@@ -15,6 +15,14 @@
 		3239BCA6277D8E5200E96E21 /* GoodDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCA4277D8E5200E96E21 /* GoodDay.xcdatamodeld */; };
 		3239BCA8277D8E5400E96E21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCA7277D8E5400E96E21 /* Assets.xcassets */; };
 		3239BCAB277D8E5400E96E21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCA9277D8E5400E96E21 /* LaunchScreen.storyboard */; };
+		F0E1A986277EDE4B00DD286E /* NameSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E1A984277EDE4B00DD286E /* NameSettingViewController.swift */; };
+		F0E1A987277EDE4B00DD286E /* NameSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E1A985277EDE4B00DD286E /* NameSettingViewController.xib */; };
+		F0E1A98A277EE1EF00DD286E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E1A988277EE1EF00DD286E /* WelcomeViewController.swift */; };
+		F0E1A98B277EE1EF00DD286E /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E1A989277EE1EF00DD286E /* WelcomeViewController.xib */; };
+		F0E1A98E277EE41700DD286E /* MbtiSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E1A98C277EE41700DD286E /* MbtiSettingViewController.swift */; };
+		F0E1A98F277EE41700DD286E /* MbtiSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E1A98D277EE41700DD286E /* MbtiSettingViewController.xib */; };
+		F0E1A992277EE70400DD286E /* TimeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E1A990277EE70400DD286E /* TimeSettingViewController.swift */; };
+		F0E1A993277EE70400DD286E /* TimeSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E1A991277EE70400DD286E /* TimeSettingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +38,14 @@
 		70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6CFE1151A1AB88C5915BAD /* Pods-GoodDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.debug.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.debug.xcconfig"; sourceTree = "<group>"; };
 		C9657BA07B3C0A1266C0F7B6 /* Pods-GoodDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.release.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.release.xcconfig"; sourceTree = "<group>"; };
+		F0E1A984277EDE4B00DD286E /* NameSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSettingViewController.swift; sourceTree = "<group>"; };
+		F0E1A985277EDE4B00DD286E /* NameSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameSettingViewController.xib; sourceTree = "<group>"; };
+		F0E1A988277EE1EF00DD286E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		F0E1A989277EE1EF00DD286E /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		F0E1A98C277EE41700DD286E /* MbtiSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MbtiSettingViewController.swift; sourceTree = "<group>"; };
+		F0E1A98D277EE41700DD286E /* MbtiSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MbtiSettingViewController.xib; sourceTree = "<group>"; };
+		F0E1A990277EE70400DD286E /* TimeSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingViewController.swift; sourceTree = "<group>"; };
+		F0E1A991277EE70400DD286E /* TimeSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeSettingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +81,7 @@
 		3239BC9A277D8E5200E96E21 /* GoodDay */ = {
 			isa = PBXGroup;
 			children = (
+				F0E1A983277EDE2400DD286E /* GDInitialSetting */,
 				3239BC9B277D8E5200E96E21 /* AppDelegate.swift */,
 				3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */,
 				3239BC9F277D8E5200E96E21 /* ViewController.swift */,
@@ -91,8 +108,22 @@
 				9B6CFE1151A1AB88C5915BAD /* Pods-GoodDay.debug.xcconfig */,
 				C9657BA07B3C0A1266C0F7B6 /* Pods-GoodDay.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F0E1A983277EDE2400DD286E /* GDInitialSetting */ = {
+			isa = PBXGroup;
+			children = (
+				F0E1A984277EDE4B00DD286E /* NameSettingViewController.swift */,
+				F0E1A985277EDE4B00DD286E /* NameSettingViewController.xib */,
+				F0E1A988277EE1EF00DD286E /* WelcomeViewController.swift */,
+				F0E1A989277EE1EF00DD286E /* WelcomeViewController.xib */,
+				F0E1A98C277EE41700DD286E /* MbtiSettingViewController.swift */,
+				F0E1A98D277EE41700DD286E /* MbtiSettingViewController.xib */,
+				F0E1A990277EE70400DD286E /* TimeSettingViewController.swift */,
+				F0E1A991277EE70400DD286E /* TimeSettingViewController.xib */,
+			);
+			path = GDInitialSetting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,7 +185,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0E1A98B277EE1EF00DD286E /* WelcomeViewController.xib in Resources */,
+				F0E1A98F277EE41700DD286E /* MbtiSettingViewController.xib in Resources */,
+				F0E1A987277EDE4B00DD286E /* NameSettingViewController.xib in Resources */,
 				3239BCAB277D8E5400E96E21 /* LaunchScreen.storyboard in Resources */,
+				F0E1A993277EE70400DD286E /* TimeSettingViewController.xib in Resources */,
 				3239BCA8277D8E5400E96E21 /* Assets.xcassets in Resources */,
 				3239BCA3277D8E5200E96E21 /* Main.storyboard in Resources */,
 			);
@@ -194,7 +229,11 @@
 			files = (
 				3239BCA0277D8E5200E96E21 /* ViewController.swift in Sources */,
 				3239BC9C277D8E5200E96E21 /* AppDelegate.swift in Sources */,
+				F0E1A986277EDE4B00DD286E /* NameSettingViewController.swift in Sources */,
+				F0E1A98A277EE1EF00DD286E /* WelcomeViewController.swift in Sources */,
+				F0E1A98E277EE41700DD286E /* MbtiSettingViewController.swift in Sources */,
 				3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */,
+				F0E1A992277EE70400DD286E /* TimeSettingViewController.swift in Sources */,
 				3239BCA6277D8E5200E96E21 /* GoodDay.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

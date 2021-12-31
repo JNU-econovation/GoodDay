@@ -9,11 +9,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var nickname: String?
+    var firstMbti: String?
+    var secondMbti: String?
+    var thirdMbti: String?
+    var fourthMbti: String?
+    var wakeUpTime: Date?
+    var sleepTime: Date?
+    
+    @IBOutlet weak var userNameLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        configureUserNameLabel()
     }
 
+    
+    func configureUserNameLabel(){
+        self.userNameLabel.text = (self.nickname ?? "")  + "님,"
+    }
 
 }
 

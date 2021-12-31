@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimeSettingViewController" customModule="GoodDay" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="0Ih-hZ-985" id="Ks1-eZ-gSx"/>
+                <outlet property="finishButton" destination="iah-pN-dd8" id="y6i-bz-j8e"/>
+                <outlet property="sleepTimeTextField" destination="Pmu-MA-6jf" id="HbD-Kj-FDS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wakeUpTimeTextField" destination="jwq-jl-WWd" id="x7Z-SC-Ldk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기상/취침 시간을" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtF-cD-2nI">
+                    <rect key="frame" x="50" y="164" width="314" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알려주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1P3-6N-RlW">
+                    <rect key="frame" x="50" y="206" width="314" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자의 생활 패턴에 맞춰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewt-EX-i1v">
+                    <rect key="frame" x="54" y="266" width="310" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="굿데이 알림이 전달됩니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H3-n2-ayN">
+                    <rect key="frame" x="54" y="291" width="310" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ih-hZ-985">
+                    <rect key="frame" x="50" y="84" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="6MU-nA-Lis"/>
+                        <constraint firstAttribute="height" constant="25" id="R95-hA-GGc"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <backgroundConfiguration key="background" image="arrow.backward" catalog="system" imageContentMode="scaleAspectFit"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="tapBackButton:" destination="-1" eventType="touchUpInside" id="eGX-Mf-Z1v"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WAKE UP AT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPc-SQ-UNx">
+                    <rect key="frame" x="160.5" y="402.5" width="93.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="기상 시간을 입력해주세요 :)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jwq-jl-WWd">
+                    <rect key="frame" x="100" y="438.5" width="214" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ple-XS-r3L"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMD-ed-0nk">
+                    <rect key="frame" x="100" y="512.5" width="214" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SLEEP AT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hn0-sD-oBc">
+                    <rect key="frame" x="171.5" y="557.5" width="71" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="취침 시간을 입력해주세요 :)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pmu-MA-6jf">
+                    <rect key="frame" x="100" y="593.5" width="214" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="iFz-n7-uzJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iah-pN-dd8">
+                    <rect key="frame" x="50" y="799" width="314" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="완료">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="tapFinishButton:" destination="-1" eventType="touchUpInside" id="Hzg-yJ-tgN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Pmu-MA-6jf" secondAttribute="trailing" constant="100" id="6qC-Kd-fuV"/>
+                <constraint firstItem="0Ih-hZ-985" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="8PZ-8W-wd0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1P3-6N-RlW" secondAttribute="trailing" constant="50" id="9ic-DG-bSt"/>
+                <constraint firstItem="1P3-6N-RlW" firstAttribute="top" secondItem="WtF-cD-2nI" secondAttribute="bottom" constant="6" id="9tS-yf-xEq"/>
+                <constraint firstItem="wPc-SQ-UNx" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-35" id="DjX-UM-M9O"/>
+                <constraint firstItem="jwq-jl-WWd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Fz4-eF-Hum"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ewt-EX-i1v" secondAttribute="trailing" constant="50" id="Grq-v9-3zx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iah-pN-dd8" secondAttribute="bottom" constant="32" id="HTD-S4-kSq"/>
+                <constraint firstItem="WtF-cD-2nI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="120" id="Ieb-Le-pUW"/>
+                <constraint firstItem="WtF-cD-2nI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="JTx-Vt-8Ug"/>
+                <constraint firstItem="kMD-ed-0nk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="LnN-5A-tbI"/>
+                <constraint firstItem="Pmu-MA-6jf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="Qwq-WP-UrE"/>
+                <constraint firstItem="iah-pN-dd8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Rzn-ja-wVf"/>
+                <constraint firstItem="Pmu-MA-6jf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="S5p-xm-ihL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jwq-jl-WWd" secondAttribute="trailing" constant="100" id="Smc-Ax-Ees"/>
+                <constraint firstItem="ewt-EX-i1v" firstAttribute="top" secondItem="1P3-6N-RlW" secondAttribute="bottom" constant="24" id="UNQ-KY-ygw"/>
+                <constraint firstItem="jwq-jl-WWd" firstAttribute="top" secondItem="wPc-SQ-UNx" secondAttribute="bottom" constant="15" id="UR2-7j-htz"/>
+                <constraint firstItem="ewt-EX-i1v" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="54" id="XLx-K3-hc1"/>
+                <constraint firstItem="jwq-jl-WWd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="100" id="Xqe-Kn-ClS"/>
+                <constraint firstItem="wPc-SQ-UNx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YNW-uZ-4ut"/>
+                <constraint firstItem="hn0-sD-oBc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YZV-8p-0jK"/>
+                <constraint firstItem="Pmu-MA-6jf" firstAttribute="top" secondItem="hn0-sD-oBc" secondAttribute="bottom" constant="15" id="ZjU-qQ-ifA"/>
+                <constraint firstItem="iah-pN-dd8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="aGL-Yx-7fc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WtF-cD-2nI" secondAttribute="trailing" constant="50" id="cmE-cO-B6p"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8H3-n2-ayN" secondAttribute="trailing" constant="50" id="eCm-7U-oTj"/>
+                <constraint firstItem="kMD-ed-0nk" firstAttribute="top" secondItem="jwq-jl-WWd" secondAttribute="bottom" constant="24" id="eZd-fl-BOp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iah-pN-dd8" secondAttribute="trailing" constant="50" id="hF3-JG-sn4"/>
+                <constraint firstItem="hn0-sD-oBc" firstAttribute="top" secondItem="kMD-ed-0nk" secondAttribute="bottom" constant="24" id="oHt-i9-Vpw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kMD-ed-0nk" secondAttribute="trailing" constant="100" id="oRC-3m-pni"/>
+                <constraint firstItem="8H3-n2-ayN" firstAttribute="top" secondItem="ewt-EX-i1v" secondAttribute="bottom" constant="4" id="x0u-4y-Dou"/>
+                <constraint firstItem="0Ih-hZ-985" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="xgl-90-PG1"/>
+                <constraint firstItem="8H3-n2-ayN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="54" id="yjd-yG-zDP"/>
+                <constraint firstItem="1P3-6N-RlW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="z38-sm-LUa"/>
+            </constraints>
+            <point key="canvasLocation" x="371.01449275362324" y="91.741071428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
