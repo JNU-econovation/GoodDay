@@ -1,16 +1,20 @@
 PODS:
   - MSPeekCollectionViewDelegateImplementation (3.2.0)
+  - ScrollStackController (1.4.2)
 
 DEPENDENCIES:
   - MSPeekCollectionViewDelegateImplementation
+  - ScrollStackController
 
 SPEC REPOS:
   trunk:
     - MSPeekCollectionViewDelegateImplementation
+    - ScrollStackController
 
 SPEC CHECKSUMS:
   MSPeekCollectionViewDelegateImplementation: be35a217bd302976a9e4476151be992c1f150127
+  ScrollStackController: a3653918f0be6cf8c6e9f658acaf9d0bd0ae9478
 
-PODFILE CHECKSUM: 484ca80189a60b08cf3009f699f6867c7d2aeccb
+PODFILE CHECKSUM: e9bb288ff9c39aac9feef5cd96f4b56cf5632dba
 
 COCOAPODS: 1.11.2

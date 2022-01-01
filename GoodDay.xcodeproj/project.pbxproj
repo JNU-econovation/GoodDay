@@ -22,8 +22,8 @@
 		3239BCBE277D9B6100E96E21 /* GDPeekingCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCBD277D9B6100E96E21 /* GDPeekingCollectionViewDataSource.swift */; };
 		3239BCC0277D9D0400E96E21 /* GDBlurEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCBF277D9D0400E96E21 /* GDBlurEffectView.swift */; };
 		3239BCC2277DA03400E96E21 /* FontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCC1277DA03400E96E21 /* FontUtils.swift */; };
-		3239BCC4277E04BF00E96E21 /* GDMissionPerDayWeaks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCC3277E04BF00E96E21 /* GDMissionPerDayWeaks.storyboard */; };
-		3239BCC7277E05DA00E96E21 /* GDMissionPerDayWeak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCC6277E05DA00E96E21 /* GDMissionPerDayWeak.swift */; };
+		3239BCC4277E04BF00E96E21 /* GDMissionPerDayWeeks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCC3277E04BF00E96E21 /* GDMissionPerDayWeeks.storyboard */; };
+		3239BCC7277E05DA00E96E21 /* GDMissionPerDayWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCC6277E05DA00E96E21 /* GDMissionPerDayWeek.swift */; };
 		3239BCD1277E0B8D00E96E21 /* NanumSquareL.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCC9277E0B8D00E96E21 /* NanumSquareL.otf */; };
 		3239BCD2277E0B8D00E96E21 /* NanumSquareR.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCCA277E0B8D00E96E21 /* NanumSquareR.otf */; };
 		3239BCD4277E0B8D00E96E21 /* NanumSquareB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCCC277E0B8D00E96E21 /* NanumSquareB.otf */; };
@@ -32,6 +32,13 @@
 		3239BCDE277E132300E96E21 /* NanumGothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCDA277E132300E96E21 /* NanumGothic.otf */; };
 		3239BCDF277E132300E96E21 /* NanumGothicExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCDB277E132300E96E21 /* NanumGothicExtraBold.otf */; };
 		3239BCE0277E132300E96E21 /* NanumGothicLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCDC277E132300E96E21 /* NanumGothicLight.otf */; };
+		3239BCE2277ED92500E96E21 /* GDMissionPerDayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCE1277ED92500E96E21 /* GDMissionPerDayDetailView.swift */; };
+		3239BCE9277EDE4800E96E21 /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCE3277EDE4700E96E21 /* NotoSansKR-Thin.otf */; };
+		3239BCEA277EDE4800E96E21 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCE4277EDE4700E96E21 /* NotoSansKR-Medium.otf */; };
+		3239BCEB277EDE4800E96E21 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCE5277EDE4700E96E21 /* NotoSansKR-Regular.otf */; };
+		3239BCEC277EDE4800E96E21 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCE6277EDE4700E96E21 /* NotoSansKR-Light.otf */; };
+		3239BCED277EDE4800E96E21 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCE7277EDE4700E96E21 /* NotoSansKR-Bold.otf */; };
+		3239BCEE277EDE4800E96E21 /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCE8277EDE4800E96E21 /* NotoSansKR-Black.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,8 +58,8 @@
 		3239BCBD277D9B6100E96E21 /* GDPeekingCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPeekingCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		3239BCBF277D9D0400E96E21 /* GDBlurEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDBlurEffectView.swift; sourceTree = "<group>"; };
 		3239BCC1277DA03400E96E21 /* FontUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontUtils.swift; sourceTree = "<group>"; };
-		3239BCC3277E04BF00E96E21 /* GDMissionPerDayWeaks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GDMissionPerDayWeaks.storyboard; sourceTree = "<group>"; };
-		3239BCC6277E05DA00E96E21 /* GDMissionPerDayWeak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMissionPerDayWeak.swift; sourceTree = "<group>"; };
+		3239BCC3277E04BF00E96E21 /* GDMissionPerDayWeeks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GDMissionPerDayWeeks.storyboard; sourceTree = "<group>"; };
+		3239BCC6277E05DA00E96E21 /* GDMissionPerDayWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMissionPerDayWeek.swift; sourceTree = "<group>"; };
 		3239BCC9277E0B8D00E96E21 /* NanumSquareL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareL.otf; sourceTree = "<group>"; };
 		3239BCCA277E0B8D00E96E21 /* NanumSquareR.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareR.otf; sourceTree = "<group>"; };
 		3239BCCC277E0B8D00E96E21 /* NanumSquareB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareB.otf; sourceTree = "<group>"; };
@@ -61,6 +68,13 @@
 		3239BCDA277E132300E96E21 /* NanumGothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothic.otf; sourceTree = "<group>"; };
 		3239BCDB277E132300E96E21 /* NanumGothicExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothicExtraBold.otf; sourceTree = "<group>"; };
 		3239BCDC277E132300E96E21 /* NanumGothicLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothicLight.otf; sourceTree = "<group>"; };
+		3239BCE1277ED92500E96E21 /* GDMissionPerDayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMissionPerDayDetailView.swift; sourceTree = "<group>"; };
+		3239BCE3277EDE4700E96E21 /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
+		3239BCE4277EDE4700E96E21 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
+		3239BCE5277EDE4700E96E21 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
+		3239BCE6277EDE4700E96E21 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
+		3239BCE7277EDE4700E96E21 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
+		3239BCE8277EDE4800E96E21 /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Black.otf"; sourceTree = "<group>"; };
 		70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6CFE1151A1AB88C5915BAD /* Pods-GoodDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.debug.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.debug.xcconfig"; sourceTree = "<group>"; };
 		C9657BA07B3C0A1266C0F7B6 /* Pods-GoodDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.release.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				3239BCC8277E0B6100E96E21 /* Fonts */,
-				3239BCC5277E05C100E96E21 /* GDMissionPerDayWeak */,
+				3239BCC5277E05C100E96E21 /* GDMissionPerDayWeek */,
 				3239BCB8277D989A00E96E21 /* GDUtils */,
 				3239BCB5277D96D200E96E21 /* GDMissionPerDay */,
 				3239BCB2277D90CE00E96E21 /* Views */,
@@ -120,7 +134,7 @@
 			children = (
 				3239BCA1277D8E5200E96E21 /* Main.storyboard */,
 				3239BCB3277D90DF00E96E21 /* GDMissionPerDayDetail.storyboard */,
-				3239BCC3277E04BF00E96E21 /* GDMissionPerDayWeaks.storyboard */,
+				3239BCC3277E04BF00E96E21 /* GDMissionPerDayWeeks.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -131,6 +145,7 @@
 				3239BCB6277D96DD00E96E21 /* GDMissionPerDayDetailViewController.swift */,
 				3239BCBB277D9AA700E96E21 /* GDPeekingCollectionView.Delegate.swift */,
 				3239BCBD277D9B6100E96E21 /* GDPeekingCollectionViewDataSource.swift */,
+				3239BCE1277ED92500E96E21 /* GDMissionPerDayDetailView.swift */,
 			);
 			path = GDMissionPerDay;
 			sourceTree = "<group>";
@@ -145,12 +160,12 @@
 			path = GDUtils;
 			sourceTree = "<group>";
 		};
-		3239BCC5277E05C100E96E21 /* GDMissionPerDayWeak */ = {
+		3239BCC5277E05C100E96E21 /* GDMissionPerDayWeek */ = {
 			isa = PBXGroup;
 			children = (
-				3239BCC6277E05DA00E96E21 /* GDMissionPerDayWeak.swift */,
+				3239BCC6277E05DA00E96E21 /* GDMissionPerDayWeek.swift */,
 			);
-			path = GDMissionPerDayWeak;
+			path = GDMissionPerDayWeek;
 			sourceTree = "<group>";
 		};
 		3239BCC8277E0B6100E96E21 /* Fonts */ = {
@@ -164,6 +179,12 @@
 				3239BCCD277E0B8D00E96E21 /* NanumSquareEB.otf */,
 				3239BCC9277E0B8D00E96E21 /* NanumSquareL.otf */,
 				3239BCCA277E0B8D00E96E21 /* NanumSquareR.otf */,
+				3239BCE8277EDE4800E96E21 /* NotoSansKR-Black.otf */,
+				3239BCE7277EDE4700E96E21 /* NotoSansKR-Bold.otf */,
+				3239BCE6277EDE4700E96E21 /* NotoSansKR-Light.otf */,
+				3239BCE4277EDE4700E96E21 /* NotoSansKR-Medium.otf */,
+				3239BCE5277EDE4700E96E21 /* NotoSansKR-Regular.otf */,
+				3239BCE3277EDE4700E96E21 /* NotoSansKR-Thin.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -249,15 +270,21 @@
 				3239BCB4277D90DF00E96E21 /* GDMissionPerDayDetail.storyboard in Resources */,
 				3239BCDF277E132300E96E21 /* NanumGothicExtraBold.otf in Resources */,
 				3239BCD2277E0B8D00E96E21 /* NanumSquareR.otf in Resources */,
-				3239BCC4277E04BF00E96E21 /* GDMissionPerDayWeaks.storyboard in Resources */,
+				3239BCED277EDE4800E96E21 /* NotoSansKR-Bold.otf in Resources */,
+				3239BCC4277E04BF00E96E21 /* GDMissionPerDayWeeks.storyboard in Resources */,
 				3239BCD5277E0B8D00E96E21 /* NanumSquareEB.otf in Resources */,
 				3239BCD4277E0B8D00E96E21 /* NanumSquareB.otf in Resources */,
 				3239BCAB277D8E5400E96E21 /* LaunchScreen.storyboard in Resources */,
+				3239BCE9277EDE4800E96E21 /* NotoSansKR-Thin.otf in Resources */,
 				3239BCDE277E132300E96E21 /* NanumGothic.otf in Resources */,
 				3239BCD1277E0B8D00E96E21 /* NanumSquareL.otf in Resources */,
+				3239BCEE277EDE4800E96E21 /* NotoSansKR-Black.otf in Resources */,
 				3239BCA8277D8E5400E96E21 /* Assets.xcassets in Resources */,
+				3239BCEA277EDE4800E96E21 /* NotoSansKR-Medium.otf in Resources */,
 				3239BCDD277E132300E96E21 /* NanumGothicBold.otf in Resources */,
+				3239BCEB277EDE4800E96E21 /* NotoSansKR-Regular.otf in Resources */,
 				3239BCA3277D8E5200E96E21 /* Main.storyboard in Resources */,
+				3239BCEC277EDE4800E96E21 /* NotoSansKR-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,11 +343,12 @@
 				3239BCBE277D9B6100E96E21 /* GDPeekingCollectionViewDataSource.swift in Sources */,
 				3239BCA0277D8E5200E96E21 /* ViewController.swift in Sources */,
 				3239BC9C277D8E5200E96E21 /* AppDelegate.swift in Sources */,
+				3239BCE2277ED92500E96E21 /* GDMissionPerDayDetailView.swift in Sources */,
 				3239BCBA277D98B600E96E21 /* ColorUtils.swift in Sources */,
 				3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */,
 				3239BCC0277D9D0400E96E21 /* GDBlurEffectView.swift in Sources */,
 				3239BCA6277D8E5200E96E21 /* GoodDay.xcdatamodeld in Sources */,
-				3239BCC7277E05DA00E96E21 /* GDMissionPerDayWeak.swift in Sources */,
+				3239BCC7277E05DA00E96E21 /* GDMissionPerDayWeek.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

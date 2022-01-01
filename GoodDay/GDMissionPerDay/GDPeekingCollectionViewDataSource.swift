@@ -40,7 +40,7 @@ extension GDMissionPerDayDetailViewController: UICollectionViewDataSource{
         textLabel.frame = innerLabel.bounds
         textLabel.text = text
         textLabel.textColor = .white
-        textLabel.font = UIFont(name: "NanumSquareOTFEB", size: 44)
+        textLabel.font = UIFont(name: "NotoSansKR-Bold", size: 44)
         textLabel.textAlignment = .center
         
         // Make Shape

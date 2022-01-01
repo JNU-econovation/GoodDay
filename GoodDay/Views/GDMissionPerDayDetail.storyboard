@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
         </scene>
-        <!--GDMissionPerDayWeakView-->
+        <!--GDMissionPerDayWeekView-->
         <scene sceneID="xmR-Nq-Ymw">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="GDMissionPerDayWeakView" storyboardName="GDMissionPerDayWeaks" referencedIdentifier="GDMissionPerDayWeakView" id="ILT-Df-EGi" userLabel="GDMissionPerDayWeakView" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="GDMissionPerDayWeekView" storyboardName="GDMissionPerDayWeeks" referencedIdentifier="GDMissionPerDayWeekView" id="ILT-Df-EGi" userLabel="GDMissionPerDayWeekView" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="hPc-5z-Nm7"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUA-Zn-yYm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

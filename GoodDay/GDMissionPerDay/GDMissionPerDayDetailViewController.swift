@@ -68,17 +68,6 @@ class GDMissionPerDayDetailViewController: UIViewController {
         return backgroundImageView
     }
     
-    func getDetailView(screenSizeWidth: CGFloat, contentViewHeight: CGFloat) -> UIView {
-        let detailView = UIView()
-        detailView.frame = CGRect(x:0, y: contentViewHeight/2, width: screenSizeWidth, height: contentViewHeight/2)
-        detailView.layer.shadowOpacity = 0.3
-        detailView.layer.shadowOffset = CGSize(width: 0, height: -3)
-        detailView.layer.shadowRadius = 5
-        detailView.backgroundColor = .white
-        
-        return detailView
-    }
-    
     func getweekButton(text: String, originButton: UIButton) -> UIButton {
         let weekButton = originButton        
         let weekLable = UILabel()
@@ -93,5 +82,18 @@ class GDMissionPerDayDetailViewController: UIViewController {
         weekButton.addSubview(weekLable)
 
         return weekButton
+    }
+    
+    func getDetailView(screenSizeWidth: CGFloat, contentViewHeight: CGFloat) -> UIView {
+        var detailView = UIView()
+        detailView.frame = CGRect(x:0, y: contentViewHeight/2, width: screenSizeWidth, height: contentViewHeight/2)
+        detailView.layer.shadowOpacity = 0.3
+        detailView.layer.shadowOffset = CGSize(width: 0, height: -3)
+        detailView.layer.shadowRadius = 5
+        detailView.backgroundColor = .white
+        
+        detailView = makeDetails(detailView: detailView)
+        
+        return detailView
     }
 }
