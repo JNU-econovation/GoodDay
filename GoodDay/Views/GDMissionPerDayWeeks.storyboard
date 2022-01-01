@@ -16,25 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6DY-AD-xks">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4B-wo-UGZ">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BWy-VZ-GN5" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1266"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                </subviews>
-                                <viewLayoutGuide key="contentLayoutGuide" id="AMP-Zv-yle"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="3Vl-n7-z4B"/>
-                            </scrollView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="r4B-wo-UGZ" secondAttribute="trailing" id="EaY-yO-HlL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="r4B-wo-UGZ" secondAttribute="bottom" id="ci9-Dq-aFs"/>
+                            <constraint firstItem="r4B-wo-UGZ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="pN5-lr-LXV"/>
+                            <constraint firstItem="r4B-wo-UGZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="x6Q-2T-Z9d"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="weekContentView" destination="BWy-VZ-GN5" id="sAw-Wv-ROq"/>
+                        <outlet property="contentView" destination="r4B-wo-UGZ" id="gBR-2j-lYU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

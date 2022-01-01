@@ -13,6 +13,7 @@ extension GDMissionPerDayDetailViewController {
         let labelsGap = (contentViewHeight/2 - 106) / 13
         
         detailView.addSubview(toDayTextLabel(gap: labelsGap))
+        detailView.addSubview(toDayMissionBackgroundImage(text: "하루 세끼 챙겨먹기", gap: labelsGap))
         detailView.addSubview(toDayMissionLabel(text: "하루 세끼 챙겨먹기", gap: labelsGap))
         detailView.addSubview(toDayMissionSubLabel(text: "이별한 사람들은 밥을 잘 안 먹더라고요.\n이번 기회에 시간 내서 밥을 먹어보아요!", gap: labelsGap))
         detailView.addSubview(changingMissionButton(gap: labelsGap))
@@ -63,15 +64,35 @@ extension GDMissionPerDayDetailViewController {
     
     func changingMissionButton(gap:CGFloat) -> UIButton {
         let changingMissionButton = UIButton()
-        changingMissionButton.setTitle("다른 미션으로 바꾸기", for: .normal)
-        changingMissionButton.setTitleColor(.black, for: .normal)
-        changingMissionButton.titleLabel?.font = UIFont(name: "NanumSquareOTFL", size: 14)
-        
+        // string에 효과 넣어서 하는 방법 중 한가지
+        let changingTitleAttribute: [NSAttributedString.Key: Any] = [
+              .font: UIFont(name: "NanumSquareOTFL", size: 14)!,
+              .foregroundColor: UIColor.black,
+              .underlineStyle: NSUnderlineStyle.single.rawValue
+        ]
+        let chaningTitleString = NSMutableAttributedString(
+                string: "다른 미션으로 바꾸기",
+                attributes: changingTitleAttribute
+        )
+        changingMissionButton.setAttributedTitle(chaningTitleString, for: .normal)
+
         let stringSize = FontUtils().getFontSize(font: UIFont(name: "NanumSquareOTFL", size: 14)!, text: "다른 미션으로 바꾸기")
         changingMissionButton.frame = CGRect(x: (screenSizeWidth - stringSize.width)/2, y: gap * 9 - 10 + 86, width: stringSize.width, height: 20)
 
         changingMissionButton.addTarget(self, action: #selector(onTapButton(_:)), for: .touchUpInside)
         
         return changingMissionButton
+    }
+    
+    func toDayMissionBackgroundImage(text: String, gap:CGFloat) -> UIImageView {
+        let changingMissionBackgroundImage = UIImageView()
+        let backgroundImage = UIImage(named: "MissioinTitleBackground")
+        
+        changingMissionBackgroundImage.image = backgroundImage
+        
+        let stringSize = FontUtils().getFontSize(font: UIFont(name: "NanumSquareOTFB", size: 27)!, text: text)
+        changingMissionBackgroundImage.frame = CGRect(x: (screenSizeWidth - stringSize.width)/2, y: gap * 6 - 15.5 + 20 + 31 * 0.4, width: stringSize.width, height: 31 * 0.6)
+        
+        return changingMissionBackgroundImage
     }
 }

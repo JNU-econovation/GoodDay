@@ -7,9 +7,13 @@
 
 
 import UIKit
+import ScrollStackController
 
 class GDMissionPerDayWeekViewController: UIViewController {
-    @IBOutlet weak var weekContentView: UIView!
+    @IBOutlet weak var contentView: UIView!
+    
+    private var stackController = ScrollStackViewController()
+    var stackView = ScrollStack()
     
     let screenSizeWidth = UIScreen.main.bounds.width
     let screenSizeheight = UIScreen.main.bounds.width
@@ -17,16 +21,15 @@ class GDMissionPerDayWeekViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let weekCount = 6
-        // scroll view 높이 맞추기.
-        //weekContentView.heightAnchor.constraint(equalToConstant: CGFloat(weekCount) * 2 * (135 + 52 * 2)).isActive = true
-        weekContentView.heightAnchor.constraint(equalToConstant: 1500).isActive = true
-        
-        var height = 0.0
-        for i in 1...weekCount {
-            weekContentView.addSubview(getOneWeekView(height: height, index: i))
-            height += (135 + 52 * 2)
+        for i in 0...6 {
+            var height = 0.0
+            stackView.addSubview(getOneWeekView(height: height, index: i))
+            stackController.view = stackView
+            height += 170
         }
+        
+        stackController.view.frame = contentView.bounds
+        contentView.addSubview(stackController.view)
     }
 }
 
@@ -38,8 +41,8 @@ extension GDMissionPerDayWeekViewController {
         let tmpLabel = UILabel()
         tmpLabel.text = "WEEK \(index)"
         tmpLabel.textColor = .black
+        tmpLabel.textAlignment = .center
         tmpLabel.sizeToFit()
-        tmpLabel.systemLayoutSizeFitting(.zero, withHorizontalFittingPriority: .defaultHigh, verticalFittingPriority: .defaultHigh)
         
         oneWeekView.addSubview(tmpLabel)
         
