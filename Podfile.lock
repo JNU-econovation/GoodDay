@@ -1,20 +1,24 @@
 PODS:
+  - EMTNeumorphicView (1.0.4)
   - MSPeekCollectionViewDelegateImplementation (3.2.0)
   - ScrollStackController (1.4.2)
 
 DEPENDENCIES:
+  - EMTNeumorphicView
   - MSPeekCollectionViewDelegateImplementation
   - ScrollStackController
 
 SPEC REPOS:
   trunk:
+    - EMTNeumorphicView
     - MSPeekCollectionViewDelegateImplementation
     - ScrollStackController
 
 SPEC CHECKSUMS:
+  EMTNeumorphicView: cb5e92953e43b1872ab47fefd451a9ce0c16fc77
   MSPeekCollectionViewDelegateImplementation: be35a217bd302976a9e4476151be992c1f150127
   ScrollStackController: a3653918f0be6cf8c6e9f658acaf9d0bd0ae9478
 
-PODFILE CHECKSUM: e9bb288ff9c39aac9feef5cd96f4b56cf5632dba
+PODFILE CHECKSUM: 7572d156520322e641434d4be82da0e8ea41176d
 
 COCOAPODS: 1.11.2

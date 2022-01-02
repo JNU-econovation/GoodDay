@@ -17,10 +17,10 @@ class GDMissionPerDayDetailViewController: UIViewController {
     @objc func onTapButton(_ sender: AnyObject) {
         let button = sender as! UIButton
         print("Button was tapped. \(button.titleLabel?.text ?? "")")
-   }
+    }
     
     let screenSizeWidth = UIScreen.main.bounds.width
-    let screenSizeheight = UIScreen.main.bounds.width
+    let screenSizeheight = UIScreen.main.bounds.height
     var contentViewHeight: CGFloat = 0.0
     
     let pickerData = ["DAY 1", "DAY 2", "DAY 3", "DAY 4", "DAY 5", "DAY 6"]

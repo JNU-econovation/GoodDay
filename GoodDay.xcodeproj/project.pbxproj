@@ -39,6 +39,8 @@
 		3239BCEC277EDE4800E96E21 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCE6277EDE4700E96E21 /* NotoSansKR-Light.otf */; };
 		3239BCED277EDE4800E96E21 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCE7277EDE4700E96E21 /* NotoSansKR-Bold.otf */; };
 		3239BCEE277EDE4800E96E21 /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCE8277EDE4800E96E21 /* NotoSansKR-Black.otf */; };
+		3239BCF1278097B400E96E21 /* GDMissionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCF0278097B400E96E21 /* GDMissionButton.swift */; };
+		3239BCF42781DEBA00E96E21 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCF32781DEBA00E96E21 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,8 @@
 		3239BCE6277EDE4700E96E21 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
 		3239BCE7277EDE4700E96E21 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		3239BCE8277EDE4800E96E21 /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Black.otf"; sourceTree = "<group>"; };
+		3239BCF0278097B400E96E21 /* GDMissionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMissionButton.swift; sourceTree = "<group>"; };
+		3239BCF32781DEBA00E96E21 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6CFE1151A1AB88C5915BAD /* Pods-GoodDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.debug.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.debug.xcconfig"; sourceTree = "<group>"; };
 		C9657BA07B3C0A1266C0F7B6 /* Pods-GoodDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.release.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 		3239BC9A277D8E5200E96E21 /* GoodDay */ = {
 			isa = PBXGroup;
 			children = (
+				3239BCF32781DEBA00E96E21 /* GoogleService-Info.plist */,
+				3239BCF22781DDC600E96E21 /* DB */,
 				3239BCC8277E0B6100E96E21 /* Fonts */,
 				3239BCC5277E05C100E96E21 /* GDMissionPerDayWeek */,
 				3239BCB8277D989A00E96E21 /* GDUtils */,
@@ -163,6 +169,7 @@
 		3239BCC5277E05C100E96E21 /* GDMissionPerDayWeek */ = {
 			isa = PBXGroup;
 			children = (
+				3239BCF0278097B400E96E21 /* GDMissionButton.swift */,
 				3239BCC6277E05DA00E96E21 /* GDMissionPerDayWeek.swift */,
 			);
 			path = GDMissionPerDayWeek;
@@ -187,6 +194,13 @@
 				3239BCE3277EDE4700E96E21 /* NotoSansKR-Thin.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3239BCF22781DDC600E96E21 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 		7648B75F7CABB0D80879E589 /* Frameworks */ = {
@@ -283,6 +297,7 @@
 				3239BCEA277EDE4800E96E21 /* NotoSansKR-Medium.otf in Resources */,
 				3239BCDD277E132300E96E21 /* NanumGothicBold.otf in Resources */,
 				3239BCEB277EDE4800E96E21 /* NotoSansKR-Regular.otf in Resources */,
+				3239BCF42781DEBA00E96E21 /* GoogleService-Info.plist in Resources */,
 				3239BCA3277D8E5200E96E21 /* Main.storyboard in Resources */,
 				3239BCEC277EDE4800E96E21 /* NotoSansKR-Light.otf in Resources */,
 			);
@@ -339,6 +354,7 @@
 			files = (
 				3239BCBC277D9AA700E96E21 /* GDPeekingCollectionView.Delegate.swift in Sources */,
 				3239BCB7277D96DD00E96E21 /* GDMissionPerDayDetailViewController.swift in Sources */,
+				3239BCF1278097B400E96E21 /* GDMissionButton.swift in Sources */,
 				3239BCC2277DA03400E96E21 /* FontUtils.swift in Sources */,
 				3239BCBE277D9B6100E96E21 /* GDPeekingCollectionViewDataSource.swift in Sources */,
 				3239BCA0277D8E5200E96E21 /* ViewController.swift in Sources */,
@@ -505,6 +521,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -533,6 +550,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

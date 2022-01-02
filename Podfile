@@ -6,6 +6,11 @@ target 'GoodDay' do
   use_frameworks!
   pod 'MSPeekCollectionViewDelegateImplementation'
   pod 'ScrollStackController'
+  
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+
   # Pods for GoodDay
 
 end
