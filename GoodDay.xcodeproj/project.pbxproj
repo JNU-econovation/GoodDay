@@ -15,6 +15,9 @@
 		3239BCA6277D8E5200E96E21 /* GoodDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCA4277D8E5200E96E21 /* GoodDay.xcdatamodeld */; };
 		3239BCA8277D8E5400E96E21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCA7277D8E5400E96E21 /* Assets.xcassets */; };
 		3239BCAB277D8E5400E96E21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCA9277D8E5400E96E21 /* LaunchScreen.storyboard */; };
+		F07E9D0C27819E2E00C7C6B4 /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07E9D0A27819E2E00C7C6B4 /* FloatingButtonViewController.swift */; };
+		F07E9D0D27819E2E00C7C6B4 /* FloatingButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07E9D0B27819E2E00C7C6B4 /* FloatingButtonViewController.xib */; };
+		F07E9D0F2781A25300C7C6B4 /* 30344-hamburger-close-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = F07E9D0E2781A25300C7C6B4 /* 30344-hamburger-close-animation.json */; };
 		F0E1A986277EDE4B00DD286E /* NameSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E1A984277EDE4B00DD286E /* NameSettingViewController.swift */; };
 		F0E1A987277EDE4B00DD286E /* NameSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E1A985277EDE4B00DD286E /* NameSettingViewController.xib */; };
 		F0E1A98A277EE1EF00DD286E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E1A988277EE1EF00DD286E /* WelcomeViewController.swift */; };
@@ -38,6 +41,9 @@
 		70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6CFE1151A1AB88C5915BAD /* Pods-GoodDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.debug.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.debug.xcconfig"; sourceTree = "<group>"; };
 		C9657BA07B3C0A1266C0F7B6 /* Pods-GoodDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.release.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.release.xcconfig"; sourceTree = "<group>"; };
+		F07E9D0A27819E2E00C7C6B4 /* FloatingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonViewController.swift; sourceTree = "<group>"; };
+		F07E9D0B27819E2E00C7C6B4 /* FloatingButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloatingButtonViewController.xib; sourceTree = "<group>"; };
+		F07E9D0E2781A25300C7C6B4 /* 30344-hamburger-close-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "30344-hamburger-close-animation.json"; sourceTree = "<group>"; };
 		F0E1A984277EDE4B00DD286E /* NameSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSettingViewController.swift; sourceTree = "<group>"; };
 		F0E1A985277EDE4B00DD286E /* NameSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameSettingViewController.xib; sourceTree = "<group>"; };
 		F0E1A988277EE1EF00DD286E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +87,7 @@
 		3239BC9A277D8E5200E96E21 /* GoodDay */ = {
 			isa = PBXGroup;
 			children = (
+				F07E9D0727819DF000C7C6B4 /* FloatingButton */,
 				F0E1A983277EDE2400DD286E /* GDInitialSetting */,
 				3239BC9B277D8E5200E96E21 /* AppDelegate.swift */,
 				3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */,
@@ -90,6 +97,7 @@
 				3239BCA9277D8E5400E96E21 /* LaunchScreen.storyboard */,
 				3239BCAC277D8E5400E96E21 /* Info.plist */,
 				3239BCA4277D8E5200E96E21 /* GoodDay.xcdatamodeld */,
+				F07E9D0E2781A25300C7C6B4 /* 30344-hamburger-close-animation.json */,
 			);
 			path = GoodDay;
 			sourceTree = "<group>";
@@ -109,6 +117,15 @@
 				C9657BA07B3C0A1266C0F7B6 /* Pods-GoodDay.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F07E9D0727819DF000C7C6B4 /* FloatingButton */ = {
+			isa = PBXGroup;
+			children = (
+				F07E9D0A27819E2E00C7C6B4 /* FloatingButtonViewController.swift */,
+				F07E9D0B27819E2E00C7C6B4 /* FloatingButtonViewController.xib */,
+			);
+			path = FloatingButton;
 			sourceTree = "<group>";
 		};
 		F0E1A983277EDE2400DD286E /* GDInitialSetting */ = {
@@ -137,6 +154,7 @@
 				3239BC94277D8E5200E96E21 /* Sources */,
 				3239BC95277D8E5200E96E21 /* Frameworks */,
 				3239BC96277D8E5200E96E21 /* Resources */,
+				3BA1A1170F9714211C84B6C0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,12 +203,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F07E9D0D27819E2E00C7C6B4 /* FloatingButtonViewController.xib in Resources */,
 				F0E1A98B277EE1EF00DD286E /* WelcomeViewController.xib in Resources */,
 				F0E1A98F277EE41700DD286E /* MbtiSettingViewController.xib in Resources */,
 				F0E1A987277EDE4B00DD286E /* NameSettingViewController.xib in Resources */,
 				3239BCAB277D8E5400E96E21 /* LaunchScreen.storyboard in Resources */,
 				F0E1A993277EE70400DD286E /* TimeSettingViewController.xib in Resources */,
 				3239BCA8277D8E5400E96E21 /* Assets.xcassets in Resources */,
+				F07E9D0F2781A25300C7C6B4 /* 30344-hamburger-close-animation.json in Resources */,
 				3239BCA3277D8E5200E96E21 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +218,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3BA1A1170F9714211C84B6C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodDay/Pods-GoodDay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodDay/Pods-GoodDay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoodDay/Pods-GoodDay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A397044CA2148AF6FDB5B486 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,6 +271,7 @@
 				F0E1A98E277EE41700DD286E /* MbtiSettingViewController.swift in Sources */,
 				3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */,
 				F0E1A992277EE70400DD286E /* TimeSettingViewController.swift in Sources */,
+				F07E9D0C27819E2E00C7C6B4 /* FloatingButtonViewController.swift in Sources */,
 				3239BCA6277D8E5200E96E21 /* GoodDay.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
