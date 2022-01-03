@@ -87,14 +87,13 @@
 		3239BC9A277D8E5200E96E21 /* GoodDay */ = {
 			isa = PBXGroup;
 			children = (
+				F0FA07A92782D0F7003FD717 /* Views */,
 				F07E9D0727819DF000C7C6B4 /* FloatingButton */,
 				F0E1A983277EDE2400DD286E /* GDInitialSetting */,
 				3239BC9B277D8E5200E96E21 /* AppDelegate.swift */,
 				3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */,
 				3239BC9F277D8E5200E96E21 /* ViewController.swift */,
-				3239BCA1277D8E5200E96E21 /* Main.storyboard */,
 				3239BCA7277D8E5400E96E21 /* Assets.xcassets */,
-				3239BCA9277D8E5400E96E21 /* LaunchScreen.storyboard */,
 				3239BCAC277D8E5400E96E21 /* Info.plist */,
 				3239BCA4277D8E5200E96E21 /* GoodDay.xcdatamodeld */,
 				F07E9D0E2781A25300C7C6B4 /* 30344-hamburger-close-animation.json */,
@@ -123,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				F07E9D0A27819E2E00C7C6B4 /* FloatingButtonViewController.swift */,
-				F07E9D0B27819E2E00C7C6B4 /* FloatingButtonViewController.xib */,
 			);
 			path = FloatingButton;
 			sourceTree = "<group>";
@@ -132,15 +130,25 @@
 			isa = PBXGroup;
 			children = (
 				F0E1A984277EDE4B00DD286E /* NameSettingViewController.swift */,
-				F0E1A985277EDE4B00DD286E /* NameSettingViewController.xib */,
 				F0E1A988277EE1EF00DD286E /* WelcomeViewController.swift */,
-				F0E1A989277EE1EF00DD286E /* WelcomeViewController.xib */,
 				F0E1A98C277EE41700DD286E /* MbtiSettingViewController.swift */,
-				F0E1A98D277EE41700DD286E /* MbtiSettingViewController.xib */,
 				F0E1A990277EE70400DD286E /* TimeSettingViewController.swift */,
-				F0E1A991277EE70400DD286E /* TimeSettingViewController.xib */,
 			);
 			path = GDInitialSetting;
+			sourceTree = "<group>";
+		};
+		F0FA07A92782D0F7003FD717 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F07E9D0B27819E2E00C7C6B4 /* FloatingButtonViewController.xib */,
+				F0E1A985277EDE4B00DD286E /* NameSettingViewController.xib */,
+				F0E1A989277EE1EF00DD286E /* WelcomeViewController.xib */,
+				F0E1A98D277EE41700DD286E /* MbtiSettingViewController.xib */,
+				F0E1A991277EE70400DD286E /* TimeSettingViewController.xib */,
+				3239BCA1277D8E5200E96E21 /* Main.storyboard */,
+				3239BCA9277D8E5400E96E21 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +430,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoodDay/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -450,6 +459,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoodDay/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
