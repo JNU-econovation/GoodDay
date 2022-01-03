@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BDC4393ADCFBC9BD88D83E8 /* Pods_GoodDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */; };
 		3239BC9C277D8E5200E96E21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BC9B277D8E5200E96E21 /* AppDelegate.swift */; };
 		3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */; };
 		3239BCA0277D8E5200E96E21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BC9F277D8E5200E96E21 /* ViewController.swift */; };
@@ -14,7 +15,6 @@
 		3239BCA6277D8E5200E96E21 /* GoodDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCA4277D8E5200E96E21 /* GoodDay.xcdatamodeld */; };
 		3239BCA8277D8E5400E96E21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCA7277D8E5400E96E21 /* Assets.xcassets */; };
 		3239BCAB277D8E5400E96E21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCA9277D8E5400E96E21 /* LaunchScreen.storyboard */; };
-<<<<<<< Updated upstream
 		F07E9D0C27819E2E00C7C6B4 /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07E9D0A27819E2E00C7C6B4 /* FloatingButtonViewController.swift */; };
 		F07E9D0D27819E2E00C7C6B4 /* FloatingButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07E9D0B27819E2E00C7C6B4 /* FloatingButtonViewController.xib */; };
 		F07E9D0F2781A25300C7C6B4 /* 30344-hamburger-close-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = F07E9D0E2781A25300C7C6B4 /* 30344-hamburger-close-animation.json */; };
@@ -26,39 +26,9 @@
 		F0E1A98F277EE41700DD286E /* MbtiSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E1A98D277EE41700DD286E /* MbtiSettingViewController.xib */; };
 		F0E1A992277EE70400DD286E /* TimeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E1A990277EE70400DD286E /* TimeSettingViewController.swift */; };
 		F0E1A993277EE70400DD286E /* TimeSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0E1A991277EE70400DD286E /* TimeSettingViewController.xib */; };
-=======
-		3239BCB4277D90DF00E96E21 /* GDMissionPerDayDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCB3277D90DF00E96E21 /* GDMissionPerDayDetail.storyboard */; };
-		3239BCB7277D96DD00E96E21 /* GDMissionPerDayDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCB6277D96DD00E96E21 /* GDMissionPerDayDetailViewController.swift */; };
-		3239BCBA277D98B600E96E21 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCB9277D98B600E96E21 /* ColorUtils.swift */; };
-		3239BCBC277D9AA700E96E21 /* GDPeekingCollectionView.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCBB277D9AA700E96E21 /* GDPeekingCollectionView.Delegate.swift */; };
-		3239BCBE277D9B6100E96E21 /* GDPeekingCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCBD277D9B6100E96E21 /* GDPeekingCollectionViewDataSource.swift */; };
-		3239BCC0277D9D0400E96E21 /* GDBlurEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCBF277D9D0400E96E21 /* GDBlurEffectView.swift */; };
-		3239BCC2277DA03400E96E21 /* FontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCC1277DA03400E96E21 /* FontUtils.swift */; };
-		3239BCC4277E04BF00E96E21 /* GDMissionPerDayWeeks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCC3277E04BF00E96E21 /* GDMissionPerDayWeeks.storyboard */; };
-		3239BCC7277E05DA00E96E21 /* GDMissionPerDayWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCC6277E05DA00E96E21 /* GDMissionPerDayWeek.swift */; };
-		3239BCD1277E0B8D00E96E21 /* NanumSquareL.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCC9277E0B8D00E96E21 /* NanumSquareL.otf */; };
-		3239BCD2277E0B8D00E96E21 /* NanumSquareR.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCCA277E0B8D00E96E21 /* NanumSquareR.otf */; };
-		3239BCD4277E0B8D00E96E21 /* NanumSquareB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCCC277E0B8D00E96E21 /* NanumSquareB.otf */; };
-		3239BCD5277E0B8D00E96E21 /* NanumSquareEB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCCD277E0B8D00E96E21 /* NanumSquareEB.otf */; };
-		3239BCDD277E132300E96E21 /* NanumGothicBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCD9277E132300E96E21 /* NanumGothicBold.otf */; };
-		3239BCDE277E132300E96E21 /* NanumGothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCDA277E132300E96E21 /* NanumGothic.otf */; };
-		3239BCDF277E132300E96E21 /* NanumGothicExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCDB277E132300E96E21 /* NanumGothicExtraBold.otf */; };
-		3239BCE0277E132300E96E21 /* NanumGothicLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCDC277E132300E96E21 /* NanumGothicLight.otf */; };
-		3239BCE2277ED92500E96E21 /* GDMissionPerDayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCE1277ED92500E96E21 /* GDMissionPerDayDetailView.swift */; };
-		3239BCE9277EDE4800E96E21 /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCE3277EDE4700E96E21 /* NotoSansKR-Thin.otf */; };
-		3239BCEA277EDE4800E96E21 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCE4277EDE4700E96E21 /* NotoSansKR-Medium.otf */; };
-		3239BCEB277EDE4800E96E21 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCE5277EDE4700E96E21 /* NotoSansKR-Regular.otf */; };
-		3239BCEC277EDE4800E96E21 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCE6277EDE4700E96E21 /* NotoSansKR-Light.otf */; };
-		3239BCED277EDE4800E96E21 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCE7277EDE4700E96E21 /* NotoSansKR-Bold.otf */; };
-		3239BCEE277EDE4800E96E21 /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCE8277EDE4800E96E21 /* NotoSansKR-Black.otf */; };
-		3239BCF1278097B400E96E21 /* GDMissionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCF0278097B400E96E21 /* GDMissionButton.swift */; };
-		3239BCF42781DEBA00E96E21 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCF32781DEBA00E96E21 /* GoogleService-Info.plist */; };
-		BF4FFCD03C76AEEA1246759E /* Pods_GoodDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F34E05B6CD0BD9D70150938 /* Pods_GoodDay.framework */; };
->>>>>>> Stashed changes
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1662004E1AEFC7808A9A3055 /* Pods-GoodDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.debug.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.debug.xcconfig"; sourceTree = "<group>"; };
 		3239BC98277D8E5200E96E21 /* GoodDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3239BC9B277D8E5200E96E21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +38,6 @@
 		3239BCA7277D8E5400E96E21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3239BCAA277D8E5400E96E21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3239BCAC277D8E5400E96E21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-<<<<<<< Updated upstream
 		70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6CFE1151A1AB88C5915BAD /* Pods-GoodDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.debug.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.debug.xcconfig"; sourceTree = "<group>"; };
 		C9657BA07B3C0A1266C0F7B6 /* Pods-GoodDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.release.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,36 +52,6 @@
 		F0E1A98D277EE41700DD286E /* MbtiSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MbtiSettingViewController.xib; sourceTree = "<group>"; };
 		F0E1A990277EE70400DD286E /* TimeSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingViewController.swift; sourceTree = "<group>"; };
 		F0E1A991277EE70400DD286E /* TimeSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeSettingViewController.xib; sourceTree = "<group>"; };
-=======
-		3239BCB3277D90DF00E96E21 /* GDMissionPerDayDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GDMissionPerDayDetail.storyboard; sourceTree = "<group>"; };
-		3239BCB6277D96DD00E96E21 /* GDMissionPerDayDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMissionPerDayDetailViewController.swift; sourceTree = "<group>"; };
-		3239BCB9277D98B600E96E21 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
-		3239BCBB277D9AA700E96E21 /* GDPeekingCollectionView.Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPeekingCollectionView.Delegate.swift; sourceTree = "<group>"; };
-		3239BCBD277D9B6100E96E21 /* GDPeekingCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPeekingCollectionViewDataSource.swift; sourceTree = "<group>"; };
-		3239BCBF277D9D0400E96E21 /* GDBlurEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDBlurEffectView.swift; sourceTree = "<group>"; };
-		3239BCC1277DA03400E96E21 /* FontUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontUtils.swift; sourceTree = "<group>"; };
-		3239BCC3277E04BF00E96E21 /* GDMissionPerDayWeeks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GDMissionPerDayWeeks.storyboard; sourceTree = "<group>"; };
-		3239BCC6277E05DA00E96E21 /* GDMissionPerDayWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMissionPerDayWeek.swift; sourceTree = "<group>"; };
-		3239BCC9277E0B8D00E96E21 /* NanumSquareL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareL.otf; sourceTree = "<group>"; };
-		3239BCCA277E0B8D00E96E21 /* NanumSquareR.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareR.otf; sourceTree = "<group>"; };
-		3239BCCC277E0B8D00E96E21 /* NanumSquareB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareB.otf; sourceTree = "<group>"; };
-		3239BCCD277E0B8D00E96E21 /* NanumSquareEB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareEB.otf; sourceTree = "<group>"; };
-		3239BCD9277E132300E96E21 /* NanumGothicBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothicBold.otf; sourceTree = "<group>"; };
-		3239BCDA277E132300E96E21 /* NanumGothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothic.otf; sourceTree = "<group>"; };
-		3239BCDB277E132300E96E21 /* NanumGothicExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothicExtraBold.otf; sourceTree = "<group>"; };
-		3239BCDC277E132300E96E21 /* NanumGothicLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothicLight.otf; sourceTree = "<group>"; };
-		3239BCE1277ED92500E96E21 /* GDMissionPerDayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMissionPerDayDetailView.swift; sourceTree = "<group>"; };
-		3239BCE3277EDE4700E96E21 /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
-		3239BCE4277EDE4700E96E21 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
-		3239BCE5277EDE4700E96E21 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
-		3239BCE6277EDE4700E96E21 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
-		3239BCE7277EDE4700E96E21 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
-		3239BCE8277EDE4800E96E21 /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Black.otf"; sourceTree = "<group>"; };
-		3239BCF0278097B400E96E21 /* GDMissionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMissionButton.swift; sourceTree = "<group>"; };
-		3239BCF32781DEBA00E96E21 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3F34E05B6CD0BD9D70150938 /* Pods_GoodDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAE842C2CCBB8DE95AECB84B /* Pods-GoodDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.release.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.release.xcconfig"; sourceTree = "<group>"; };
->>>>>>> Stashed changes
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF4FFCD03C76AEEA1246759E /* Pods_GoodDay.framework in Frameworks */,
+				1BDC4393ADCFBC9BD88D83E8 /* Pods_GoodDay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +72,7 @@
 				3239BC9A277D8E5200E96E21 /* GoodDay */,
 				3239BC99277D8E5200E96E21 /* Products */,
 				96CA59776B761B2CCCDEA62A /* Pods */,
-				7EC113CAB5456984A8D1639A /* Frameworks */,
+				7648B75F7CABB0D80879E589 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,21 +87,12 @@
 		3239BC9A277D8E5200E96E21 /* GoodDay */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< Updated upstream
 				F07E9D0727819DF000C7C6B4 /* FloatingButton */,
 				F0E1A983277EDE2400DD286E /* GDInitialSetting */,
-=======
-				3239BCF32781DEBA00E96E21 /* GoogleService-Info.plist */,
-				3239BCF22781DDC600E96E21 /* DB */,
-				3239BCC8277E0B6100E96E21 /* Fonts */,
-				3239BCC5277E05C100E96E21 /* GDMissionPerDayWeek */,
-				3239BCB8277D989A00E96E21 /* GDUtils */,
-				3239BCB5277D96D200E96E21 /* GDMissionPerDay */,
-				3239BCB2277D90CE00E96E21 /* Views */,
->>>>>>> Stashed changes
 				3239BC9B277D8E5200E96E21 /* AppDelegate.swift */,
 				3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */,
 				3239BC9F277D8E5200E96E21 /* ViewController.swift */,
+				3239BCA1277D8E5200E96E21 /* Main.storyboard */,
 				3239BCA7277D8E5400E96E21 /* Assets.xcassets */,
 				3239BCA9277D8E5400E96E21 /* LaunchScreen.storyboard */,
 				3239BCAC277D8E5400E96E21 /* Info.plist */,
@@ -172,78 +102,10 @@
 			path = GoodDay;
 			sourceTree = "<group>";
 		};
-		3239BCB2277D90CE00E96E21 /* Views */ = {
+		7648B75F7CABB0D80879E589 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3239BCA1277D8E5200E96E21 /* Main.storyboard */,
-				3239BCB3277D90DF00E96E21 /* GDMissionPerDayDetail.storyboard */,
-				3239BCC3277E04BF00E96E21 /* GDMissionPerDayWeeks.storyboard */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		3239BCB5277D96D200E96E21 /* GDMissionPerDay */ = {
-			isa = PBXGroup;
-			children = (
-				3239BCB6277D96DD00E96E21 /* GDMissionPerDayDetailViewController.swift */,
-				3239BCBB277D9AA700E96E21 /* GDPeekingCollectionView.Delegate.swift */,
-				3239BCBD277D9B6100E96E21 /* GDPeekingCollectionViewDataSource.swift */,
-				3239BCE1277ED92500E96E21 /* GDMissionPerDayDetailView.swift */,
-			);
-			path = GDMissionPerDay;
-			sourceTree = "<group>";
-		};
-		3239BCB8277D989A00E96E21 /* GDUtils */ = {
-			isa = PBXGroup;
-			children = (
-				3239BCB9277D98B600E96E21 /* ColorUtils.swift */,
-				3239BCBF277D9D0400E96E21 /* GDBlurEffectView.swift */,
-				3239BCC1277DA03400E96E21 /* FontUtils.swift */,
-			);
-			path = GDUtils;
-			sourceTree = "<group>";
-		};
-		3239BCC5277E05C100E96E21 /* GDMissionPerDayWeek */ = {
-			isa = PBXGroup;
-			children = (
-				3239BCF0278097B400E96E21 /* GDMissionButton.swift */,
-				3239BCC6277E05DA00E96E21 /* GDMissionPerDayWeek.swift */,
-			);
-			path = GDMissionPerDayWeek;
-			sourceTree = "<group>";
-		};
-		3239BCC8277E0B6100E96E21 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				3239BCDA277E132300E96E21 /* NanumGothic.otf */,
-				3239BCD9277E132300E96E21 /* NanumGothicBold.otf */,
-				3239BCDB277E132300E96E21 /* NanumGothicExtraBold.otf */,
-				3239BCDC277E132300E96E21 /* NanumGothicLight.otf */,
-				3239BCCC277E0B8D00E96E21 /* NanumSquareB.otf */,
-				3239BCCD277E0B8D00E96E21 /* NanumSquareEB.otf */,
-				3239BCC9277E0B8D00E96E21 /* NanumSquareL.otf */,
-				3239BCCA277E0B8D00E96E21 /* NanumSquareR.otf */,
-				3239BCE8277EDE4800E96E21 /* NotoSansKR-Black.otf */,
-				3239BCE7277EDE4700E96E21 /* NotoSansKR-Bold.otf */,
-				3239BCE6277EDE4700E96E21 /* NotoSansKR-Light.otf */,
-				3239BCE4277EDE4700E96E21 /* NotoSansKR-Medium.otf */,
-				3239BCE5277EDE4700E96E21 /* NotoSansKR-Regular.otf */,
-				3239BCE3277EDE4700E96E21 /* NotoSansKR-Thin.otf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		3239BCF22781DDC600E96E21 /* DB */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DB;
-			sourceTree = "<group>";
-		};
-		7EC113CAB5456984A8D1639A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3F34E05B6CD0BD9D70150938 /* Pods_GoodDay.framework */,
+				70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -251,8 +113,8 @@
 		96CA59776B761B2CCCDEA62A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1662004E1AEFC7808A9A3055 /* Pods-GoodDay.debug.xcconfig */,
-				BAE842C2CCBB8DE95AECB84B /* Pods-GoodDay.release.xcconfig */,
+				9B6CFE1151A1AB88C5915BAD /* Pods-GoodDay.debug.xcconfig */,
+				C9657BA07B3C0A1266C0F7B6 /* Pods-GoodDay.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -288,15 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3239BCAF277D8E5400E96E21 /* Build configuration list for PBXNativeTarget "GoodDay" */;
 			buildPhases = (
-				9F4235F3594F0F15534E851F /* [CP] Check Pods Manifest.lock */,
+				A397044CA2148AF6FDB5B486 /* [CP] Check Pods Manifest.lock */,
 				3239BC94277D8E5200E96E21 /* Sources */,
 				3239BC95277D8E5200E96E21 /* Frameworks */,
 				3239BC96277D8E5200E96E21 /* Resources */,
-<<<<<<< Updated upstream
 				3BA1A1170F9714211C84B6C0 /* [CP] Embed Pods Frameworks */,
-=======
-				A7E3FED5833D1BF163C0858A /* [CP] Embed Pods Frameworks */,
->>>>>>> Stashed changes
 			);
 			buildRules = (
 			);
@@ -345,7 +203,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< Updated upstream
 				F07E9D0D27819E2E00C7C6B4 /* FloatingButtonViewController.xib in Resources */,
 				F0E1A98B277EE1EF00DD286E /* WelcomeViewController.xib in Resources */,
 				F0E1A98F277EE41700DD286E /* MbtiSettingViewController.xib in Resources */,
@@ -354,35 +211,13 @@
 				F0E1A993277EE70400DD286E /* TimeSettingViewController.xib in Resources */,
 				3239BCA8277D8E5400E96E21 /* Assets.xcassets in Resources */,
 				F07E9D0F2781A25300C7C6B4 /* 30344-hamburger-close-animation.json in Resources */,
-=======
-				3239BCE0277E132300E96E21 /* NanumGothicLight.otf in Resources */,
-				3239BCB4277D90DF00E96E21 /* GDMissionPerDayDetail.storyboard in Resources */,
-				3239BCDF277E132300E96E21 /* NanumGothicExtraBold.otf in Resources */,
-				3239BCD2277E0B8D00E96E21 /* NanumSquareR.otf in Resources */,
-				3239BCED277EDE4800E96E21 /* NotoSansKR-Bold.otf in Resources */,
-				3239BCC4277E04BF00E96E21 /* GDMissionPerDayWeeks.storyboard in Resources */,
-				3239BCD5277E0B8D00E96E21 /* NanumSquareEB.otf in Resources */,
-				3239BCD4277E0B8D00E96E21 /* NanumSquareB.otf in Resources */,
-				3239BCAB277D8E5400E96E21 /* LaunchScreen.storyboard in Resources */,
-				3239BCE9277EDE4800E96E21 /* NotoSansKR-Thin.otf in Resources */,
-				3239BCDE277E132300E96E21 /* NanumGothic.otf in Resources */,
-				3239BCD1277E0B8D00E96E21 /* NanumSquareL.otf in Resources */,
-				3239BCEE277EDE4800E96E21 /* NotoSansKR-Black.otf in Resources */,
-				3239BCA8277D8E5400E96E21 /* Assets.xcassets in Resources */,
-				3239BCEA277EDE4800E96E21 /* NotoSansKR-Medium.otf in Resources */,
-				3239BCDD277E132300E96E21 /* NanumGothicBold.otf in Resources */,
-				3239BCEB277EDE4800E96E21 /* NotoSansKR-Regular.otf in Resources */,
-				3239BCF42781DEBA00E96E21 /* GoogleService-Info.plist in Resources */,
->>>>>>> Stashed changes
 				3239BCA3277D8E5200E96E21 /* Main.storyboard in Resources */,
-				3239BCEC277EDE4800E96E21 /* NotoSansKR-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-<<<<<<< Updated upstream
 		3BA1A1170F9714211C84B6C0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -401,9 +236,6 @@
 			showEnvVarsInLog = 0;
 		};
 		A397044CA2148AF6FDB5B486 /* [CP] Check Pods Manifest.lock */ = {
-=======
-		9F4235F3594F0F15534E851F /* [CP] Check Pods Manifest.lock */ = {
->>>>>>> Stashed changes
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -425,23 +257,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A7E3FED5833D1BF163C0858A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GoodDay/Pods-GoodDay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GoodDay/Pods-GoodDay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoodDay/Pods-GoodDay-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -449,28 +264,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3239BCBC277D9AA700E96E21 /* GDPeekingCollectionView.Delegate.swift in Sources */,
-				3239BCB7277D96DD00E96E21 /* GDMissionPerDayDetailViewController.swift in Sources */,
-				3239BCF1278097B400E96E21 /* GDMissionButton.swift in Sources */,
-				3239BCC2277DA03400E96E21 /* FontUtils.swift in Sources */,
-				3239BCBE277D9B6100E96E21 /* GDPeekingCollectionViewDataSource.swift in Sources */,
 				3239BCA0277D8E5200E96E21 /* ViewController.swift in Sources */,
 				3239BC9C277D8E5200E96E21 /* AppDelegate.swift in Sources */,
-<<<<<<< Updated upstream
 				F0E1A986277EDE4B00DD286E /* NameSettingViewController.swift in Sources */,
 				F0E1A98A277EE1EF00DD286E /* WelcomeViewController.swift in Sources */,
 				F0E1A98E277EE41700DD286E /* MbtiSettingViewController.swift in Sources */,
 				3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */,
 				F0E1A992277EE70400DD286E /* TimeSettingViewController.swift in Sources */,
 				F07E9D0C27819E2E00C7C6B4 /* FloatingButtonViewController.swift in Sources */,
-=======
-				3239BCE2277ED92500E96E21 /* GDMissionPerDayDetailView.swift in Sources */,
-				3239BCBA277D98B600E96E21 /* ColorUtils.swift in Sources */,
-				3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */,
-				3239BCC0277D9D0400E96E21 /* GDBlurEffectView.swift in Sources */,
->>>>>>> Stashed changes
 				3239BCA6277D8E5200E96E21 /* GoodDay.xcdatamodeld in Sources */,
-				3239BCC7277E05DA00E96E21 /* GDMissionPerDayWeek.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,7 +335,6 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -595,7 +396,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -607,7 +407,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -617,14 +416,11 @@
 		};
 		3239BCB0277D8E5400E96E21 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1662004E1AEFC7808A9A3055 /* Pods-GoodDay.debug.xcconfig */;
+			baseConfigurationReference = 9B6CFE1151A1AB88C5915BAD /* Pods-GoodDay.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 88WFD6M5FC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoodDay/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -632,7 +428,6 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -640,7 +435,6 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.FourLeafClover.GoodDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -649,14 +443,11 @@
 		};
 		3239BCB1277D8E5400E96E21 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAE842C2CCBB8DE95AECB84B /* Pods-GoodDay.release.xcconfig */;
+			baseConfigurationReference = C9657BA07B3C0A1266C0F7B6 /* Pods-GoodDay.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 88WFD6M5FC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoodDay/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -664,16 +455,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.FourLeafClover.GoodDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

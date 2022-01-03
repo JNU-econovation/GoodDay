@@ -1,19 +1,4 @@
 PODS:
-<<<<<<< Updated upstream
-  - lottie-ios (3.3.0)
-
-DEPENDENCIES:
-  - lottie-ios
-
-SPEC REPOS:
-  trunk:
-    - lottie-ios
-
-SPEC CHECKSUMS:
-  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
-
-PODFILE CHECKSUM: 6bb1f045d7f3cfac8befee1f661e62dc7689c003
-=======
   - abseil/algorithm (0.20200225.0):
     - abseil/algorithm/algorithm (= 0.20200225.0)
     - abseil/algorithm/container (= 0.20200225.0)
@@ -341,6 +326,7 @@ PODFILE CHECKSUM: 6bb1f045d7f3cfac8befee1f661e62dc7689c003
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.7.0)
   - leveldb-library (1.22.1)
+  - lottie-ios (3.3.0)
   - MSPeekCollectionViewDelegateImplementation (3.2.0)
   - nanopb (1.30906.0):
     - nanopb/decode (= 1.30906.0)
@@ -355,6 +341,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - FirebaseFirestoreSwift
+  - lottie-ios
   - MSPeekCollectionViewDelegateImplementation
   - ScrollStackController
 
@@ -377,6 +364,7 @@ SPEC REPOS:
     - gRPC-Core
     - GTMSessionFetcher
     - leveldb-library
+    - lottie-ios
     - MSPeekCollectionViewDelegateImplementation
     - nanopb
     - PromisesObjC
@@ -400,12 +388,12 @@ SPEC CHECKSUMS:
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
+  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   MSPeekCollectionViewDelegateImplementation: be35a217bd302976a9e4476151be992c1f150127
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   ScrollStackController: a3653918f0be6cf8c6e9f658acaf9d0bd0ae9478
 
-PODFILE CHECKSUM: f9fd9b8c46f8c1e9bbe9f12313e39c929346fc5e
->>>>>>> Stashed changes
+PODFILE CHECKSUM: 6c7cfd054d5fa06a50e8ce4232759ede7c617010
 
 COCOAPODS: 1.11.2
