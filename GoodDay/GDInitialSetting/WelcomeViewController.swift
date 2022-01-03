@@ -39,12 +39,7 @@ class WelcomeViewController: UIViewController {
         NameSettingVC.modalTransitionStyle = .crossDissolve
         
         self.present(NameSettingVC, animated: true, completion: nil)
-        
-        
     }
-    
-
-
 }
 
 

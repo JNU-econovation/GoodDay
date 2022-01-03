@@ -40,8 +40,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.rootViewController = mainVC
             
         }
-        
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

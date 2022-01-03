@@ -27,6 +27,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         configureUserNameLabel()
         configureAnimationView()
+        // Do any additional setup after loading the view.
+        
+        let backBarButtonItem = UIBarButtonItem(title: "GOOD DAY", style: .plain, target: self, action: nil)
+        backBarButtonItem.tintColor = .black
+        //self.navigationItem.backBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "NanumSquareL", size: 18)!], for: .normal)
+        self.navigationItem.backBarButtonItem = backBarButtonItem
     }
 
     
