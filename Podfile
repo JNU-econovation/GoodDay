@@ -6,5 +6,5 @@ target 'GoodDay' do
   use_frameworks!
 
   # Pods for GoodDay
-
+  pod 'lottie-ios'
 end
