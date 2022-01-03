@@ -15,6 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     
         guard let _ = (scene as? UIWindowScene) else { return }
+<<<<<<< Updated upstream
         
         let userDefaults = UserDefaults.standard
         
@@ -42,6 +43,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
         
+=======
+    
+>>>>>>> Stashed changes
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
