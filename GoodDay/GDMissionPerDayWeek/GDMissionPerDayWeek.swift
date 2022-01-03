@@ -8,7 +8,6 @@
 
 import UIKit
 import ScrollStackController
-import EMTNeumorphicView
 
 class GDMissionPerDayWeekViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
@@ -59,7 +58,10 @@ extension GDMissionPerDayWeekViewController {
     }
     
     func getOneWeekImage(missionState: missionStatement, buttonSize: CGFloat, position: CGSize) -> UIImageView {
-        let imageView = 
+        let imageView = UIImageView()
+        
+        return imageView
+        
     }
     
     func getOneWekButton(missionState: missionStatement, buttonSize: CGFloat, position: CGSize) -> UIButton {

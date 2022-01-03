@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class ViewController: UIViewController {
+    let db = Firestore.firestore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +19,7 @@ class ViewController: UIViewController {
         backBarButtonItem.tintColor = .black
         //self.navigationItem.backBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "NanumSquareL", size: 18)!], for: .normal)
         self.navigationItem.backBarButtonItem = backBarButtonItem
+        
     }
 
 
