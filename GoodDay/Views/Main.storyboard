@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="Y6W-OH-hqX" customClass="ViewController" customModule="GoodDay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD DAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK2-HA-jkY">
+                                <rect key="frame" x="36" y="84" width="122" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시형님," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17B-7G-CbK">
+                                <rect key="frame" x="36" y="263" width="328" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘 하루도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGP-rb-571">
+                                <rect key="frame" x="36" y="311" width="159" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="힘내세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCY-Ju-Rb5">
+                                <rect key="frame" x="36" y="359" width="129" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JCY-Ju-Rb5" firstAttribute="top" secondItem="VGP-rb-571" secondAttribute="bottom" constant="6" id="1vu-Xy-WhL"/>
+                            <constraint firstItem="YK2-HA-jkY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="4OA-QG-uhi"/>
+                            <constraint firstItem="17B-7G-CbK" firstAttribute="top" secondItem="YK2-HA-jkY" secondAttribute="bottom" constant="150" id="6eo-Vp-cXV"/>
+                            <constraint firstItem="YK2-HA-jkY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="G4s-gq-W4q"/>
+                            <constraint firstItem="VGP-rb-571" firstAttribute="top" secondItem="17B-7G-CbK" secondAttribute="bottom" constant="6" id="Izr-vd-Sqc"/>
+                            <constraint firstItem="JCY-Ju-Rb5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="Njn-47-r8e"/>
+                            <constraint firstItem="VGP-rb-571" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="OJg-s5-C7R"/>
+                            <constraint firstItem="17B-7G-CbK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="aQo-nA-pUv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="17B-7G-CbK" secondAttribute="trailing" constant="50" id="skx-EG-2rV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="userNameLabel" destination="17B-7G-CbK" id="Ad6-nm-H4g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112" y="106"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

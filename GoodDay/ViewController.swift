@@ -18,8 +18,9 @@ class ViewController: UIViewController {
     var wakeUpTime: Date?
     var sleepTime: Date?
     
-    @IBOutlet weak var userNameLabel: UILabel!
+
     
+    @IBOutlet weak var userNameLabel: UILabel!
     var isShowFloating: Bool = true
     let animationView = AnimationView(name: "30344-hamburger-close-animation")
     
@@ -29,10 +30,7 @@ class ViewController: UIViewController {
         configureAnimationView()
         // Do any additional setup after loading the view.
         
-        let backBarButtonItem = UIBarButtonItem(title: "GOOD DAY", style: .plain, target: self, action: nil)
-        backBarButtonItem.tintColor = .black
-        //self.navigationItem.backBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "NanumSquareL", size: 18)!], for: .normal)
-        self.navigationItem.backBarButtonItem = backBarButtonItem
+        
     }
 
     

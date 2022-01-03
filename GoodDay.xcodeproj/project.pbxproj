@@ -11,10 +11,10 @@
 		3239BC9C277D8E5200E96E21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BC9B277D8E5200E96E21 /* AppDelegate.swift */; };
 		3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */; };
 		3239BCA0277D8E5200E96E21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BC9F277D8E5200E96E21 /* ViewController.swift */; };
-		3239BCA3277D8E5200E96E21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCA1277D8E5200E96E21 /* Main.storyboard */; };
 		3239BCA6277D8E5200E96E21 /* GoodDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCA4277D8E5200E96E21 /* GoodDay.xcdatamodeld */; };
 		3239BCA8277D8E5400E96E21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCA7277D8E5400E96E21 /* Assets.xcassets */; };
 		3239BCAB277D8E5400E96E21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCA9277D8E5400E96E21 /* LaunchScreen.storyboard */; };
+		F068BDB62782DCEF001035B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F068BDB52782DCEF001035B6 /* Main.storyboard */; };
 		F07E9D0C27819E2E00C7C6B4 /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07E9D0A27819E2E00C7C6B4 /* FloatingButtonViewController.swift */; };
 		F07E9D0D27819E2E00C7C6B4 /* FloatingButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07E9D0B27819E2E00C7C6B4 /* FloatingButtonViewController.xib */; };
 		F07E9D0F2781A25300C7C6B4 /* 30344-hamburger-close-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = F07E9D0E2781A25300C7C6B4 /* 30344-hamburger-close-animation.json */; };
@@ -33,7 +33,6 @@
 		3239BC9B277D8E5200E96E21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3239BC9F277D8E5200E96E21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3239BCA2277D8E5200E96E21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3239BCA5277D8E5200E96E21 /* GoodDay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoodDay.xcdatamodel; sourceTree = "<group>"; };
 		3239BCA7277D8E5400E96E21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3239BCAA277D8E5400E96E21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,6 +40,7 @@
 		70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6CFE1151A1AB88C5915BAD /* Pods-GoodDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.debug.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.debug.xcconfig"; sourceTree = "<group>"; };
 		C9657BA07B3C0A1266C0F7B6 /* Pods-GoodDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.release.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.release.xcconfig"; sourceTree = "<group>"; };
+		F068BDB52782DCEF001035B6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F07E9D0A27819E2E00C7C6B4 /* FloatingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonViewController.swift; sourceTree = "<group>"; };
 		F07E9D0B27819E2E00C7C6B4 /* FloatingButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloatingButtonViewController.xib; sourceTree = "<group>"; };
 		F07E9D0E2781A25300C7C6B4 /* 30344-hamburger-close-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "30344-hamburger-close-animation.json"; sourceTree = "<group>"; };
@@ -145,8 +145,8 @@
 				F0E1A989277EE1EF00DD286E /* WelcomeViewController.xib */,
 				F0E1A98D277EE41700DD286E /* MbtiSettingViewController.xib */,
 				F0E1A991277EE70400DD286E /* TimeSettingViewController.xib */,
-				3239BCA1277D8E5200E96E21 /* Main.storyboard */,
 				3239BCA9277D8E5400E96E21 /* LaunchScreen.storyboard */,
+				F068BDB52782DCEF001035B6 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,9 +217,9 @@
 				F0E1A987277EDE4B00DD286E /* NameSettingViewController.xib in Resources */,
 				3239BCAB277D8E5400E96E21 /* LaunchScreen.storyboard in Resources */,
 				F0E1A993277EE70400DD286E /* TimeSettingViewController.xib in Resources */,
+				F068BDB62782DCEF001035B6 /* Main.storyboard in Resources */,
 				3239BCA8277D8E5400E96E21 /* Assets.xcassets in Resources */,
 				F07E9D0F2781A25300C7C6B4 /* 30344-hamburger-close-animation.json in Resources */,
-				3239BCA3277D8E5200E96E21 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,14 +287,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3239BCA1277D8E5200E96E21 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3239BCA2277D8E5200E96E21 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3239BCA9277D8E5400E96E21 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -44,7 +44,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일상의 회복을 돕는 이별 극복 서포팅 앱 입니다. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vo9-Ts-0U7">
-                    <rect key="frame" x="44" y="352" width="320" height="21"/>
+                    <rect key="frame" x="44" y="352" width="350" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -93,7 +93,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AIX-Jk-UsM" secondAttribute="trailing" constant="50" id="GFl-Kr-5Cs"/>
                 <constraint firstItem="XAh-xu-eWg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="Gnl-FH-LSz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vAk-mt-GYq" secondAttribute="trailing" constant="50" id="I7d-ca-WEc"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vo9-Ts-0U7" secondAttribute="trailing" constant="50" id="KJC-xq-98m"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vo9-Ts-0U7" secondAttribute="trailing" constant="20" id="KJC-xq-98m"/>
                 <constraint firstItem="AIX-Jk-UsM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="Kmt-h5-1yU"/>
                 <constraint firstItem="vAk-mt-GYq" firstAttribute="top" secondItem="te5-wM-zGZ" secondAttribute="bottom" constant="4" id="LGb-cz-3nT"/>
                 <constraint firstItem="AIX-Jk-UsM" firstAttribute="top" secondItem="fw2-MJ-60U" secondAttribute="bottom" constant="35" id="MV5-uN-y24"/>
