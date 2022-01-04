@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     var wakeUpTime: Date?
     var sleepTime: Date?
     
-
     
     @IBOutlet weak var userNameLabel: UILabel!
     var isShowFloating: Bool = true
@@ -60,13 +59,9 @@ class ViewController: UIViewController {
             animationView.animationSpeed = 5
             
             let floatingButtonVC = FloatingButtonViewController(nibName: "FloatingButtonViewController", bundle: nil)
-            
             floatingButtonVC.modalPresentationStyle = .overCurrentContext
-            
             floatingButtonVC.delegate = self
-            
             self.present(floatingButtonVC, animated: false, completion: nil)
-    
             
         }
         
@@ -83,7 +78,6 @@ extension ViewController: DelegateFloatingButtonViewController {
             animationView.play(fromFrame: animationView.animation?.endFrame, toFrame: animationView.animation!.startFrame)
             self.isShowFloating = true
         }
-        
         
     }
 }

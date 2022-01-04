@@ -192,6 +192,8 @@ class FloatingButtonViewController: UIViewController {
         missionButton.layer.shadowOffset = CGSize.zero
         missionButton.layer.shadowRadius = 5
         missionButton.translatesAutoresizingMaskIntoConstraints = false
+        missionButton.addTarget(self, action: #selector(tapMissionButton(_:)), for: .touchUpInside)
+
         
         diaryButton.layer.cornerRadius = diaryButton.bounds.height / 2
         diaryButton.layer.shadowColor = UIColor.gray.cgColor
@@ -208,7 +210,16 @@ class FloatingButtonViewController: UIViewController {
         myPageButton.translatesAutoresizingMaskIntoConstraints = false
         
     }
+    
+    @IBAction func tapMissionButton(_ sender: UIButton) {
+        
+        let GDMissionPerDayDetailVC = GDMissionPerDayDetailViewController(nibName: "GDMissionPerDayDetail", bundle: nil)
 
+        GDMissionPerDayDetailVC.modalPresentationStyle = .overFullScreen
+        GDMissionPerDayDetailVC.modalTransitionStyle = .crossDissolve
+        
+        self.present(GDMissionPerDayDetailVC, animated: true, completion: nil)
+    }
     
 
 

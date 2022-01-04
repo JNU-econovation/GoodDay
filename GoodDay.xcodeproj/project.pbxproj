@@ -12,25 +12,20 @@
 		3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */; };
 		3239BCA0277D8E5200E96E21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BC9F277D8E5200E96E21 /* ViewController.swift */; };
 		3239BCA6277D8E5200E96E21 /* GoodDay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3239BCA4277D8E5200E96E21 /* GoodDay.xcdatamodeld */; };
-		3239BCA8277D8E5400E96E21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCA7277D8E5400E96E21 /* Assets.xcassets */; };
 		3239BCAB277D8E5400E96E21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3239BCA9277D8E5400E96E21 /* LaunchScreen.storyboard */; };
 		32F2436B27833BC900F1D160 /* GDPeekingCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2434D27833BC900F1D160 /* GDPeekingCollectionViewDataSource.swift */; };
 		32F2436C27833BC900F1D160 /* GDMissionPerDayDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2434E27833BC900F1D160 /* GDMissionPerDayDetailViewController.swift */; };
 		32F2436D27833BC900F1D160 /* GDPeekingCollectionView.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2434F27833BC900F1D160 /* GDPeekingCollectionView.Delegate.swift */; };
 		32F2436E27833BC900F1D160 /* GDMissionPerDayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2435027833BC900F1D160 /* GDMissionPerDayDetailView.swift */; };
 		32F2436F27833BC900F1D160 /* NanumGothicBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32F2435227833BC900F1D160 /* NanumGothicBold.otf */; };
-		32F2437027833BC900F1D160 /* NanumSquareOTF_acEB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32F2435327833BC900F1D160 /* NanumSquareOTF_acEB.otf */; };
 		32F2437127833BC900F1D160 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32F2435427833BC900F1D160 /* NotoSansKR-Light.otf */; };
 		32F2437227833BC900F1D160 /* NanumSquareL.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32F2435527833BC900F1D160 /* NanumSquareL.otf */; };
 		32F2437327833BC900F1D160 /* NanumSquareEB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32F2435627833BC900F1D160 /* NanumSquareEB.otf */; };
-		32F2437427833BC900F1D160 /* NanumSquareOTF_acL.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32F2435727833BC900F1D160 /* NanumSquareOTF_acL.otf */; };
 		32F2437527833BC900F1D160 /* NanumGothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32F2435827833BC900F1D160 /* NanumGothic.otf */; };
 		32F2437627833BC900F1D160 /* NanumGothicExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32F2435927833BC900F1D160 /* NanumGothicExtraBold.otf */; };
 		32F2437727833BC900F1D160 /* NanumSquareR.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32F2435A27833BC900F1D160 /* NanumSquareR.otf */; };
-		32F2437827833BC900F1D160 /* NanumSquareOTF_acR.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32F2435B27833BC900F1D160 /* NanumSquareOTF_acR.otf */; };
 		32F2437927833BC900F1D160 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32F2435C27833BC900F1D160 /* NotoSansKR-Bold.otf */; };
 		32F2437A27833BC900F1D160 /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32F2435D27833BC900F1D160 /* NotoSansKR-Thin.otf */; };
-		32F2437B27833BC900F1D160 /* NanumSquareOTF_acB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32F2435E27833BC900F1D160 /* NanumSquareOTF_acB.otf */; };
 		32F2437C27833BC900F1D160 /* NanumSquareB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32F2435F27833BC900F1D160 /* NanumSquareB.otf */; };
 		32F2437D27833BC900F1D160 /* NanumGothicLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32F2436027833BC900F1D160 /* NanumGothicLight.otf */; };
 		32F2437E27833BC900F1D160 /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32F2436127833BC900F1D160 /* NotoSansKR-Black.otf */; };
@@ -42,7 +37,8 @@
 		32F2438427833BC900F1D160 /* FontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2436927833BC900F1D160 /* FontUtils.swift */; };
 		32F2438527833BC900F1D160 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F2436A27833BC900F1D160 /* ColorUtils.swift */; };
 		32F2438827833BED00F1D160 /* GDMissionPerDayWeeks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32F2438627833BED00F1D160 /* GDMissionPerDayWeeks.storyboard */; };
-		32F2438927833BED00F1D160 /* GDMissionPerDayDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32F2438727833BED00F1D160 /* GDMissionPerDayDetail.storyboard */; };
+		32F2438D2783D47A00F1D160 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32F2438C2783D47A00F1D160 /* Assets.xcassets */; };
+		32F2438F2783E4D200F1D160 /* GDMissionPerDayDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32F2438E2783E4D200F1D160 /* GDMissionPerDayDetail.xib */; };
 		F068BDB62782DCEF001035B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F068BDB52782DCEF001035B6 /* Main.storyboard */; };
 		F07E9D0C27819E2E00C7C6B4 /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07E9D0A27819E2E00C7C6B4 /* FloatingButtonViewController.swift */; };
 		F07E9D0D27819E2E00C7C6B4 /* FloatingButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07E9D0B27819E2E00C7C6B4 /* FloatingButtonViewController.xib */; };
@@ -63,7 +59,6 @@
 		3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3239BC9F277D8E5200E96E21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3239BCA5277D8E5200E96E21 /* GoodDay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoodDay.xcdatamodel; sourceTree = "<group>"; };
-		3239BCA7277D8E5400E96E21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3239BCAA277D8E5400E96E21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3239BCAC277D8E5400E96E21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32F2434D27833BC900F1D160 /* GDPeekingCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDPeekingCollectionViewDataSource.swift; sourceTree = "<group>"; };
@@ -71,18 +66,14 @@
 		32F2434F27833BC900F1D160 /* GDPeekingCollectionView.Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDPeekingCollectionView.Delegate.swift; sourceTree = "<group>"; };
 		32F2435027833BC900F1D160 /* GDMissionPerDayDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDMissionPerDayDetailView.swift; sourceTree = "<group>"; };
 		32F2435227833BC900F1D160 /* NanumGothicBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothicBold.otf; sourceTree = "<group>"; };
-		32F2435327833BC900F1D160 /* NanumSquareOTF_acEB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTF_acEB.otf; sourceTree = "<group>"; };
 		32F2435427833BC900F1D160 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
 		32F2435527833BC900F1D160 /* NanumSquareL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareL.otf; sourceTree = "<group>"; };
 		32F2435627833BC900F1D160 /* NanumSquareEB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareEB.otf; sourceTree = "<group>"; };
-		32F2435727833BC900F1D160 /* NanumSquareOTF_acL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTF_acL.otf; sourceTree = "<group>"; };
 		32F2435827833BC900F1D160 /* NanumGothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothic.otf; sourceTree = "<group>"; };
 		32F2435927833BC900F1D160 /* NanumGothicExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothicExtraBold.otf; sourceTree = "<group>"; };
 		32F2435A27833BC900F1D160 /* NanumSquareR.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareR.otf; sourceTree = "<group>"; };
-		32F2435B27833BC900F1D160 /* NanumSquareOTF_acR.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTF_acR.otf; sourceTree = "<group>"; };
 		32F2435C27833BC900F1D160 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		32F2435D27833BC900F1D160 /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
-		32F2435E27833BC900F1D160 /* NanumSquareOTF_acB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTF_acB.otf; sourceTree = "<group>"; };
 		32F2435F27833BC900F1D160 /* NanumSquareB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareB.otf; sourceTree = "<group>"; };
 		32F2436027833BC900F1D160 /* NanumGothicLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothicLight.otf; sourceTree = "<group>"; };
 		32F2436127833BC900F1D160 /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Black.otf"; sourceTree = "<group>"; };
@@ -94,7 +85,8 @@
 		32F2436927833BC900F1D160 /* FontUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontUtils.swift; sourceTree = "<group>"; };
 		32F2436A27833BC900F1D160 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		32F2438627833BED00F1D160 /* GDMissionPerDayWeeks.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GDMissionPerDayWeeks.storyboard; sourceTree = "<group>"; };
-		32F2438727833BED00F1D160 /* GDMissionPerDayDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GDMissionPerDayDetail.storyboard; sourceTree = "<group>"; };
+		32F2438C2783D47A00F1D160 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		32F2438E2783E4D200F1D160 /* GDMissionPerDayDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDMissionPerDayDetail.xib; sourceTree = "<group>"; };
 		70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6CFE1151A1AB88C5915BAD /* Pods-GoodDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.debug.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.debug.xcconfig"; sourceTree = "<group>"; };
 		C9657BA07B3C0A1266C0F7B6 /* Pods-GoodDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.release.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +137,7 @@
 		3239BC9A277D8E5200E96E21 /* GoodDay */ = {
 			isa = PBXGroup;
 			children = (
+				32F2438C2783D47A00F1D160 /* Assets.xcassets */,
 				32F2435127833BC900F1D160 /* Fonts */,
 				32F2434C27833BC900F1D160 /* GDMissionPerDay */,
 				32F2436427833BC900F1D160 /* GDMissionPerDayWeek */,
@@ -155,7 +148,6 @@
 				3239BC9B277D8E5200E96E21 /* AppDelegate.swift */,
 				3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */,
 				3239BC9F277D8E5200E96E21 /* ViewController.swift */,
-				3239BCA7277D8E5400E96E21 /* Assets.xcassets */,
 				3239BCAC277D8E5400E96E21 /* Info.plist */,
 				3239BCA4277D8E5200E96E21 /* GoodDay.xcdatamodeld */,
 				F07E9D0E2781A25300C7C6B4 /* 30344-hamburger-close-animation.json */,
@@ -177,24 +169,20 @@
 		32F2435127833BC900F1D160 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				32F2435227833BC900F1D160 /* NanumGothicBold.otf */,
-				32F2435327833BC900F1D160 /* NanumSquareOTF_acEB.otf */,
-				32F2435427833BC900F1D160 /* NotoSansKR-Light.otf */,
-				32F2435527833BC900F1D160 /* NanumSquareL.otf */,
-				32F2435627833BC900F1D160 /* NanumSquareEB.otf */,
-				32F2435727833BC900F1D160 /* NanumSquareOTF_acL.otf */,
 				32F2435827833BC900F1D160 /* NanumGothic.otf */,
+				32F2435227833BC900F1D160 /* NanumGothicBold.otf */,
 				32F2435927833BC900F1D160 /* NanumGothicExtraBold.otf */,
-				32F2435A27833BC900F1D160 /* NanumSquareR.otf */,
-				32F2435B27833BC900F1D160 /* NanumSquareOTF_acR.otf */,
-				32F2435C27833BC900F1D160 /* NotoSansKR-Bold.otf */,
-				32F2435D27833BC900F1D160 /* NotoSansKR-Thin.otf */,
-				32F2435E27833BC900F1D160 /* NanumSquareOTF_acB.otf */,
-				32F2435F27833BC900F1D160 /* NanumSquareB.otf */,
 				32F2436027833BC900F1D160 /* NanumGothicLight.otf */,
+				32F2435F27833BC900F1D160 /* NanumSquareB.otf */,
+				32F2435627833BC900F1D160 /* NanumSquareEB.otf */,
+				32F2435527833BC900F1D160 /* NanumSquareL.otf */,
+				32F2435A27833BC900F1D160 /* NanumSquareR.otf */,
 				32F2436127833BC900F1D160 /* NotoSansKR-Black.otf */,
+				32F2435C27833BC900F1D160 /* NotoSansKR-Bold.otf */,
+				32F2435427833BC900F1D160 /* NotoSansKR-Light.otf */,
 				32F2436227833BC900F1D160 /* NotoSansKR-Medium.otf */,
 				32F2436327833BC900F1D160 /* NotoSansKR-Regular.otf */,
+				32F2435D27833BC900F1D160 /* NotoSansKR-Thin.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -263,7 +251,7 @@
 				F0E1A98D277EE41700DD286E /* MbtiSettingViewController.xib */,
 				F0E1A991277EE70400DD286E /* TimeSettingViewController.xib */,
 				3239BCA9277D8E5400E96E21 /* LaunchScreen.storyboard */,
-				32F2438727833BED00F1D160 /* GDMissionPerDayDetail.storyboard */,
+				32F2438E2783E4D200F1D160 /* GDMissionPerDayDetail.xib */,
 				32F2438627833BED00F1D160 /* GDMissionPerDayWeeks.storyboard */,
 				F068BDB52782DCEF001035B6 /* Main.storyboard */,
 			);
@@ -334,8 +322,7 @@
 				F0E1A98B277EE1EF00DD286E /* WelcomeViewController.xib in Resources */,
 				32F2437F27833BC900F1D160 /* NotoSansKR-Medium.otf in Resources */,
 				32F2438827833BED00F1D160 /* GDMissionPerDayWeeks.storyboard in Resources */,
-				32F2437827833BC900F1D160 /* NanumSquareOTF_acR.otf in Resources */,
-				32F2437B27833BC900F1D160 /* NanumSquareOTF_acB.otf in Resources */,
+				32F2438D2783D47A00F1D160 /* Assets.xcassets in Resources */,
 				F0E1A98F277EE41700DD286E /* MbtiSettingViewController.xib in Resources */,
 				32F2437727833BC900F1D160 /* NanumSquareR.otf in Resources */,
 				32F2437527833BC900F1D160 /* NanumGothic.otf in Resources */,
@@ -344,18 +331,15 @@
 				32F2437627833BC900F1D160 /* NanumGothicExtraBold.otf in Resources */,
 				F0E1A987277EDE4B00DD286E /* NameSettingViewController.xib in Resources */,
 				3239BCAB277D8E5400E96E21 /* LaunchScreen.storyboard in Resources */,
-				32F2438927833BED00F1D160 /* GDMissionPerDayDetail.storyboard in Resources */,
-				32F2437427833BC900F1D160 /* NanumSquareOTF_acL.otf in Resources */,
 				F0E1A993277EE70400DD286E /* TimeSettingViewController.xib in Resources */,
 				32F2437127833BC900F1D160 /* NotoSansKR-Light.otf in Resources */,
+				32F2438F2783E4D200F1D160 /* GDMissionPerDayDetail.xib in Resources */,
 				F068BDB62782DCEF001035B6 /* Main.storyboard in Resources */,
 				32F2437927833BC900F1D160 /* NotoSansKR-Bold.otf in Resources */,
 				32F2437C27833BC900F1D160 /* NanumSquareB.otf in Resources */,
 				32F2438027833BC900F1D160 /* NotoSansKR-Regular.otf in Resources */,
 				32F2437E27833BC900F1D160 /* NotoSansKR-Black.otf in Resources */,
 				32F2437A27833BC900F1D160 /* NotoSansKR-Thin.otf in Resources */,
-				32F2437027833BC900F1D160 /* NanumSquareOTF_acEB.otf in Resources */,
-				3239BCA8277D8E5400E96E21 /* Assets.xcassets in Resources */,
 				32F2436F27833BC900F1D160 /* NanumGothicBold.otf in Resources */,
 				32F2437227833BC900F1D160 /* NanumSquareL.otf in Resources */,
 				F07E9D0F2781A25300C7C6B4 /* 30344-hamburger-close-animation.json in Resources */,
@@ -567,6 +551,7 @@
 			baseConfigurationReference = 9B6CFE1151A1AB88C5915BAD /* Pods-GoodDay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development: cotmd6203@naver.com (S5W794Z5NN)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 88WFD6M5FC;
@@ -596,6 +581,7 @@
 			baseConfigurationReference = C9657BA07B3C0A1266C0F7B6 /* Pods-GoodDay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development: cotmd6203@naver.com (S5W794Z5NN)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 88WFD6M5FC;

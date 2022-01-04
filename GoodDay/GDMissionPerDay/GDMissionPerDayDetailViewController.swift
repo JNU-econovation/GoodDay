@@ -10,9 +10,9 @@ import MSPeekCollectionViewDelegateImplementation
 
 class GDMissionPerDayDetailViewController: UIViewController {
     
-    @IBOutlet weak var ContentView: UIView!
-    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var weekButton: UIButton!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     @objc func onTapButton(_ sender: AnyObject) {
         let button = sender as! UIButton
@@ -33,14 +33,14 @@ class GDMissionPerDayDetailViewController: UIViewController {
         behavior = MSCollectionViewPeekingBehavior(cellPeekWidth: screenSizeWidth * 0.119)
         
         // content height
-        contentViewHeight = ContentView.frame.height
+        contentViewHeight = contentView.frame.height
         
         // add components
         collectionView = getPeekingCollectionView(screenSizeWidth: screenSizeWidth, contentViewHeight: contentViewHeight, collectionView: collectionView)
-        ContentView.addSubview(getCollectionViewBackgroundImage(collectionView: collectionView))
-        ContentView.addSubview(collectionView)
-        ContentView.addSubview(getDetailView(screenSizeWidth: screenSizeWidth, contentViewHeight: contentViewHeight))
-        ContentView.addSubview(getweekButton(text: "WEEK 1",originButton: weekButton))
+        contentView.addSubview(getCollectionViewBackgroundImage(collectionView: collectionView))
+        contentView.addSubview(collectionView)
+        contentView.addSubview(getDetailView(screenSizeWidth: screenSizeWidth, contentViewHeight: contentViewHeight))
+        contentView.addSubview(getweekButton(text: "WEEK 1",originButton: weekButton))
         
         // set next backbar button
         let backBarButtonItem = UIBarButtonItem(title: "GOOD DAY", style: .plain, target: self, action: nil)
