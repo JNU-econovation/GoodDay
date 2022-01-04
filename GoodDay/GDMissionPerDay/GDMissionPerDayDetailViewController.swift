@@ -19,6 +19,16 @@ class GDMissionPerDayDetailViewController: UIViewController {
         print("Button was tapped. \(button.titleLabel?.text ?? "")")
     }
     
+    @IBAction func tapMissionWeekButton(_ sender: UIButton) {
+        let GDMissionPerDayWeeksVC = GDMissionPerDayWeekViewController(nibName: "GDMissionPerDayWeeks", bundle: nil)
+
+        GDMissionPerDayWeeksVC.modalPresentationStyle = .overFullScreen
+        GDMissionPerDayWeeksVC.modalTransitionStyle = .crossDissolve
+        
+        self.present(GDMissionPerDayWeeksVC, animated: true, completion: nil)
+    }
+    
+    
     let screenSizeWidth = UIScreen.main.bounds.width
     let screenSizeheight = UIScreen.main.bounds.height
     var contentViewHeight: CGFloat = 0.0
@@ -29,7 +39,8 @@ class GDMissionPerDayDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+
         behavior = MSCollectionViewPeekingBehavior(cellPeekWidth: screenSizeWidth * 0.119)
         
         // content height
@@ -43,9 +54,9 @@ class GDMissionPerDayDetailViewController: UIViewController {
         contentView.addSubview(getweekButton(text: "WEEK 1",originButton: weekButton))
         
         // set next backbar button
-        let backBarButtonItem = UIBarButtonItem(title: "GOOD DAY", style: .plain, target: self, action: nil)
-        backBarButtonItem.tintColor = .black
-        self.navigationItem.backBarButtonItem = backBarButtonItem
+//        let backBarButtonItem = UIBarButtonItem(title: "GOOD DAY", style: .plain, target: self, action: nil)
+//        backBarButtonItem.tintColor = .black
+//        self.navigationItem.backBarButtonItem = backBarButtonItem
     }
     
     func getPeekingCollectionView(screenSizeWidth: CGFloat, contentViewHeight: CGFloat, collectionView: UICollectionView ) -> UICollectionView{
@@ -78,6 +89,8 @@ class GDMissionPerDayDetailViewController: UIViewController {
         
         let stringSize = FontUtils().getFontSize(font: weekLable.font, text: text)
         weekButton.frame = CGRect(x: (screenSizeWidth - stringSize.width) / 2, y: (contentViewHeight / 2 - screenSizeWidth * 0.6) / 4  - 20, width: stringSize.width, height: 40)
+        
+        weekButton.addTarget(self, action: #selector(tapMissionWeekButton(_:)), for: .touchUpInside)
         
         weekButton.addSubview(weekLable)
 
