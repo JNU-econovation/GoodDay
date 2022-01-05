@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GDMissionPerDayWeekViewController" customModule="GoodDay" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="x7d-P3-RdI" id="qYI-I3-i6Y"/>
                 <outlet property="contentView" destination="j1y-2E-iGV" id="3hr-lj-bwY"/>
                 <outlet property="view" destination="iN0-l3-epB" id="eMF-Sp-MKx"/>
             </connections>
@@ -19,8 +20,23 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7d-P3-RdI">
+                    <rect key="frame" x="27" y="66" width="144.5" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system">
+                        <attributedString key="attributedTitle">
+                            <fragment content="   GOOD DAY">
+                                <attributes>
+                                    <font key="NSFont" size="18" name="NanumSquareEB"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j1y-2E-iGV">
-                    <rect key="frame" x="0.0" y="98" width="414" height="798"/>
+                    <rect key="frame" x="0.0" y="133" width="414" height="763"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
             </subviews>
@@ -28,14 +44,17 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="j1y-2E-iGV" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="0Lb-lm-V4L"/>
-                <constraint firstItem="j1y-2E-iGV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="54" id="6ej-jZ-U6T"/>
+                <constraint firstItem="j1y-2E-iGV" firstAttribute="top" secondItem="x7d-P3-RdI" secondAttribute="bottom" constant="32" id="6ej-jZ-U6T"/>
                 <constraint firstAttribute="bottom" secondItem="j1y-2E-iGV" secondAttribute="bottom" id="FXQ-oB-RNC"/>
+                <constraint firstItem="x7d-P3-RdI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="66" id="QUH-PU-6N3"/>
+                <constraint firstItem="x7d-P3-RdI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="27" id="dPX-9a-dPv"/>
                 <constraint firstItem="j1y-2E-iGV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="sC9-WK-dH2"/>
             </constraints>
             <point key="canvasLocation" x="139" y="89"/>
         </view>
     </objects>
     <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

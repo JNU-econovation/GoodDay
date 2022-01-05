@@ -10,6 +10,7 @@ import MSPeekCollectionViewDelegateImplementation
 
 class GDMissionPerDayDetailViewController: UIViewController {
     
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var weekButton: UIButton!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -19,7 +20,11 @@ class GDMissionPerDayDetailViewController: UIViewController {
         print("Button was tapped. \(button.titleLabel?.text ?? "")")
     }
     
-    @IBAction func tapMissionWeekButton(_ sender: UIButton) {
+    @objc func onTapBackButton(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func onTapMissionWeekButton(_ sender: UIButton) {
         let GDMissionPerDayWeeksVC = GDMissionPerDayWeekViewController(nibName: "GDMissionPerDayWeeks", bundle: nil)
 
         GDMissionPerDayWeeksVC.modalPresentationStyle = .overFullScreen
@@ -53,10 +58,7 @@ class GDMissionPerDayDetailViewController: UIViewController {
         contentView.addSubview(getDetailView(screenSizeWidth: screenSizeWidth, contentViewHeight: contentViewHeight))
         contentView.addSubview(getweekButton(text: "WEEK 1",originButton: weekButton))
         
-        // set next backbar button
-//        let backBarButtonItem = UIBarButtonItem(title: "GOOD DAY", style: .plain, target: self, action: nil)
-//        backBarButtonItem.tintColor = .black
-//        self.navigationItem.backBarButtonItem = backBarButtonItem
+        backButton.addTarget(self, action: #selector(onTapBackButton(_:)), for: .touchUpInside)
     }
     
     func getPeekingCollectionView(screenSizeWidth: CGFloat, contentViewHeight: CGFloat, collectionView: UICollectionView ) -> UICollectionView{
@@ -90,7 +92,7 @@ class GDMissionPerDayDetailViewController: UIViewController {
         let stringSize = FontUtils().getFontSize(font: weekLable.font, text: text)
         weekButton.frame = CGRect(x: (screenSizeWidth - stringSize.width) / 2, y: (contentViewHeight / 2 - screenSizeWidth * 0.6) / 4  - 20, width: stringSize.width, height: 40)
         
-        weekButton.addTarget(self, action: #selector(tapMissionWeekButton(_:)), for: .touchUpInside)
+        weekButton.addTarget(self, action: #selector(onTapMissionWeekButton(_:)), for: .touchUpInside)
         
         weekButton.addSubview(weekLable)
 

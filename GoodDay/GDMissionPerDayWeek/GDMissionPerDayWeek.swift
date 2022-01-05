@@ -11,10 +11,15 @@ import ScrollStackController
 
 class GDMissionPerDayWeekViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var backButton: UIButton!
     
     @objc func onTapButton(_ sender: AnyObject) {
         let button = sender as! UIButton
         print("Button was tapped. \(button.titleLabel?.text ?? "")")
+    }
+    
+    @objc func onTapBackButton(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     private var stackController = ScrollStackViewController()
@@ -34,6 +39,8 @@ class GDMissionPerDayWeekViewController: UIViewController {
         stackController.view = stackView
         stackController.view.frame = contentView.bounds
         contentView.addSubview(stackController.view)
+        
+        backButton.addTarget(self, action: #selector(onTapBackButton(_:)), for: .touchUpInside)
     }
 }
 
