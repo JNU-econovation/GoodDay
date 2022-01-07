@@ -47,83 +47,56 @@ class GDMissionPerDayWeekViewController: UIViewController {
 extension GDMissionPerDayWeekViewController {
     func getOneWeekView(index: Int) -> UIView {
         let oneWeekView = UIView()
-        //oneWeekView.frame = CGRect(x: 0, y: height, width: screenSizeWidth, height: 170)
-        oneWeekView.heightAnchor.constraint(equalToConstant: 130).isActive = true
         
         let tmpLabel = UILabel()
         tmpLabel.text = "WEEK \(index)"
         tmpLabel.textColor = .black
         tmpLabel.textAlignment = .center
         tmpLabel.sizeToFit()
-        
+
+        let textSize = FontUtils().getFontSize(font: tmpLabel.font, text: tmpLabel.text!)
+        tmpLabel.frame = CGRect(x: screenSizeWidth / 2  - textSize.width * 3 / 4, y:  20 - textSize.height, width: textSize.width, height: textSize.height)
+
+        let buttonSize = (screenSizeWidth - 10) / 7.3876
+        oneWeekView.heightAnchor.constraint(equalToConstant: 80 + buttonSize).isActive = true
+       
         oneWeekView.addSubview(tmpLabel)
-        oneWeekView.addSubview(getOneWekButton(missionState: .missonClaer, buttonSize: 50, position: CGSize(width: 10, height: 10)))
-        oneWeekView.addSubview(getOneWekButton(missionState: .missionFail, buttonSize: 50, position: CGSize(width: 60, height: 10)))
-        oneWeekView.addSubview(getOneWekButton(missionState: .notExist, buttonSize: 50, position: CGSize(width: 110, height: 10)))
-        
+
+        oneWeekView.addSubview(getOneWeekImage(missionState: .missionFail, buttonSize: buttonSize, position: CGSize(width: buttonSize * 0.6938 - 15, height: 40)))
+        oneWeekView.addSubview(getOneWeekImage(missionState: .missionFail, buttonSize: buttonSize, position: CGSize(width: buttonSize * 1.6938 - 13, height: 40)))
+        oneWeekView.addSubview(getOneWeekImage(missionState: .missonClaer, buttonSize: buttonSize, position: CGSize(width: buttonSize * 2.6938 - 11, height: 40)))
+        oneWeekView.addSubview(getOneWeekImage(missionState: .missonClaer, buttonSize: buttonSize, position: CGSize(width: buttonSize * 3.6938 - 9, height: 40)))
+        oneWeekView.addSubview(getOneWeekImage(missionState: .missonClaer, buttonSize: buttonSize, position: CGSize(width: buttonSize * 4.6938 - 7, height: 40)))
+        oneWeekView.addSubview(getOneWeekImage(missionState: .notExist, buttonSize: buttonSize, position: CGSize(width: buttonSize * 5.6938 - 5, height: 40)))
+
         return oneWeekView
     }
     
     func getOneWeekImage(missionState: missionStatement, buttonSize: CGFloat, position: CGSize) -> UIImageView {
+        //let missionButton = UIButton()
+        var image = UIImage()
         let imageView = UIImageView()
         
-        return imageView
+        imageView.frame = CGRect(x: 0, y: 0, width: buttonSize, height: buttonSize)
+        imageView.frame = CGRect(x: position.width, y: position.height, width: buttonSize, height: buttonSize)
+        imageView.layer.cornerRadius = buttonSize / 2
         
-    }
-    
-    func getOneWekButton(missionState: missionStatement, buttonSize: CGFloat, position: CGSize) -> UIButton {
-        let missionButton = UIButton()
-        let gradientLayer = CAGradientLayer()
+        imageView.layer.shadowOpacity = 0.8
+        imageView.layer.shadowRadius = 3
+        imageView.layer.shadowOffset = CGSize(width: 0, height: 4.24)
         
-        var colors: [CGColor] = []
-        
-        gradientLayer.endPoint = CGPoint(x: 0.7, y: 1)
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0.3)
-        gradientLayer.locations = [0, 1]
-        
-        missionButton.frame = CGRect(x: position.width, y: position.height, width: buttonSize, height: buttonSize)
-        missionButton.layer.cornerRadius = buttonSize / 2
-        gradientLayer.frame = CGRect(x: 0, y: 0, width: buttonSize, height: buttonSize)
-        gradientLayer.cornerRadius = buttonSize / 2
-
         switch missionState {
         case .missonClaer:
-            colors = [
-                UIColor(red: 0, green: 0.082, blue: 1, alpha: 0.9).cgColor,
-                UIColor(red: 0, green: 0.082, blue: 1, alpha: 0.35).cgColor
-            ]
-            missionButton.layer.shadowOpacity = 0.4
-            missionButton.layer.shadowOffset = CGSize(width: 0, height: 4.23)
-            missionButton.layer.shadowRadius = 4
-            
+            image = UIImage(named: "missionClear")!
         case .missionFail:
-            colors = [
-                UIColor(red: 0, green: 0, blue: 0, alpha: 0.8).cgColor,
-                UIColor(red: 0.006, green: 0, blue: 0.308, alpha: 0.41).cgColor,
-                UIColor(red: 0.02, green: 0, blue: 1, alpha: 0.4).cgColor
-            ]
-            gradientLayer.locations = [0, 1, 1]
-            missionButton.layer.shadowOpacity = 0.4
-            missionButton.layer.shadowOffset = CGSize(width: 0, height: 4.23)
-            missionButton.layer.shadowRadius = 4
-
+            image = UIImage(named: "missionFail")!
         case .notExist:
-            colors = [
-                UIColor(red: 1, green: 1, blue: 1, alpha: 1).cgColor,
-                UIColor(red: 1, green: 1, blue: 1, alpha: 0.5).cgColor
-            ]
-            gradientLayer.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 0.49, b: 0.85, c: -0.85, d: 0.49, tx: 0.66, ty: -0.16))
+            image = UIImage(named: "notExist")!
+            imageView.layer.shadowOpacity = 0
         }
-
-        gradientLayer.colors = colors
         
-        missionButton.layer.addSublayer(gradientLayer)
-        
-        missionButton.backgroundColor = .white
-        missionButton.layer.borderColor = .init(gray: 0, alpha: 1)
-        missionButton.layer.borderWidth = 0.05
-        missionButton.addTarget(self, action: #selector(onTapButton(_:)), for: .touchUpInside)
-        
-        return missionButton
+        imageView.image = image
+                
+        return imageView
     }
 }
