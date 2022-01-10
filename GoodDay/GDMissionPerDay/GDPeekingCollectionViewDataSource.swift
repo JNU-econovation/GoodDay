@@ -17,8 +17,9 @@ extension GDMissionPerDayDetailViewController: UICollectionViewDataSource{
         return pickerData.count
     }
     
+    // 버튼 눌렀을 때 뜨는 코드
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("\(indexPath.item)")
+//        let cell = collectionView.cellForItem(at: indexPath)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -26,32 +27,81 @@ extension GDMissionPerDayDetailViewController: UICollectionViewDataSource{
         cell.subviews.forEach {$0.removeFromSuperview()}
         cell.backgroundColor = .none
         
-        let innerLabel = getInnerCircleLabel(cell: cell, text: pickerData[indexPath.item])
+        let innerLabel = getInnerCircleLabel(cell: cell)
+        let blurEffect = getBlurEffetCircleView(innerLabel: innerLabel)
+        innerLabel.addSubview(blurEffect)
+        innerLabel.addSubview(getInnerCircleTextLabel(text: pickerData[indexPath.item], innerLabel: innerLabel))
         cell.addSubview(innerLabel)
         
         return cell
     }
     
-    func getInnerCircleLabel(cell: UICollectionViewCell, text: String) -> UILabel{
+    // 버튼 누를때
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) {
+           let pressedDownTransform = CGAffineTransform(scaleX: 0.98, y: 0.98)
+           UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 3, options: [.curveEaseInOut], animations: { cell.transform = pressedDownTransform })
+       }
+    }
+    
+    // 버튼 뗄때
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) {
+            
+            let innerLabel = getInnerCircleLabel(cell: cell)
+            let visualEffectView = getBlurEffectView(style: .regular)
+            let checkImage = UIImage(named: "check")
+            let imageView = UIImageView(image: checkImage)
+            imageView.frame =  CGRect(x: screenSizeWidth * 0.2, y: screenSizeWidth * 0.2, width: screenSizeWidth * 0.2, height: screenSizeWidth * 0.2  )
+            imageView.tag = 20
+            
+            let textView = getInnerCircleTextLabel(text: "DAY \(indexPath.item + 1)", innerLabel: innerLabel)
+            
+            
+            visualEffectView.alpha = 0
+            imageView.alpha = 0
+            textView.alpha = 0
+            
+            let originalTransform = CGAffineTransform(scaleX: 1, y: 1)
+            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 3, options: [.curveEaseInOut]) {
+                cell.transform = originalTransform
+            } completion: { finished in
+                UIView.animate(withDuration: 0.8, delay: 0, options: .transitionCrossDissolve) {
+                    cell.subviews.forEach {
+                        if $0.tag == 5 { //innerlabel
+                            $0.subviews.forEach{tmpView in
+                                if tmpView.tag == 11 { tmpView.removeFromSuperview() } // textview
+                                if tmpView.tag == 12 { tmpView.removeFromSuperview() } // blurview
+                                if tmpView.tag == 20 { tmpView.removeFromSuperview() } // imageview
+                            }
+                        }
+                    }
+                    innerLabel.addSubview(visualEffectView)
+                    innerLabel.addSubview(imageView)
+                    visualEffectView.alpha = 1
+                    imageView.alpha = 1
+                    cell.addSubview(innerLabel)
+                } completion: { finished in
+                    UIView.animate(withDuration: 0.6, delay: 0.5, options: .transitionCrossDissolve) {
+                        imageView.alpha = 0
+                        innerLabel.addSubview(textView)
+                        textView.alpha = 1
+                    }
+                }
+            }
+        }
+    }
+    
+    func getInnerCircleLabel(cell: UICollectionViewCell) -> UILabel{
         let innerLabel = UILabel(frame: CGRect(x: (cell.frame.width - screenSizeWidth * 0.6) / 2, y: ((contentViewHeight / 2) - screenSizeWidth * 0.6) / 2 , width: screenSizeWidth * 0.6, height: screenSizeWidth * 0.6))
-        
-        // Set Text
-        let textLabel = UILabel()
-        textLabel.frame = innerLabel.bounds
-        textLabel.text = text
-        textLabel.textColor = .white
-        textLabel.font = UIFont(name: "NotoSansKR-Bold", size: 44)
-        textLabel.textAlignment = .center
         
         // Make Shape
         innerLabel.layer.cornerRadius = screenSizeWidth * 0.3
         innerLabel.layer.shadowOpacity = 0.4
         innerLabel.layer.shadowOffset = CGSize(width: 0, height: 1)
         innerLabel.layer.shadowRadius = 3
-                
-        let blurEffect = getBlurEffetCircleView(innerLabel: innerLabel)
-        innerLabel.addSubview(blurEffect)
-        innerLabel.addSubview(textLabel)
+        
+        innerLabel.tag = 5
         
         return innerLabel
     }
@@ -62,7 +112,33 @@ extension GDMissionPerDayDetailViewController: UICollectionViewDataSource{
         blurEffect.frame = innerLabel.bounds
         blurEffect.layer.cornerRadius = screenSizeWidth * 0.3
         blurEffect.clipsToBounds = true
+        blurEffect.tag = 10
 
         return blurEffect
+    }
+    
+    func getInnerCircleTextLabel(text: String, innerLabel: UILabel) -> UILabel {
+        let textLabel = UILabel()
+        textLabel.frame = innerLabel.bounds
+        textLabel.text = text
+        textLabel.textColor = .white
+        textLabel.font = UIFont(name: "NotoSansKR-Bold", size: 44)
+        textLabel.textAlignment = .center
+        textLabel.tag = 11
+        
+        return textLabel
+    }
+    
+    func getBlurEffectView(style: UIBlurEffect.Style) -> UIVisualEffectView {
+        let blurEffect = UIBlurEffect(style: style)
+        let visualEffectView = UIVisualEffectView(effect: blurEffect)
+        
+        visualEffectView.frame = CGRect(x: 0, y: 0, width: screenSizeWidth * 0.6, height: screenSizeWidth * 0.6)
+        visualEffectView.clipsToBounds = true; // 없으면 안됨
+        visualEffectView.layer.cornerRadius = screenSizeWidth * 0.3
+        
+        visualEffectView.tag = 12
+        
+        return visualEffectView
     }
 }

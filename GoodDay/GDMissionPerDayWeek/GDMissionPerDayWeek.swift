@@ -81,7 +81,7 @@ extension GDMissionPerDayWeekViewController {
         imageView.frame = CGRect(x: position.width, y: position.height, width: buttonSize, height: buttonSize)
         imageView.layer.cornerRadius = buttonSize / 2
         
-        imageView.layer.shadowOpacity = 0.8
+        imageView.layer.shadowOpacity = 0.2
         imageView.layer.shadowRadius = 3
         imageView.layer.shadowOffset = CGSize(width: 0, height: 4.24)
         

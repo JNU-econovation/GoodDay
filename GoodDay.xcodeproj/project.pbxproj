@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0386FC55278B0C3400319E42 /* 미션 항목.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0386FC54278B0C3400319E42 /* 미션 항목.csv */; };
+		0386FC57278B0C9200319E42 /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386FC56278B0C9200319E42 /* CSVParser.swift */; };
+		03C345A5278887B9006278FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03C345A4278887B9006278FF /* GoogleService-Info.plist */; };
 		1BDC4393ADCFBC9BD88D83E8 /* Pods_GoodDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */; };
 		3239BC9C277D8E5200E96E21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BC9B277D8E5200E96E21 /* AppDelegate.swift */; };
 		3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */; };
@@ -54,6 +57,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0386FC54278B0C3400319E42 /* 미션 항목.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "미션 항목.csv"; sourceTree = "<group>"; };
+		0386FC56278B0C9200319E42 /* CSVParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
+		03C345A4278887B9006278FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3239BC98277D8E5200E96E21 /* GoodDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3239BC9B277D8E5200E96E21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +157,8 @@
 				3239BCAC277D8E5400E96E21 /* Info.plist */,
 				3239BCA4277D8E5200E96E21 /* GoodDay.xcdatamodeld */,
 				F07E9D0E2781A25300C7C6B4 /* 30344-hamburger-close-animation.json */,
+				03C345A4278887B9006278FF /* GoogleService-Info.plist */,
+				0386FC54278B0C3400319E42 /* 미션 항목.csv */,
 			);
 			path = GoodDay;
 			sourceTree = "<group>";
@@ -202,6 +210,7 @@
 				32F2436827833BC900F1D160 /* GDBlurEffectView.swift */,
 				32F2436927833BC900F1D160 /* FontUtils.swift */,
 				32F2436A27833BC900F1D160 /* ColorUtils.swift */,
+				0386FC56278B0C9200319E42 /* CSVParser.swift */,
 			);
 			path = GDUtils;
 			sourceTree = "<group>";
@@ -331,9 +340,11 @@
 				32F2437627833BC900F1D160 /* NanumGothicExtraBold.otf in Resources */,
 				F0E1A987277EDE4B00DD286E /* NameSettingViewController.xib in Resources */,
 				3239BCAB277D8E5400E96E21 /* LaunchScreen.storyboard in Resources */,
+				03C345A5278887B9006278FF /* GoogleService-Info.plist in Resources */,
 				F0E1A993277EE70400DD286E /* TimeSettingViewController.xib in Resources */,
 				32F2437127833BC900F1D160 /* NotoSansKR-Light.otf in Resources */,
 				32F2438F2783E4D200F1D160 /* GDMissionPerDayDetail.xib in Resources */,
+				0386FC55278B0C3400319E42 /* 미션 항목.csv in Resources */,
 				F068BDB62782DCEF001035B6 /* Main.storyboard in Resources */,
 				32F2437927833BC900F1D160 /* NotoSansKR-Bold.otf in Resources */,
 				32F2437C27833BC900F1D160 /* NanumSquareB.otf in Resources */,
@@ -406,6 +417,7 @@
 				32F2438427833BC900F1D160 /* FontUtils.swift in Sources */,
 				32F2438527833BC900F1D160 /* ColorUtils.swift in Sources */,
 				F0E1A98E277EE41700DD286E /* MbtiSettingViewController.swift in Sources */,
+				0386FC57278B0C9200319E42 /* CSVParser.swift in Sources */,
 				32F2438327833BC900F1D160 /* GDBlurEffectView.swift in Sources */,
 				3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */,
 				F0E1A992277EE70400DD286E /* TimeSettingViewController.swift in Sources */,

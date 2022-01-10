@@ -39,8 +39,9 @@ class GDMissionPerDayDetailViewController: UIViewController {
     var contentViewHeight: CGFloat = 0.0
     
     let pickerData = ["DAY 1", "DAY 2", "DAY 3", "DAY 4", "DAY 5", "DAY 6"]
+    var mission:[[String]] = []
     
-    var behavior:MSCollectionViewPeekingBehavior!
+    var behavior: MSCollectionViewPeekingBehavior!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,7 +102,7 @@ class GDMissionPerDayDetailViewController: UIViewController {
     
     func getDetailView(screenSizeWidth: CGFloat, contentViewHeight: CGFloat) -> UIView {
         var detailView = UIView()
-        detailView.frame = CGRect(x:0, y: contentViewHeight/2, width: screenSizeWidth, height: contentViewHeight/2)
+        detailView.frame = CGRect(x:0, y: contentViewHeight/2, width: screenSizeWidth, height: contentViewHeight)
         detailView.layer.shadowOpacity = 0.3
         detailView.layer.shadowOffset = CGSize(width: 0, height: -3)
         detailView.layer.shadowRadius = 5
