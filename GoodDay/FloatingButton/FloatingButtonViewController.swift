@@ -19,7 +19,6 @@ class FloatingButtonViewController: UIViewController {
     
     weak var delegate: DelegateFloatingButtonViewController?
     
-    let homeImg = UIImage(systemName: "house.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 12))
     
     let missionImg = UIImage(systemName: "target", withConfiguration: UIImage.SymbolConfiguration(pointSize: 12))
     
@@ -30,25 +29,26 @@ class FloatingButtonViewController: UIViewController {
     
     @IBOutlet weak var blurView: UIVisualEffectView!
     
-    @IBOutlet weak var homeButton: UIButton!
+    
     @IBOutlet weak var missionButton: UIButton!
     @IBOutlet weak var diaryButton: UIButton!
     @IBOutlet weak var myPageButton: UIButton!
     
-    @IBOutlet weak var homeButtonCenterY: NSLayoutConstraint!
+    
     @IBOutlet weak var missionButtonCenterY: NSLayoutConstraint!
     @IBOutlet weak var diaryButtonCenterY: NSLayoutConstraint!
     @IBOutlet weak var myPageButtonCenterY: NSLayoutConstraint!
     
-    @IBOutlet weak var homeLabelCenterY: NSLayoutConstraint!
+    
     @IBOutlet weak var missionLabelCenterY: NSLayoutConstraint!
     @IBOutlet weak var diaryLabelCenterY: NSLayoutConstraint!
     @IBOutlet weak var myPageLabelCenterY: NSLayoutConstraint!
     
-    @IBOutlet weak var homeLabelCenterX: NSLayoutConstraint!
     @IBOutlet weak var missionLabelCenterX: NSLayoutConstraint!
     @IBOutlet weak var diaryLabelCenterX: NSLayoutConstraint!
     @IBOutlet weak var myPageLabelCenterX: NSLayoutConstraint!
+    
+    
     
     
     override func viewDidLoad() {
@@ -62,31 +62,31 @@ class FloatingButtonViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: .curveEaseOut) {
-            
-            
-            self.homeButtonCenterY.constant = 60
-            self.missionButtonCenterY.constant = 120
-            self.diaryButtonCenterY.constant = 180
-            self.myPageButtonCenterY.constant = 240
-            
-            
-            self.homeLabelCenterY.constant = -60
-            self.missionLabelCenterY.constant = 120
-            self.diaryLabelCenterY.constant = 180
-            self.myPageLabelCenterY.constant = 240
-            
-            self.homeLabelCenterX.constant = 40
-            self.missionLabelCenterX.constant = -47
+
+
+
+            self.missionButtonCenterY.constant = 60
+            self.diaryButtonCenterY.constant = 120
+            self.myPageButtonCenterY.constant = 180
+
+
+
+            self.missionLabelCenterY.constant = -60
+            self.diaryLabelCenterY.constant = 120
+            self.myPageLabelCenterY.constant = 180
+
+
+            self.missionLabelCenterX.constant = 47
             self.diaryLabelCenterX.constant = -55
             self.myPageLabelCenterX.constant = -70
-            
-            
+
+
             self.view.layoutIfNeeded() // 화면 갱신
-        
-            
-            
+
+
+
         } completion: { (completion) in
-            
+
         }
     }
     
@@ -113,17 +113,17 @@ class FloatingButtonViewController: UIViewController {
         
         UIView.animate(withDuration: 0.019, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5, options: .curveEaseIn) {
             
-            self.homeButtonCenterY.constant = 0
+
             self.missionButtonCenterY.constant = 0
             self.diaryButtonCenterY.constant = 0
             self.myPageButtonCenterY.constant = 0
-            
-            self.homeLabelCenterY.constant = 0
+
+
             self.missionLabelCenterY.constant = 0
             self.diaryLabelCenterY.constant = 0
             self.myPageLabelCenterY.constant = 0
-            
-            self.homeLabelCenterX.constant = 0
+
+
             self.missionLabelCenterX.constant = 0
             self.diaryLabelCenterX.constant = 0
             self.myPageLabelCenterX.constant = 0
@@ -148,44 +148,39 @@ class FloatingButtonViewController: UIViewController {
     }
     
     func initializeFloatingButtons() {
-        self.homeButtonCenterY.constant = 0
+
         self.missionButtonCenterY.constant = 0
         self.diaryButtonCenterY.constant = 0
         self.myPageButtonCenterY.constant = 0
-        
-        self.homeLabelCenterY.constant = 0
+
+
         self.missionLabelCenterY.constant = 0
         self.diaryLabelCenterY.constant = 0
         self.myPageLabelCenterY.constant = 0
-        
-        self.homeLabelCenterX.constant = 0
+
+
         self.missionLabelCenterX.constant = 0
         self.diaryLabelCenterX.constant = 0
         self.myPageLabelCenterX.constant = 0
-        
-        self.blurView.alpha = 0.6
-        
+
+        self.blurView.alpha = 0.8
+//
     }
     
     
     func configureButtons(){
-        homeButton.setImage(homeImg, for: .normal)
+
         missionButton.setImage(missionImg, for: .normal)
         diaryButton.setImage(diaryImg, for: .normal)
         myPageButton.setImage(myPageImg, for: .normal)
-        
-        homeButton.tintColor = .black
+
+
         missionButton.tintColor = .black
         diaryButton.tintColor = .black
         myPageButton.tintColor = .black
-        
-        homeButton.layer.cornerRadius = homeButton.bounds.height / 2
-        homeButton.layer.shadowColor = UIColor.gray.cgColor
-        homeButton.layer.shadowOpacity = 1
-        homeButton.layer.shadowOffset = CGSize.zero
-        homeButton.layer.shadowRadius = 5
-        homeButton.translatesAutoresizingMaskIntoConstraints = false
-        
+
+
+
         missionButton.layer.cornerRadius = missionButton.bounds.height / 2
         missionButton.layer.shadowColor = UIColor.gray.cgColor
         missionButton.layer.shadowOpacity = 1
@@ -194,14 +189,14 @@ class FloatingButtonViewController: UIViewController {
         missionButton.translatesAutoresizingMaskIntoConstraints = false
         missionButton.addTarget(self, action: #selector(tapMissionButton(_:)), for: .touchUpInside)
 
-        
+
         diaryButton.layer.cornerRadius = diaryButton.bounds.height / 2
         diaryButton.layer.shadowColor = UIColor.gray.cgColor
         diaryButton.layer.shadowOpacity = 1
         diaryButton.layer.shadowOffset = CGSize.zero
         diaryButton.layer.shadowRadius = 5
         diaryButton.translatesAutoresizingMaskIntoConstraints = false
-        
+
         myPageButton.layer.cornerRadius = myPageButton.bounds.height / 2
         myPageButton.layer.shadowColor = UIColor.gray.cgColor
         myPageButton.layer.shadowOpacity = 1
@@ -211,16 +206,57 @@ class FloatingButtonViewController: UIViewController {
         
     }
     
+    
     @IBAction func tapMissionButton(_ sender: UIButton) {
         
         let GDMissionPerDayDetailVC = GDMissionPerDayDetailViewController(nibName: "GDMissionPerDayDetail", bundle: nil)
-
+        
         GDMissionPerDayDetailVC.modalPresentationStyle = .overFullScreen
         GDMissionPerDayDetailVC.modalTransitionStyle = .crossDissolve
         
         self.present(GDMissionPerDayDetailVC, animated: true, completion: nil)
+        
     }
     
+    // 유저가 화면을 터치했을 때 호출되는 메서드
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        UIView.animate(withDuration: 0.019, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5, options: .curveEaseIn) {
+            
+
+            self.missionButtonCenterY.constant = 0
+            self.diaryButtonCenterY.constant = 0
+            self.myPageButtonCenterY.constant = 0
+
+
+            self.missionLabelCenterY.constant = 0
+            self.diaryLabelCenterY.constant = 0
+            self.myPageLabelCenterY.constant = 0
+
+
+            self.missionLabelCenterX.constant = 0
+            self.diaryLabelCenterX.constant = 0
+            self.myPageLabelCenterX.constant = 0
+            
+           
+            
+            self.view.layoutIfNeeded() // 화면 갱신
+            
+            
+            
+            
+        } completion: { (completion) in
+            
+            
+      
+            // 애니메이션이 끝나는 시점
+            self.dismiss(animated: false, completion: nil)
+        }
+        
+        delegate?.passBoolValue(isShowFloating: false)
+    }
+    
+
 
 
 }
