@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>862890492686-6lao32s6im798ecbjoqbep24ipsuatmv.apps.googleusercontent.com</string>
+	<string>717864641417-e5gdrkaunrlk91neak2cpqodvk1c9f7c.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.862890492686-6lao32s6im798ecbjoqbep24ipsuatmv</string>
+	<string>com.googleusercontent.apps.717864641417-e5gdrkaunrlk91neak2cpqodvk1c9f7c</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAtZpmh3UoSOf9BiV_NV8kyjGMc560Ut4U</string>
+	<string>AIzaSyDlY10XPD7-u06q-tBtkR7wirFvwhzUKB8</string>
 	<key>GCM_SENDER_ID</key>
-	<string>862890492686</string>
+	<string>717864641417</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.FourLeafClover.GoodDay</string>
 	<key>PROJECT_ID</key>
-	<string>goodday-4413b</string>
+	<string>goodday-d7736</string>
 	<key>STORAGE_BUCKET</key>
-	<string>goodday-4413b.appspot.com</string>
+	<string>goodday-d7736.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:862890492686:ios:bee066920a5a731241cd5f</string>
+	<string>1:717864641417:ios:4b44817a8f52423edc7758</string>
 </dict>
 </plist>

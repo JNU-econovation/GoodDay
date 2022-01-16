@@ -7,6 +7,8 @@
 
 import UIKit
 import Lottie
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 class ViewController: UIViewController {
 
@@ -17,7 +19,9 @@ class ViewController: UIViewController {
     var fourthMbti: String?
     var wakeUpTime: Date?
     var sleepTime: Date?
-    
+    var userUid: String?
+    let db = Firestore.firestore()
+    var user: User?
     
     @IBOutlet weak var userNameLabel: UILabel!
     var isShowFloating: Bool = true
@@ -25,16 +29,22 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.userUid = UserDefaults.standard.string(forKey: "userUid")
+        
         configureUserNameLabel()
         configureAnimationView()
-        // Do any additional setup after loading the view.
+        
         
         
     }
 
     
     func configureUserNameLabel(){
-        self.userNameLabel.text = (self.nickname ?? "")  + "님,"
+        
+        self.nickname = UserDefaults.standard.string(forKey: "userName")
+        
+        self.userNameLabel.text = (self.nickname ?? "") + "님,"
+        
     }
     
     func configureAnimationView(){

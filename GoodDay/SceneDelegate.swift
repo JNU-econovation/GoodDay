@@ -18,8 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let userDefaults = UserDefaults.standard
         
-        //let isInitialized: Bool = userDefaults.bool(forKey: "isInitialized")
-        let isInitialized: Bool = true
+        let isInitialized: Bool = userDefaults.bool(forKey: "isInitialized")
+//        let isInitialized: Bool = false
         
         // 초기 설정이 안 됐을 경우 -> 초기 화면으로 이동
         if isInitialized == false {

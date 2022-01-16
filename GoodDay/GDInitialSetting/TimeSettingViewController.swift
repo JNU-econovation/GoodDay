@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 class TimeSettingViewController: UIViewController {
 
@@ -19,6 +21,7 @@ class TimeSettingViewController: UIViewController {
     var wakeUptimePicker: UIDatePicker!
     var sleepTimePicker: UIDatePicker!
     let timeFormmater = DateFormatter()
+    let userUid = UUID().uuidString
     
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var wakeUpTimeTextField: UITextField!
@@ -192,10 +195,34 @@ class TimeSettingViewController: UIViewController {
         guard let mainVC = storyBoard.instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
         
         mainVC.nickname = self.nickname
+        mainVC.userUid = self.userUid
         mainVC.modalPresentationStyle = .overFullScreen
         mainVC.modalTransitionStyle = .crossDissolve
         
+        saveUserInfo()
+        
         self.present(mainVC, animated: true, completion: nil)
+        
+    }
+    
+    func saveUserInfo(){
+        
+        let db = Firestore.firestore()
+        
+        let mbti = (self.firstMbti ?? "") + (self.secondMbti ?? "") + (self.thirdMbti ?? "")  + (self.fourthMbti ?? "")
+        UserDefaults.standard.set(true, forKey: "isInitialized")
+        UserDefaults.standard.set(self.userUid, forKey: "userUid")
+        UserDefaults.standard.set(self.nickname, forKey:"userName")
+        
+        let user = User(name: self.nickname ?? "", mbti: mbti, wakeUpTime: self.wakeUpTime ?? Date(), sleepTime: self.sleepTime ?? Date(), beginDay: Date())
+        
+        do {
+            try db.collection("users").document(self.userUid).setData(from: user)
+        }catch let error {
+            print("Error writing user to Firestore: \(error)")
+        }
+        
+        
         
     }
     

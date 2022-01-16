@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0386FC55278B0C3400319E42 /* 미션 항목.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0386FC54278B0C3400319E42 /* 미션 항목.csv */; };
 		0386FC57278B0C9200319E42 /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386FC56278B0C9200319E42 /* CSVParser.swift */; };
-		03C345A5278887B9006278FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03C345A4278887B9006278FF /* GoogleService-Info.plist */; };
 		1BDC4393ADCFBC9BD88D83E8 /* Pods_GoodDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */; };
 		3239BC9C277D8E5200E96E21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BC9B277D8E5200E96E21 /* AppDelegate.swift */; };
 		3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */; };
@@ -43,6 +42,8 @@
 		32F2438F2783E4D200F1D160 /* GDMissionPerDayDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32F2438E2783E4D200F1D160 /* GDMissionPerDayDetail.xib */; };
 		32F24391278464B600F1D160 /* GDMissionPerDayWeeks.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32F24390278464B600F1D160 /* GDMissionPerDayWeeks.xib */; };
 		F068BDB62782DCEF001035B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F068BDB52782DCEF001035B6 /* Main.storyboard */; };
+		F0794E9A2793F1FE00EC55B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0794E992793F1FD00EC55B8 /* GoogleService-Info.plist */; };
+		F0794E9D2793F49400EC55B8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0794E9C2793F49400EC55B8 /* User.swift */; };
 		F07E9D0C27819E2E00C7C6B4 /* FloatingButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07E9D0A27819E2E00C7C6B4 /* FloatingButtonViewController.swift */; };
 		F07E9D0D27819E2E00C7C6B4 /* FloatingButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07E9D0B27819E2E00C7C6B4 /* FloatingButtonViewController.xib */; };
 		F07E9D0F2781A25300C7C6B4 /* 30344-hamburger-close-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = F07E9D0E2781A25300C7C6B4 /* 30344-hamburger-close-animation.json */; };
@@ -59,7 +60,6 @@
 /* Begin PBXFileReference section */
 		0386FC54278B0C3400319E42 /* 미션 항목.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "미션 항목.csv"; sourceTree = "<group>"; };
 		0386FC56278B0C9200319E42 /* CSVParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
-		03C345A4278887B9006278FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3239BC98277D8E5200E96E21 /* GoodDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3239BC9B277D8E5200E96E21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +97,8 @@
 		9B6CFE1151A1AB88C5915BAD /* Pods-GoodDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.debug.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.debug.xcconfig"; sourceTree = "<group>"; };
 		C9657BA07B3C0A1266C0F7B6 /* Pods-GoodDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.release.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.release.xcconfig"; sourceTree = "<group>"; };
 		F068BDB52782DCEF001035B6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F0794E992793F1FD00EC55B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F0794E9C2793F49400EC55B8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F07E9D0A27819E2E00C7C6B4 /* FloatingButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonViewController.swift; sourceTree = "<group>"; };
 		F07E9D0B27819E2E00C7C6B4 /* FloatingButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloatingButtonViewController.xib; sourceTree = "<group>"; };
 		F07E9D0E2781A25300C7C6B4 /* 30344-hamburger-close-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "30344-hamburger-close-animation.json"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		3239BC9A277D8E5200E96E21 /* GoodDay */ = {
 			isa = PBXGroup;
 			children = (
+				F0794E9B2793F47F00EC55B8 /* Model */,
 				32F2438C2783D47A00F1D160 /* Assets.xcassets */,
 				32F2435127833BC900F1D160 /* Fonts */,
 				32F2434C27833BC900F1D160 /* GDMissionPerDay */,
@@ -157,7 +160,7 @@
 				3239BCAC277D8E5400E96E21 /* Info.plist */,
 				3239BCA4277D8E5200E96E21 /* GoodDay.xcdatamodeld */,
 				F07E9D0E2781A25300C7C6B4 /* 30344-hamburger-close-animation.json */,
-				03C345A4278887B9006278FF /* GoogleService-Info.plist */,
+				F0794E992793F1FD00EC55B8 /* GoogleService-Info.plist */,
 				0386FC54278B0C3400319E42 /* 미션 항목.csv */,
 			);
 			path = GoodDay;
@@ -230,6 +233,14 @@
 				C9657BA07B3C0A1266C0F7B6 /* Pods-GoodDay.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F0794E9B2793F47F00EC55B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0794E9C2793F49400EC55B8 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F07E9D0727819DF000C7C6B4 /* FloatingButton */ = {
@@ -338,9 +349,9 @@
 				32F2437327833BC900F1D160 /* NanumSquareEB.otf in Resources */,
 				32F2437D27833BC900F1D160 /* NanumGothicLight.otf in Resources */,
 				32F2437627833BC900F1D160 /* NanumGothicExtraBold.otf in Resources */,
+				F0794E9A2793F1FE00EC55B8 /* GoogleService-Info.plist in Resources */,
 				F0E1A987277EDE4B00DD286E /* NameSettingViewController.xib in Resources */,
 				3239BCAB277D8E5400E96E21 /* LaunchScreen.storyboard in Resources */,
-				03C345A5278887B9006278FF /* GoogleService-Info.plist in Resources */,
 				F0E1A993277EE70400DD286E /* TimeSettingViewController.xib in Resources */,
 				32F2437127833BC900F1D160 /* NotoSansKR-Light.otf in Resources */,
 				32F2438F2783E4D200F1D160 /* GDMissionPerDayDetail.xib in Resources */,
@@ -414,6 +425,7 @@
 				F0E1A98A277EE1EF00DD286E /* WelcomeViewController.swift in Sources */,
 				32F2436E27833BC900F1D160 /* GDMissionPerDayDetailView.swift in Sources */,
 				32F2436C27833BC900F1D160 /* GDMissionPerDayDetailViewController.swift in Sources */,
+				F0794E9D2793F49400EC55B8 /* User.swift in Sources */,
 				32F2438427833BC900F1D160 /* FontUtils.swift in Sources */,
 				32F2438527833BC900F1D160 /* ColorUtils.swift in Sources */,
 				F0E1A98E277EE41700DD286E /* MbtiSettingViewController.swift in Sources */,
