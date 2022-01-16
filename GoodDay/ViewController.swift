@@ -27,12 +27,17 @@ class ViewController: UIViewController {
     var isShowFloating: Bool = true
     let animationView = AnimationView(name: "30344-hamburger-close-animation")
     
+    @IBOutlet weak var famousSayingView: UIView!
+    @IBOutlet weak var famousSayingLabel: UILabel!
+    @IBOutlet weak var famousSayingMentionerLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.userUid = UserDefaults.standard.string(forKey: "userUid")
         
         configureUserNameLabel()
         configureAnimationView()
+        configureFamousSayingView()
         
         
         
@@ -89,6 +94,12 @@ extension ViewController: DelegateFloatingButtonViewController {
             self.isShowFloating = true
         }
         
+    }
+    
+    func configureFamousSayingView(){
+        self.famousSayingView.layer.cornerRadius = 13
+        self.famousSayingView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        self.famousSayingView.layer.shadowOpacity = 0.25
     }
 }
 
