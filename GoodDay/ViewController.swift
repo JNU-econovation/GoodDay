@@ -31,12 +31,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var famousSayingLabel: UILabel!
     @IBOutlet weak var famousSayingMentionerLabel: UILabel!
     
+    @IBOutlet weak var missionView: UIView!
+    @IBOutlet weak var missionDayLabel: UILabel!
+    @IBOutlet weak var missionTitleLabel: UILabel!
+    @IBOutlet weak var missionFirstTagLabel: UILabel!
+    @IBOutlet weak var missionSecondTagLabel: UILabel!
+    @IBOutlet weak var missionNextButton: UIButton!
+    
+    let rightArrowImg = UIImage(systemName: "arrow.right", withConfiguration: UIImage.SymbolConfiguration(pointSize: 24))
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.userUid = UserDefaults.standard.string(forKey: "userUid")
         
         configureUserNameLabel()
         configureAnimationView()
+        configureMissionView()
         configureFamousSayingView()
         
         
@@ -51,6 +63,7 @@ class ViewController: UIViewController {
         self.userNameLabel.text = (self.nickname ?? "") + "님,"
         
     }
+    
     
     func configureAnimationView(){
         
@@ -81,6 +94,23 @@ class ViewController: UIViewController {
         }
         
     }
+    func configureFamousSayingView(){
+        self.famousSayingView.layer.cornerRadius = 13
+        self.famousSayingView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        self.famousSayingView.layer.shadowOpacity = 0.25
+    }
+    
+    func configureMissionView(){
+        self.missionView.layer.cornerRadius = 13
+        self.missionView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        self.missionView.layer.shadowOpacity = 0.25
+        configureMissionButton()
+    }
+    
+    private func configureMissionButton(){
+        self.missionNextButton.setImage(rightArrowImg, for: .normal)
+        self.missionNextButton.tintColor = .white
+    }
 
 }
 
@@ -96,11 +126,7 @@ extension ViewController: DelegateFloatingButtonViewController {
         
     }
     
-    func configureFamousSayingView(){
-        self.famousSayingView.layer.cornerRadius = 13
-        self.famousSayingView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        self.famousSayingView.layer.shadowOpacity = 0.25
-    }
+    
 }
 
 
