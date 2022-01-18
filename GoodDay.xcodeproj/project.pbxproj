@@ -409,11 +409,8 @@
 				32F2437927833BC900F1D160 /* NotoSansKR-Bold.otf in Resources */,
 				32F2437C27833BC900F1D160 /* NanumSquareB.otf in Resources */,
 				32F2438027833BC900F1D160 /* NotoSansKR-Regular.otf in Resources */,
-<<<<<<< Updated upstream
 				F0FDB07D279696E300BDF962 /* DiaryCalendarViewController.xib in Resources */,
-=======
 				035591EF278C188900BD0417 /* missionContent.json in Resources */,
->>>>>>> Stashed changes
 				32F2437E27833BC900F1D160 /* NotoSansKR-Black.otf in Resources */,
 				32F2437A27833BC900F1D160 /* NotoSansKR-Thin.otf in Resources */,
 				F0FDB0812796987900BDF962 /* DiaryDetailViewController.xib in Resources */,
@@ -488,12 +485,9 @@
 				32F2438427833BC900F1D160 /* FontUtils.swift in Sources */,
 				32F2438527833BC900F1D160 /* ColorUtils.swift in Sources */,
 				F0E1A98E277EE41700DD286E /* MbtiSettingViewController.swift in Sources */,
-<<<<<<< Updated upstream
 				F0FDB07C279696E300BDF962 /* DiaryCalendarViewController.swift in Sources */,
 				0386FC57278B0C9200319E42 /* CSVParser.swift in Sources */,
 				F0FDB08727969ECC00BDF962 /* RegisteredDiaryView.swift in Sources */,
-=======
->>>>>>> Stashed changes
 				32F2438327833BC900F1D160 /* GDBlurEffectView.swift in Sources */,
 				3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */,
 				F0E1A992277EE70400DD286E /* TimeSettingViewController.swift in Sources */,
