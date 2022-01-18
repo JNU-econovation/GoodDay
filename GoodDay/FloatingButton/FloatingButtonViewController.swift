@@ -214,9 +214,30 @@ class FloatingButtonViewController: UIViewController {
         GDMissionPerDayDetailVC.modalPresentationStyle = .overFullScreen
         GDMissionPerDayDetailVC.modalTransitionStyle = .crossDissolve
         
+       
         self.present(GDMissionPerDayDetailVC, animated: true, completion: nil)
         
+        
+        
     }
+    
+    @IBAction func tapDiaryButton(_ sender: UIButton) {
+        
+        
+        
+        let diaryVC = DiaryCalendarViewController(nibName: "DiaryCalendarViewController", bundle: nil)
+        
+        diaryVC.modalPresentationStyle = .overFullScreen
+        diaryVC.modalTransitionStyle = .crossDissolve
+       
+        
+        self.present(diaryVC, animated: true, completion: nil)
+        
+        
+    }
+    
+    
+    
     
     // 유저가 화면을 터치했을 때 호출되는 메서드
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

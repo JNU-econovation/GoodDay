@@ -21,4 +21,6 @@ target 'GoodDay' do
 
   # Pods for GoodDay
   pod 'lottie-ios'
+  pod 'FSCalendar'
+  pod 'IQKeyboardManagerSwift'
 end
