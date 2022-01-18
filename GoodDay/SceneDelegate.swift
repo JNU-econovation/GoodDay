@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    
+    let db = Firestore.firestore()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     
@@ -28,15 +30,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.rootViewController = WelcomeVC
             
             
-            
-            
-            
-        }else {
+        } else {
             // 초기 설정이 됐을 경우 -> 메인 화면으로 이동
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             
             guard let mainVC = storyBoard.instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
-            
+             
             window?.rootViewController = mainVC
             
         }

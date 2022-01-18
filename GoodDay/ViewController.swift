@@ -50,9 +50,6 @@ class ViewController: UIViewController {
         configureAnimationView()
         configureMissionView()
         configureFamousSayingView()
-        
-        
-        
     }
 
     

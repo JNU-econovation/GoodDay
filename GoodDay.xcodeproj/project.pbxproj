@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0386FC55278B0C3400319E42 /* 미션 항목.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0386FC54278B0C3400319E42 /* 미션 항목.csv */; };
-		0386FC57278B0C9200319E42 /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386FC56278B0C9200319E42 /* CSVParser.swift */; };
+		035591EF278C188900BD0417 /* missionContent.json in Resources */ = {isa = PBXBuildFile; fileRef = 035591EE278C188800BD0417 /* missionContent.json */; };
+		035591F1278C614100BD0417 /* GDMissionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035591F0278C614100BD0417 /* GDMissionData.swift */; };
+		03C345A5278887B9006278FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03C345A4278887B9006278FF /* GoogleService-Info.plist */; };
 		1BDC4393ADCFBC9BD88D83E8 /* Pods_GoodDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */; };
 		3239BC9C277D8E5200E96E21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BC9B277D8E5200E96E21 /* AppDelegate.swift */; };
 		3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */; };
@@ -66,8 +67,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0386FC54278B0C3400319E42 /* 미션 항목.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "미션 항목.csv"; sourceTree = "<group>"; };
-		0386FC56278B0C9200319E42 /* CSVParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
+		035591EE278C188800BD0417 /* missionContent.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = missionContent.json; sourceTree = "<group>"; };
+		035591F0278C614100BD0417 /* GDMissionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMissionData.swift; sourceTree = "<group>"; };
+		03C345A4278887B9006278FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3239BC98277D8E5200E96E21 /* GoodDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3239BC9B277D8E5200E96E21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		032AEF81278E46ED00B6C197 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				32F2434D27833BC900F1D160 /* GDPeekingCollectionViewDataSource.swift */,
+				32F2434E27833BC900F1D160 /* GDMissionPerDayDetailViewController.swift */,
+				32F2434F27833BC900F1D160 /* GDPeekingCollectionViewDelegate.swift */,
+				32F2435027833BC900F1D160 /* GDMissionPerDayDetailView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		032AEF82278E973600B6C197 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				035591F0278C614100BD0417 /* GDMissionData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3239BC8F277D8E5200E96E21 = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +187,6 @@
 				32F2438C2783D47A00F1D160 /* Assets.xcassets */,
 				32F2435127833BC900F1D160 /* Fonts */,
 				32F2434C27833BC900F1D160 /* GDMissionPerDay */,
-				32F2436427833BC900F1D160 /* GDMissionPerDayWeek */,
 				32F2436727833BC900F1D160 /* GDUtils */,
 				F0FA07A92782D0F7003FD717 /* Views */,
 				F07E9D0727819DF000C7C6B4 /* FloatingButton */,
@@ -177,8 +197,8 @@
 				3239BCAC277D8E5400E96E21 /* Info.plist */,
 				3239BCA4277D8E5200E96E21 /* GoodDay.xcdatamodeld */,
 				F07E9D0E2781A25300C7C6B4 /* 30344-hamburger-close-animation.json */,
-				F0794E992793F1FD00EC55B8 /* GoogleService-Info.plist */,
-				0386FC54278B0C3400319E42 /* 미션 항목.csv */,
+				03C345A4278887B9006278FF /* GoogleService-Info.plist */,
+				035591EE278C188800BD0417 /* missionContent.json */,
 			);
 			path = GoodDay;
 			sourceTree = "<group>";
@@ -186,10 +206,8 @@
 		32F2434C27833BC900F1D160 /* GDMissionPerDay */ = {
 			isa = PBXGroup;
 			children = (
-				32F2434D27833BC900F1D160 /* GDPeekingCollectionViewDataSource.swift */,
-				32F2434E27833BC900F1D160 /* GDMissionPerDayDetailViewController.swift */,
-				32F2434F27833BC900F1D160 /* GDPeekingCollectionViewDelegate.swift */,
-				32F2435027833BC900F1D160 /* GDMissionPerDayDetailView.swift */,
+				032AEF82278E973600B6C197 /* Model */,
+				032AEF81278E46ED00B6C197 /* Controller */,
 			);
 			path = GDMissionPerDay;
 			sourceTree = "<group>";
@@ -197,6 +215,7 @@
 		32F2435127833BC900F1D160 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				32F2436427833BC900F1D160 /* GDMissionPerDayWeek */,
 				32F2435827833BC900F1D160 /* NanumGothic.otf */,
 				32F2435227833BC900F1D160 /* NanumGothicBold.otf */,
 				32F2435927833BC900F1D160 /* NanumGothicExtraBold.otf */,
@@ -230,7 +249,6 @@
 				32F2436827833BC900F1D160 /* GDBlurEffectView.swift */,
 				32F2436927833BC900F1D160 /* FontUtils.swift */,
 				32F2436A27833BC900F1D160 /* ColorUtils.swift */,
-				0386FC56278B0C9200319E42 /* CSVParser.swift */,
 			);
 			path = GDUtils;
 			sourceTree = "<group>";
@@ -387,12 +405,15 @@
 				F0E1A993277EE70400DD286E /* TimeSettingViewController.xib in Resources */,
 				32F2437127833BC900F1D160 /* NotoSansKR-Light.otf in Resources */,
 				32F2438F2783E4D200F1D160 /* GDMissionPerDayDetail.xib in Resources */,
-				0386FC55278B0C3400319E42 /* 미션 항목.csv in Resources */,
 				F068BDB62782DCEF001035B6 /* Main.storyboard in Resources */,
 				32F2437927833BC900F1D160 /* NotoSansKR-Bold.otf in Resources */,
 				32F2437C27833BC900F1D160 /* NanumSquareB.otf in Resources */,
 				32F2438027833BC900F1D160 /* NotoSansKR-Regular.otf in Resources */,
+<<<<<<< Updated upstream
 				F0FDB07D279696E300BDF962 /* DiaryCalendarViewController.xib in Resources */,
+=======
+				035591EF278C188900BD0417 /* missionContent.json in Resources */,
+>>>>>>> Stashed changes
 				32F2437E27833BC900F1D160 /* NotoSansKR-Black.otf in Resources */,
 				32F2437A27833BC900F1D160 /* NotoSansKR-Thin.otf in Resources */,
 				F0FDB0812796987900BDF962 /* DiaryDetailViewController.xib in Resources */,
@@ -467,15 +488,19 @@
 				32F2438427833BC900F1D160 /* FontUtils.swift in Sources */,
 				32F2438527833BC900F1D160 /* ColorUtils.swift in Sources */,
 				F0E1A98E277EE41700DD286E /* MbtiSettingViewController.swift in Sources */,
+<<<<<<< Updated upstream
 				F0FDB07C279696E300BDF962 /* DiaryCalendarViewController.swift in Sources */,
 				0386FC57278B0C9200319E42 /* CSVParser.swift in Sources */,
 				F0FDB08727969ECC00BDF962 /* RegisteredDiaryView.swift in Sources */,
+=======
+>>>>>>> Stashed changes
 				32F2438327833BC900F1D160 /* GDBlurEffectView.swift in Sources */,
 				3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */,
 				F0E1A992277EE70400DD286E /* TimeSettingViewController.swift in Sources */,
 				F07E9D0C27819E2E00C7C6B4 /* FloatingButtonViewController.swift in Sources */,
 				3239BCA6277D8E5200E96E21 /* GoodDay.xcdatamodeld in Sources */,
 				32F2438227833BC900F1D160 /* GDMissionButton.swift in Sources */,
+				035591F1278C614100BD0417 /* GDMissionData.swift in Sources */,
 				32F2436D27833BC900F1D160 /* GDPeekingCollectionViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,12 +10,13 @@ import UIKit
 extension GDMissionPerDayDetailViewController {
     
     func makeDetails (detailView: UIView) -> UIView {
-        let labelsGap = (contentViewHeight/2 - 106) / 13
         
+        let labelsGap = (contentViewHeight/2 - 106) / 13
+                
         detailView.addSubview(toDayTextLabel(gap: labelsGap))
-        detailView.addSubview(toDayMissionBackgroundImage(text: "하루 세끼 챙겨먹기", gap: labelsGap))
-        detailView.addSubview(toDayMissionLabel(text: "하루 세끼 챙겨먹기", gap: labelsGap))
-        detailView.addSubview(toDayMissionSubLabel(text: "이별한 사람들은 밥을 잘 안 먹더라고요.\n이번 기회에 시간 내서 밥을 먹어보아요!", gap: labelsGap))
+        detailView.addSubview(toDayMissionBackgroundImage(text: mission?[missionIndex].content ?? "", gap: labelsGap))
+        detailView.addSubview(toDayMissionLabel(text: mission?[missionIndex].content ?? "", gap: labelsGap))
+        detailView.addSubview(toDayMissionSubLabel(text: mission?[missionIndex].detail ?? "", gap: labelsGap))
         detailView.addSubview(changingMissionButton(gap: labelsGap))
 
         return detailView
@@ -54,6 +55,7 @@ extension GDMissionPerDayDetailViewController {
         toDayMissionSubLabel.text = text
         toDayMissionSubLabel.textColor = ColorUtils().hexStringToUIColor(hex: "#5C5C5C", alpha: 1)
         toDayMissionSubLabel.font = UIFont(name: "NanumSquareOTFL", size: 12)
+        toDayMissionSubLabel.textAlignment = .center
         toDayMissionSubLabel.numberOfLines = 2
         
         let stringSize = FontUtils().getFontSize(font: toDayMissionSubLabel.font, text: text)
@@ -80,6 +82,7 @@ extension GDMissionPerDayDetailViewController {
         changingMissionButton.frame = CGRect(x: (screenSizeWidth - stringSize.width)/2, y: gap * 9 - 10 + 86, width: stringSize.width, height: 20)
 
         changingMissionButton.addTarget(self, action: #selector(onTapButton(_:)), for: .touchUpInside)
+        changingMissionButton.tag = 20
         
         return changingMissionButton
     }

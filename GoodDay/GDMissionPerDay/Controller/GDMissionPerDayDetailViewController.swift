@@ -7,6 +7,9 @@
 
 import UIKit
 import MSPeekCollectionViewDelegateImplementation
+import Lottie
+import Firebase
+import grpc
 
 class GDMissionPerDayDetailViewController: UIViewController {
     
@@ -15,8 +18,26 @@ class GDMissionPerDayDetailViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let db = Firestore.firestore()
+    var model: GDMissionData?
+    
+    var detailView: UIView!
+    var missionIndex = 0
+    
     @objc func onTapButton(_ sender: AnyObject) {
         let button = sender as! UIButton
+        if button.tag == 20 {
+            if missionIndex != (mission?.count ?? 0) - 1 {
+                missionIndex += 1
+            } else {
+                missionIndex = 0
+            }
+            print("update index \(missionIndex)")
+            detailView.subviews.forEach{$0.removeFromSuperview()}
+            detailView = makeDetails(detailView: detailView)
+            detailView.setNeedsDisplay()
+            detailView.layoutIfNeeded()
+        }
         print("Button was tapped. \(button.titleLabel?.text ?? "")")
     }
     
@@ -31,6 +52,10 @@ class GDMissionPerDayDetailViewController: UIViewController {
         GDMissionPerDayWeeksVC.modalTransitionStyle = .crossDissolve
         
         self.present(GDMissionPerDayWeeksVC, animated: true, completion: nil)
+        
+        for i in 1...6 {
+            model?.putMissionPerDay(uid: "1234", week: 1, day: i, missionId: i, isSuccess: false)
+        }
     }
     
     
@@ -39,12 +64,16 @@ class GDMissionPerDayDetailViewController: UIViewController {
     var contentViewHeight: CGFloat = 0.0
     
     let pickerData = ["DAY 1", "DAY 2", "DAY 3", "DAY 4", "DAY 5", "DAY 6"]
-    var mission:[[String]] = []
+    var mission: [Mission]?
+    //let missionPerDay = GDMissionData().getMissionPerDay()
     
     var behavior: MSCollectionViewPeekingBehavior!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        model = GDMissionData()
+        mission = GDMissionData().getMissionData()
+                
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
 
         behavior = MSCollectionViewPeekingBehavior(cellPeekWidth: screenSizeWidth * 0.119)
@@ -57,6 +86,9 @@ class GDMissionPerDayDetailViewController: UIViewController {
         contentView.addSubview(getCollectionViewBackgroundImage(collectionView: collectionView))
         contentView.addSubview(collectionView)
         contentView.addSubview(getDetailView(screenSizeWidth: screenSizeWidth, contentViewHeight: contentViewHeight))
+        
+        //let weeks = missionPerDay?.weeks
+        //contentView.addSubview(getweekButton(text: "WEEK \(String(describing: weeks?.count))",originButton: weekButton))
         contentView.addSubview(getweekButton(text: "WEEK 1",originButton: weekButton))
         
         backButton.addTarget(self, action: #selector(onTapBackButton(_:)), for: .touchUpInside)
@@ -101,7 +133,8 @@ class GDMissionPerDayDetailViewController: UIViewController {
     }
     
     func getDetailView(screenSizeWidth: CGFloat, contentViewHeight: CGFloat) -> UIView {
-        var detailView = UIView()
+        detailView = UIView()
+
         detailView.frame = CGRect(x:0, y: contentViewHeight/2, width: screenSizeWidth, height: contentViewHeight)
         detailView.layer.shadowOpacity = 0.3
         detailView.layer.shadowOffset = CGSize(width: 0, height: -3)
