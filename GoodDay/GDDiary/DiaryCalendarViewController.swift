@@ -7,6 +7,8 @@
 
 import UIKit
 import FSCalendar
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 class DiaryCalendarViewController: UIViewController {
 
@@ -77,23 +79,32 @@ class DiaryCalendarViewController: UIViewController {
         
     }()
     let todayDate = Date()
+    let db = Firestore.firestore()
+    let userUid = UserDefaults.standard.string(forKey: "userUid")
     var todayDateStr: String?
     var isRegisteredDiary: Bool = false
     var selectedDateStr: String?
     var registeredDiaryDateList = [String]()
     var diaryList = [Diary]()
-    var boolVal:Bool?
     
+    @IBOutlet weak var backButton: UIButton!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureTodayDate()
         configureCalendarViewLayout()
-        configureDiaryView()
+        fetchDiaryData()
+//        configureTodayDate()
+//        configureDiaryView()
         
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         
     }
@@ -232,7 +243,71 @@ class DiaryCalendarViewController: UIViewController {
         
         
     }
-
+    
+    
+    @IBAction func tapBackButton(_ sender: UIButton) {
+        
+        
+        sender.showAnimation {
+            let notificationName = Notification.Name("sendBoolData")
+            
+            let boolDic = ["isShowFloating" : false]
+            
+            NotificationCenter.default.post(name: notificationName, object: nil, userInfo: boolDic)
+            
+            
+            
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+       
+        
+        
+    }
+    func fetchDiaryData() {
+//        self.diaryList = [Diary]()
+//        self.registeredDiaryDateList = [String]()
+        self.db.collection("diarys").document(self.userUid!).getDocument { (document, error) in
+            if let document = document {
+                
+                if let diary = (document["diaryList"] as? [[String: String]]) {
+                    
+                    for (idx, _) in diary.enumerated() {
+                        let title = diary[idx]["title"]! as String
+                        let contents = diary[idx]["contents"]! as String
+                        let date = diary[idx]["date"]! as String
+                        
+                        
+                        let diary = Diary(title: title, contents: contents, date: date)
+                        
+                        print("title is \(title)")
+                        print("contents is \(contents)")
+                        print("date is \(date)")
+                        self.diaryList.append(diary)
+                        self.registeredDiaryDateList.append(date)
+                        self.calendarView.reloadData()
+                        
+                    }
+                    
+                    
+                }
+                self.configureTodayDate()
+                self.configureDiaryView()
+                for diary in self.diaryList {
+                    if diary.date == self.todayDateStr {
+                        self.registeredDiaryView.dateLabel.text = diary.date
+                        self.registeredDiaryView.diaryTitleLabel.text = diary.title
+                        self.registeredDiaryView.diaryContentLabel.text = diary.contents
+                    }
+                }
+                
+                
+            }
+        }
+        
+        
+    }
+    
 
 
 
@@ -325,6 +400,36 @@ extension DiaryCalendarViewController: DiaryDetailViewControllerDelegate {
         self.diaryList.append(diary)
         self.registeredDiaryDateList.append(date)
         
+        var diaryListItem = [Any]()
+        
+        do {
+            let jsonData = try JSONEncoder().encode(diary)
+            let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
+            diaryListItem.append(jsonObject)
+            
+        }catch {
+            
+        }
+        
+        if self.diaryList.count == 1 {
+            let docData: [String: Any] = [
+                "diaryList": diaryListItem
+            ]
+            self.db.collection("diarys").document(self.userUid!).setData(docData) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                }else {
+                    print("Docuemnt successfully written!")
+                }
+            }
+            
+        }else {
+            self.db.collection("diarys").document(self.userUid!).updateData([
+                "diaryList": FieldValue.arrayUnion(diaryListItem)
+            ])
+            
+        }
+        
         registeredDiaryView.dateLabel.text = date
         registeredDiaryView.diaryTitleLabel.text = title
         registeredDiaryView.diaryContentLabel.text = contents
@@ -349,6 +454,30 @@ extension DiaryCalendarViewController: DiaryDetailViewControllerDelegate {
             
         }
         
+        var diaryListItem = [Any]()
+        
+        for diary in self.diaryList {
+            do {
+                let jsonData = try JSONEncoder().encode(diary)
+                let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
+                diaryListItem.append(jsonObject)
+                
+            }catch{
+                
+            }
+        }
+        let docData: [String: Any] = [
+            "diaryList": diaryListItem
+        ]
+        
+        self.db.collection("diarys").document(self.userUid!).setData(docData) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            }else {
+                print("Document successfully Update")
+            }
+            
+        }
         registeredDiaryView.dateLabel.text = date
         registeredDiaryView.diaryTitleLabel.text = title
         registeredDiaryView.diaryContentLabel.text = contents
@@ -356,6 +485,7 @@ extension DiaryCalendarViewController: DiaryDetailViewControllerDelegate {
     }
     func deleteDiaryData(date: String) {
         
+        let deletedDiary: Diary
         for (indexVal, dateStr) in registeredDiaryDateList.enumerated() {
             if dateStr == date {
                 registeredDiaryDateList.remove(at: indexVal)
@@ -367,13 +497,26 @@ extension DiaryCalendarViewController: DiaryDetailViewControllerDelegate {
         
         for (indexVal, diary) in diaryList.enumerated() {
             if diary.date == date {
+                
+                deletedDiary = diary
                 diaryList.remove(at: indexVal)
                 
+                var diaryListItem = [Any]()
                 
+                do {
+                    let jsonData = try JSONEncoder().encode(deletedDiary)
+                    let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
+                    diaryListItem.append(jsonObject)
+                }catch {
+                }
                 
+                self.db.collection("diarys").document(self.userUid!).updateData([
+                    "diaryList": FieldValue.arrayRemove(diaryListItem)
+                ])
                 break
             }
         }
+        
         
         validateIsRegisteredDiary(date: date)
         configureDiaryView()
@@ -382,3 +525,5 @@ extension DiaryCalendarViewController: DiaryDetailViewControllerDelegate {
         
     }
 }
+
+

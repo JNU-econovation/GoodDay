@@ -224,14 +224,19 @@ class FloatingButtonViewController: UIViewController {
     @IBAction func tapDiaryButton(_ sender: UIButton) {
         
         
+        let presentView = presentingViewController
         
-        let diaryVC = DiaryCalendarViewController(nibName: "DiaryCalendarViewController", bundle: nil)
+        self.dismiss(animated: false) {
+            let diaryVC = DiaryCalendarViewController(nibName: "DiaryCalendarViewController", bundle: nil)
+            
+            diaryVC.modalPresentationStyle = .overFullScreen
+            diaryVC.modalTransitionStyle = .crossDissolve
+            
+            presentView?.present(diaryVC, animated: true, completion: nil)
+            
+        }
         
-        diaryVC.modalPresentationStyle = .overFullScreen
-        diaryVC.modalTransitionStyle = .crossDissolve
-       
         
-        self.present(diaryVC, animated: true, completion: nil)
         
         
     }

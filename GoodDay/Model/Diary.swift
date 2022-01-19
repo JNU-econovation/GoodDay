@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct Diary {
+struct Diary: Codable {
     var title: String
     var contents: String
     var date: String
+    
     
 }

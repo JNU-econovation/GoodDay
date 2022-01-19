@@ -119,7 +119,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNj-e9-zmH">
-                    <rect key="frame" x="30" y="836" width="354" height="38"/>
+                    <rect key="frame" x="30" y="812" width="354" height="38"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="완료">
                         <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
@@ -152,7 +152,7 @@
                 <constraint firstItem="GuS-ZM-PTh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="dIS-nP-MaS"/>
                 <constraint firstItem="fb0-yn-Wfc" firstAttribute="centerY" secondItem="oFb-mK-cbs" secondAttribute="centerY" id="flP-TS-xMU"/>
                 <constraint firstItem="cGm-1F-7Vo" firstAttribute="top" secondItem="oFb-mK-cbs" secondAttribute="bottom" constant="25" id="g5e-DR-EJr"/>
-                <constraint firstItem="aNj-e9-zmH" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="12" id="giQ-9c-ASz"/>
+                <constraint firstItem="aNj-e9-zmH" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-12" id="giQ-9c-ASz"/>
                 <constraint firstItem="oFb-mK-cbs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="h5j-Ej-ZU6"/>
                 <constraint firstItem="VBh-rA-kEy" firstAttribute="top" secondItem="dOS-N2-c89" secondAttribute="bottom" constant="20" id="jMX-7H-Zst"/>
                 <constraint firstItem="cGm-1F-7Vo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="jeC-YW-3Ju"/>

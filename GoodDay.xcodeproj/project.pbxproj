@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		035591EF278C188900BD0417 /* missionContent.json in Resources */ = {isa = PBXBuildFile; fileRef = 035591EE278C188800BD0417 /* missionContent.json */; };
 		035591F1278C614100BD0417 /* GDMissionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035591F0278C614100BD0417 /* GDMissionData.swift */; };
-		03C345A5278887B9006278FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03C345A4278887B9006278FF /* GoogleService-Info.plist */; };
 		1BDC4393ADCFBC9BD88D83E8 /* Pods_GoodDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */; };
 		3239BC9C277D8E5200E96E21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BC9B277D8E5200E96E21 /* AppDelegate.swift */; };
 		3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */; };
@@ -69,7 +68,6 @@
 /* Begin PBXFileReference section */
 		035591EE278C188800BD0417 /* missionContent.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = missionContent.json; sourceTree = "<group>"; };
 		035591F0278C614100BD0417 /* GDMissionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMissionData.swift; sourceTree = "<group>"; };
-		03C345A4278887B9006278FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3239BC98277D8E5200E96E21 /* GoodDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3239BC9B277D8E5200E96E21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +166,7 @@
 				3239BC99277D8E5200E96E21 /* Products */,
 				96CA59776B761B2CCCDEA62A /* Pods */,
 				7648B75F7CABB0D80879E589 /* Frameworks */,
+				F09A579C2796F8F500706B96 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,7 +196,6 @@
 				3239BCAC277D8E5400E96E21 /* Info.plist */,
 				3239BCA4277D8E5200E96E21 /* GoodDay.xcdatamodeld */,
 				F07E9D0E2781A25300C7C6B4 /* 30344-hamburger-close-animation.json */,
-				03C345A4278887B9006278FF /* GoogleService-Info.plist */,
 				035591EE278C188800BD0417 /* missionContent.json */,
 			);
 			path = GoodDay;
@@ -287,6 +285,14 @@
 			path = FloatingButton;
 			sourceTree = "<group>";
 		};
+		F09A579C2796F8F500706B96 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				F0794E992793F1FD00EC55B8 /* GoogleService-Info.plist */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		F0E1A983277EDE2400DD286E /* GDInitialSetting */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +312,8 @@
 				F0E1A989277EE1EF00DD286E /* WelcomeViewController.xib */,
 				F0E1A98D277EE41700DD286E /* MbtiSettingViewController.xib */,
 				F0E1A991277EE70400DD286E /* TimeSettingViewController.xib */,
+				F0FDB07B279696E300BDF962 /* DiaryCalendarViewController.xib */,
+				F0FDB07F2796987900BDF962 /* DiaryDetailViewController.xib */,
 				3239BCA9277D8E5400E96E21 /* LaunchScreen.storyboard */,
 				32F2438E2783E4D200F1D160 /* GDMissionPerDayDetail.xib */,
 				32F24390278464B600F1D160 /* GDMissionPerDayWeeks.xib */,
@@ -318,9 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				F0FDB07A279696E300BDF962 /* DiaryCalendarViewController.swift */,
-				F0FDB07B279696E300BDF962 /* DiaryCalendarViewController.xib */,
 				F0FDB07E2796987900BDF962 /* DiaryDetailViewController.swift */,
-				F0FDB07F2796987900BDF962 /* DiaryDetailViewController.xib */,
 				F0FDB08227969D0D00BDF962 /* DiaryEditorMode.swift */,
 				F0FDB08427969EBA00BDF962 /* UnRegisteredDiaryView.swift */,
 				F0FDB08627969ECC00BDF962 /* RegisteredDiaryView.swift */,
@@ -486,7 +492,6 @@
 				32F2438527833BC900F1D160 /* ColorUtils.swift in Sources */,
 				F0E1A98E277EE41700DD286E /* MbtiSettingViewController.swift in Sources */,
 				F0FDB07C279696E300BDF962 /* DiaryCalendarViewController.swift in Sources */,
-				0386FC57278B0C9200319E42 /* CSVParser.swift in Sources */,
 				F0FDB08727969ECC00BDF962 /* RegisteredDiaryView.swift in Sources */,
 				32F2438327833BC900F1D160 /* GDBlurEffectView.swift in Sources */,
 				3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */,

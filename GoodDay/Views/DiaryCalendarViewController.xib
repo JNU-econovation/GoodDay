@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiaryCalendarViewController" customModule="GoodDay" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="9ZX-vg-pZJ" id="m89-q9-ZZa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -35,6 +36,9 @@
                     <buttonConfiguration key="configuration" style="plain">
                         <backgroundConfiguration key="background" image="chevron.backward" catalog="system" imageContentMode="scaleAspectFit"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="tapBackButton:" destination="-1" eventType="touchUpInside" id="vxm-M4-JwN"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD DAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LR1-0m-rwc">
                     <rect key="frame" x="62" y="84" width="102" height="20"/>
@@ -55,7 +59,7 @@
                 <constraint firstItem="LR1-0m-rwc" firstAttribute="centerY" secondItem="9ZX-vg-pZJ" secondAttribute="centerY" id="dny-1o-Pzz"/>
                 <constraint firstItem="cIC-i7-swm" firstAttribute="centerY" secondItem="9ZX-vg-pZJ" secondAttribute="centerY" id="g4W-gB-CGp"/>
             </constraints>
-            <point key="canvasLocation" x="133" y="106"/>
+            <point key="canvasLocation" x="-25" y="107"/>
         </view>
     </objects>
     <resources>
