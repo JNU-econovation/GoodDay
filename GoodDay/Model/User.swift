@@ -8,12 +8,10 @@
 import Foundation
 
 struct User: Codable {
-    
     var name: String
     var mbti: String
     var wakeUpTime: Date
     var sleepTime: Date
     var beginDay: Date
-    
-    
 }
+

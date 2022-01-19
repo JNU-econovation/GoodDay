@@ -11,5 +11,5 @@ struct Diary {
     var title: String
     var contents: String
     var date: String
-    
 }
+   

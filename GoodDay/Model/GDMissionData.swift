@@ -11,8 +11,10 @@ import Firebase
 class GDMissionData {
     let db = Firestore.firestore()
     var missionPerDayData: MissionPerDay?
-    
+    let docRef: DocumentReference?
+
     init() {
+        docRef = db.collection("missionPerDay").document((UserDefaults.standard.string(forKey: "userUid"))!)
         missionPerDayData = getMissionPerDay()
     }
     
@@ -26,12 +28,11 @@ class GDMissionData {
     }
     
     func getMissionPerDay() -> MissionPerDay? {
-        let docRef = db.collection("missionPerDay").document("1234")
         
         var data: [String:Any]?
         var result: MissionPerDay?
         
-        docRef.getDocument { (document, error) in
+        docRef?.getDocument { (document, error) in
             if let document = document, document.exists {
                 data = document.data()
             } else {
@@ -51,39 +52,6 @@ class GDMissionData {
     
     func putMissionPerDay(uid: String, week: Int, day: Int, missionId: Int, isSuccess: Bool) {
         var isChange = false
-        
-        missionPerDayData?.weeks.forEach{ (oneWeek) in
-            if oneWeek.id == week {
-                oneWeek.days.forEach{ (oneDay) in
-                    if oneDay.id == day { // 기존에 있던 미션
-                        missionPerDayData?.weeks[week-1].days[missionId-1].missionId = missionId
-                        missionPerDayData?.weeks[week-1].days[missionId-1].isSuccess = isSuccess
-                        isChange = true
-                        return
-                    }
-                }
-                if isChange {
-                    return
-                } else { // 새로운 날의 미션
-                    let missionDay = MissionDay(id: day, missionId: missionId, isSuccess: isSuccess)
-                    missionPerDayData?.weeks[week-1].days.append(missionDay)
-                    isChange = true
-                }
-            }
-        }
-        if !isChange { //새로운 주의 미션
-            let missionWeek = MissionWeek(id: week, days: [MissionDay.init(id: day, missionId: missionId, isSuccess: isSuccess)])
-            missionPerDayData?.weeks.append(missionWeek)
-            isChange = true
-        }
-        
-        db.collection("missionPerDay").document(uid).setData( try! missionPerDayData?.toDictionary() as! [String : Any]) { err in
-            if let err = err {
-                print("Err writing document: \(err)")
-            } else {
-                print("Document successfully written!: week\(week), day\(day), missionId\(missionId)")
-            }
-        }
     }
     
     func dictionaryToObject<T:Decodable>(objectType:T.Type,dictionary:[[String:Any]]) -> [T]? {

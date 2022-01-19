@@ -227,9 +227,6 @@ class MbtiSettingViewController: UIViewController {
             self.nextButton.backgroundColor = UIColor(rgb: 0xCACACA)
             
         }
-        
-        
-        
        
     }
     
@@ -263,11 +260,6 @@ class MbtiSettingViewController: UIViewController {
         self.view.endEditing(true)
         
     }
-    
-    
-    
-
-
 }
 
 extension MbtiSettingViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -335,7 +327,5 @@ extension MbtiSettingViewController: UIPickerViewDelegate, UIPickerViewDataSourc
             
         }
     }
-
-
 
 }

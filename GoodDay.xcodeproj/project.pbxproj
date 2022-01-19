@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		035591EF278C188900BD0417 /* missionContent.json in Resources */ = {isa = PBXBuildFile; fileRef = 035591EE278C188800BD0417 /* missionContent.json */; };
 		035591F1278C614100BD0417 /* GDMissionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035591F0278C614100BD0417 /* GDMissionData.swift */; };
-		03C345A5278887B9006278FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03C345A4278887B9006278FF /* GoogleService-Info.plist */; };
 		1BDC4393ADCFBC9BD88D83E8 /* Pods_GoodDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */; };
 		3239BC9C277D8E5200E96E21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BC9B277D8E5200E96E21 /* AppDelegate.swift */; };
 		3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */; };
@@ -142,23 +141,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		032AEF81278E46ED00B6C197 /* Controller */ = {
+		032AEF892796F71300B6C197 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				32F2434D27833BC900F1D160 /* GDPeekingCollectionViewDataSource.swift */,
-				32F2434E27833BC900F1D160 /* GDMissionPerDayDetailViewController.swift */,
-				32F2434F27833BC900F1D160 /* GDPeekingCollectionViewDelegate.swift */,
-				32F2435027833BC900F1D160 /* GDMissionPerDayDetailView.swift */,
+				F0794E992793F1FD00EC55B8 /* GoogleService-Info.plist */,
 			);
-			path = Controller;
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		032AEF82278E973600B6C197 /* Model */ = {
+		032AEF8B2796FB3F00B6C197 /* Contollers */ = {
 			isa = PBXGroup;
 			children = (
-				035591F0278C614100BD0417 /* GDMissionData.swift */,
+				32F2436427833BC900F1D160 /* GDMissionPerDayWeek */,
+				F0E1A983277EDE2400DD286E /* GDInitialSetting */,
+				F07E9D0727819DF000C7C6B4 /* FloatingButton */,
+				32F2434C27833BC900F1D160 /* GDMissionPerDay */,
 			);
-			path = Model;
+			path = Contollers;
 			sourceTree = "<group>";
 		};
 		3239BC8F277D8E5200E96E21 = {
@@ -168,6 +167,7 @@
 				3239BC99277D8E5200E96E21 /* Products */,
 				96CA59776B761B2CCCDEA62A /* Pods */,
 				7648B75F7CABB0D80879E589 /* Frameworks */,
+				032AEF892796F71300B6C197 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,12 +185,10 @@
 				F0FDB0792796967D00BDF962 /* GDDiary */,
 				F0794E9B2793F47F00EC55B8 /* Model */,
 				32F2438C2783D47A00F1D160 /* Assets.xcassets */,
+				032AEF8B2796FB3F00B6C197 /* Contollers */,
 				32F2435127833BC900F1D160 /* Fonts */,
-				32F2434C27833BC900F1D160 /* GDMissionPerDay */,
 				32F2436727833BC900F1D160 /* GDUtils */,
 				F0FA07A92782D0F7003FD717 /* Views */,
-				F07E9D0727819DF000C7C6B4 /* FloatingButton */,
-				F0E1A983277EDE2400DD286E /* GDInitialSetting */,
 				3239BC9B277D8E5200E96E21 /* AppDelegate.swift */,
 				3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */,
 				3239BC9F277D8E5200E96E21 /* ViewController.swift */,
@@ -206,8 +204,10 @@
 		32F2434C27833BC900F1D160 /* GDMissionPerDay */ = {
 			isa = PBXGroup;
 			children = (
-				032AEF82278E973600B6C197 /* Model */,
-				032AEF81278E46ED00B6C197 /* Controller */,
+				32F2434D27833BC900F1D160 /* GDPeekingCollectionViewDataSource.swift */,
+				32F2434E27833BC900F1D160 /* GDMissionPerDayDetailViewController.swift */,
+				32F2434F27833BC900F1D160 /* GDPeekingCollectionViewDelegate.swift */,
+				32F2435027833BC900F1D160 /* GDMissionPerDayDetailView.swift */,
 			);
 			path = GDMissionPerDay;
 			sourceTree = "<group>";
@@ -215,7 +215,6 @@
 		32F2435127833BC900F1D160 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				32F2436427833BC900F1D160 /* GDMissionPerDayWeek */,
 				32F2435827833BC900F1D160 /* NanumGothic.otf */,
 				32F2435227833BC900F1D160 /* NanumGothicBold.otf */,
 				32F2435927833BC900F1D160 /* NanumGothicExtraBold.otf */,
@@ -273,6 +272,7 @@
 		F0794E9B2793F47F00EC55B8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				035591F0278C614100BD0417 /* GDMissionData.swift */,
 				F0794E9C2793F49400EC55B8 /* User.swift */,
 				F0FDB08827969F3100BDF962 /* Diary.swift */,
 			);
@@ -486,7 +486,6 @@
 				32F2438527833BC900F1D160 /* ColorUtils.swift in Sources */,
 				F0E1A98E277EE41700DD286E /* MbtiSettingViewController.swift in Sources */,
 				F0FDB07C279696E300BDF962 /* DiaryCalendarViewController.swift in Sources */,
-				0386FC57278B0C9200319E42 /* CSVParser.swift in Sources */,
 				F0FDB08727969ECC00BDF962 /* RegisteredDiaryView.swift in Sources */,
 				32F2438327833BC900F1D160 /* GDBlurEffectView.swift in Sources */,
 				3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */,
