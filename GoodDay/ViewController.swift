@@ -50,6 +50,7 @@ class ViewController: UIViewController {
         configureAnimationView()
         configureMissionView()
         configureFamousSayingView()
+        configureNotificationCenter()
     }
 
     
@@ -108,6 +109,23 @@ class ViewController: UIViewController {
         self.missionNextButton.setImage(rightArrowImg, for: .normal)
         self.missionNextButton.tintColor = .white
     }
+    
+    func configureNotificationCenter(){
+        let notificationName = Notification.Name("sendBoolData")
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(sendBoolData), name: notificationName, object: nil)
+        
+    }
+    
+    @objc private func sendBoolData(notification: Notification){
+        self.isShowFloating = notification.userInfo?["isShowFloating"] as? Bool ?? false
+        
+        if !self.isShowFloating {
+            animationView.play(fromFrame: animationView.animation?.endFrame, toFrame: animationView.animation!.startFrame)
+            self.isShowFloating = true
+        }
+        
+    }
 
 }
 
@@ -124,6 +142,28 @@ extension ViewController: DelegateFloatingButtonViewController {
     }
     
     
+}
+
+extension UIView {
+    func showAnimation(_ completionBlock: @escaping () -> Void) {
+      isUserInteractionEnabled = false
+        UIView.animate(withDuration: 0.1,
+                       delay: 0,
+                       options: .curveLinear,
+                       animations: { [weak self] in
+                            self?.transform = CGAffineTransform.init(scaleX: 0.95, y: 0.95)
+        }) {  (done) in
+            UIView.animate(withDuration: 0.1,
+                           delay: 0,
+                           options: .curveLinear,
+                           animations: { [weak self] in
+                                self?.transform = CGAffineTransform.init(scaleX: 1, y: 1)
+            }) { [weak self] (_) in
+                self?.isUserInteractionEnabled = true
+                completionBlock()
+            }
+        }
+    }
 }
 
 

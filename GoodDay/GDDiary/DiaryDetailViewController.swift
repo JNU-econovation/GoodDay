@@ -173,7 +173,11 @@ class DiaryDetailViewController: UIViewController {
     }
     
     @IBAction func tapBackButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        
+        sender.showAnimation {
+            self.dismiss(animated: true, completion: nil)
+        }
+    
     }
     @IBAction func tapDeleteButton(_ sender: UIButton) {
         let alert = UIAlertController(title: "삭제", message: "정말로 해당 날짜의 일기를 삭제하시겠습니까?", preferredStyle: .alert)
