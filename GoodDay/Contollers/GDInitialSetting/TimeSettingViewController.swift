@@ -117,25 +117,9 @@ class TimeSettingViewController: UIViewController {
         self.wakeUpTimeTextField.borderStyle = .none
         self.sleepTimeTextField.borderStyle = .none
         
-        self.wakeUpTimeTextField.font = UIFont(name: self.wakeUpTimeTextField.font!.fontName, size: 24)
+        self.wakeUpTimeTextField.font = UIFont(name: self.wakeUpTimeTextField.font!.fontName, size: 40)
         
-        self.sleepTimeTextField.font = UIFont(name: self.sleepTimeTextField.font!.fontName, size: 24)
-        
-        let wakeUpTimeBorder = CALayer()
-        let sleepTimeBorder = CALayer()
-        
-        
-        wakeUpTimeBorder.frame = CGRect(x: 0, y: self.wakeUpTimeTextField.frame.size.height - 2, width: self.wakeUpTimeTextField.frame.width, height: 1)
-        
-        sleepTimeBorder.frame = CGRect(x: 0, y: self.sleepTimeTextField.frame.size.height - 2 , width: self.sleepTimeTextField.frame.width, height: 1)
-        
-        wakeUpTimeBorder.backgroundColor = UIColor.black.cgColor
-        
-        sleepTimeBorder.backgroundColor = UIColor.black.cgColor
-        
-        
-        self.wakeUpTimeTextField.layer.addSublayer(wakeUpTimeBorder)
-        self.sleepTimeTextField.layer.addSublayer(sleepTimeBorder)
+        self.sleepTimeTextField.font = UIFont(name: self.sleepTimeTextField.font!.fontName, size: 40)
         
         self.wakeUpTimeTextField.textAlignment = .center
         self.sleepTimeTextField.textAlignment = .center

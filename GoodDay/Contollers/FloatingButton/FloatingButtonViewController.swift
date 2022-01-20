@@ -27,7 +27,7 @@ class FloatingButtonViewController: UIViewController {
     let myPageImg = UIImage(systemName: "person.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 12))
     
     
-    @IBOutlet weak var blurView: UIVisualEffectView!
+    
     
     
     @IBOutlet weak var missionButton: UIButton!
@@ -49,6 +49,7 @@ class FloatingButtonViewController: UIViewController {
     @IBOutlet weak var myPageLabelCenterX: NSLayoutConstraint!
     
     
+    @IBOutlet var floatingView: UIView!
     
     
     override func viewDidLoad() {
@@ -56,6 +57,8 @@ class FloatingButtonViewController: UIViewController {
         configureAnimationView()
         initializeFloatingButtons()
         configureButtons()
+        
+        
 
     }
     
@@ -163,7 +166,9 @@ class FloatingButtonViewController: UIViewController {
         self.diaryLabelCenterX.constant = 0
         self.myPageLabelCenterX.constant = 0
 
-        self.blurView.alpha = 0.8
+        self.floatingView.backgroundColor = .black
+        self.floatingView.alpha = 0.65
+        
 //
     }
     
