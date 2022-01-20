@@ -18,11 +18,11 @@ class GDMissionPerDayDetailViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let db = Firestore.firestore()
     var model: GDMissionData?
     
     var detailView: UIView!
-    var missionIndex = 0
+    var missionIndex = -1
+    var curDay = -1
     
     @objc func onTapButton(_ sender: AnyObject) {
         let button = sender as! UIButton
@@ -65,14 +65,17 @@ class GDMissionPerDayDetailViewController: UIViewController {
     
     let pickerData = ["DAY 1", "DAY 2", "DAY 3", "DAY 4", "DAY 5", "DAY 6"]
     var mission: [Mission]?
+    var missionPerDayData: MissionPerDay?
+    var curWeek: Int?
     //let missionPerDay = GDMissionData().getMissionPerDay()
     
     var behavior: MSCollectionViewPeekingBehavior!
+    var docRef: DocumentReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        model = GDMissionData()
-        mission = GDMissionData().getMissionData()
+        model = GDMissionData.shared
+        mission = model?.getMissionData()
                 
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
 
@@ -81,16 +84,31 @@ class GDMissionPerDayDetailViewController: UIViewController {
         // content height
         contentViewHeight = contentView.frame.height
         
-        // add components
-        collectionView = getPeekingCollectionView(screenSizeWidth: screenSizeWidth, contentViewHeight: contentViewHeight, collectionView: collectionView)
-        contentView.addSubview(getCollectionViewBackgroundImage(collectionView: collectionView))
-        contentView.addSubview(collectionView)
-        contentView.addSubview(getDetailView(screenSizeWidth: screenSizeWidth, contentViewHeight: contentViewHeight))
-        
-        //let weeks = missionPerDay?.weeks
-        //contentView.addSubview(getweekButton(text: "WEEK \(String(describing: weeks?.count))",originButton: weekButton))
-        contentView.addSubview(getweekButton(text: "WEEK 1",originButton: weekButton))
-        
+        docRef = model?.db.collection("missionPerDay").document((UserDefaults.standard.string(forKey: "userUid"))!)
+        docRef?.getDocument { [self] (document, error) in
+            if let document = document, document.exists {
+                let data = document.data()
+                do {
+                    let json = try JSONSerialization.data(withJSONObject: data!, options: [])
+                    self.missionPerDayData = try JSONDecoder().decode(MissionPerDay.self, from: json)
+                    
+                    curWeek = missionPerDayData?.weeks.count
+
+                    // add components
+                    collectionView = self.getPeekingCollectionView(screenSizeWidth: screenSizeWidth, contentViewHeight: contentViewHeight, collectionView: collectionView)
+                    contentView.addSubview(self.getCollectionViewBackgroundImage(collectionView: collectionView))
+                    contentView.addSubview(collectionView)
+                    contentView.addSubview(self.getDetailView(screenSizeWidth: screenSizeWidth, contentViewHeight: contentViewHeight))
+                    
+                    contentView.addSubview(self.getweekButton(text: "WEEK \(String(describing: curWeek!))",originButton: weekButton))
+                } catch {
+                    print("getMissionPerDay(): error")
+                }
+            } else {
+                print("Document does not exist")
+            }
+        }
+                
         backButton.addTarget(self, action: #selector(onTapBackButton(_:)), for: .touchUpInside)
     }
     

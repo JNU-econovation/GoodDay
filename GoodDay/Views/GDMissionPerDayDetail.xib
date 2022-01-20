@@ -3,11 +3,17 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareB.otf">
+            <string>NanumSquareOTFB</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GDMissionPerDayDetailViewController" customModule="GoodDay" customModuleProvider="target">
             <connections>
@@ -37,22 +43,15 @@
                             </buttonConfiguration>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMm-hh-j4W">
-                            <rect key="frame" x="27" y="66" width="141.5" height="35"/>
+                            <rect key="frame" x="27" y="84" width="150.5" height="36.5"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system">
-                                <attributedString key="attributedTitle">
-                                    <fragment content="   GOOD DAY">
-                                        <attributes>
-                                            <font key="NSFont" metaFont="system" size="18"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system" title="   GOOD DAY">
+                                <fontDescription key="titleFontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="20"/>
                                 <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V3g-NP-63d" userLabel="ContentView">
-                            <rect key="frame" x="0.0" y="101" width="414" height="761"/>
+                            <rect key="frame" x="0.0" y="120.5" width="414" height="741.5"/>
                             <subviews>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0CI-PX-94U">
                                     <rect key="frame" x="77" y="150" width="240" height="128"/>
@@ -78,17 +77,29 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="62.5" placeholderIntrinsicHeight="35" text="Mission" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwP-Rl-sKe">
+                            <rect key="frame" x="170.5" y="84" width="73" height="38"/>
+                            <color key="tintColor" name="AccentColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="38" id="H6d-R4-Tyj"/>
+                                <constraint firstAttribute="width" constant="73" id="j4x-ld-rvr"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="20"/>
+                            <color key="textColor" red="0.0" green="0.082352941176470587" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="highlightedColor" name="AccentColor"/>
+                        </label>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="VU1-WK-9HT"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="V3g-NP-63d" firstAttribute="top" secondItem="rMm-hh-j4W" secondAttribute="bottom" id="7Sh-qk-KPE"/>
                         <constraint firstItem="V3g-NP-63d" firstAttribute="bottom" secondItem="VU1-WK-9HT" secondAttribute="bottom" id="Qdg-jd-PoY"/>
-                        <constraint firstItem="rMm-hh-j4W" firstAttribute="top" secondItem="DXz-60-0E9" secondAttribute="top" constant="66" id="SAI-QN-Qsy"/>
                         <constraint firstItem="rMm-hh-j4W" firstAttribute="leading" secondItem="DXz-60-0E9" secondAttribute="leading" constant="27" id="Trk-kn-cV8"/>
+                        <constraint firstItem="uwP-Rl-sKe" firstAttribute="leading" secondItem="rMm-hh-j4W" secondAttribute="trailing" constant="-7" id="Tx1-t6-50v"/>
                         <constraint firstItem="V3g-NP-63d" firstAttribute="leading" secondItem="VU1-WK-9HT" secondAttribute="leading" id="Z0x-jn-tFv"/>
+                        <constraint firstItem="uwP-Rl-sKe" firstAttribute="top" secondItem="VU1-WK-9HT" secondAttribute="top" constant="40" id="ao5-xf-5BI"/>
                         <constraint firstItem="VU1-WK-9HT" firstAttribute="trailing" secondItem="V3g-NP-63d" secondAttribute="trailing" id="eqN-2J-saR"/>
-                        <constraint firstItem="rMm-hh-j4W" firstAttribute="top" secondItem="VU1-WK-9HT" secondAttribute="top" constant="22" id="t9W-kd-W1u"/>
+                        <constraint firstItem="rMm-hh-j4W" firstAttribute="top" secondItem="VU1-WK-9HT" secondAttribute="top" constant="40" id="t9W-kd-W1u"/>
                     </constraints>
                 </view>
             </subviews>
@@ -99,6 +110,9 @@
     </objects>
     <resources>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

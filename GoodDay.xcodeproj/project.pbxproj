@@ -140,14 +140,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		032AEF892796F71300B6C197 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				F0794E992793F1FD00EC55B8 /* GoogleService-Info.plist */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		032AEF8B2796FB3F00B6C197 /* Contollers */ = {
 			isa = PBXGroup;
 			children = (

@@ -7,46 +7,45 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestoreSwift
+import FirebaseFirestore
 
 class GDMissionData {
     let db = Firestore.firestore()
-    var missionPerDayData: MissionPerDay?
-    let docRef: DocumentReference?
+    
+    static let shared = GDMissionData()
 
-    init() {
-        docRef = db.collection("missionPerDay").document((UserDefaults.standard.string(forKey: "userUid"))!)
-        missionPerDayData = getMissionPerDay()
-    }
+    private init() {}
     
     func getMissionData() -> [Mission] {
         let path = Bundle.main.path(forResource: "missionContent", ofType: "json")
         
         let data = try? String(contentsOfFile: path!).data(using: .utf8)
         let json = try! JSONDecoder().decode([Mission].self, from: data!)
-        
+         
         return json
     }
-    
+      
     func getMissionPerDay() -> MissionPerDay? {
         
-        var data: [String:Any]?
         var result: MissionPerDay?
         
-        docRef?.getDocument { (document, error) in
+        let docRef = db.collection("missionPerDay").document((UserDefaults.standard.string(forKey: "userUid"))!)
+                
+        docRef.getDocument { (document, error) in
             if let document = document, document.exists {
-                data = document.data()
+                let data = document.data()
+                do {
+                    let json = try JSONSerialization.data(withJSONObject: data!, options: [])
+                    result = try JSONDecoder().decode(MissionPerDay.self, from: json)
+                } catch {
+                    print("getMissionPerDay(): error")
+                }
             } else {
                 print("Document does not exist")
             }
-            
-            do {
-                let json = try JSONSerialization.data(withJSONObject: data!, options: [])
-                result = try JSONDecoder().decode(MissionPerDay.self, from: json)
-            } catch {
-                print("getMissionPerDay(): error")
-            }
         }
-        
+
         return result
     }
     
@@ -86,7 +85,7 @@ struct MissionWeek: Codable {
 struct MissionDay: Codable {
     var id: Int
     var missionId: Int
-    var isSuccess: Bool
+    var isSuccess: Int
 }
 
 extension Encodable {

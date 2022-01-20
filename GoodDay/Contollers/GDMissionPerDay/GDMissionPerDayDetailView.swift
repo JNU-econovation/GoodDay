@@ -9,10 +9,17 @@ import UIKit
 
 extension GDMissionPerDayDetailViewController {
     
+    
     func makeDetails (detailView: UIView) -> UIView {
-        
         let labelsGap = (contentViewHeight/2 - 106) / 13
-                
+        
+        if curDay == -1 {
+            curDay = (missionPerDayData?.weeks[(curWeek ?? 1) - 1].days.count) ?? 1
+        }
+        if missionIndex == -1 {
+            missionIndex = (missionPerDayData?.weeks[(curWeek ?? 1) - 1].days[curDay - 1].missionId)!
+        }
+        
         detailView.addSubview(toDayTextLabel(gap: labelsGap))
         detailView.addSubview(toDayMissionBackgroundImage(text: mission?[missionIndex].content ?? "", gap: labelsGap))
         detailView.addSubview(toDayMissionLabel(text: mission?[missionIndex].content ?? "", gap: labelsGap))

@@ -14,6 +14,7 @@ extension GDMissionPerDayDetailViewController: UICollectionViewDelegate{
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        curDay = behavior.currentIndex
         print(behavior.currentIndex)
     }
 }

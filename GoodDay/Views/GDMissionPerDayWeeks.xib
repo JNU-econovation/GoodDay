@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareB.otf">
+            <string>NanumSquareOTFB</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GDMissionPerDayWeekViewController" customModule="GoodDay" customModuleProvider="target">
             <connections>
@@ -21,36 +26,40 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7d-P3-RdI">
-                    <rect key="frame" x="27" y="66" width="141.5" height="35"/>
+                    <rect key="frame" x="27" y="84" width="150.5" height="36.5"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system">
-                        <attributedString key="attributedTitle">
-                            <fragment content="   GOOD DAY">
-                                <attributes>
-                                    <font key="NSFont" metaFont="system" size="18"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
+                    <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system" title="   GOOD DAY">
+                        <fontDescription key="titleFontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="20"/>
                         <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j1y-2E-iGV">
-                    <rect key="frame" x="0.0" y="133" width="414" height="763"/>
+                    <rect key="frame" x="0.0" y="152.5" width="414" height="743.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mission" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNY-4D-2Ew">
+                    <rect key="frame" x="170.5" y="84" width="71.5" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="9rz-wa-Chv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="20"/>
+                    <color key="textColor" red="0.0" green="0.08235294118" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="j1y-2E-iGV" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="0Lb-lm-V4L"/>
+                <constraint firstItem="MNY-4D-2Ew" firstAttribute="leading" secondItem="x7d-P3-RdI" secondAttribute="trailing" constant="-7" id="6OG-SV-m1l"/>
                 <constraint firstItem="j1y-2E-iGV" firstAttribute="top" secondItem="x7d-P3-RdI" secondAttribute="bottom" constant="32" id="6ej-jZ-U6T"/>
                 <constraint firstAttribute="bottom" secondItem="j1y-2E-iGV" secondAttribute="bottom" id="FXQ-oB-RNC"/>
-                <constraint firstItem="x7d-P3-RdI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="66" id="QUH-PU-6N3"/>
+                <constraint firstItem="x7d-P3-RdI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="QUH-PU-6N3"/>
+                <constraint firstItem="MNY-4D-2Ew" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="UAX-8k-bAw"/>
                 <constraint firstItem="x7d-P3-RdI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="27" id="dPX-9a-dPv"/>
                 <constraint firstItem="j1y-2E-iGV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="sC9-WK-dH2"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="89"/>
+            <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
         </view>
     </objects>
     <resources>

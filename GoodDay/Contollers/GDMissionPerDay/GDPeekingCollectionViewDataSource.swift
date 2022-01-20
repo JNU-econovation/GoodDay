@@ -7,6 +7,7 @@
 
 import UIKit
 import MSPeekCollectionViewDelegateImplementation
+import FirebaseFirestore
 
 extension GDMissionPerDayDetailViewController: UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -14,7 +15,7 @@ extension GDMissionPerDayDetailViewController: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pickerData.count
+        return (missionPerDayData?.weeks[(curWeek ?? 1) - 1].days.count) ?? 1
     }
     
     // 버튼 눌렀을 때 뜨는 코드
@@ -29,7 +30,14 @@ extension GDMissionPerDayDetailViewController: UICollectionViewDataSource{
         
         let innerLabel = getInnerCircleLabel(cell: cell)
         let blurEffect = getBlurEffetCircleView(innerLabel: innerLabel)
-        innerLabel.addSubview(blurEffect)
+        let visualEffectView = getBlurEffectView(style: .regular)
+        
+        if missionPerDayData?.weeks[(curWeek ?? 1) - 1].days[curDay - 1].isSuccess == 1{
+            innerLabel.addSubview(blurEffect)
+        } else {
+            innerLabel.addSubview(visualEffectView)
+        }
+        
         innerLabel.addSubview(getInnerCircleTextLabel(text: pickerData[indexPath.item], innerLabel: innerLabel))
         cell.addSubview(innerLabel)
         
@@ -41,7 +49,21 @@ extension GDMissionPerDayDetailViewController: UICollectionViewDataSource{
         if let cell = collectionView.cellForItem(at: indexPath) {
            let pressedDownTransform = CGAffineTransform(scaleX: 0.98, y: 0.98)
            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 3, options: [.curveEaseInOut], animations: { cell.transform = pressedDownTransform })
-       }
+        }
+        
+        var isSuceess: Int?
+        if missionPerDayData?.weeks[(curWeek ?? 1) - 1].days[indexPath.item].isSuccess == 1 {
+            isSuceess = 0
+        } else {
+            isSuceess = 1
+        }
+        
+        missionPerDayData?.weeks[(curWeek ?? 1) - 1].days[indexPath.item].isSuccess = isSuceess!
+        do {
+            docRef?.updateData((try missionPerDayData?.toDictionary().self)!)
+        } catch {
+            print("Not Changed!!")
+        }
     }
     
     // 버튼 뗄때
