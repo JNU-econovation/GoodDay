@@ -70,13 +70,13 @@ class MbtiSettingViewController: UIViewController {
         self.thirdMbtiTextField.borderStyle = .none
         self.fourthMbtiTextField.borderStyle = .none
         
-        self.firstMbtiTextField.font = UIFont(name: self.firstMbtiTextField.font!.fontName, size: 24)
+        self.firstMbtiTextField.font = UIFont(name: self.firstMbtiTextField.font!.fontName, size: 28)
         
-        self.secondMbtiTextField.font = UIFont(name: self.secondMbtiTextField.font!.fontName, size: 24)
+        self.secondMbtiTextField.font = UIFont(name: self.secondMbtiTextField.font!.fontName, size: 28)
         
-        self.thirdMbtiTextField.font = UIFont(name: self.thirdMbtiTextField.font!.fontName, size: 24)
+        self.thirdMbtiTextField.font = UIFont(name: self.thirdMbtiTextField.font!.fontName, size: 28)
         
-        self.fourthMbtiTextField.font = UIFont(name: self.fourthMbtiTextField.font!.fontName, size: 24)
+        self.fourthMbtiTextField.font = UIFont(name: self.fourthMbtiTextField.font!.fontName, size: 28)
         
         
         
@@ -86,13 +86,13 @@ class MbtiSettingViewController: UIViewController {
         let thirdBorder = CALayer()
         let fourthBorder = CALayer()
         
-        firstBorder.frame = CGRect(x: 0, y: self.firstMbtiTextField.frame.size.height - 1, width: self.firstMbtiTextField.frame.width, height: 1)
+        firstBorder.frame = CGRect(x: 0, y: self.firstMbtiTextField.frame.size.height - 5, width: self.firstMbtiTextField.frame.width, height: 1)
         
-        secondBorder.frame = CGRect(x: 0, y: self.secondMbtiTextField.frame.size.height - 1, width: self.secondMbtiTextField.frame.width, height: 1)
+        secondBorder.frame = CGRect(x: 0, y: self.secondMbtiTextField.frame.size.height - 5, width: self.secondMbtiTextField.frame.width, height: 1)
         
-        thirdBorder.frame = CGRect(x: 0, y: self.thirdMbtiTextField.frame.size.height - 1, width: self.thirdMbtiTextField.frame.width, height: 1)
+        thirdBorder.frame = CGRect(x: 0, y: self.thirdMbtiTextField.frame.size.height - 5, width: self.thirdMbtiTextField.frame.width, height: 1)
         
-        fourthBorder.frame = CGRect(x: 0, y: self.fourthMbtiTextField.frame.size.height - 1, width: self.fourthMbtiTextField.frame.width, height: 1)
+        fourthBorder.frame = CGRect(x: 0, y: self.fourthMbtiTextField.frame.size.height - 5, width: self.fourthMbtiTextField.frame.width, height: 1)
         
         firstBorder.backgroundColor = UIColor.black.cgColor
         
