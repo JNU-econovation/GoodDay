@@ -14,10 +14,10 @@ extension GDMissionPerDayDetailViewController {
         let labelsGap = (contentViewHeight/2 - 106) / 13
         
         if curDay == -1 {
-            curDay = (missionPerDayData?.weeks[(curWeek ?? 1) - 1].days.count) ?? 1
+            curDay = missionPerDayData!.weeks[(curWeek ?? 1) - 1].days.count
         }
         if missionIndex == -1 {
-            missionIndex = (missionPerDayData?.weeks[(curWeek ?? 1) - 1].days[curDay - 1].missionId)!
+            missionIndex = missionPerDayData!.weeks[(curWeek ?? 1) - 1].days[curDay - 1].missionId
         }
         
         detailView.addSubview(toDayTextLabel(gap: labelsGap))

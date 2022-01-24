@@ -19,12 +19,13 @@ class GDMissionPerDayDetailViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var model: GDMissionData?
+    var docRef: DocumentReference!
     
     var detailView: UIView!
     var missionIndex = -1
     var curDay = -1
     
-    @objc func onTapButton(_ sender: AnyObject) {
+    @IBAction func onTapButton(_ sender: AnyObject) {
         let button = sender as! UIButton
         if button.tag == 20 {
             if missionIndex != (mission?.count ?? 0) - 1 {
@@ -37,12 +38,28 @@ class GDMissionPerDayDetailViewController: UIViewController {
             detailView = makeDetails(detailView: detailView)
             detailView.setNeedsDisplay()
             detailView.layoutIfNeeded()
+            missionPerDayData!.weeks[curWeek! - 1].days[curDay - 1].missionId = missionIndex
+            
+            //mbti별로 처리 해야하는 구문 작성해야함.
+            
+            do {
+                docRef?.setData(try missionPerDayData!.toDictionary()!)
+            } catch {
+                print("error 다른 미션 바꾸기 : not changed")
+            }
         }
         print("Button was tapped. \(button.titleLabel?.text ?? "")")
     }
     
-    @objc func onTapBackButton(_ sender: AnyObject) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func onTapBackButton(_ sender: UIButton) {
+        sender.showAnimation {
+            let notificationName = Notification.Name("sendBoolData")
+            
+            let boolDic = ["isShowFloating" : false]
+            NotificationCenter.default.post(name: notificationName, object: nil, userInfo: boolDic)
+ 
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func onTapMissionWeekButton(_ sender: UIButton) {
@@ -51,11 +68,9 @@ class GDMissionPerDayDetailViewController: UIViewController {
         GDMissionPerDayWeeksVC.modalPresentationStyle = .overFullScreen
         GDMissionPerDayWeeksVC.modalTransitionStyle = .crossDissolve
         
-        self.present(GDMissionPerDayWeeksVC, animated: true, completion: nil)
+        GDMissionPerDayWeeksVC.missionPerDayData = missionPerDayData
         
-        for i in 1...6 {
-            model?.putMissionPerDay(uid: "1234", week: 1, day: i, missionId: i, isSuccess: false)
-        }
+        self.present(GDMissionPerDayWeeksVC, animated: true, completion: nil)
     }
     
     
@@ -67,10 +82,8 @@ class GDMissionPerDayDetailViewController: UIViewController {
     var mission: [Mission]?
     var missionPerDayData: MissionPerDay?
     var curWeek: Int?
-    //let missionPerDay = GDMissionData().getMissionPerDay()
     
     var behavior: MSCollectionViewPeekingBehavior!
-    var docRef: DocumentReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,11 +99,34 @@ class GDMissionPerDayDetailViewController: UIViewController {
         
         docRef = model?.db.collection("missionPerDay").document((UserDefaults.standard.string(forKey: "userUid"))!)
         docRef?.getDocument { [self] (document, error) in
+            //print(UserDefaults.standard.string(forKey: "mbti"))
             if let document = document, document.exists {
                 let data = document.data()
                 do {
                     let json = try JSONSerialization.data(withJSONObject: data!, options: [])
                     self.missionPerDayData = try JSONDecoder().decode(MissionPerDay.self, from: json)
+                                        
+                    let beginDate = UserDefaults.standard.object(forKey: "beginDay") as! Date
+                    let curDay = Calendar.current.dateComponents([.day], from: beginDate, to: Date()).day! + 1
+
+                    if curDay != (missionPerDayData?.weeks[(curWeek ?? 1) - 1].days.count) ?? -1 {
+                        for i in 1...(curDay + 1) {
+                            if i % 7 != 0 {
+                                let tmpDayId = i % 7
+                                let tmpWeekId = Int(i / 7) + 1
+                                
+                                if missionPerDayData!.weeks.count < tmpWeekId {
+                                    missionPerDayData!.weeks.append(MissionWeek.init(id: tmpWeekId, days: []))
+                                }
+
+                                if missionPerDayData!.weeks[tmpWeekId - 1].days.count < tmpDayId {
+                                    missionPerDayData!.weeks[tmpWeekId - 1].days.append(MissionDay.init(id: tmpDayId, missionId: 1, isSuccess: 0))
+                                }
+                                
+                                docRef?.setData(try missionPerDayData!.toDictionary()!)
+                            }
+                        }
+                    }
                     
                     curWeek = missionPerDayData?.weeks.count
 
@@ -103,6 +139,8 @@ class GDMissionPerDayDetailViewController: UIViewController {
                     contentView.addSubview(self.getweekButton(text: "WEEK \(String(describing: curWeek!))",originButton: weekButton))
                 } catch {
                     print("getMissionPerDay(): error")
+                    // 안되면 초기화
+                    // docRef?.updateData(["weeks": [["id": 1, "days": [["id": 1,"isSuccess": 0, "missionId": 0]]]]])
                 }
             } else {
                 print("Document does not exist")
@@ -139,7 +177,7 @@ class GDMissionPerDayDetailViewController: UIViewController {
         weekLable.textColor = .black
         weekLable.font = UIFont(name: "NanumGothicOTF", size: 24)
         weekLable.sizeToFit()
-        
+
         let stringSize = FontUtils().getFontSize(font: weekLable.font, text: text)
         weekButton.frame = CGRect(x: (screenSizeWidth - stringSize.width) / 2, y: (contentViewHeight / 2 - screenSizeWidth * 0.6) / 4  - 20, width: stringSize.width, height: 40)
         

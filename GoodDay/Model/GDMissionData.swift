@@ -50,7 +50,6 @@ class GDMissionData {
     }
     
     func putMissionPerDay(uid: String, week: Int, day: Int, missionId: Int, isSuccess: Bool) {
-        var isChange = false
     }
     
     func dictionaryToObject<T:Decodable>(objectType:T.Type,dictionary:[[String:Any]]) -> [T]? {

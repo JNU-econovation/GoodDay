@@ -21,18 +21,24 @@ class GDMissionPerDayWeekViewController: UIViewController {
     @objc func onTapBackButton(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
-    
+        
     private var stackController = ScrollStackViewController()
     let stackView = ScrollStack()
     
     let screenSizeWidth = UIScreen.main.bounds.width
     let screenSizeheight = UIScreen.main.bounds.width
+
+    var missionPerDayData: MissionPerDay?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        for i in 1...6 {
-            stackView.addRow(view: getOneWeekView(index: i))
+                
+        for i in 1...(missionPerDayData!.weeks.count) {
+            let oneWeekView = getOneWeekView(index: i)
+            let taps = UITapGestureRecognizer(target: self, action: #selector(onTapButton(_:)))
+            oneWeekView.addGestureRecognizer(taps)
+            
+            stackView.addRow(view: oneWeekView)
         }
         
         stackView.isSeparatorHidden = true
@@ -62,12 +68,20 @@ extension GDMissionPerDayWeekViewController {
        
         oneWeekView.addSubview(tmpLabel)
 
-        oneWeekView.addSubview(getOneWeekImage(missionState: .missionFail, buttonSize: buttonSize, position: CGSize(width: buttonSize * 0.6938 - 15, height: 40)))
-        oneWeekView.addSubview(getOneWeekImage(missionState: .missionFail, buttonSize: buttonSize, position: CGSize(width: buttonSize * 1.6938 - 13, height: 40)))
-        oneWeekView.addSubview(getOneWeekImage(missionState: .missonClaer, buttonSize: buttonSize, position: CGSize(width: buttonSize * 2.6938 - 11, height: 40)))
-        oneWeekView.addSubview(getOneWeekImage(missionState: .missonClaer, buttonSize: buttonSize, position: CGSize(width: buttonSize * 3.6938 - 9, height: 40)))
-        oneWeekView.addSubview(getOneWeekImage(missionState: .missonClaer, buttonSize: buttonSize, position: CGSize(width: buttonSize * 4.6938 - 7, height: 40)))
-        oneWeekView.addSubview(getOneWeekImage(missionState: .notExist, buttonSize: buttonSize, position: CGSize(width: buttonSize * 5.6938 - 5, height: 40)))
+        var curMissionStatement: missionStatement?
+        
+        for i in 0...5 {
+            if missionPerDayData!.weeks[index - 1].days.count > i {
+                if missionPerDayData?.weeks[index - 1].days[i].isSuccess == 1 {
+                    curMissionStatement = .missionClear
+                } else {
+                    curMissionStatement = .missionFail
+                }
+            } else {
+                curMissionStatement = .notExist
+            }
+            oneWeekView.addSubview(getOneWeekImage(missionState: curMissionStatement!, buttonSize: buttonSize, position: CGSize(width: buttonSize * CGFloat(0.6938 + Double(i)) - 15 + CGFloat((2 * i)), height: CGFloat(40)) ))
+        }
 
         return oneWeekView
     }
@@ -86,7 +100,7 @@ extension GDMissionPerDayWeekViewController {
         imageView.layer.shadowOffset = CGSize(width: 0, height: 4.24)
         
         switch missionState {
-        case .missonClaer:
+        case .missionClear:
             image = UIImage(named: "missionClear")!
         case .missionFail:
             image = UIImage(named: "missionFail")!
@@ -98,5 +112,11 @@ extension GDMissionPerDayWeekViewController {
         imageView.image = image
                 
         return imageView
+    }
+}
+
+extension Array {
+    subscript(safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
     }
 }

@@ -38,9 +38,9 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mission" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNY-4D-2Ew">
-                    <rect key="frame" x="170.5" y="84" width="71.5" height="35"/>
+                    <rect key="frame" x="170.5" y="84" width="71.5" height="38"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="35" id="9rz-wa-Chv"/>
+                        <constraint firstAttribute="height" constant="38" id="9rz-wa-Chv"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="20"/>
                     <color key="textColor" red="0.0" green="0.08235294118" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

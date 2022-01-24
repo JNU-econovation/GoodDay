@@ -14,7 +14,12 @@ extension GDMissionPerDayDetailViewController: UICollectionViewDelegate{
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        curDay = behavior.currentIndex
-        print(behavior.currentIndex)
+        curDay = behavior.currentIndex + 1
+        missionIndex = missionPerDayData!.weeks[curWeek! - 1].days[curDay - 1].missionId
+        
+        detailView.subviews.forEach{$0.removeFromSuperview()}
+        detailView = makeDetails(detailView: detailView)
+        detailView.setNeedsDisplay()
+        detailView.layoutIfNeeded()
     }
 }

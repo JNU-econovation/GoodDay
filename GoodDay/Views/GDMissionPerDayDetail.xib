@@ -51,7 +51,7 @@
                             </buttonConfiguration>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V3g-NP-63d" userLabel="ContentView">
-                            <rect key="frame" x="0.0" y="120.5" width="414" height="741.5"/>
+                            <rect key="frame" x="0.0" y="140.5" width="414" height="721.5"/>
                             <subviews>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0CI-PX-94U">
                                     <rect key="frame" x="77" y="150" width="240" height="128"/>
@@ -92,13 +92,13 @@
                     <viewLayoutGuide key="safeArea" id="VU1-WK-9HT"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="V3g-NP-63d" firstAttribute="top" secondItem="rMm-hh-j4W" secondAttribute="bottom" id="7Sh-qk-KPE"/>
                         <constraint firstItem="V3g-NP-63d" firstAttribute="bottom" secondItem="VU1-WK-9HT" secondAttribute="bottom" id="Qdg-jd-PoY"/>
                         <constraint firstItem="rMm-hh-j4W" firstAttribute="leading" secondItem="DXz-60-0E9" secondAttribute="leading" constant="27" id="Trk-kn-cV8"/>
                         <constraint firstItem="uwP-Rl-sKe" firstAttribute="leading" secondItem="rMm-hh-j4W" secondAttribute="trailing" constant="-7" id="Tx1-t6-50v"/>
                         <constraint firstItem="V3g-NP-63d" firstAttribute="leading" secondItem="VU1-WK-9HT" secondAttribute="leading" id="Z0x-jn-tFv"/>
                         <constraint firstItem="uwP-Rl-sKe" firstAttribute="top" secondItem="VU1-WK-9HT" secondAttribute="top" constant="40" id="ao5-xf-5BI"/>
                         <constraint firstItem="VU1-WK-9HT" firstAttribute="trailing" secondItem="V3g-NP-63d" secondAttribute="trailing" id="eqN-2J-saR"/>
+                        <constraint firstItem="V3g-NP-63d" firstAttribute="top" secondItem="rMm-hh-j4W" secondAttribute="bottom" constant="20" id="lKh-3X-fUL"/>
                         <constraint firstItem="rMm-hh-j4W" firstAttribute="top" secondItem="VU1-WK-9HT" secondAttribute="top" constant="40" id="t9W-kd-W1u"/>
                     </constraints>
                 </view>
