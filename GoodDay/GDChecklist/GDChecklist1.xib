@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareR.otf">
+            <string>NanumSquareOTFR</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GDChecklistViewController" customModule="GoodDay" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="Qxh-ye-7ke"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GDChecklistView1" customModule="GoodDay" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ta-T0-qgf">
+                    <rect key="frame" x="36" y="84" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="BfG-lq-vAa"/>
+                        <constraint firstAttribute="height" constant="25" id="ErN-et-Xu2"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="labelColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <backgroundConfiguration key="background" image="arrow.backward" catalog="system" imageContentMode="scaleAspectFit"/>
+                    </buttonConfiguration>
+                </button>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="wD2-EE-rdX">
+                    <rect key="frame" x="37" y="291" width="340" height="31"/>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmi-Uh-aiK">
+                    <rect key="frame" x="39" y="387" width="215" height="53.5"/>
+                    <string key="text">나는 매일 매일에 대해
+더감사하게 되었다.</string>
+                    <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANe-Lg-5tS">
+                    <rect key="frame" x="39" y="588.5" width="258.5" height="53.5"/>
+                    <string key="text">나는 어려움을 극복할 수
+있다는확신을 갖게 되었다.</string>
+                    <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="unN-rL-gOr">
+                    <rect key="frame" x="37" y="692" width="340" height="31"/>
+                </slider>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPu-gU-3sb">
+                    <rect key="frame" x="25" y="800" width="364" height="62"/>
+                    <color key="backgroundColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="62" id="hXW-Jw-9gt"/>
+                    </constraints>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <attributedString key="attributedTitle">
+                            <fragment content="다음">
+                                <attributes>
+                                    <font key="NSFont" size="18" name="NanumSquareOTFB"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </buttonConfiguration>
+                </button>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="mXy-2v-gDn">
+                    <rect key="frame" x="37" y="492.5" width="340" height="31"/>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOt-9w-cAv">
+                    <rect key="frame" x="39" y="161" width="209" height="80"/>
+                    <string key="text">나는 생각했던 것보다
+내 자신이 강하다는
+것을 알게 되었다.</string>
+                    <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="unN-rL-gOr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="2e4-Lf-MaH"/>
+                <constraint firstItem="mXy-2v-gDn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="6Qz-UM-tG5"/>
+                <constraint firstItem="8ta-T0-qgf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="Bfm-N7-4bc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="unN-rL-gOr" secondAttribute="trailing" constant="39" id="ECn-oR-7r0"/>
+                <constraint firstItem="ANe-Lg-5tS" firstAttribute="top" secondItem="mXy-2v-gDn" secondAttribute="bottom" constant="66" id="JnR-hj-3ZS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="EPu-gU-3sb" secondAttribute="bottom" id="Kng-XN-q5b"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EPu-gU-3sb" secondAttribute="trailing" constant="25" id="MDk-rB-zkl"/>
+                <constraint firstItem="unN-rL-gOr" firstAttribute="top" secondItem="ANe-Lg-5tS" secondAttribute="bottom" constant="50" id="Rd9-Iw-C6s"/>
+                <constraint firstItem="8ta-T0-qgf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="36" id="Rwy-8a-jTJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wD2-EE-rdX" secondAttribute="trailing" constant="39" id="Zca-eY-pMP"/>
+                <constraint firstItem="EPu-gU-3sb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="bMl-k0-hDI"/>
+                <constraint firstItem="Cmi-Uh-aiK" firstAttribute="top" secondItem="wD2-EE-rdX" secondAttribute="bottom" constant="66" id="bzn-tT-4hk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mXy-2v-gDn" secondAttribute="trailing" constant="39" id="dFF-nj-2Iq"/>
+                <constraint firstItem="Cmi-Uh-aiK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="eEn-QK-rb8"/>
+                <constraint firstItem="wOt-9w-cAv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="h1c-eh-tEY"/>
+                <constraint firstItem="wD2-EE-rdX" firstAttribute="top" secondItem="wOt-9w-cAv" secondAttribute="bottom" constant="50" id="iI8-JH-lxm"/>
+                <constraint firstItem="wOt-9w-cAv" firstAttribute="top" secondItem="8ta-T0-qgf" secondAttribute="bottom" constant="52" id="jfh-6e-8d3"/>
+                <constraint firstItem="mXy-2v-gDn" firstAttribute="top" secondItem="Cmi-Uh-aiK" secondAttribute="bottom" constant="52" id="seN-xY-Gw3"/>
+                <constraint firstItem="ANe-Lg-5tS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="y3D-sB-BEZ"/>
+                <constraint firstItem="wD2-EE-rdX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="ywb-Ns-XSY"/>
+            </constraints>
+            <connections>
+                <outlet property="nextButton" destination="EPu-gU-3sb" id="mRC-Wl-Oo3"/>
+                <outlet property="slider1" destination="wD2-EE-rdX" id="h1x-DU-4L5"/>
+                <outlet property="slider2" destination="mXy-2v-gDn" id="Mrq-LR-3VR"/>
+                <outlet property="slider3" destination="unN-rL-gOr" id="hWx-Xl-Xsy"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="121.875"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

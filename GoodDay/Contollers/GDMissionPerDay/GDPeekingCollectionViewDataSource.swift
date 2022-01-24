@@ -11,17 +11,13 @@ import FirebaseFirestore
 
 extension GDMissionPerDayDetailViewController: UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return missionPerDayData!.weeks[(curWeek ?? 1) - 1].days.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (missionPerDayData?.weeks[(curWeek ?? 1) - 1].days.count) ?? 1
+        return missionPerDayData!.weeks[(curWeek ?? 1) - 1].days.count
     }
     
-    // 버튼 눌렀을 때 뜨는 코드
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let cell = collectionView.cellForItem(at: indexPath)!
-    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as UICollectionViewCell
@@ -32,7 +28,7 @@ extension GDMissionPerDayDetailViewController: UICollectionViewDataSource{
         let blurEffect = getBlurEffetCircleView(innerLabel: innerLabel)
         let visualEffectView = getBlurEffectView(style: .regular)
         
-        if missionPerDayData?.weeks[(curWeek ?? 1) - 1].days[curDay - 1].isSuccess == 1{
+        if missionPerDayData?.weeks[(curWeek ?? 1) - 1].days[indexPath.item].isSuccess != 1{
             innerLabel.addSubview(blurEffect)
         } else {
             innerLabel.addSubview(visualEffectView)
@@ -69,11 +65,12 @@ extension GDMissionPerDayDetailViewController: UICollectionViewDataSource{
     // 버튼 뗄때
     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) {
-            
             let innerLabel = getInnerCircleLabel(cell: cell)
             let visualEffectView = getBlurEffectView(style: .regular)
+            let blurEffectView = getBlurEffetCircleView(innerLabel: innerLabel)
             let checkImage = UIImage(named: "check")
             let imageView = UIImageView(image: checkImage)
+
             imageView.frame =  CGRect(x: screenSizeWidth * 0.2, y: screenSizeWidth * 0.2, width: screenSizeWidth * 0.2, height: screenSizeWidth * 0.2  )
             imageView.tag = 20
             
@@ -83,11 +80,44 @@ extension GDMissionPerDayDetailViewController: UICollectionViewDataSource{
             visualEffectView.alpha = 0
             imageView.alpha = 0
             textView.alpha = 0
+            blurEffectView.alpha = 0
             
             let originalTransform = CGAffineTransform(scaleX: 1, y: 1)
             UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 3, options: [.curveEaseInOut]) {
                 cell.transform = originalTransform
-            } completion: { finished in
+            } completion: { [self] finished in
+                if self.missionPerDayData?.weeks[(self.curWeek ?? 1) - 1].days[indexPath.item].isSuccess == 0 {
+
+                    UIView.animate(withDuration: 0.8, delay: 0, options: .transitionCrossDissolve) {
+
+                        cell.subviews.forEach {
+                            if $0.tag == 5 {
+                                $0.subviews.forEach { tmpView in
+                                    if tmpView.tag == 11 { tmpView.removeFromSuperview() } // textview
+                                    if tmpView.tag == 12 {tmpView.alpha = 0} // blurview
+                                    if tmpView.tag == 20 { tmpView.removeFromSuperview() } // imageview
+                                }
+                            }
+                        }
+                        innerLabel.addSubview(blurEffectView)
+                        blurEffectView.alpha = 1
+                        cell.addSubview(innerLabel)
+                    } completion: { finished in
+                        UIView.animate(withDuration: 0.6, delay: 0, options: .transitionCrossDissolve) {
+                            cell.subviews.forEach {
+                                if $0.tag == 5 {
+                                    $0.subviews.forEach { tmpView in
+                                        if tmpView.tag == 12 { tmpView.removeFromSuperview()} // blurview
+                                    }
+                                }
+                            }
+                            innerLabel.addSubview(textView)
+                            textView.alpha = 1
+                        }
+                    }
+                    return
+                }
+                
                 UIView.animate(withDuration: 0.8, delay: 0, options: .transitionCrossDissolve) {
                     cell.subviews.forEach {
                         if $0.tag == 5 { //innerlabel

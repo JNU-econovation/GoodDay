@@ -194,16 +194,22 @@ class TimeSettingViewController: UIViewController {
         
         let db = Firestore.firestore()
         
+        let beginDay = Date()
         let mbti = (self.firstMbti ?? "") + (self.secondMbti ?? "") + (self.thirdMbti ?? "")  + (self.fourthMbti ?? "")
         UserDefaults.standard.set(true, forKey: "isInitialized")
         UserDefaults.standard.set(self.userUid, forKey: "userUid")
         UserDefaults.standard.set(self.nickname, forKey:"userName")
+        UserDefaults.standard.set(beginDay, forKey: "beginDay")
+        UserDefaults.standard.set(mbti, forKey:"mbti")
+        UserDefaults.standard.set(self.wakeUpTime, forKey: "wakeUpTime")
+        UserDefaults.standard.set(self.sleepTime, forKey: "sleepTime")
         
-        let user = User(name: self.nickname ?? "", mbti: mbti, wakeUpTime: self.wakeUpTime ?? Date(), sleepTime: self.sleepTime ?? Date(), beginDay: Date())
+        let user = User(name: self.nickname ?? "", mbti: mbti, wakeUpTime: self.wakeUpTime ?? Date(), sleepTime: self.sleepTime ?? Date(), beginDay: beginDay)
         
         do {
             try db.collection("users").document(self.userUid).setData(from: user)
-        }catch let error {
+            db.collection("missionPerDay").document(self.userUid).setData(["weeks": [["days":[["id": 1, "isSuccess": 0,"missionId": 0]], "id": 1]]])
+        } catch let error {
             print("Error writing user to Firestore: \(error)")
         }
         

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0336D285279E3B9C0018BF9E /* GDChecklist1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0336D284279E3B9C0018BF9E /* GDChecklist1.xib */; };
+		0336D28A279E493A0018BF9E /* GDChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0336D289279E493A0018BF9E /* GDChecklistViewController.swift */; };
 		035591EF278C188900BD0417 /* missionContent.json in Resources */ = {isa = PBXBuildFile; fileRef = 035591EE278C188800BD0417 /* missionContent.json */; };
 		035591F1278C614100BD0417 /* GDMissionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035591F0278C614100BD0417 /* GDMissionData.swift */; };
 		1BDC4393ADCFBC9BD88D83E8 /* Pods_GoodDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */; };
@@ -70,6 +72,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0336D284279E3B9C0018BF9E /* GDChecklist1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDChecklist1.xib; sourceTree = "<group>"; };
+		0336D286279E425B0018BF9E /* GDChecklist2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDChecklist2.xib; sourceTree = "<group>"; };
+		0336D287279E425C0018BF9E /* GDChecklist3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDChecklist3.xib; sourceTree = "<group>"; };
+		0336D288279E43990018BF9E /* GDChecklist4.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDChecklist4.xib; sourceTree = "<group>"; };
+		0336D289279E493A0018BF9E /* GDChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDChecklistViewController.swift; sourceTree = "<group>"; };
 		035591EE278C188800BD0417 /* missionContent.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = missionContent.json; sourceTree = "<group>"; };
 		035591F0278C614100BD0417 /* GDMissionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMissionData.swift; sourceTree = "<group>"; };
 		3239BC98277D8E5200E96E21 /* GoodDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +166,18 @@
 			path = Contollers;
 			sourceTree = "<group>";
 		};
+		0336D281279E3B480018BF9E /* GDChecklist */ = {
+			isa = PBXGroup;
+			children = (
+				0336D284279E3B9C0018BF9E /* GDChecklist1.xib */,
+				0336D286279E425B0018BF9E /* GDChecklist2.xib */,
+				0336D287279E425C0018BF9E /* GDChecklist3.xib */,
+				0336D288279E43990018BF9E /* GDChecklist4.xib */,
+				0336D289279E493A0018BF9E /* GDChecklistViewController.swift */,
+			);
+			path = GDChecklist;
+			sourceTree = "<group>";
+		};
 		3239BC8F277D8E5200E96E21 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +202,7 @@
 			children = (
 				F077CD99279E7C0600254D61 /* GDWeeklyCheck */,
 				F05A8C6C279D248B00EAE250 /* GDMyPage */,
+				0336D281279E3B480018BF9E /* GDChecklist */,
 				F0FDB0792796967D00BDF962 /* GDDiary */,
 				F0794E9B2793F47F00EC55B8 /* Model */,
 				32F2438C2783D47A00F1D160 /* Assets.xcassets */,
@@ -422,6 +442,7 @@
 				F05A8C70279D24A600EAE250 /* MyPageViewController.xib in Resources */,
 				F0E1A98F277EE41700DD286E /* MbtiSettingViewController.xib in Resources */,
 				32F2437727833BC900F1D160 /* NanumSquareR.otf in Resources */,
+				0336D285279E3B9C0018BF9E /* GDChecklist1.xib in Resources */,
 				32F2437527833BC900F1D160 /* NanumGothic.otf in Resources */,
 				32F2437327833BC900F1D160 /* NanumSquareEB.otf in Resources */,
 				32F2437D27833BC900F1D160 /* NanumGothicLight.otf in Resources */,
@@ -515,6 +536,7 @@
 				32F2438427833BC900F1D160 /* FontUtils.swift in Sources */,
 				32F2438527833BC900F1D160 /* ColorUtils.swift in Sources */,
 				F0E1A98E277EE41700DD286E /* MbtiSettingViewController.swift in Sources */,
+				0336D28A279E493A0018BF9E /* GDChecklistViewController.swift in Sources */,
 				F0FDB07C279696E300BDF962 /* DiaryCalendarViewController.swift in Sources */,
 				F0FDB08727969ECC00BDF962 /* RegisteredDiaryView.swift in Sources */,
 				32F2438327833BC900F1D160 /* GDBlurEffectView.swift in Sources */,

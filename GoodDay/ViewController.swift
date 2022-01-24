@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     var wakeUpTime: Date?
     var sleepTime: Date?
     var userUid: String?
+    
     let db = Firestore.firestore()
     var user: User?
     
@@ -40,8 +41,6 @@ class ViewController: UIViewController {
     
     let rightArrowImg = UIImage(systemName: "arrow.right", withConfiguration: UIImage.SymbolConfiguration(pointSize: 24))
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.userUid = UserDefaults.standard.string(forKey: "userUid")
@@ -52,7 +51,7 @@ class ViewController: UIViewController {
         configureFamousSayingView()
         configureNotificationCenter()
     }
-
+    
     
     func configureUserNameLabel(){
         

@@ -213,15 +213,16 @@ class FloatingButtonViewController: UIViewController {
     
     
     @IBAction func tapMissionButton(_ sender: UIButton) {
+        let presentView = presentingViewController
         
-        let GDMissionPerDayDetailVC = GDMissionPerDayDetailViewController(nibName: "GDMissionPerDayDetail", bundle: nil)
-        
-        GDMissionPerDayDetailVC.modalPresentationStyle = .overFullScreen
-        GDMissionPerDayDetailVC.modalTransitionStyle = .crossDissolve
-        
-       
-        self.present(GDMissionPerDayDetailVC, animated: true, completion: nil)
-        
+        self.dismiss(animated: false) {
+            let GDMissionPerDayDetailVC = GDMissionPerDayDetailViewController(nibName: "GDMissionPerDayDetail", bundle: nil)
+            
+            GDMissionPerDayDetailVC.modalPresentationStyle = .overFullScreen
+            GDMissionPerDayDetailVC.modalTransitionStyle = .crossDissolve
+
+            presentView?.present(GDMissionPerDayDetailVC, animated: true, completion: nil)
+        }
         
         
     }
