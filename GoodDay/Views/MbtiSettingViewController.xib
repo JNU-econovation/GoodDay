@@ -25,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ieq-TS-PUI">
-                    <rect key="frame" x="50" y="84" width="25" height="25"/>
+                    <rect key="frame" x="30" y="84" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="25" id="HdC-wH-i4G"/>
                         <constraint firstAttribute="height" constant="25" id="pkJ-3M-OV2"/>
@@ -39,19 +39,19 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 MBTI는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rxe-CX-icA">
-                    <rect key="frame" x="50" y="164" width="314" height="36"/>
+                    <rect key="frame" x="30" y="164" width="334" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자의 MBTI를 기반으로" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hP-bC-sD3">
-                    <rect key="frame" x="54" y="266" width="310" height="20.5"/>
+                    <rect key="frame" x="30" y="266" width="334" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이별 극복을 돕습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1de-NS-8Ol">
-                    <rect key="frame" x="54" y="290.5" width="310" height="20.5"/>
+                    <rect key="frame" x="30" y="290.5" width="334" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -97,13 +97,13 @@
                     </constraints>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무엇인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhv-WG-9Kw">
-                    <rect key="frame" x="50" y="206" width="314" height="36"/>
+                    <rect key="frame" x="30" y="206" width="334" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZQ-8u-gBl">
-                    <rect key="frame" x="50" y="799" width="314" height="31"/>
+                    <rect key="frame" x="30" y="799" width="354" height="31"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="다음">
                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -119,21 +119,21 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1de-NS-8Ol" secondAttribute="trailing" constant="50" id="6pJ-SN-FtR"/>
                 <constraint firstItem="YZQ-8u-gBl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9XL-Gp-rhy"/>
                 <constraint firstItem="1de-NS-8Ol" firstAttribute="top" secondItem="1hP-bC-sD3" secondAttribute="bottom" constant="4" id="BzD-nc-I8i"/>
-                <constraint firstItem="YZQ-8u-gBl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="Dqb-2U-iM0"/>
-                <constraint firstItem="Ieq-TS-PUI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="Egz-RL-sR2"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YZQ-8u-gBl" secondAttribute="trailing" constant="50" id="Oq7-Df-PbB"/>
+                <constraint firstItem="YZQ-8u-gBl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Dqb-2U-iM0"/>
+                <constraint firstItem="Ieq-TS-PUI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Egz-RL-sR2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YZQ-8u-gBl" secondAttribute="trailing" constant="30" id="Oq7-Df-PbB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1hP-bC-sD3" secondAttribute="trailing" constant="50" id="QYs-HG-Eyg"/>
-                <constraint firstItem="Rhv-WG-9Kw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="Se3-G0-YeK"/>
+                <constraint firstItem="Rhv-WG-9Kw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Se3-G0-YeK"/>
                 <constraint firstItem="Ieq-TS-PUI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="Wu3-Hy-gyp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rhv-WG-9Kw" secondAttribute="trailing" constant="50" id="ZYS-64-CbL"/>
-                <constraint firstItem="Rxe-CX-icA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="bk7-hr-svA"/>
-                <constraint firstItem="1hP-bC-sD3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="54" id="cs7-oy-4JB"/>
+                <constraint firstItem="Rxe-CX-icA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="bk7-hr-svA"/>
+                <constraint firstItem="1hP-bC-sD3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="cs7-oy-4JB"/>
                 <constraint firstItem="Rhv-WG-9Kw" firstAttribute="top" secondItem="Rxe-CX-icA" secondAttribute="bottom" constant="6" id="efg-zT-bXa"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rxe-CX-icA" secondAttribute="trailing" constant="50" id="fD0-vC-1FJ"/>
                 <constraint firstItem="1hP-bC-sD3" firstAttribute="top" secondItem="Rhv-WG-9Kw" secondAttribute="bottom" constant="24" id="gxc-Mf-r1c"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YZQ-8u-gBl" secondAttribute="bottom" constant="32" id="j5v-t9-F2L"/>
                 <constraint firstItem="Rxe-CX-icA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="120" id="o0E-0n-o1X"/>
-                <constraint firstItem="1de-NS-8Ol" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="54" id="owS-oX-X4P"/>
+                <constraint firstItem="1de-NS-8Ol" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="owS-oX-X4P"/>
                 <constraint firstItem="a4m-Pw-1y4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qNn-Hp-aBc"/>
                 <constraint firstItem="a4m-Pw-1y4" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="20" id="uqM-NQ-j7T"/>
             </constraints>

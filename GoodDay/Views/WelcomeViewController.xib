@@ -20,63 +20,63 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD DAY를" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYL-iw-g8q">
-                    <rect key="frame" x="40" y="164" width="324" height="36"/>
+                    <rect key="frame" x="30" y="159" width="334" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIX-Jk-UsM">
-                    <rect key="frame" x="44" y="277" width="320" height="21"/>
+                    <rect key="frame" x="30" y="272" width="334" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD DAY입니다 :) " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcv-1x-Hfb">
-                    <rect key="frame" x="44" y="302" width="320" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 이별 극복 서포터, 굿데이입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcv-1x-Hfb">
+                    <rect key="frame" x="30" y="297" width="334" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD DAY는 이별로 인해 무너진 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQI-BF-XDm">
-                    <rect key="frame" x="44" y="327" width="320" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이별의 상처로 무너진 일상," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQI-BF-XDm">
+                    <rect key="frame" x="30" y="322" width="334" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일상의 회복을 돕는 이별 극복 서포팅 앱 입니다. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vo9-Ts-0U7">
-                    <rect key="frame" x="44" y="352" width="350" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그대로 두면 흉터로 남을 수 있어요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vo9-Ts-0U7">
+                    <rect key="frame" x="30" y="347" width="364" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지금은 비록 많이 힘들겠지만," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAh-xu-eWg">
-                    <rect key="frame" x="44" y="408" width="320" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD DAY와 함께 깊은 상처는 아물고" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAh-xu-eWg">
+                    <rect key="frame" x="30" y="391" width="334" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD DAY와 함께 이별을" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="te5-wM-zGZ">
-                    <rect key="frame" x="44" y="433" width="320" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회복과 성장을 경험해보아요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="te5-wM-zGZ">
+                    <rect key="frame" x="30" y="416" width="334" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="극복해 나갔으면 좋겠습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAk-mt-GYq">
-                    <rect key="frame" x="44" y="458" width="320" height="21"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD DAY MAKES YOUR LIFE TO BE GOOD DAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAk-mt-GYq">
+                    <rect key="frame" x="30" y="460" width="334" height="16"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5W-Eg-jQe">
-                    <rect key="frame" x="50" y="799" width="314" height="31"/>
+                    <rect key="frame" x="30" y="799" width="354" height="31"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="이별 극복 시작하기"/>
+                    <buttonConfiguration key="configuration" style="plain" title="시작하기"/>
                     <connections>
                         <action selector="tapStartButton:" destination="-1" eventType="touchUpInside" id="Q1L-51-bWd"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택해주셔서 감사합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fw2-MJ-60U">
-                    <rect key="frame" x="40" y="206" width="364" height="36"/>
+                    <rect key="frame" x="30" y="201" width="374" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -85,37 +85,37 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vAk-mt-GYq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="0Qx-0a-fbY"/>
+                <constraint firstItem="vAk-mt-GYq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="0Qx-0a-fbY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XAh-xu-eWg" secondAttribute="trailing" constant="50" id="2rT-Et-uwn"/>
-                <constraint firstItem="dYL-iw-g8q" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="120" id="4Rd-R6-Gh6"/>
-                <constraint firstItem="fw2-MJ-60U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="6gz-6c-NLJ"/>
+                <constraint firstItem="dYL-iw-g8q" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="115" id="4Rd-R6-Gh6"/>
+                <constraint firstItem="fw2-MJ-60U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="6gz-6c-NLJ"/>
                 <constraint firstItem="vo9-Ts-0U7" firstAttribute="top" secondItem="kQI-BF-XDm" secondAttribute="bottom" constant="4" id="9MC-iO-zwM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AIX-Jk-UsM" secondAttribute="trailing" constant="50" id="GFl-Kr-5Cs"/>
-                <constraint firstItem="XAh-xu-eWg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="Gnl-FH-LSz"/>
+                <constraint firstItem="XAh-xu-eWg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Gnl-FH-LSz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vAk-mt-GYq" secondAttribute="trailing" constant="50" id="I7d-ca-WEc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vo9-Ts-0U7" secondAttribute="trailing" constant="20" id="KJC-xq-98m"/>
-                <constraint firstItem="AIX-Jk-UsM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="Kmt-h5-1yU"/>
-                <constraint firstItem="vAk-mt-GYq" firstAttribute="top" secondItem="te5-wM-zGZ" secondAttribute="bottom" constant="4" id="LGb-cz-3nT"/>
+                <constraint firstItem="AIX-Jk-UsM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Kmt-h5-1yU"/>
+                <constraint firstItem="vAk-mt-GYq" firstAttribute="top" secondItem="te5-wM-zGZ" secondAttribute="bottom" constant="23" id="LGb-cz-3nT"/>
                 <constraint firstItem="AIX-Jk-UsM" firstAttribute="top" secondItem="fw2-MJ-60U" secondAttribute="bottom" constant="35" id="MV5-uN-y24"/>
-                <constraint firstItem="kQI-BF-XDm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="QEn-wU-zC1"/>
+                <constraint firstItem="kQI-BF-XDm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="QEn-wU-zC1"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fw2-MJ-60U" secondAttribute="trailing" constant="10" id="Sua-14-AWD"/>
                 <constraint firstItem="A5W-Eg-jQe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UmG-Ay-uSO"/>
-                <constraint firstItem="vo9-Ts-0U7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="X59-k9-U8Y"/>
+                <constraint firstItem="vo9-Ts-0U7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="X59-k9-U8Y"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dYL-iw-g8q" secondAttribute="trailing" constant="50" id="Xib-nq-0ix"/>
                 <constraint firstItem="te5-wM-zGZ" firstAttribute="top" secondItem="XAh-xu-eWg" secondAttribute="bottom" constant="4" id="Zg9-P1-R02"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kcv-1x-Hfb" secondAttribute="trailing" constant="50" id="auD-6P-9ZN"/>
-                <constraint firstItem="XAh-xu-eWg" firstAttribute="top" secondItem="vo9-Ts-0U7" secondAttribute="bottom" constant="35" id="cZD-Yt-wqD"/>
-                <constraint firstItem="dYL-iw-g8q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="d1e-fd-NkP"/>
+                <constraint firstItem="XAh-xu-eWg" firstAttribute="top" secondItem="vo9-Ts-0U7" secondAttribute="bottom" constant="23" id="cZD-Yt-wqD"/>
+                <constraint firstItem="dYL-iw-g8q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="d1e-fd-NkP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="A5W-Eg-jQe" secondAttribute="bottom" constant="32" id="gkZ-0t-mke"/>
                 <constraint firstItem="fw2-MJ-60U" firstAttribute="top" secondItem="dYL-iw-g8q" secondAttribute="bottom" constant="6" id="kSe-EQ-leb"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="A5W-Eg-jQe" secondAttribute="trailing" constant="50" id="lnU-bx-aFR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="A5W-Eg-jQe" secondAttribute="trailing" constant="30" id="lnU-bx-aFR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kQI-BF-XDm" secondAttribute="trailing" constant="50" id="r9U-JJ-LE7"/>
                 <constraint firstItem="kcv-1x-Hfb" firstAttribute="top" secondItem="AIX-Jk-UsM" secondAttribute="bottom" constant="4" id="rCL-GI-e3p"/>
                 <constraint firstItem="kQI-BF-XDm" firstAttribute="top" secondItem="kcv-1x-Hfb" secondAttribute="bottom" constant="4" id="t1S-eb-gBh"/>
-                <constraint firstItem="A5W-Eg-jQe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="uEF-IB-QxB"/>
-                <constraint firstItem="kcv-1x-Hfb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="wP4-41-Bx5"/>
+                <constraint firstItem="A5W-Eg-jQe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="uEF-IB-QxB"/>
+                <constraint firstItem="kcv-1x-Hfb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="wP4-41-Bx5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="te5-wM-zGZ" secondAttribute="trailing" constant="50" id="wvC-g9-P5D"/>
-                <constraint firstItem="te5-wM-zGZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="zmP-qC-esE"/>
+                <constraint firstItem="te5-wM-zGZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="zmP-qC-esE"/>
             </constraints>
             <point key="canvasLocation" x="487" y="131"/>
         </view>

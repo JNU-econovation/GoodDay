@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NameSettingViewController" customModule="GoodDay" customModuleProvider="target">
             <connections>
                 <outlet property="nameTextField" destination="QSO-xF-E0l" id="NYT-HR-NMB"/>
-                <outlet property="nextButton" destination="wja-Uc-Sfc" id="hAp-p4-zTQ"/>
+                <outlet property="nextButton" destination="WHN-eX-Dau" id="euD-E1-1Pj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="warningLabel" destination="tlN-ph-uzT" id="Seg-Aa-JAy"/>
             </connections>
@@ -22,25 +22,25 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자의 닉네임을" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDf-tq-NeY">
-                    <rect key="frame" x="50" y="164" width="237" height="36"/>
+                    <rect key="frame" x="30" y="164" width="334" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnD-Zh-EVt">
-                    <rect key="frame" x="50" y="206" width="237" height="36"/>
+                    <rect key="frame" x="30" y="206" width="334" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 멋진 이름을 입력해주세요 :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyX-pq-ocb">
-                    <rect key="frame" x="54" y="266" width="233" height="21"/>
+                    <rect key="frame" x="30" y="266" width="334" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="닉네임 (2~8글자)" textAlignment="natural" minimumFontSize="17" background="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="QSO-xF-E0l">
-                    <rect key="frame" x="50" y="450.5" width="290" height="55"/>
+                    <rect key="frame" x="62" y="450.5" width="290" height="55"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="290" id="2Ut-gA-1a2"/>
                         <constraint firstAttribute="height" constant="55" id="50u-at-HZg"/>
@@ -49,47 +49,43 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlN-ph-uzT">
-                    <rect key="frame" x="50" y="508.5" width="237" height="21"/>
+                    <rect key="frame" x="62" y="508.5" width="290" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wja-Uc-Sfc">
-                    <rect key="frame" x="50" y="799" width="237" height="31"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHN-eX-Dau">
+                    <rect key="frame" x="30" y="799" width="354" height="31"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="다음">
-                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </buttonConfiguration>
+                    <buttonConfiguration key="configuration" style="plain" title="다음"/>
                     <connections>
-                        <action selector="tapNextButton:" destination="-1" eventType="touchUpInside" id="8E7-E5-scu"/>
+                        <action selector="tapNextButton:" destination="-1" eventType="touchUpInside" id="gqz-BI-OUz"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="QSO-xF-E0l" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0Zw-Yc-e7N"/>
                 <constraint firstItem="tlN-ph-uzT" firstAttribute="top" secondItem="QSO-xF-E0l" secondAttribute="bottom" constant="3" id="3uK-MG-FzM"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wja-Uc-Sfc" secondAttribute="bottom" constant="32" id="6Zr-IV-KAX"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tlN-ph-uzT" secondAttribute="trailing" constant="50" id="8Bg-mB-XTq"/>
+                <constraint firstItem="QSO-xF-E0l" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ANx-Wf-cqk"/>
                 <constraint firstItem="DyX-pq-ocb" firstAttribute="top" secondItem="tnD-Zh-EVt" secondAttribute="bottom" constant="24" id="BmR-zO-WLx"/>
                 <constraint firstItem="tlN-ph-uzT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Dne-aP-1Ub"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DyX-pq-ocb" secondAttribute="trailing" constant="50" id="H3Z-8A-7lg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WHN-eX-Dau" secondAttribute="trailing" constant="30" id="HDl-Bf-2wM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tnD-Zh-EVt" secondAttribute="trailing" constant="50" id="Oh4-Z4-E1F"/>
                 <constraint firstItem="rDf-tq-NeY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="120" id="P2G-Dc-Px0"/>
-                <constraint firstItem="wja-Uc-Sfc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="RTi-W9-oMm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="WHN-eX-Dau" secondAttribute="bottom" constant="32" id="RMc-tM-cUJ"/>
                 <constraint firstItem="QSO-xF-E0l" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="30" id="TbS-6N-Yvr"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wja-Uc-Sfc" secondAttribute="trailing" constant="50" id="UZW-zp-zOT"/>
                 <constraint firstItem="tnD-Zh-EVt" firstAttribute="top" secondItem="rDf-tq-NeY" secondAttribute="bottom" constant="6" id="ZXh-dy-ydF"/>
+                <constraint firstItem="tlN-ph-uzT" firstAttribute="leading" secondItem="QSO-xF-E0l" secondAttribute="leading" id="bhe-Fz-GVe"/>
+                <constraint firstItem="WHN-eX-Dau" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="i6e-0k-PYw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rDf-tq-NeY" secondAttribute="trailing" constant="50" id="iT5-dt-PVR"/>
-                <constraint firstItem="DyX-pq-ocb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="54" id="mKL-s9-cjI"/>
-                <constraint firstItem="QSO-xF-E0l" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="scx-00-Zy6"/>
-                <constraint firstItem="tlN-ph-uzT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="tkn-c9-dXm"/>
-                <constraint firstItem="tnD-Zh-EVt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="vYV-n9-BbG"/>
-                <constraint firstItem="wja-Uc-Sfc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xMo-hm-Ug9"/>
-                <constraint firstItem="rDf-tq-NeY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="zTh-tE-uVd"/>
+                <constraint firstItem="DyX-pq-ocb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="mKL-s9-cjI"/>
+                <constraint firstItem="WHN-eX-Dau" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qnq-oD-7Lo"/>
+                <constraint firstItem="tnD-Zh-EVt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="vYV-n9-BbG"/>
+                <constraint firstItem="rDf-tq-NeY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="zTh-tE-uVd"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="140"/>
+            <point key="canvasLocation" x="132" y="137"/>
         </view>
     </objects>
     <resources>

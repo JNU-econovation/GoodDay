@@ -72,6 +72,7 @@ class NameSettingViewController: UIViewController {
         if self.nextButton.isEnabled {
             // 버튼 글자 색 변경
             self.nextButton.titleLabel?.textColor = .white
+            self.nextButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
             self.nextButton.backgroundColor = UIColor(rgb: 0x0015FF)
             self.warningLabel.textColor = UIColor(rgb: 0x0015FF)
             self.warningLabel.text = "사용 가능한 멋진 닉네임입니다."
@@ -101,10 +102,7 @@ class NameSettingViewController: UIViewController {
     }
     
     
-    
-    
     @IBAction func tapNextButton(_ sender: UIButton) {
-        
         let MbtiSettingVC = MbtiSettingViewController(nibName: "MbtiSettingViewController", bundle: nil)
         let userName = self.nameTextField.text
         
@@ -113,8 +111,8 @@ class NameSettingViewController: UIViewController {
         MbtiSettingVC.modalTransitionStyle = .crossDissolve
         
         self.present(MbtiSettingVC, animated: true, completion: nil)
+        
     }
-    
     
     
     // 유저가 화면을 터치했을 때 호출되는 메서드

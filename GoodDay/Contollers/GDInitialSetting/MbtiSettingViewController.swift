@@ -121,24 +121,28 @@ class MbtiSettingViewController: UIViewController {
         mbtiPosition = .first
         self.firstMbtiTextField.inputView = self.firstMbtiPicker
         self.firstMbtiTextField.inputAccessoryView = self.toolbar
+        self.validateNextButton()
     }
     
     @objc private func beginSecondTextField(_ textField: UITextField){
         mbtiPosition = .second
         self.secondMbtiTextField.inputView = self.secondMbtiPicker
         self.secondMbtiTextField.inputAccessoryView = self.toolbar
+        self.validateNextButton()
     }
     
     @objc private func beginThirdTextField(_ textField: UITextField){
         mbtiPosition = .third
         self.thirdMbtiTextField.inputView = self.thirdMbtiPicker
         self.thirdMbtiTextField.inputAccessoryView = self.toolbar
+        self.validateNextButton()
     }
     
     @objc private func beginFourthTextField(_ textField: UITextField){
         mbtiPosition = .fourth
         self.fourthMbtiTextField.inputView = self.fourthMbtiPicker
         self.fourthMbtiTextField.inputAccessoryView = self.toolbar
+        self.validateNextButton()
     }
     
     
@@ -219,6 +223,7 @@ class MbtiSettingViewController: UIViewController {
         if self.nextButton.isEnabled {
             // 버튼 글자 색 변경
             self.nextButton.titleLabel?.textColor = .white
+            self.nextButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
             self.nextButton.backgroundColor = UIColor(rgb: 0x0015FF)
             
            
