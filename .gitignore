@@ -5,7 +5,7 @@
 ## User settings
 xcuserdata/
 .DS_Store
-
+GoodDay/.DS_Store
 
 ## firestoreData
 ./GoodDay/GoogleService-Info.plist

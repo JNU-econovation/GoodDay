@@ -21,10 +21,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let userDefaults = UserDefaults.standard
         //userDefaults.set(false, forKey: "isInitialized")
         let isInitialized: Bool = userDefaults.bool(forKey: "isInitialized")
+
 //        let isInitialized: Bool = false
         
 //        goChecklist()
 //        return
+
+
         
         // 초기 설정이 안 됐을 경우 -> 초기 화면으로 이동
         if !isInitialized {
@@ -41,26 +44,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
              
             window?.rootViewController = mainVC
             
-        }
-    }
-    
-    func goChecklist() {
-        let beginDate = UserDefaults.standard.object(forKey: "beginDay") as! Date
-        //let isDoChecklist = UserDefaults.standard.bool(forKey: "isDoChecklist")
-        let isDoChecklist = false
-        //let curDay = Calendar.current.dateComponents([.day], from: beginDate, to: Date()).day! + 1
-        let curDay = 7
-        
-        if (curDay % 7 == 0) && !isDoChecklist {
-            let GDChecklistVC = GDChecklistViewController(nibName: "GDChecklist1", bundle: nil)
-            
-            window?.rootViewController = GDChecklistVC
-            
-            UserDefaults.standard.set(true, forKey: "isDoChecklist")
-        }
-        
-        if curDay % 7 != 0 {
-            UserDefaults.standard.set(false, forKey: "isDoChecklist")
         }
     }
 

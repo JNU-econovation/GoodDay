@@ -13,9 +13,13 @@ class GDMissionPerDayWeekViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var backButton: UIButton!
     
+    var delegate: ProtocolData?
+    
     @objc func onTapButton(_ sender: AnyObject) {
-        let button = sender as! UIButton
-        print("Button was tapped. \(button.titleLabel?.text ?? "")")
+        let selectedWeek = sender.view?.tag ?? 1
+        
+        self.delegate?.protocolData(dataSent: selectedWeek)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @objc func onTapBackButton(_ sender: AnyObject) {
@@ -37,6 +41,7 @@ class GDMissionPerDayWeekViewController: UIViewController {
             let oneWeekView = getOneWeekView(index: i)
             let taps = UITapGestureRecognizer(target: self, action: #selector(onTapButton(_:)))
             oneWeekView.addGestureRecognizer(taps)
+            oneWeekView.tag = i
             
             stackView.addRow(view: oneWeekView)
         }
@@ -119,4 +124,8 @@ extension Array {
     subscript(safe index: Index) -> Element? {
         return indices.contains(index) ? self[index] : nil
     }
+}
+
+protocol ProtocolData {
+    func protocolData(dataSent: Int)
 }

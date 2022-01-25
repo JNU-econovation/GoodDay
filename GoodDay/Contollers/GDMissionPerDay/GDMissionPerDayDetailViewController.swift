@@ -11,7 +11,7 @@ import Lottie
 import Firebase
 import grpc
 
-class GDMissionPerDayDetailViewController: UIViewController {
+class GDMissionPerDayDetailViewController: UIViewController, ProtocolData {
     
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var weekButton: UIButton!
@@ -69,10 +69,28 @@ class GDMissionPerDayDetailViewController: UIViewController {
         GDMissionPerDayWeeksVC.modalTransitionStyle = .crossDissolve
         
         GDMissionPerDayWeeksVC.missionPerDayData = missionPerDayData
+        GDMissionPerDayWeeksVC.delegate = self
         
         self.present(GDMissionPerDayWeeksVC, animated: true, completion: nil)
     }
     
+    func protocolData(dataSent: Int) {
+        curWeek = dataSent
+        curDay = -1
+        missionIndex = -1
+    
+        contentView.subviews.forEach{$0.removeFromSuperview()}
+        
+        collectionView = self.getPeekingCollectionView(screenSizeWidth: screenSizeWidth, contentViewHeight: contentViewHeight, collectionView: collectionView)
+        collectionView.reloadData()
+        contentView.addSubview(self.getCollectionViewBackgroundImage(collectionView: collectionView))
+        contentView.addSubview(collectionView)
+        contentView.addSubview(self.getDetailView(screenSizeWidth: screenSizeWidth, contentViewHeight: contentViewHeight))
+        contentView.addSubview(self.getweekButton(text: "WEEK \(String(describing: curWeek!))",originButton: weekButton))
+        
+        contentView.setNeedsLayout()
+        contentView.layoutIfNeeded()
+    }
     
     let screenSizeWidth = UIScreen.main.bounds.width
     let screenSizeheight = UIScreen.main.bounds.height
@@ -120,7 +138,7 @@ class GDMissionPerDayDetailViewController: UIViewController {
                                 }
 
                                 if missionPerDayData!.weeks[tmpWeekId - 1].days.count < tmpDayId {
-                                    missionPerDayData!.weeks[tmpWeekId - 1].days.append(MissionDay.init(id: tmpDayId, missionId: 1, isSuccess: 0))
+                                    missionPerDayData!.weeks[tmpWeekId - 1].days.append(MissionDay.init(id: tmpDayId, missionId: Int.random(in: 0..<(mission?.count ?? 1)), isSuccess: 0))
                                 }
                                 
                                 docRef?.setData(try missionPerDayData!.toDictionary()!)
@@ -171,7 +189,9 @@ class GDMissionPerDayDetailViewController: UIViewController {
     }
     
     func getweekButton(text: String, originButton: UIButton) -> UIButton {
-        let weekButton = originButton        
+        let weekButton = originButton
+        originButton.subviews.forEach{$0.removeFromSuperview()}
+        
         let weekLable = UILabel()
         weekLable.text = text
         weekLable.textColor = .black
@@ -180,9 +200,7 @@ class GDMissionPerDayDetailViewController: UIViewController {
 
         let stringSize = FontUtils().getFontSize(font: weekLable.font, text: text)
         weekButton.frame = CGRect(x: (screenSizeWidth - stringSize.width) / 2, y: (contentViewHeight / 2 - screenSizeWidth * 0.6) / 4  - 20, width: stringSize.width, height: 40)
-        
         weekButton.addTarget(self, action: #selector(onTapMissionWeekButton(_:)), for: .touchUpInside)
-        
         weekButton.addSubview(weekLable)
 
         return weekButton

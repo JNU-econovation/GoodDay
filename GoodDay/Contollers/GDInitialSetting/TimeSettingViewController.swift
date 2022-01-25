@@ -146,8 +146,6 @@ class TimeSettingViewController: UIViewController {
         
         self.wakeUpTimeTextField.textAlignment = .center
         self.sleepTimeTextField.textAlignment = .center
-        
-        
     }
     @objc private func DidtextFieldChange(_ textField: UITextField){
         self.validateFinishButton()
@@ -172,23 +170,14 @@ class TimeSettingViewController: UIViewController {
             
         }
 
-        
-        
-       
     }
-    
-    
+
     // 유저가 화면을 터치했을 때 호출되는 메서드
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         // 키보드를 내린다.
         self.view.endEditing(true)
     }
-    
-    
-
-
-    
     
     @IBAction func tapBackButton(_ sender: UIButton) {
         
@@ -244,15 +233,5 @@ class TimeSettingViewController: UIViewController {
         } catch let error {
             print("Error writing user to Firestore: \(error)")
         }
-        
-        
-        
     }
-    
-    
-    
-    
-    
-    
-
 }
