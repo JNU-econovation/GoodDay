@@ -19,6 +19,7 @@ class WelcomeViewController: UIViewController {
     func configureStartButton(){
         // 글자 색 변경
         self.startButton.titleLabel?.textColor = .white
+        self.startButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         self.startButton.backgroundColor = UIColor(rgb: 0x0015FF)
         self.startButton.layer.cornerRadius = 13
 

@@ -12,7 +12,7 @@ class NameSettingViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var nextButton: UIButton!
-    
+    let border = CALayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,11 +36,12 @@ class NameSettingViewController: UIViewController {
     }
     
     func makeBottomBorder(borderColor: UIColor){
-        let border = CALayer()
-        border.frame = CGRect(x: 0, y: self.nameTextField.frame.size.height, width: self.nameTextField.frame.width - 30 , height: 1)
+        
+        border.frame = CGRect(x: 0, y: self.nameTextField.frame.size.height - 7, width: 329 , height: 1)
         border.backgroundColor = borderColor.cgColor
         
         self.nameTextField.layer.addSublayer(border)
+        
     }
     
     
@@ -72,10 +73,14 @@ class NameSettingViewController: UIViewController {
         if self.nextButton.isEnabled {
             // 버튼 글자 색 변경
             self.nextButton.titleLabel?.textColor = .white
+            self.nextButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
             self.nextButton.backgroundColor = UIColor(rgb: 0x0015FF)
             self.warningLabel.textColor = UIColor(rgb: 0x0015FF)
             self.warningLabel.text = "사용 가능한 멋진 닉네임입니다."
             self.warningLabel.font = UIFont.systemFont(ofSize: 14)
+            
+
+            
             self.makeBottomBorder(borderColor: UIColor(rgb: 0x0015FF))
            
             
@@ -87,9 +92,11 @@ class NameSettingViewController: UIViewController {
             self.nextButton.backgroundColor = UIColor(rgb: 0xCACACA)
             
             if ((self.nameTextField.text?.isEmpty) ?? true){
+               
                 self.makeBottomBorder(borderColor: UIColor(rgb: 0xCACACA))
                 self.warningLabel.textColor = UIColor(rgb: 0xCACACA)
             }else {
+               
                 self.makeBottomBorder(borderColor: .red)
                 self.warningLabel.textColor = .red
             }
@@ -101,10 +108,7 @@ class NameSettingViewController: UIViewController {
     }
     
     
-    
-    
     @IBAction func tapNextButton(_ sender: UIButton) {
-        
         let MbtiSettingVC = MbtiSettingViewController(nibName: "MbtiSettingViewController", bundle: nil)
         let userName = self.nameTextField.text
         
@@ -113,8 +117,8 @@ class NameSettingViewController: UIViewController {
         MbtiSettingVC.modalTransitionStyle = .crossDissolve
         
         self.present(MbtiSettingVC, animated: true, completion: nil)
+        
     }
-    
     
     
     // 유저가 화면을 터치했을 때 호출되는 메서드

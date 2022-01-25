@@ -18,10 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        let userDefaults = UserDefaults.standard
+//        let userDefaults = UserDefaults.standard
         //userDefaults.set(false, forKey: "isInitialized")
-        let isInitialized: Bool = userDefaults.bool(forKey: "isInitialized")
-        //let isInitialized: Bool = false
+//        let isInitialized: Bool = userDefaults.bool(forKey: "isInitialized")
+        let isInitialized: Bool = false
         
 //        goChecklist()
 //        return

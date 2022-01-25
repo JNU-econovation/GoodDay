@@ -137,6 +137,7 @@ class TimeSettingViewController: UIViewController {
         if self.finishButton.isEnabled {
             // 버튼 글자 색 변경
             self.finishButton.titleLabel?.textColor = .white
+            self.finishButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
             self.finishButton.backgroundColor = UIColor(rgb: 0x0015FF)
             
            
