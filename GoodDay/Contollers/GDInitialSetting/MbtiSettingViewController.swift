@@ -15,6 +15,10 @@ enum MbtiPosition {
     case fourth
 }
 
+protocol DelegateMbtiSettingViewController: AnyObject {
+    func passMbtiData(mbti: String)
+}
+
 class MbtiSettingViewController: UIViewController {
 
     @IBOutlet weak var backButton: UIButton!
@@ -25,6 +29,7 @@ class MbtiSettingViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     
     var nickName: String?
+    var mbti: String?
     var mbtiPosition: MbtiPosition?
     var firstMbtiPicker: UIPickerView?
     var secondMbtiPicker: UIPickerView?
@@ -37,6 +42,9 @@ class MbtiSettingViewController: UIViewController {
     let mbtiListSize: Int = 2
     var finishButton: UIBarButtonItem!
     var toolbar: UIToolbar!
+    var myPageEditorMode: MyPageEditorMode = .new
+    
+    weak var delegate: DelegateMbtiSettingViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +55,19 @@ class MbtiSettingViewController: UIViewController {
         configureBackButton()
         configureMbtiTextFields()
         configureNextButton()
+        editMbtiTextFields()
+    }
+    
+    func editMbtiTextFields(){
+        if myPageEditorMode == .edit {
+            firstMbtiTextField.text = String(mbti![mbti!.startIndex])
+            secondMbtiTextField.text = String(mbti![mbti!.index(mbti!.startIndex, offsetBy: 1)])
+            thirdMbtiTextField.text = String(mbti![mbti!.index(mbti!.startIndex, offsetBy: 2)])
+            fourthMbtiTextField.text = String(mbti![mbti!.index(mbti!.startIndex, offsetBy: 3)])
+            
+            self.validateNextButton()
+            
+        }
     }
 
 
@@ -222,6 +243,12 @@ class MbtiSettingViewController: UIViewController {
         // 버튼이 활성화 되어 있는 경우
         if self.nextButton.isEnabled {
             // 버튼 글자 색 변경
+            
+            if myPageEditorMode == .new {
+                self.nextButton.setTitle("다음", for: .normal)
+            }else {
+                self.nextButton.setTitle("완료", for: .normal)
+            }
             self.nextButton.titleLabel?.textColor = .white
             self.nextButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
             self.nextButton.backgroundColor = UIColor(rgb: 0x0015FF)
@@ -229,6 +256,12 @@ class MbtiSettingViewController: UIViewController {
            
             
         }else { // 버튼이 비활성화 되어 있는 경우
+            if myPageEditorMode == .new {
+                self.nextButton.setTitle("다음", for: .normal)
+            }else {
+                self.nextButton.setTitle("완료", for: .normal)
+            }
+            self.nextButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
             self.nextButton.backgroundColor = UIColor(rgb: 0xCACACA)
             
         }
@@ -241,19 +274,28 @@ class MbtiSettingViewController: UIViewController {
     }
     
     @IBAction func tapNextButton(_ sender: UIButton) {
-        let timeSettingVC = TimeSettingViewController(nibName: "TimeSettingViewController", bundle: nil)
         
-        timeSettingVC.nickname = self.nickName
-        timeSettingVC.firstMbti = self.firstMbtiTextField.text
-        timeSettingVC.secondMbti = self.secondMbtiTextField.text
-        timeSettingVC.thirdMbti = self.thirdMbtiTextField.text
-        timeSettingVC.fourthMbti = self.fourthMbtiTextField.text
+        if myPageEditorMode == .new {
+            let timeSettingVC = TimeSettingViewController(nibName: "TimeSettingViewController", bundle: nil)
+            
+            timeSettingVC.nickname = self.nickName
+            timeSettingVC.firstMbti = self.firstMbtiTextField.text
+            timeSettingVC.secondMbti = self.secondMbtiTextField.text
+            timeSettingVC.thirdMbti = self.thirdMbtiTextField.text
+            timeSettingVC.fourthMbti = self.fourthMbtiTextField.text
+            
+            
+            timeSettingVC.modalPresentationStyle = .overFullScreen
+            timeSettingVC.modalTransitionStyle = .crossDissolve
+            
+            self.present(timeSettingVC, animated: true, completion: nil)
+        }else {
+            self.mbti = (firstMbtiTextField.text ?? "") + (secondMbtiTextField.text ?? "") + (thirdMbtiTextField.text ?? "") + (fourthMbtiTextField.text ?? "")
+            delegate?.passMbtiData(mbti: self.mbti!)
+            
+            self.dismiss(animated: true, completion: nil)
+        }
         
-        
-        timeSettingVC.modalPresentationStyle = .overFullScreen
-        timeSettingVC.modalTransitionStyle = .crossDissolve
-        
-        self.present(timeSettingVC, animated: true, completion: nil)
         
     }
     

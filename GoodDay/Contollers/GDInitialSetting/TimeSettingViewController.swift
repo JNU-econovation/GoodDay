@@ -9,6 +9,12 @@ import UIKit
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
+
+protocol DelegateTimeSettingController: AnyObject {
+    func passTimeData(wakeUpTime: Date, sleepTime: Date)
+}
+
+
 class TimeSettingViewController: UIViewController {
 
     var nickname: String?
@@ -20,7 +26,13 @@ class TimeSettingViewController: UIViewController {
     var sleepTime: Date?
     var wakeUptimePicker: UIDatePicker!
     var sleepTimePicker: UIDatePicker!
-    let timeFormmater = DateFormatter()
+    let timeFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh:mm a"
+        formatter.locale = Locale(identifier: "en_US")
+        return formatter
+        
+    }()
     let userUid = UUID().uuidString
     
     @IBOutlet weak var backButton: UIButton!
@@ -28,6 +40,8 @@ class TimeSettingViewController: UIViewController {
     @IBOutlet weak var sleepTimeTextField: UITextField!
     @IBOutlet weak var finishButton: UIButton!
     
+    var myPageEditorMode: MyPageEditorMode = .new
+    var delegate: DelegateTimeSettingController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,11 +51,23 @@ class TimeSettingViewController: UIViewController {
         configureWakeUpTimePicker()
         configureSleepTimePicker()
         configureFinishButton()
+        editTimeTextFields()
         
     }
     
     func configureBackButton() {
         self.backButton.tintColor = .black
+    }
+    
+    func editTimeTextFields(){
+        
+        if myPageEditorMode == .edit {
+            self.wakeUpTimeTextField.text = timeFormatter.string(from: wakeUpTime!)
+            
+            self.sleepTimeTextField.text = timeFormatter.string(from: sleepTime!)
+            
+            self.validateFinishButton()
+        }
     }
 
     
@@ -86,11 +112,11 @@ class TimeSettingViewController: UIViewController {
     
     @objc private func DidWakeUpTimePickerValueChange(_ timePicker: UIDatePicker){
         
-        timeFormmater.dateFormat = "hh:mm a"
-        timeFormmater.locale = Locale(identifier: "en_US")
+//        timeFormmater.dateFormat = "hh:mm a"
+//        timeFormmater.locale = Locale(identifier: "en_US")
         
         self.wakeUpTime = self.wakeUptimePicker.date
-        self.wakeUpTimeTextField.text = timeFormmater.string(from: self.wakeUptimePicker.date)
+        self.wakeUpTimeTextField.text = timeFormatter.string(from: self.wakeUptimePicker.date)
         
         self.wakeUpTimeTextField.sendActions(for: .editingChanged)
         
@@ -98,11 +124,8 @@ class TimeSettingViewController: UIViewController {
     
     @objc private func DidSleepTimePickerValueChange(_ timePicker: UIDatePicker) {
         
-        timeFormmater.dateFormat = "hh:mm a"
-        timeFormmater.locale = Locale(identifier: "en_US")
-        
         self.sleepTime = self.sleepTimePicker.date
-        self.sleepTimeTextField.text = timeFormmater.string(from: self.sleepTimePicker.date)
+        self.sleepTimeTextField.text = timeFormatter.string(from: self.sleepTimePicker.date)
         
         self.wakeUpTimeTextField.sendActions(for: .editingChanged)
         
@@ -175,18 +198,27 @@ class TimeSettingViewController: UIViewController {
     
     @IBAction func tapFinishButton(_ sender: UIButton) {
         
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        if myPageEditorMode == .new{
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            
+            guard let mainVC = storyBoard.instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
+            
+            mainVC.nickname = self.nickname
+            mainVC.userUid = self.userUid
+            mainVC.modalPresentationStyle = .overFullScreen
+            mainVC.modalTransitionStyle = .crossDissolve
+            
+            saveUserInfo()
+            
+            self.present(mainVC, animated: true, completion: nil)
+        }else {
+            delegate?.passTimeData(wakeUpTime: self.wakeUptimePicker.date, sleepTime: self.sleepTimePicker.date)
+            
+            self.dismiss(animated: true, completion: nil)
+            
+            
+        }
         
-        guard let mainVC = storyBoard.instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
-        
-        mainVC.nickname = self.nickname
-        mainVC.userUid = self.userUid
-        mainVC.modalPresentationStyle = .overFullScreen
-        mainVC.modalTransitionStyle = .crossDissolve
-        
-        saveUserInfo()
-        
-        self.present(mainVC, animated: true, completion: nil)
         
     }
     

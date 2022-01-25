@@ -247,6 +247,21 @@ class FloatingButtonViewController: UIViewController {
         
     }
     
+    @IBAction func tapMyPageButton(_ sender: UIButton) {
+        let presentView = presentingViewController
+        
+        self.dismiss(animated: false) {
+            let myPageVC = MyPageViewController(nibName: "MyPageViewController", bundle: nil)
+            
+            myPageVC.modalPresentationStyle = .overFullScreen
+            myPageVC.modalTransitionStyle = .crossDissolve
+            
+            presentView?.present(myPageVC, animated: true, completion: nil)
+            
+        }
+        
+    }
+    
     
     
     
