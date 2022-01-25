@@ -12,11 +12,12 @@ class GDChecklist4ViewController: UIViewController {
     @IBOutlet weak var slider11: UISlider!
     @IBOutlet weak var slider12: UISlider!
     @IBOutlet weak var nextButton: UIButton!
-    
+    @IBOutlet weak var prevButton: UIButton!
+
     var q10: Int?
     var q11: Int?
     var q12: Int?
-    var qs: [Int] = []
+    var qs = [Int](repeating: 0, count: 12)
     var isDone = false
     
     override func viewDidLoad() {
@@ -26,6 +27,7 @@ class GDChecklist4ViewController: UIViewController {
         nextButton.layer.cornerRadius = 13
         nextButton.setTitleColor(.white, for: .disabled)
         nextButton.addTarget(self, action: #selector(tapNextButton(_:)), for: .touchUpInside)
+        prevButton.addTarget(self, action: #selector(tapPrevButton(_:)), for: .touchUpInside)
     }
     
     func settingSliderRect() {
@@ -120,18 +122,21 @@ class GDChecklist4ViewController: UIViewController {
     }
     
     @IBAction func tapNextButton(_ sender: UIButton) {
-//        let GDChecklist2VC = GDChecklist2ViewController(nibName: "GDChecklist2", bundle: nil)
-//
-        qs.append(q10!)
-        qs.append(q11!)
-        qs.append(q12!)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        guard let mainVC = storyBoard.instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
+
+        qs[9] = q10!
+        qs[10] = q11!
+        qs[11] = q12!
         print(qs)
-//        
-//        GDChecklist2VC.qs = qs
-//
-//        GDChecklist2VC.modalPresentationStyle = .overFullScreen
-//        GDChecklist2VC.modalTransitionStyle = .crossDissolve
-//        
-//        self.present(GDChecklist2VC, animated: true, completion: nil)
+
+        mainVC.modalPresentationStyle = .overFullScreen
+        mainVC.modalTransitionStyle = .crossDissolve
+        
+        self.present(mainVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func tapPrevButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
 }

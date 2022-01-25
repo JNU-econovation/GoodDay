@@ -16,6 +16,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GDChecklist3ViewController" customModule="GoodDay" customModuleProvider="target">
             <connections>
                 <outlet property="nextButton" destination="K1L-Kv-ZGn" id="hMs-Fw-E7u"/>
+                <outlet property="prevButton" destination="8ta-T0-qgf" id="KYz-2p-oqn"/>
                 <outlet property="slider7" destination="wD2-EE-rdX" id="5lJ-Gq-1YS"/>
                 <outlet property="slider8" destination="mXy-2v-gDn" id="cuj-2N-tUi"/>
                 <outlet property="slider9" destination="unN-rL-gOr" id="ymc-Hr-HSD"/>
@@ -40,7 +41,7 @@
                     </buttonConfiguration>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOt-9w-cAv">
-                    <rect key="frame" x="39" y="163" width="292" height="53.5"/>
+                    <rect key="frame" x="39" y="163" width="282.5" height="56"/>
                     <string key="text">나는 타인과의 관계에서
 더 큰 친밀감을 느끼게 되었다.</string>
                     <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="24"/>
@@ -48,13 +49,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="wD2-EE-rdX">
-                    <rect key="frame" x="37" y="266.5" width="340" height="31"/>
+                    <rect key="frame" x="37" y="269" width="340" height="31"/>
                     <color key="minimumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <color key="maximumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <color key="thumbTintColor" red="0.81176470590000005" green="0.81176470590000005" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                 </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmi-Uh-aiK">
-                    <rect key="frame" x="39" y="362.5" width="220.5" height="80"/>
+                    <rect key="frame" x="39" y="365" width="214" height="84"/>
                     <string key="text">어려운 일이 생겼을 때,
 다른 사람들에게도 
 의지할 수 있게 되었다.</string>
@@ -63,7 +64,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANe-Lg-5tS">
-                    <rect key="frame" x="39" y="588.5" width="286" height="53.5"/>
+                    <rect key="frame" x="39" y="595" width="276" height="56"/>
                     <string key="text">나는 이웃의 필요성을
 이전보다 더 인정하게 되었다.</string>
                     <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="24"/>
@@ -71,13 +72,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="unN-rL-gOr">
-                    <rect key="frame" x="37" y="692" width="340" height="31"/>
+                    <rect key="frame" x="37" y="701" width="340" height="31"/>
                     <color key="minimumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <color key="maximumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <color key="thumbTintColor" red="0.81176470590000005" green="0.81176470590000005" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                 </slider>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="mXy-2v-gDn">
-                    <rect key="frame" x="37" y="492.5" width="340" height="31"/>
+                    <rect key="frame" x="37" y="499" width="340" height="31"/>
                     <color key="minimumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <color key="maximumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <color key="thumbTintColor" red="0.81176470590000005" green="0.81176470590000005" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>

@@ -24,10 +24,18 @@ class WeeklyCheckPopUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        closeButton.addTarget(self, action: #selector(tapCloseButton(_:)), for: .touchUpInside)
         initializeWeeklyCheckPopUpViews()
     }
     
-    func initializeWeeklyCheckPopUpViews(){
+    func initializeWeeklyCheckPopUpViews() {
+        
+        let beginDate = UserDefaults.standard.object(forKey: "beginDay") as! Date
+        let curDay = Calendar.current.dateComponents([.day], from: beginDate, to: Date()).day! + 1
+
+        mbtiLabel.text = "\(UserDefaults.standard.string(forKey: "mbti") ?? "")"
+        nameLabel.text = "\(UserDefaults.standard.string(forKey: "userName") ?? "")님"
+        weeklyCheckLabel.text = "\(Int(curDay % 7))주차 주간 점검"
         configureWeeklyCheckContainerView()
         configureCheckButton()
         configureCloseButton()
@@ -35,15 +43,16 @@ class WeeklyCheckPopUpViewController: UIViewController {
         configureStartButton()
     }
     
-    func configureWeeklyCheckContainerView(){
+    func configureWeeklyCheckContainerView() {
         self.weeklyCheckContainerView.backgroundColor = .black
         self.weeklyCheckContainerView.alpha = 0.8
     }
     
-    func configureWeekCheckView(){
+    func configureWeekCheckView() {
         self.popUpView.layer.cornerRadius = 20
     }
-    func configureCheckButton(){
+    
+    func configureCheckButton() {
         self.checkButton.setImage(checkImg, for: .normal)
         self.checkButton.layer.cornerRadius = self.checkButton.frame.width / 2
         self.checkButton.backgroundColor = .white
@@ -52,11 +61,10 @@ class WeeklyCheckPopUpViewController: UIViewController {
         self.checkButton.layer.borderColor = UIColor.blue.cgColor
     }
     
-    func configureCloseButton(){
+    func configureCloseButton() {
         self.closeButton.setImage(xmarkImg, for: .normal)
         self.closeButton.backgroundColor = .white
         self.closeButton.tintColor = .lightGray
-        
     }
 
     func configureStartButton() {
@@ -64,12 +72,18 @@ class WeeklyCheckPopUpViewController: UIViewController {
         self.startButton.backgroundColor = .blue
         self.startButton.layer.cornerRadius = 20
         self.startButton.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
-        
+    }
+    
+    @IBAction func tapCloseButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func tapStartButton(_ sender: UIButton) {
+        let GDChecklistVC = GDChecklist1ViewController(nibName: "GDChecklist1", bundle: nil)
+
+        GDChecklistVC.modalPresentationStyle = .overFullScreen
+        GDChecklistVC.modalTransitionStyle = .crossDissolve
+        
+        self.present(GDChecklistVC, animated: true, completion: nil)
     }
-    
-
-
 }

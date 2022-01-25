@@ -52,6 +52,33 @@ class ViewController: UIViewController {
         configureNotificationCenter()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        goChecklist()
+    }
+    
+    func goChecklist() {
+        let beginDate = UserDefaults.standard.object(forKey: "beginDay") as! Date
+        let isDoChecklist = UserDefaults.standard.bool(forKey: "isDoChecklist")
+        //let isDoChecklist = false
+        //let curDay = Calendar.current.dateComponents([.day], from: beginDate, to: Date()).day! + 1
+        let curDay = 7
+        
+        if (curDay % 7 == 0) && !isDoChecklist {
+            let WeeklyCheckPopUpVC = WeeklyCheckPopUpViewController(nibName: "WeeklyCheckPopUpViewController", bundle: nil)
+
+            WeeklyCheckPopUpVC.modalPresentationStyle = .overFullScreen
+            WeeklyCheckPopUpVC.modalTransitionStyle = .crossDissolve
+            
+            self.present(WeeklyCheckPopUpVC, animated: true, completion: nil)
+            
+            UserDefaults.standard.set(true, forKey: "isDoChecklist")
+        }
+        
+        if curDay % 7 != 0 {
+            UserDefaults.standard.set(false, forKey: "isDoChecklist")
+        }
+    }
     
     func configureUserNameLabel(){
         

@@ -12,11 +12,12 @@ class GDChecklist1ViewController: UIViewController {
     @IBOutlet weak var slider2: UISlider!
     @IBOutlet weak var slider3: UISlider!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var prevButton: UIButton!
     
     var q1: Int?
     var q2: Int?
     var q3: Int?
-    var qs: [Int] = []
+    var qs = [Int](repeating: 0, count: 12) 
     var isDone = false
     
     override func viewDidLoad() {
@@ -26,6 +27,7 @@ class GDChecklist1ViewController: UIViewController {
         nextButton.layer.cornerRadius = 13
         nextButton.setTitleColor(.white, for: .disabled)
         nextButton.addTarget(self, action: #selector(tapNextButton(_:)), for: .touchUpInside)
+        prevButton.addTarget(self, action: #selector(tapPrevButton(_:)), for: .touchUpInside)
     }
     
     func settingSliderRect() {
@@ -125,15 +127,18 @@ class GDChecklist1ViewController: UIViewController {
         }
         let GDChecklist2VC = GDChecklist2ViewController(nibName: "GDChecklist2", bundle: nil)
         
-        qs.append(q1!)
-        qs.append(q2!)
-        qs.append(q3!)
-        
+        qs[0] = q1!
+        qs[1] = q2!
+        qs[2] = q3!
         GDChecklist2VC.qs = qs
 
         GDChecklist2VC.modalPresentationStyle = .overFullScreen
         GDChecklist2VC.modalTransitionStyle = .crossDissolve
         
         self.present(GDChecklist2VC, animated: true, completion: nil)
+    }
+    
+    @IBAction func tapPrevButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
 }

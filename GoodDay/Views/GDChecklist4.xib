@@ -16,6 +16,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GDChecklist4ViewController" customModule="GoodDay" customModuleProvider="target">
             <connections>
                 <outlet property="nextButton" destination="422-ut-dik" id="V6M-t2-5Vt"/>
+                <outlet property="prevButton" destination="8ta-T0-qgf" id="fH6-Vm-UVa"/>
                 <outlet property="slider10" destination="wD2-EE-rdX" id="GVA-db-c2a"/>
                 <outlet property="slider11" destination="mXy-2v-gDn" id="6mP-26-PHj"/>
                 <outlet property="slider12" destination="unN-rL-gOr" id="XHK-2b-fcf"/>

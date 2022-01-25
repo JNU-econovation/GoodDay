@@ -11,10 +11,10 @@
 		033D2172279FCD60005CA90F /* GDChecklist2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0336D286279E425B0018BF9E /* GDChecklist2.xib */; };
 		033D2173279FCD65005CA90F /* GDChecklist3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0336D287279E425C0018BF9E /* GDChecklist3.xib */; };
 		033D2174279FCD68005CA90F /* GDChecklist4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0336D288279E43990018BF9E /* GDChecklist4.xib */; };
-		033D2179279FE02C005CA90F /* GDChecklistView3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D2175279FE02C005CA90F /* GDChecklistView3Controller.swift */; };
-		033D217A279FE02C005CA90F /* GDChecklistView4Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D2176279FE02C005CA90F /* GDChecklistView4Controller.swift */; };
-		033D217B279FE02C005CA90F /* GDChecklistView1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D2177279FE02C005CA90F /* GDChecklistView1Controller.swift */; };
-		033D217C279FE02C005CA90F /* GDChecklistView2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D2178279FE02C005CA90F /* GDChecklistView2Controller.swift */; };
+		033D218C279FE199005CA90F /* GDChecklistView4Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D2188279FE198005CA90F /* GDChecklistView4Controller.swift */; };
+		033D218D279FE199005CA90F /* GDChecklistView2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D2189279FE198005CA90F /* GDChecklistView2Controller.swift */; };
+		033D218E279FE199005CA90F /* GDChecklistView3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D218A279FE198005CA90F /* GDChecklistView3Controller.swift */; };
+		033D218F279FE199005CA90F /* GDChecklistView1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D218B279FE198005CA90F /* GDChecklistView1Controller.swift */; };
 		035591EF278C188900BD0417 /* missionContent.json in Resources */ = {isa = PBXBuildFile; fileRef = 035591EE278C188800BD0417 /* missionContent.json */; };
 		035591F1278C614100BD0417 /* GDMissionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035591F0278C614100BD0417 /* GDMissionData.swift */; };
 		1BDC4393ADCFBC9BD88D83E8 /* Pods_GoodDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */; };
@@ -82,10 +82,10 @@
 		0336D286279E425B0018BF9E /* GDChecklist2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDChecklist2.xib; sourceTree = "<group>"; };
 		0336D287279E425C0018BF9E /* GDChecklist3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDChecklist3.xib; sourceTree = "<group>"; };
 		0336D288279E43990018BF9E /* GDChecklist4.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDChecklist4.xib; sourceTree = "<group>"; };
-		033D2175279FE02C005CA90F /* GDChecklistView3Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GDChecklistView3Controller.swift; path = "GoodDay/Contollers/New Group/GDChecklistView3Controller.swift"; sourceTree = SOURCE_ROOT; };
-		033D2176279FE02C005CA90F /* GDChecklistView4Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GDChecklistView4Controller.swift; path = "GoodDay/Contollers/New Group/GDChecklistView4Controller.swift"; sourceTree = SOURCE_ROOT; };
-		033D2177279FE02C005CA90F /* GDChecklistView1Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GDChecklistView1Controller.swift; path = "GoodDay/Contollers/New Group/GDChecklistView1Controller.swift"; sourceTree = SOURCE_ROOT; };
-		033D2178279FE02C005CA90F /* GDChecklistView2Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GDChecklistView2Controller.swift; path = "GoodDay/Contollers/New Group/GDChecklistView2Controller.swift"; sourceTree = SOURCE_ROOT; };
+		033D2188279FE198005CA90F /* GDChecklistView4Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDChecklistView4Controller.swift; sourceTree = "<group>"; };
+		033D2189279FE198005CA90F /* GDChecklistView2Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDChecklistView2Controller.swift; sourceTree = "<group>"; };
+		033D218A279FE198005CA90F /* GDChecklistView3Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDChecklistView3Controller.swift; sourceTree = "<group>"; };
+		033D218B279FE198005CA90F /* GDChecklistView1Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDChecklistView1Controller.swift; sourceTree = "<group>"; };
 		035591EE278C188800BD0417 /* missionContent.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = missionContent.json; sourceTree = "<group>"; };
 		035591F0278C614100BD0417 /* GDMissionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMissionData.swift; sourceTree = "<group>"; };
 		3239BC98277D8E5200E96E21 /* GoodDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,10 +179,11 @@
 		033D217D279FE04A005CA90F /* GDChecklist */ = {
 			isa = PBXGroup;
 			children = (
-				033D2177279FE02C005CA90F /* GDChecklistView1Controller.swift */,
-				033D2178279FE02C005CA90F /* GDChecklistView2Controller.swift */,
-				033D2175279FE02C005CA90F /* GDChecklistView3Controller.swift */,
-				033D2176279FE02C005CA90F /* GDChecklistView4Controller.swift */,
+				F077CD9A279E7C3900254D61 /* WeeklyCheckPopUpViewController.swift */,
+				033D218B279FE198005CA90F /* GDChecklistView1Controller.swift */,
+				033D2189279FE198005CA90F /* GDChecklistView2Controller.swift */,
+				033D218A279FE198005CA90F /* GDChecklistView3Controller.swift */,
+				033D2188279FE198005CA90F /* GDChecklistView4Controller.swift */,
 			);
 			path = GDChecklist;
 			sourceTree = "<group>";
@@ -209,7 +210,6 @@
 		3239BC9A277D8E5200E96E21 /* GoodDay */ = {
 			isa = PBXGroup;
 			children = (
-				F077CD99279E7C0600254D61 /* GDWeeklyCheck */,
 				F05A8C6C279D248B00EAE250 /* GDMyPage */,
 				F0FDB0792796967D00BDF962 /* GDDiary */,
 				F0794E9B2793F47F00EC55B8 /* Model */,
@@ -306,15 +306,6 @@
 			path = GDMyPage;
 			sourceTree = "<group>";
 		};
-		F077CD99279E7C0600254D61 /* GDWeeklyCheck */ = {
-			isa = PBXGroup;
-			children = (
-				F077CD9A279E7C3900254D61 /* WeeklyCheckPopUpViewController.swift */,
-				F077CD9B279E7C3900254D61 /* WeeklyCheckPopUpViewController.xib */,
-			);
-			path = GDWeeklyCheck;
-			sourceTree = "<group>";
-		};
 		F0794E9B2793F47F00EC55B8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +346,7 @@
 		F0FA07A92782D0F7003FD717 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F077CD9B279E7C3900254D61 /* WeeklyCheckPopUpViewController.xib */,
 				0336D284279E3B9C0018BF9E /* GDChecklist1.xib */,
 				0336D286279E425B0018BF9E /* GDChecklist2.xib */,
 				0336D287279E425C0018BF9E /* GDChecklist3.xib */,
@@ -533,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				033D218F279FE199005CA90F /* GDChecklistView1Controller.swift in Sources */,
 				32F2438127833BC900F1D160 /* GDMissionPerDayWeek.swift in Sources */,
 				32F2436B27833BC900F1D160 /* GDPeekingCollectionViewDataSource.swift in Sources */,
 				F0FDB08327969D0D00BDF962 /* DiaryEditorMode.swift in Sources */,
@@ -541,19 +534,17 @@
 				3239BCA0277D8E5200E96E21 /* ViewController.swift in Sources */,
 				3239BC9C277D8E5200E96E21 /* AppDelegate.swift in Sources */,
 				F0E1A986277EDE4B00DD286E /* NameSettingViewController.swift in Sources */,
+				033D218D279FE199005CA90F /* GDChecklistView2Controller.swift in Sources */,
 				F0E1A98A277EE1EF00DD286E /* WelcomeViewController.swift in Sources */,
 				F077CD9C279E7C3900254D61 /* WeeklyCheckPopUpViewController.swift in Sources */,
 				32F2436E27833BC900F1D160 /* GDMissionPerDayDetailView.swift in Sources */,
 				F05A8C6F279D24A600EAE250 /* MyPageViewController.swift in Sources */,
-				033D217C279FE02C005CA90F /* GDChecklistView2Controller.swift in Sources */,
 				32F2436C27833BC900F1D160 /* GDMissionPerDayDetailViewController.swift in Sources */,
+				033D218C279FE199005CA90F /* GDChecklistView4Controller.swift in Sources */,
 				F0794E9D2793F49400EC55B8 /* User.swift in Sources */,
 				F0FDB0802796987900BDF962 /* DiaryDetailViewController.swift in Sources */,
 				32F2438427833BC900F1D160 /* FontUtils.swift in Sources */,
-				033D2179279FE02C005CA90F /* GDChecklistView3Controller.swift in Sources */,
 				32F2438527833BC900F1D160 /* ColorUtils.swift in Sources */,
-				033D217A279FE02C005CA90F /* GDChecklistView4Controller.swift in Sources */,
-				033D217B279FE02C005CA90F /* GDChecklistView1Controller.swift in Sources */,
 				F0E1A98E277EE41700DD286E /* MbtiSettingViewController.swift in Sources */,
 				F0FDB07C279696E300BDF962 /* DiaryCalendarViewController.swift in Sources */,
 				F0FDB08727969ECC00BDF962 /* RegisteredDiaryView.swift in Sources */,
@@ -563,6 +554,7 @@
 				F07E9D0C27819E2E00C7C6B4 /* FloatingButtonViewController.swift in Sources */,
 				3239BCA6277D8E5200E96E21 /* GoodDay.xcdatamodeld in Sources */,
 				32F2438227833BC900F1D160 /* GDMissionButton.swift in Sources */,
+				033D218E279FE199005CA90F /* GDChecklistView3Controller.swift in Sources */,
 				035591F1278C614100BD0417 /* GDMissionData.swift in Sources */,
 				32F2436D27833BC900F1D160 /* GDPeekingCollectionViewDelegate.swift in Sources */,
 			);
