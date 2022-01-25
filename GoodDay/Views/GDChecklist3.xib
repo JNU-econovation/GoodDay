@@ -13,13 +13,17 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GDChecklistViewController" customModule="GoodDay">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GDChecklist3ViewController" customModule="GoodDay" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="iN0-l3-epB" id="lI7-Q5-EQ5"/>
+                <outlet property="nextButton" destination="K1L-Kv-ZGn" id="hMs-Fw-E7u"/>
+                <outlet property="slider7" destination="wD2-EE-rdX" id="5lJ-Gq-1YS"/>
+                <outlet property="slider8" destination="mXy-2v-gDn" id="cuj-2N-tUi"/>
+                <outlet property="slider9" destination="unN-rL-gOr" id="ymc-Hr-HSD"/>
+                <outlet property="view" destination="iN0-l3-epB" id="dwQ-K5-fTP"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GDChecklistView4" customModule="GoodDay">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -36,44 +40,53 @@
                     </buttonConfiguration>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOt-9w-cAv">
-                    <rect key="frame" x="39" y="163" width="187" height="53.5"/>
-                    <string key="text">나는 새로운것에 
-관심을 갖게되었다.</string>
+                    <rect key="frame" x="39" y="163" width="292" height="53.5"/>
+                    <string key="text">나는 타인과의 관계에서
+더 큰 친밀감을 느끼게 되었다.</string>
                     <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="wD2-EE-rdX">
-                    <rect key="frame" x="37" y="270.5" width="340" height="31"/>
+                    <rect key="frame" x="37" y="266.5" width="340" height="31"/>
+                    <color key="minimumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                    <color key="maximumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                    <color key="thumbTintColor" red="0.81176470590000005" green="0.81176470590000005" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                 </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmi-Uh-aiK">
-                    <rect key="frame" x="39" y="370.5" width="203" height="80"/>
-                    <string key="text">나는인생에서 무엇이
-중요한지에 대한
-생각이 바뀌었다.</string>
+                    <rect key="frame" x="39" y="362.5" width="220.5" height="80"/>
+                    <string key="text">어려운 일이 생겼을 때,
+다른 사람들에게도 
+의지할 수 있게 되었다.</string>
                     <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANe-Lg-5tS">
-                    <rect key="frame" x="39" y="604.5" width="214.5" height="53.5"/>
-                    <string key="text">내 삶에 대한
-새로운 계획이 생겼다.</string>
+                    <rect key="frame" x="39" y="588.5" width="286" height="53.5"/>
+                    <string key="text">나는 이웃의 필요성을
+이전보다 더 인정하게 되었다.</string>
                     <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="unN-rL-gOr">
-                    <rect key="frame" x="37" y="712" width="340" height="31"/>
+                    <rect key="frame" x="37" y="692" width="340" height="31"/>
+                    <color key="minimumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                    <color key="maximumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                    <color key="thumbTintColor" red="0.81176470590000005" green="0.81176470590000005" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                 </slider>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="mXy-2v-gDn">
-                    <rect key="frame" x="37" y="504.5" width="340" height="31"/>
+                    <rect key="frame" x="37" y="492.5" width="340" height="31"/>
+                    <color key="minimumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                    <color key="maximumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                    <color key="thumbTintColor" red="0.81176470590000005" green="0.81176470590000005" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                 </slider>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="422-ut-dik">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1L-Kv-ZGn">
                     <rect key="frame" x="25" y="800" width="364" height="62"/>
                     <color key="backgroundColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="62" id="Zzd-sH-Phs"/>
+                        <constraint firstAttribute="height" constant="62" id="wDL-dd-NQj"/>
                     </constraints>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Button"/>
@@ -91,33 +104,27 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="K1L-Kv-ZGn" secondAttribute="bottom" id="0Ka-D8-ndY"/>
                 <constraint firstItem="unN-rL-gOr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="2e4-Lf-MaH"/>
-                <constraint firstItem="422-ut-dik" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="6MH-Aq-2bV"/>
                 <constraint firstItem="mXy-2v-gDn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="6Qz-UM-tG5"/>
                 <constraint firstItem="8ta-T0-qgf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="Bfm-N7-4bc"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="unN-rL-gOr" secondAttribute="trailing" constant="39" id="ECn-oR-7r0"/>
-                <constraint firstItem="ANe-Lg-5tS" firstAttribute="top" secondItem="mXy-2v-gDn" secondAttribute="bottom" constant="70" id="JnR-hj-3ZS"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="422-ut-dik" secondAttribute="bottom" id="MAN-hf-FBV"/>
-                <constraint firstItem="unN-rL-gOr" firstAttribute="top" secondItem="ANe-Lg-5tS" secondAttribute="bottom" constant="54" id="Rd9-Iw-C6s"/>
+                <constraint firstItem="ANe-Lg-5tS" firstAttribute="top" secondItem="mXy-2v-gDn" secondAttribute="bottom" constant="66" id="JnR-hj-3ZS"/>
+                <constraint firstItem="unN-rL-gOr" firstAttribute="top" secondItem="ANe-Lg-5tS" secondAttribute="bottom" constant="50" id="Rd9-Iw-C6s"/>
                 <constraint firstItem="8ta-T0-qgf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="36" id="Rwy-8a-jTJ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wD2-EE-rdX" secondAttribute="trailing" constant="39" id="Zca-eY-pMP"/>
-                <constraint firstItem="Cmi-Uh-aiK" firstAttribute="top" secondItem="wD2-EE-rdX" secondAttribute="bottom" constant="70" id="bzn-tT-4hk"/>
+                <constraint firstItem="K1L-Kv-ZGn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="akb-1C-KAk"/>
+                <constraint firstItem="Cmi-Uh-aiK" firstAttribute="top" secondItem="wD2-EE-rdX" secondAttribute="bottom" constant="66" id="bzn-tT-4hk"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mXy-2v-gDn" secondAttribute="trailing" constant="39" id="dFF-nj-2Iq"/>
                 <constraint firstItem="Cmi-Uh-aiK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="eEn-QK-rb8"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="422-ut-dik" secondAttribute="trailing" constant="25" id="fpt-eL-maQ"/>
                 <constraint firstItem="wOt-9w-cAv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="h1c-eh-tEY"/>
-                <constraint firstItem="wD2-EE-rdX" firstAttribute="top" secondItem="wOt-9w-cAv" secondAttribute="bottom" constant="54" id="iI8-JH-lxm"/>
+                <constraint firstItem="wD2-EE-rdX" firstAttribute="top" secondItem="wOt-9w-cAv" secondAttribute="bottom" constant="50" id="iI8-JH-lxm"/>
                 <constraint firstItem="wOt-9w-cAv" firstAttribute="top" secondItem="8ta-T0-qgf" secondAttribute="bottom" constant="54" id="jfh-6e-8d3"/>
-                <constraint firstItem="mXy-2v-gDn" firstAttribute="top" secondItem="Cmi-Uh-aiK" secondAttribute="bottom" constant="54" id="seN-xY-Gw3"/>
+                <constraint firstItem="mXy-2v-gDn" firstAttribute="top" secondItem="Cmi-Uh-aiK" secondAttribute="bottom" constant="50" id="seN-xY-Gw3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="K1L-Kv-ZGn" secondAttribute="trailing" constant="25" id="vdB-HZ-vOB"/>
                 <constraint firstItem="ANe-Lg-5tS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="y3D-sB-BEZ"/>
                 <constraint firstItem="wD2-EE-rdX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="ywb-Ns-XSY"/>
             </constraints>
-            <connections>
-                <outlet property="nextButton" destination="422-ut-dik" id="mUt-2B-G1l"/>
-                <outlet property="slider10" destination="wD2-EE-rdX" id="rIU-09-Vsh"/>
-                <outlet property="slider11" destination="mXy-2v-gDn" id="sYO-aM-Hj9"/>
-                <outlet property="slider12" destination="unN-rL-gOr" id="3qa-nq-dIZ"/>
-            </connections>
             <point key="canvasLocation" x="139" y="122"/>
         </view>
     </objects>

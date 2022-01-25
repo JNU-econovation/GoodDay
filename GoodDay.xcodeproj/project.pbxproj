@@ -8,7 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0336D285279E3B9C0018BF9E /* GDChecklist1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0336D284279E3B9C0018BF9E /* GDChecklist1.xib */; };
-		0336D28A279E493A0018BF9E /* GDChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0336D289279E493A0018BF9E /* GDChecklistViewController.swift */; };
+		0336D28A279E493A0018BF9E /* GDChecklistView1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0336D289279E493A0018BF9E /* GDChecklistView1Controller.swift */; };
+		0336D28C279E93CE0018BF9E /* GDChecklistView2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0336D28B279E93CE0018BF9E /* GDChecklistView2Controller.swift */; };
+		0336D28E279E93CF0018BF9E /* GDChecklistView3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0336D28D279E93CF0018BF9E /* GDChecklistView3Controller.swift */; };
+		0336D290279E93D10018BF9E /* GDChecklistView4Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0336D28F279E93D10018BF9E /* GDChecklistView4Controller.swift */; };
+		033D2172279FCD60005CA90F /* GDChecklist2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0336D286279E425B0018BF9E /* GDChecklist2.xib */; };
+		033D2173279FCD65005CA90F /* GDChecklist3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0336D287279E425C0018BF9E /* GDChecklist3.xib */; };
+		033D2174279FCD68005CA90F /* GDChecklist4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0336D288279E43990018BF9E /* GDChecklist4.xib */; };
 		035591EF278C188900BD0417 /* missionContent.json in Resources */ = {isa = PBXBuildFile; fileRef = 035591EE278C188800BD0417 /* missionContent.json */; };
 		035591F1278C614100BD0417 /* GDMissionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035591F0278C614100BD0417 /* GDMissionData.swift */; };
 		1BDC4393ADCFBC9BD88D83E8 /* Pods_GoodDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */; };
@@ -72,7 +78,10 @@
 		0336D286279E425B0018BF9E /* GDChecklist2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDChecklist2.xib; sourceTree = "<group>"; };
 		0336D287279E425C0018BF9E /* GDChecklist3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDChecklist3.xib; sourceTree = "<group>"; };
 		0336D288279E43990018BF9E /* GDChecklist4.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDChecklist4.xib; sourceTree = "<group>"; };
-		0336D289279E493A0018BF9E /* GDChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDChecklistViewController.swift; sourceTree = "<group>"; };
+		0336D289279E493A0018BF9E /* GDChecklistView1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDChecklistView1Controller.swift; sourceTree = "<group>"; };
+		0336D28B279E93CE0018BF9E /* GDChecklistView2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDChecklistView2Controller.swift; sourceTree = "<group>"; };
+		0336D28D279E93CF0018BF9E /* GDChecklistView3Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDChecklistView3Controller.swift; sourceTree = "<group>"; };
+		0336D28F279E93D10018BF9E /* GDChecklistView4Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDChecklistView4Controller.swift; sourceTree = "<group>"; };
 		035591EE278C188800BD0417 /* missionContent.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = missionContent.json; sourceTree = "<group>"; };
 		035591F0278C614100BD0417 /* GDMissionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMissionData.swift; sourceTree = "<group>"; };
 		3239BC98277D8E5200E96E21 /* GoodDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +159,7 @@
 		032AEF8B2796FB3F00B6C197 /* Contollers */ = {
 			isa = PBXGroup;
 			children = (
+				0336D281279E3B480018BF9E /* GDChecklist */,
 				32F2436427833BC900F1D160 /* GDMissionPerDayWeek */,
 				F0E1A983277EDE2400DD286E /* GDInitialSetting */,
 				F07E9D0727819DF000C7C6B4 /* FloatingButton */,
@@ -161,11 +171,10 @@
 		0336D281279E3B480018BF9E /* GDChecklist */ = {
 			isa = PBXGroup;
 			children = (
-				0336D284279E3B9C0018BF9E /* GDChecklist1.xib */,
-				0336D286279E425B0018BF9E /* GDChecklist2.xib */,
-				0336D287279E425C0018BF9E /* GDChecklist3.xib */,
-				0336D288279E43990018BF9E /* GDChecklist4.xib */,
-				0336D289279E493A0018BF9E /* GDChecklistViewController.swift */,
+				0336D28F279E93D10018BF9E /* GDChecklistView4Controller.swift */,
+				0336D28D279E93CF0018BF9E /* GDChecklistView3Controller.swift */,
+				0336D28B279E93CE0018BF9E /* GDChecklistView2Controller.swift */,
+				0336D289279E493A0018BF9E /* GDChecklistView1Controller.swift */,
 			);
 			path = GDChecklist;
 			sourceTree = "<group>";
@@ -192,7 +201,6 @@
 		3239BC9A277D8E5200E96E21 /* GoodDay */ = {
 			isa = PBXGroup;
 			children = (
-				0336D281279E3B480018BF9E /* GDChecklist */,
 				F0FDB0792796967D00BDF962 /* GDDiary */,
 				F0794E9B2793F47F00EC55B8 /* Model */,
 				32F2438C2783D47A00F1D160 /* Assets.xcassets */,
@@ -319,6 +327,10 @@
 		F0FA07A92782D0F7003FD717 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0336D284279E3B9C0018BF9E /* GDChecklist1.xib */,
+				0336D286279E425B0018BF9E /* GDChecklist2.xib */,
+				0336D287279E425C0018BF9E /* GDChecklist3.xib */,
+				0336D288279E43990018BF9E /* GDChecklist4.xib */,
 				F07E9D0B27819E2E00C7C6B4 /* FloatingButtonViewController.xib */,
 				F0E1A985277EDE4B00DD286E /* NameSettingViewController.xib */,
 				F0E1A989277EE1EF00DD286E /* WelcomeViewController.xib */,
@@ -422,6 +434,7 @@
 				F0E1A987277EDE4B00DD286E /* NameSettingViewController.xib in Resources */,
 				3239BCAB277D8E5400E96E21 /* LaunchScreen.storyboard in Resources */,
 				F0E1A993277EE70400DD286E /* TimeSettingViewController.xib in Resources */,
+				033D2172279FCD60005CA90F /* GDChecklist2.xib in Resources */,
 				32F2437127833BC900F1D160 /* NotoSansKR-Light.otf in Resources */,
 				32F2438F2783E4D200F1D160 /* GDMissionPerDayDetail.xib in Resources */,
 				F068BDB62782DCEF001035B6 /* Main.storyboard in Resources */,
@@ -430,9 +443,11 @@
 				32F2438027833BC900F1D160 /* NotoSansKR-Regular.otf in Resources */,
 				F0FDB07D279696E300BDF962 /* DiaryCalendarViewController.xib in Resources */,
 				035591EF278C188900BD0417 /* missionContent.json in Resources */,
+				033D2173279FCD65005CA90F /* GDChecklist3.xib in Resources */,
 				32F2437E27833BC900F1D160 /* NotoSansKR-Black.otf in Resources */,
 				32F2437A27833BC900F1D160 /* NotoSansKR-Thin.otf in Resources */,
 				F0FDB0812796987900BDF962 /* DiaryDetailViewController.xib in Resources */,
+				033D2174279FCD68005CA90F /* GDChecklist4.xib in Resources */,
 				32F2436F27833BC900F1D160 /* NanumGothicBold.otf in Resources */,
 				32F2437227833BC900F1D160 /* NanumSquareL.otf in Resources */,
 				F07E9D0F2781A25300C7C6B4 /* 30344-hamburger-close-animation.json in Resources */,
@@ -492,10 +507,12 @@
 				32F2436B27833BC900F1D160 /* GDPeekingCollectionViewDataSource.swift in Sources */,
 				F0FDB08327969D0D00BDF962 /* DiaryEditorMode.swift in Sources */,
 				F0FDB08927969F3100BDF962 /* Diary.swift in Sources */,
+				0336D28E279E93CF0018BF9E /* GDChecklistView3Controller.swift in Sources */,
 				F0FDB08527969EBA00BDF962 /* UnRegisteredDiaryView.swift in Sources */,
 				3239BCA0277D8E5200E96E21 /* ViewController.swift in Sources */,
 				3239BC9C277D8E5200E96E21 /* AppDelegate.swift in Sources */,
 				F0E1A986277EDE4B00DD286E /* NameSettingViewController.swift in Sources */,
+				0336D28C279E93CE0018BF9E /* GDChecklistView2Controller.swift in Sources */,
 				F0E1A98A277EE1EF00DD286E /* WelcomeViewController.swift in Sources */,
 				32F2436E27833BC900F1D160 /* GDMissionPerDayDetailView.swift in Sources */,
 				32F2436C27833BC900F1D160 /* GDMissionPerDayDetailViewController.swift in Sources */,
@@ -504,13 +521,14 @@
 				32F2438427833BC900F1D160 /* FontUtils.swift in Sources */,
 				32F2438527833BC900F1D160 /* ColorUtils.swift in Sources */,
 				F0E1A98E277EE41700DD286E /* MbtiSettingViewController.swift in Sources */,
-				0336D28A279E493A0018BF9E /* GDChecklistViewController.swift in Sources */,
+				0336D28A279E493A0018BF9E /* GDChecklistView1Controller.swift in Sources */,
 				F0FDB07C279696E300BDF962 /* DiaryCalendarViewController.swift in Sources */,
 				F0FDB08727969ECC00BDF962 /* RegisteredDiaryView.swift in Sources */,
 				32F2438327833BC900F1D160 /* GDBlurEffectView.swift in Sources */,
 				3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */,
 				F0E1A992277EE70400DD286E /* TimeSettingViewController.swift in Sources */,
 				F07E9D0C27819E2E00C7C6B4 /* FloatingButtonViewController.swift in Sources */,
+				0336D290279E93D10018BF9E /* GDChecklistView4Controller.swift in Sources */,
 				3239BCA6277D8E5200E96E21 /* GoodDay.xcdatamodeld in Sources */,
 				32F2438227833BC900F1D160 /* GDMissionButton.swift in Sources */,
 				035591F1278C614100BD0417 /* GDMissionData.swift in Sources */,

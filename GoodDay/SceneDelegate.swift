@@ -23,8 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let isInitialized: Bool = userDefaults.bool(forKey: "isInitialized")
         //let isInitialized: Bool = false
         
-        goChecklist()
-        return 
+//        goChecklist()
+//        return
         
         // 초기 설정이 안 됐을 경우 -> 초기 화면으로 이동
         if !isInitialized {
@@ -52,7 +52,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let curDay = 7
         
         if (curDay % 7 == 0) && !isDoChecklist {
-            let GDChecklistVC = GDChecklistViewController(nibName: "GDChecklist1", bundle: nil)
+            let GDChecklistVC = GDChecklist1ViewController(nibName: "GDChecklist1", bundle: nil)
             
             window?.rootViewController = GDChecklistVC
             
