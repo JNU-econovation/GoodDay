@@ -11,8 +11,6 @@ import FirebaseFirestoreSwift
 
 
 class MyPageViewController: UIViewController {
-
-    
     @IBOutlet weak var myPageSubView: UIView!
     @IBOutlet weak var mbtiLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -21,27 +19,19 @@ class MyPageViewController: UIViewController {
     @IBOutlet weak var updateTimeLabel: UILabel!
     @IBOutlet weak var myPageImageView: UIImageView!
     @IBOutlet weak var editButton: UIButton!
-    
     @IBOutlet weak var lineView: UIView!
-    
     @IBOutlet weak var mbtiStackView: UIStackView!
     @IBOutlet weak var wakeUpTimeStackView: UIStackView!
     @IBOutlet weak var sleepTimeStackView: UIStackView!
-    
     @IBOutlet weak var mbtiEditLabel: UILabel!
     @IBOutlet weak var wakeUpTimeEditLabel: UILabel!
     @IBOutlet weak var sleepTimeEditLabel: UILabel!
-    
     @IBOutlet weak var mbtiEditButton: UIButton!
     @IBOutlet weak var timeEditButton: UIButton!
-    
     @IBOutlet weak var backButton: UIButton!
     
-    
     let editImage = UIImage(systemName: "square.and.pencil", withConfiguration: UIImage.SymbolConfiguration(pointSize: 14, weight: .bold))
-    
     let rightChevronImg = UIImage(systemName: "chevron.right", withConfiguration: UIImage.SymbolConfiguration(pointSize: 12, weight: .semibold))
-    
     let timeFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "hh:mm a"
@@ -55,7 +45,6 @@ class MyPageViewController: UIViewController {
         super.viewDidLoad()
         initializeMyPageViews()
         initailizeMyPageData()
-        
     }
     
     func initializeMyPageViews(){
@@ -79,28 +68,23 @@ class MyPageViewController: UIViewController {
     
     func initailizeMyPageData(){
         let userDefaults = UserDefaults.standard
-        
         self.mbtiLabel.text = userDefaults.string(forKey: "mbti")
         self.nameLabel.text = userDefaults.string(forKey: "userName")! + "님"
         self.wakeUpTimeLabel.text = self.timeFormatter.string(from: userDefaults.object(forKey: "wakeUpTime") as! Date)
         self.sleepTimeLabel.text = self.timeFormatter.string(from: userDefaults.object(forKey: "sleepTime") as! Date)
-        
         if userDefaults.string(forKey: "updateTime") == nil {
             self.updateTimeLabel.text = self.timeFormatter.string(from: userDefaults.object(forKey: "beginDay") as! Date)
         }else {
             self.updateTimeLabel.text = userDefaults.string(forKey: "updateTime")
         }
-        
         self.mbtiEditLabel.text = userDefaults.string(forKey: "mbti")
         self.wakeUpTimeEditLabel.text = self.timeFormatter.string(from: userDefaults.object(forKey: "wakeUpTime") as! Date)
         self.sleepTimeEditLabel.text = self.timeFormatter.string(from: userDefaults.object(forKey: "sleepTime") as! Date)
-        
     }
     
     private func configureEditButton(){
         self.editButton.setImage(editImage, for: .normal)
         self.editButton.layer.cornerRadius = self.editButton.frame.width / 2
-        
     }
     
     func animateMyPageViews(){
@@ -114,14 +98,12 @@ class MyPageViewController: UIViewController {
     
         self.mbtiStackView.alpha = 1
         self.lineView.alpha = 1
-        
         self.mbtiEditButton.layer.isHidden = false
         self.timeEditButton.layer.isHidden = false
         self.mbtiEditButton.alpha = 1
         self.timeEditButton.alpha = 1
         self.wakeUpTimeStackView.alpha = 1
         self.sleepTimeStackView.alpha = 1
-        
         self.view.layoutIfNeeded() // 화면 갱신
     }
     
@@ -130,10 +112,8 @@ class MyPageViewController: UIViewController {
 
     @IBAction func tapEditButton(_ sender: UIButton) {
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut) {
-            
             self.animateMyPageViews()
         } completion: { (completion) in
-            
         }
     }
     
@@ -146,14 +126,10 @@ class MyPageViewController: UIViewController {
         
         mbtiSettingVC.modalPresentationStyle = .overFullScreen
         mbtiSettingVC.modalTransitionStyle = .crossDissolve
-        
         self.present(mbtiSettingVC, animated: true, completion: nil)
         
-        
-        
-        
     }
-    
+
     @IBAction func tapTimeEditButton(_ sender: UIButton) {
         let timeSettingVC = TimeSettingViewController(nibName: "TimeSettingViewController", bundle: nil)
         timeSettingVC.delegate = self
@@ -170,29 +146,20 @@ class MyPageViewController: UIViewController {
     
     @IBAction func tapBackButton(_ sender: UIButton) {
         let notificationName = Notification.Name("sendBoolData")
-        
         let boolDic = ["isShowFloating" : false]
-        
         NotificationCenter.default.post(name: notificationName, object: nil, userInfo: boolDic)
-        
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-
-
 }
 
 extension MyPageViewController: DelegateMbtiSettingViewController, DelegateTimeSettingController {
-    
     func passMbtiData(mbti: String) {
         let userDefaults = UserDefaults.standard
         let currentTime = Date()
         let currentUpdateTime = timeFormatter.string(from: currentTime)
+        
         self.mbtiLabel.text = mbti
         self.mbtiEditLabel.text = mbti
-        
         self.updateTimeLabel.text = timeFormatter.string(from: currentTime)
         
         userDefaults.set(mbti, forKey: "mbti")
@@ -207,8 +174,6 @@ extension MyPageViewController: DelegateMbtiSettingViewController, DelegateTimeS
                 print("Document successfully updated")
             }
         }
-        
-        
     }
     
     func passTimeData(wakeUpTime: Date, sleepTime: Date) {
@@ -225,6 +190,7 @@ extension MyPageViewController: DelegateMbtiSettingViewController, DelegateTimeS
         userDefaults.set(wakeUpTime, forKey: "wakeUpTime")
         userDefaults.set(sleepTime, forKey: "sleepTime")
         userDefaults.set(currentUpdateTime, forKey: "updateTime")
+        
         self.db.collection("users").document(userDefaults.string(forKey: "userUid")!).updateData([
             "wakeUpTime": wakeUpTime,
             "sleepTime": sleepTime
@@ -235,10 +201,6 @@ extension MyPageViewController: DelegateMbtiSettingViewController, DelegateTimeS
                 print("Document successfully updated")
             }
         }
-        
-        
-        
     }
-    
 }
 

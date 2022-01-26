@@ -8,15 +8,12 @@
 import UIKit
 
 protocol DiaryDetailViewControllerDelegate: AnyObject {
-    
     func passDiaryData(date: String, title: String, contents: String)
     func passModifiedDiaryData(date: String, title: String, contents: String)
     func deleteDiaryData(date: String)
 }
 
 class DiaryDetailViewController: UIViewController {
-
-    
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var diaryDateLabel: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
@@ -36,7 +33,6 @@ class DiaryDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeViewSettings()
-        
     }
 
     func initializeViewSettings(){
@@ -50,6 +46,7 @@ class DiaryDetailViewController: UIViewController {
         validateInputField()
         
     }
+    
     private func configureModifiedDiaryData(){
         if diaryEditorMode == .edit {
             self.titleTextField.text = self.diaryTitleStr
@@ -80,11 +77,10 @@ class DiaryDetailViewController: UIViewController {
         
         self.titleTextField.addTarget(self, action: #selector(titleTextFieldDidChange(_:)), for: .editingChanged)
     }
+    
     @objc private func titleTextFieldDidChange(_ textField: UITextField) {
         self.validateInputField()
     }
-    
-    
     
     private func configureContentsView(){
         self.contentsTextView.layer.borderWidth = 1.0
@@ -93,17 +89,12 @@ class DiaryDetailViewController: UIViewController {
         self.contentsTextView.textContainerInset = UIEdgeInsets(top: 16, left: 8, bottom: 8, right: 8)
         self.contentsTextView.font = .systemFont(ofSize: 15)
         
-        
         if diaryEditorMode == .new {
             self.contentsTextView.text = "내용을 입력하세요."
             self.contentsTextView.textColor = UIColor(rgb: 0xD2D2D2)
         }
-        
         self.contentsTextView.delegate = self
-        
     }
-    
-    
     
     private func configurePointView(){
         let gradientLayer = CAGradientLayer()
@@ -122,6 +113,7 @@ class DiaryDetailViewController: UIViewController {
         self.pointView.layer.addSublayer(gradientLayer)
         self.pointView.layer.cornerRadius = pointView.frame.width / 2
     }
+    
     private func configureFinishButton(){
         self.finishButton.setTitle("완료", for: .normal)
         self.finishButton.setTitleColor(.white, for: .normal)
@@ -130,65 +122,44 @@ class DiaryDetailViewController: UIViewController {
         
         
     }
-    
-    
-    
-    
-    
-    
     private func validateInputField() {
-        
         self.finishButton.isEnabled = !(self.titleTextField.text?.isEmpty ?? true) && !(self.contentsTextView.text.isEmpty) && (self.contentsTextView.text != contentsTextViewPlaceHolder)
         
         if self.finishButton.isEnabled {
-            
-            
             self.finishButton.titleLabel?.textColor = .white
             self.finishButton.backgroundColor = UIColor(rgb: 0x0015FF)
-            
             self.finishButton.layer.cornerRadius = 7
-            
             self.finishButton.translatesAutoresizingMaskIntoConstraints = false
             self.finishButton.widthAnchor.constraint(equalToConstant: 348).isActive = true
             self.finishButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         }else {
-            
             self.finishButton.backgroundColor = UIColor(rgb: 0xCACACA)
-            
             self.finishButton.layer.cornerRadius = 7
-            
             self.finishButton.translatesAutoresizingMaskIntoConstraints = false
             self.finishButton.widthAnchor.constraint(equalToConstant: 348).isActive = true
             self.finishButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         }
-        
-        
     }
     
     // 유저가 화면을 터치하면 호출되는 메서드
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true) // 빈 화면을 누를 때마다 키보드나 데이트피커가 사라지게 된다.
-        
-        
     }
     
     @IBAction func tapBackButton(_ sender: UIButton) {
-        
         sender.showAnimation {
             self.dismiss(animated: true, completion: nil)
         }
-    
     }
+    
     @IBAction func tapDeleteButton(_ sender: UIButton) {
         let alert = UIAlertController(title: "삭제", message: "정말로 해당 날짜의 일기를 삭제하시겠습니까?", preferredStyle: .alert)
-        
         let deleteButton = UIAlertAction(title: "삭제", style: .default) { _ in
             
             // 일기를 삭제하는 로직
             self.delegate?.deleteDiaryData(date: self.diaryDateLabel.text ?? "")
             
             self.dismiss(animated: true, completion: nil)
-            
             
         }
         let cancelButton = UIAlertAction(title: "취소", style: .cancel, handler: nil)
@@ -199,10 +170,8 @@ class DiaryDetailViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    
     @IBAction func tapFinishButton(_ sender: UIButton) {
         if diaryEditorMode == .new {
-            
             guard let date = self.diaryDateLabel.text else { return }
             guard let title = self.titleTextField.text else { return }
             guard let contents = self.contentsTextView.text else { return }
@@ -210,9 +179,6 @@ class DiaryDetailViewController: UIViewController {
             delegate?.passDiaryData(date: date, title: title, contents: contents) ?? nil
             
             self.dismiss(animated: true, completion: nil)
-            
-            
-            
         }else if diaryEditorMode == .edit {
             guard let date = self.diaryDateLabel.text else { return }
             guard let title = self.titleTextField.text else { return }
@@ -234,19 +200,14 @@ extension DiaryDetailViewController: UITextViewDelegate {
             textView.textColor = .black
         }
     }
-    
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             textView.text = contentsTextViewPlaceHolder
             textView.textColor = .lightGray
-            
         }
     }
-    
     func textViewDidChange(_ textView: UITextView) {
         self.validateInputField()
     }
-    
-    
 }
 

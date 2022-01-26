@@ -59,16 +59,16 @@ class ViewController: UIViewController {
     
     func goChecklist() {
         let beginDate = UserDefaults.standard.object(forKey: "beginDay") as! Date
-        let isDoChecklist = UserDefaults.standard.bool(forKey: "isDoChecklist")
-        //let isDoChecklist = false
+//        let isDoChecklist = UserDefaults.standard.bool(forKey: "isDoChecklist")
+        let isDoChecklist = false
         //let curDay = Calendar.current.dateComponents([.day], from: beginDate, to: Date()).day! + 1
         let curDay = 7
         
         if (curDay % 7 == 0) && !isDoChecklist {
             let WeeklyCheckPopUpVC = WeeklyCheckPopUpViewController(nibName: "WeeklyCheckPopUpViewController", bundle: nil)
 
-            WeeklyCheckPopUpVC.modalPresentationStyle = .overFullScreen
-            WeeklyCheckPopUpVC.modalTransitionStyle = .crossDissolve
+            WeeklyCheckPopUpVC.modalPresentationStyle = .overCurrentContext
+//            WeeklyCheckPopUpVC.modalTransitionStyle = .crossDissolve
             
             self.present(WeeklyCheckPopUpVC, animated: true, completion: nil)
             
@@ -138,19 +138,15 @@ class ViewController: UIViewController {
     
     func configureNotificationCenter(){
         let notificationName = Notification.Name("sendBoolData")
-        
         NotificationCenter.default.addObserver(self, selector: #selector(sendBoolData), name: notificationName, object: nil)
-        
     }
     
     @objc private func sendBoolData(notification: Notification){
         self.isShowFloating = notification.userInfo?["isShowFloating"] as? Bool ?? false
-        
         if !self.isShowFloating {
             animationView.play(fromFrame: animationView.animation?.endFrame, toFrame: animationView.animation!.startFrame)
             self.isShowFloating = true
         }
-        
     }
 
 }

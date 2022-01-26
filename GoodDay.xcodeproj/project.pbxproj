@@ -169,10 +169,12 @@
 		032AEF8B2796FB3F00B6C197 /* Contollers */ = {
 			isa = PBXGroup;
 			children = (
+				F05A8C6C279D248B00EAE250 /* GDMyPage */,
+				F0FDB0792796967D00BDF962 /* GDDiary */,
 				033D217D279FE04A005CA90F /* GDChecklist */,
 				32F2436427833BC900F1D160 /* GDMissionPerDayWeek */,
 				F0E1A983277EDE2400DD286E /* GDInitialSetting */,
-				F07E9D0727819DF000C7C6B4 /* FloatingButton */,
+				F07E9D0727819DF000C7C6B4 /* GDFloatingButton */,
 				32F2434C27833BC900F1D160 /* GDMissionPerDay */,
 			);
 			path = Contollers;
@@ -212,17 +214,15 @@
 		3239BC9A277D8E5200E96E21 /* GoodDay */ = {
 			isa = PBXGroup;
 			children = (
-				F05A8C6C279D248B00EAE250 /* GDMyPage */,
-				F0FDB0792796967D00BDF962 /* GDDiary */,
 				F0794E9B2793F47F00EC55B8 /* Model */,
-				32F2438C2783D47A00F1D160 /* Assets.xcassets */,
+				F0FA07A92782D0F7003FD717 /* Views */,
 				032AEF8B2796FB3F00B6C197 /* Contollers */,
 				32F2435127833BC900F1D160 /* Fonts */,
 				32F2436727833BC900F1D160 /* GDUtils */,
-				F0FA07A92782D0F7003FD717 /* Views */,
 				3239BC9B277D8E5200E96E21 /* AppDelegate.swift */,
 				3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */,
 				3239BC9F277D8E5200E96E21 /* ViewController.swift */,
+				32F2438C2783D47A00F1D160 /* Assets.xcassets */,
 				3239BCAC277D8E5400E96E21 /* Info.plist */,
 				3239BCA4277D8E5200E96E21 /* GoodDay.xcdatamodeld */,
 				F07E9D0E2781A25300C7C6B4 /* 30344-hamburger-close-animation.json */,
@@ -303,7 +303,6 @@
 			isa = PBXGroup;
 			children = (
 				F05A8C6D279D24A600EAE250 /* MyPageViewController.swift */,
-				F05A8C6E279D24A600EAE250 /* MyPageViewController.xib */,
 				F013DA57279FF019000178D8 /* MyPageEditorMode.swift */,
 			);
 			path = GDMyPage;
@@ -319,12 +318,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F07E9D0727819DF000C7C6B4 /* FloatingButton */ = {
+		F07E9D0727819DF000C7C6B4 /* GDFloatingButton */ = {
 			isa = PBXGroup;
 			children = (
 				F07E9D0A27819E2E00C7C6B4 /* FloatingButtonViewController.swift */,
 			);
-			path = FloatingButton;
+			path = GDFloatingButton;
 			sourceTree = "<group>";
 		};
 		F09A579C2796F8F500706B96 /* Recovered References */ = {
@@ -364,6 +363,7 @@
 				3239BCA9277D8E5400E96E21 /* LaunchScreen.storyboard */,
 				32F2438E2783E4D200F1D160 /* GDMissionPerDayDetail.xib */,
 				32F24390278464B600F1D160 /* GDMissionPerDayWeeks.xib */,
+				F05A8C6E279D24A600EAE250 /* MyPageViewController.xib */,
 				F068BDB52782DCEF001035B6 /* Main.storyboard */,
 			);
 			path = Views;

@@ -52,6 +52,7 @@
                         <constraint firstAttribute="width" constant="25" id="6MU-nA-Lis"/>
                         <constraint firstAttribute="height" constant="25" id="R95-hA-GGc"/>
                     </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain">
                         <backgroundConfiguration key="background" image="arrow.backward" catalog="system" imageContentMode="scaleAspectFit"/>

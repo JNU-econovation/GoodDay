@@ -15,36 +15,29 @@ class RegisteredDiaryView: UIView {
         let colors: [CGColor] = [
             UIColor(rgb: 0x0015FF).cgColor,
             UIColor(rgb: 0xAEB5FF).cgColor]
-        
-        
-        
         gradientLayer.frame = view.bounds
-        
         gradientLayer.colors = colors
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
         gradientLayer.endPoint = CGPoint(x: 1.0, y: 1.0)
         gradientLayer.cornerRadius = view.frame.width / 2
-        
         view.layer.addSublayer(gradientLayer)
         view.layer.cornerRadius = view.frame.width / 2
-        
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
     }()
     
     let dateLabel: UILabel = {
-        
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "2022. 01. 07"
+        
         return label
         
     }()
     
     let missionLabel: UILabel = {
-        
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -55,36 +48,31 @@ class RegisteredDiaryView: UIView {
     }()
     
     let diaryTitleLabel: UILabel = {
-        
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
         label.text = "오늘은 치팅데이!!!!!!ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
         label.numberOfLines = 1
-        
         label.translatesAutoresizingMaskIntoConstraints = false
-        return label
         
+        return label
     }()
     
     let diaryContentLabel: UILabel = {
-        
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12, weight: .ultraLight)
         label.text = "오늘은 치팅데이였다. 의식을 잃고 치킨,피자,보쌈을 흡입하였다. 눈 뜨고 보니 치킨, 피자, 보쌈은 모두 없어져 있었다... 다 먹고보니 정말 후회가 된다."
         label.numberOfLines = 2
-        
         let attrString = NSMutableAttributedString(string: label.text!)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 3
         attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attrString.length))
         label.attributedText = attrString
-        
         label.translatesAutoresizingMaskIntoConstraints = false
+        
         return label
     }()
     
     let seeMoreButton: UIButton = {
-        
         let button = UIButton()
         button.setTitle("더보기", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -92,12 +80,9 @@ class RegisteredDiaryView: UIView {
         button.titleLabel?.textColor = .white
         button.backgroundColor = UIColor(rgb: 0x0015FF)
         button.layer.cornerRadius = 7
-        
         button.translatesAutoresizingMaskIntoConstraints = false
         
-        
         return button
-        
     }()
     
     
@@ -106,7 +91,6 @@ class RegisteredDiaryView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
-        
     }
     
     required init?(coder: NSCoder) {
@@ -115,23 +99,19 @@ class RegisteredDiaryView: UIView {
     }
     
     private func commonInit() {
-        
         self.addSubview(pointView)
         self.addSubview(dateLabel)
         self.addSubview(missionLabel)
         self.addSubview(diaryTitleLabel)
         self.addSubview(diaryContentLabel)
         self.addSubview(seeMoreButton)
-        
         constraintCustomView()
     }
     
     func constraintCustomView() {
         NSLayoutConstraint.activate([
-            
             pointView.topAnchor.constraint(equalTo: self.topAnchor, constant: 35),
             pointView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 50),
-            
             
             dateLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 34),
             dateLabel.leadingAnchor.constraint(equalTo: pointView.trailingAnchor, constant: 33),
@@ -153,11 +133,6 @@ class RegisteredDiaryView: UIView {
             seeMoreButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 50),
             seeMoreButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50),
             seeMoreButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -46)
-            
-            
         ])
-        
-        
     }
-
 }
