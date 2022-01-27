@@ -27,8 +27,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        goChecklist()
 //        return
 
-
-        
         // 초기 설정이 안 됐을 경우 -> 초기 화면으로 이동
         if !isInitialized {
             let WelcomeVC = WelcomeViewController(nibName: "WelcomeViewController", bundle: nil)
@@ -43,7 +41,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             guard let mainVC = storyBoard.instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
              
             window?.rootViewController = mainVC
-            
         }
     }
 

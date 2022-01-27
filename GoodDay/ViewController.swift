@@ -100,13 +100,13 @@ class ViewController: UIViewController {
         let curDay = 7
         
         if (curDay % 7 == 0) && !isDoneChecklist {
+//            let GDCeremonyVC = GDCeremony(nibName: "GDCeremony", bundle: nil)
+//            GDCeremonyVC.modalPresentationStyle = .overCurrentContext
+//            self.present(GDCeremonyVC, animated: false, completion: nil)
+            
             let WeeklyCheckPopUpVC = WeeklyCheckPopUpViewController(nibName: "WeeklyCheckPopUpViewController", bundle: nil)
-
             WeeklyCheckPopUpVC.modalPresentationStyle = .overCurrentContext
-//            WeeklyCheckPopUpVC.modalTransitionStyle = .crossDissolve
-            
             self.present(WeeklyCheckPopUpVC, animated: false, completion: nil)
-            
             UserDefaults.standard.set(true, forKey: "isDoChecklist")
         }
         

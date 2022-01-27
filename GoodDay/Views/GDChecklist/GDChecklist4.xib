@@ -7,11 +7,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="NanumSquareR.otf">
-            <string>NanumSquareOTFR</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GDChecklist4ViewController" customModule="GoodDay" customModuleProvider="target">
             <connections>
@@ -20,6 +15,7 @@
                 <outlet property="slider10" destination="wD2-EE-rdX" id="GVA-db-c2a"/>
                 <outlet property="slider11" destination="mXy-2v-gDn" id="6mP-26-PHj"/>
                 <outlet property="slider12" destination="unN-rL-gOr" id="XHK-2b-fcf"/>
+                <outlet property="slider13" destination="xRR-4F-QC5" id="eWI-tB-2tf"/>
                 <outlet property="view" destination="iN0-l3-epB" id="lI7-Q5-EQ5"/>
             </connections>
         </placeholder>
@@ -40,45 +36,67 @@
                         <backgroundConfiguration key="background" image="arrow.backward" catalog="system" imageContentMode="scaleAspectFit"/>
                     </buttonConfiguration>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOt-9w-cAv">
-                    <rect key="frame" x="39" y="163" width="187" height="53.5"/>
-                    <string key="text">나는 새로운것에 
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOt-9w-cAv">
+                    <rect key="frame" x="39" y="149" width="187" height="56.5"/>
+                    <attributedString key="attributedText">
+                        <fragment>
+                            <string key="content">나는 새로운것에 
 관심을 갖게되었다.</string>
-                    <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="24"/>
-                    <nil key="textColor"/>
+                            <attributes>
+                                <font key="NSFont" size="24" name="NanumSquareOTFR"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="wD2-EE-rdX">
-                    <rect key="frame" x="37" y="266.5" width="340" height="31"/>
+                    <rect key="frame" x="37" y="231.5" width="340" height="31"/>
                     <color key="minimumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <color key="maximumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <color key="thumbTintColor" red="0.81176470590000005" green="0.81176470590000005" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                 </slider>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmi-Uh-aiK">
-                    <rect key="frame" x="39" y="362.5" width="203" height="80"/>
-                    <string key="text">나는인생에서 무엇이
-중요한지에 대한
-생각이 바뀌었다.</string>
-                    <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="24"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmi-Uh-aiK">
+                    <rect key="frame" x="39" y="301.5" width="292.5" height="56.5"/>
+                    <attributedString key="attributedText">
+                        <fragment content="나는 내 삶을 통해 더 가치있는 일들을 할 수 있게 되었다.">
+                            <attributes>
+                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="24" name="NanumSquareOTFR"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANe-Lg-5tS">
-                    <rect key="frame" x="39" y="588.5" width="214.5" height="53.5"/>
-                    <string key="text">내 삶에 대한
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANe-Lg-5tS">
+                    <rect key="frame" x="39" y="454" width="214.5" height="56.5"/>
+                    <attributedString key="attributedText">
+                        <fragment>
+                            <string key="content">내 삶에 대한
 새로운 계획이 생겼다.</string>
-                    <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="24"/>
-                    <nil key="textColor"/>
+                            <attributes>
+                                <font key="NSFont" size="24" name="NanumSquareOTFR"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="unN-rL-gOr">
-                    <rect key="frame" x="37" y="692" width="340" height="31"/>
+                    <rect key="frame" x="37" y="536.5" width="340" height="31"/>
+                    <color key="minimumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                    <color key="maximumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                    <color key="thumbTintColor" red="0.81176470590000005" green="0.81176470590000005" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                </slider>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="xRR-4F-QC5">
+                    <rect key="frame" x="37" y="689" width="340" height="31"/>
                     <color key="minimumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <color key="maximumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <color key="thumbTintColor" red="0.81176470590000005" green="0.81176470590000005" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                 </slider>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="mXy-2v-gDn">
-                    <rect key="frame" x="37" y="492.5" width="340" height="31"/>
+                    <rect key="frame" x="37" y="384" width="340" height="31"/>
                     <color key="minimumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <color key="maximumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <color key="thumbTintColor" red="0.81176470590000005" green="0.81176470590000005" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
@@ -102,32 +120,49 @@
                         </attributedString>
                     </buttonConfiguration>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3p-3x-rGD">
+                    <rect key="frame" x="39" y="606.5" width="264.5" height="56.5"/>
+                    <attributedString key="attributedText">
+                        <fragment content="나는 어려움을 극복할 수 있다는 확신을 갖게 되었다.">
+                            <attributes>
+                                <font key="NSFont" size="24" name="NanumSquareOTFR"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="s3p-3x-rGD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="234-pG-rdt"/>
                 <constraint firstItem="unN-rL-gOr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="2e4-Lf-MaH"/>
                 <constraint firstItem="422-ut-dik" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="6MH-Aq-2bV"/>
                 <constraint firstItem="mXy-2v-gDn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="6Qz-UM-tG5"/>
                 <constraint firstItem="8ta-T0-qgf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="Bfm-N7-4bc"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="unN-rL-gOr" secondAttribute="trailing" constant="39" id="ECn-oR-7r0"/>
-                <constraint firstItem="ANe-Lg-5tS" firstAttribute="top" secondItem="mXy-2v-gDn" secondAttribute="bottom" constant="66" id="JnR-hj-3ZS"/>
+                <constraint firstItem="ANe-Lg-5tS" firstAttribute="top" secondItem="mXy-2v-gDn" secondAttribute="bottom" constant="40" id="JnR-hj-3ZS"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="422-ut-dik" secondAttribute="bottom" id="MAN-hf-FBV"/>
-                <constraint firstItem="unN-rL-gOr" firstAttribute="top" secondItem="ANe-Lg-5tS" secondAttribute="bottom" constant="50" id="Rd9-Iw-C6s"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xRR-4F-QC5" secondAttribute="trailing" constant="39" id="Pw4-Jm-70d"/>
+                <constraint firstItem="unN-rL-gOr" firstAttribute="top" secondItem="ANe-Lg-5tS" secondAttribute="bottom" constant="26" id="Rd9-Iw-C6s"/>
                 <constraint firstItem="8ta-T0-qgf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="36" id="Rwy-8a-jTJ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wD2-EE-rdX" secondAttribute="trailing" constant="39" id="Zca-eY-pMP"/>
-                <constraint firstItem="Cmi-Uh-aiK" firstAttribute="top" secondItem="wD2-EE-rdX" secondAttribute="bottom" constant="66" id="bzn-tT-4hk"/>
+                <constraint firstItem="Cmi-Uh-aiK" firstAttribute="top" secondItem="wD2-EE-rdX" secondAttribute="bottom" constant="40" id="bzn-tT-4hk"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mXy-2v-gDn" secondAttribute="trailing" constant="39" id="dFF-nj-2Iq"/>
                 <constraint firstItem="Cmi-Uh-aiK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="eEn-QK-rb8"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="422-ut-dik" secondAttribute="trailing" constant="25" id="fpt-eL-maQ"/>
+                <constraint firstItem="s3p-3x-rGD" firstAttribute="top" secondItem="unN-rL-gOr" secondAttribute="bottom" constant="40" id="gN6-F7-6ve"/>
                 <constraint firstItem="wOt-9w-cAv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="h1c-eh-tEY"/>
-                <constraint firstItem="wD2-EE-rdX" firstAttribute="top" secondItem="wOt-9w-cAv" secondAttribute="bottom" constant="50" id="iI8-JH-lxm"/>
-                <constraint firstItem="wOt-9w-cAv" firstAttribute="top" secondItem="8ta-T0-qgf" secondAttribute="bottom" constant="54" id="jfh-6e-8d3"/>
-                <constraint firstItem="mXy-2v-gDn" firstAttribute="top" secondItem="Cmi-Uh-aiK" secondAttribute="bottom" constant="50" id="seN-xY-Gw3"/>
+                <constraint firstItem="xRR-4F-QC5" firstAttribute="top" secondItem="s3p-3x-rGD" secondAttribute="bottom" constant="26" id="hUO-ul-EES"/>
+                <constraint firstItem="wD2-EE-rdX" firstAttribute="top" secondItem="wOt-9w-cAv" secondAttribute="bottom" constant="26" id="iI8-JH-lxm"/>
+                <constraint firstItem="wOt-9w-cAv" firstAttribute="top" secondItem="8ta-T0-qgf" secondAttribute="bottom" constant="40" id="jfh-6e-8d3"/>
+                <constraint firstItem="mXy-2v-gDn" firstAttribute="top" secondItem="Cmi-Uh-aiK" secondAttribute="bottom" constant="26" id="seN-xY-Gw3"/>
+                <constraint firstItem="xRR-4F-QC5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="u8J-7q-FH9"/>
                 <constraint firstItem="ANe-Lg-5tS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="y3D-sB-BEZ"/>
                 <constraint firstItem="wD2-EE-rdX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="39" id="ywb-Ns-XSY"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="122"/>
+            <point key="canvasLocation" x="137.68115942028987" y="121.875"/>
         </view>
     </objects>
     <resources>

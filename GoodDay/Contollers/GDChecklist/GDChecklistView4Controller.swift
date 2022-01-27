@@ -6,18 +6,22 @@
 //
 
 import UIKit
+import Lottie
 
 class GDChecklist4ViewController: UIViewController {
     @IBOutlet weak var slider10: UISlider!
     @IBOutlet weak var slider11: UISlider!
     @IBOutlet weak var slider12: UISlider!
+    @IBOutlet weak var slider13: UISlider!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var prevButton: UIButton!
+    let animationView = AnimationView(name: "Ceremony")
 
     var q10: Int?
     var q11: Int?
     var q12: Int?
-    var qs = [Int](repeating: 0, count: 12)
+    var q13: Int?
+    var qs = [Int](repeating: 0, count: 13)
     var isDone = false
     
     override func viewDidLoad() {
@@ -34,10 +38,12 @@ class GDChecklist4ViewController: UIViewController {
         slider10.tag = 10
         slider11.tag = 11
         slider12.tag = 12
+        slider13.tag = 13
         
         addTick(slider: slider10, selfView: self.view)
         addTick(slider: slider11, selfView: self.view)
         addTick(slider: slider12, selfView: self.view)
+        addTick(slider: slider13, selfView: self.view)
 
         slider10.setMaximumTrackImage(UIImage(named: "sliderTrack"), for: .normal)
         slider10.setMinimumTrackImage(UIImage(named: "sliderTrack"), for: .normal)
@@ -50,6 +56,10 @@ class GDChecklist4ViewController: UIViewController {
         slider12.setMaximumTrackImage(UIImage(named: "sliderTrack"), for: .normal)
         slider12.setMinimumTrackImage(UIImage(named: "sliderTrack"), for: .normal)
         slider12.addTarget(self, action: #selector(moveSliderThumb(sender:)), for: .valueChanged)
+        
+        slider13.setMaximumTrackImage(UIImage(named: "sliderTrack"), for: .normal)
+        slider13.setMinimumTrackImage(UIImage(named: "sliderTrack"), for: .normal)
+        slider13.addTarget(self, action: #selector(moveSliderThumb(sender:)), for: .valueChanged)
     }
     
     @IBAction func moveSliderThumb(sender: UISlider) {
@@ -78,7 +88,7 @@ class GDChecklist4ViewController: UIViewController {
             sender.setValue(5, animated: true)
         }
         
-        if ((q10 ?? 0) * (q11 ?? 0) * (q12 ?? 0)) != 0 {
+        if ((q10 ?? 0) * (q11 ?? 0) * (q12 ?? 0) * (q13 ?? 0)) != 0 {
             nextButton.backgroundColor = ColorUtils().hexStringToUIColor(hex: "#0015FF", alpha: 1)
             isDone = true
         }
@@ -92,6 +102,8 @@ class GDChecklist4ViewController: UIViewController {
             q11 = value
         case 12:
             q12 = value
+        case 13:
+            q13 = value
         default:
             return
         }
@@ -129,8 +141,9 @@ class GDChecklist4ViewController: UIViewController {
         qs[9] = q10!
         qs[10] = q11!
         qs[11] = q12!
+        qs[12] = q13!
         
-        var checklistResult = 0
+        var checklistResult = 100
         for i in 0..<qs.count {
             checklistResult += (qs[i] - 1)
         }
@@ -165,10 +178,14 @@ class GDChecklist4ViewController: UIViewController {
                 GDChecklistUnder90.modalTransitionStyle = .crossDissolve
                 self.present(GDChecklistUnder90, animated: true, completion: nil)
             } else {
-                let GDChecklistOver90 = GDChecklistOver90ViewController(nibName: "GDChecklistResultOver90", bundle: nil)
-                GDChecklistOver90.modalPresentationStyle = .overFullScreen
-                GDChecklistOver90.modalTransitionStyle = .crossDissolve
-                self.present(GDChecklistOver90, animated: true, completion: nil)
+                self.view.addSubview(self.animationView)
+                self.animationView.play(completion: {(finished) in
+                    let GDChecklistOver90 = GDChecklistOver90ViewController(nibName: "GDChecklistResultOver90", bundle: nil)
+                    GDChecklistOver90.modalPresentationStyle = .overFullScreen
+                    GDChecklistOver90.modalTransitionStyle = .crossDissolve
+                    self.present(GDChecklistOver90, animated: true, completion: nil)
+                })
+
             }
         }
     }

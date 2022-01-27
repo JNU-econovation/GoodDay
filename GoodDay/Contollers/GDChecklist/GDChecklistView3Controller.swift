@@ -17,7 +17,7 @@ class GDChecklist3ViewController: UIViewController {
     var q7: Int?
     var q8: Int?
     var q9: Int?
-    var qs = [Int](repeating: 0, count: 12)
+    var qs = [Int](repeating: 0, count: 13)
     var isDone = false
     
     override func viewDidLoad() {
