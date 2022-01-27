@@ -19,52 +19,99 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD DAY를" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYL-iw-g8q">
-                    <rect key="frame" x="30" y="159" width="334" height="36"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYL-iw-g8q">
+                    <rect key="frame" x="30" y="159" width="334" height="35"/>
+                    <attributedString key="attributedText">
+                        <fragment content="GOOD DAY를">
+                            <attributes>
+                                <font key="NSFont" size="30" name="NanumSquareOTFR"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIX-Jk-UsM">
-                    <rect key="frame" x="30" y="272" width="334" height="21"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIX-Jk-UsM">
+                    <rect key="frame" x="30" y="270" width="334" height="20"/>
+                    <attributedString key="attributedText">
+                        <fragment content="안녕하세요. ">
+                            <attributes>
+                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="17" name="NanumSquareOTFR"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 이별 극복 서포터, 굿데이입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcv-1x-Hfb">
-                    <rect key="frame" x="30" y="297" width="334" height="21"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcv-1x-Hfb">
+                    <rect key="frame" x="30" y="294" width="334" height="20"/>
+                    <attributedString key="attributedText">
+                        <fragment content="당신의 이별 극복 서포터, 굿데이입니다.">
+                            <attributes>
+                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="17" name="NanumSquareOTFR"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이별의 상처로 무너진 일상," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQI-BF-XDm">
-                    <rect key="frame" x="30" y="322" width="334" height="21"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQI-BF-XDm">
+                    <rect key="frame" x="30" y="318" width="334" height="20"/>
+                    <attributedString key="attributedText">
+                        <fragment content="이별의 상처로 무너진 일상,">
+                            <attributes>
+                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="17" name="NanumSquareOTFR"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그대로 두면 흉터로 남을 수 있어요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vo9-Ts-0U7">
-                    <rect key="frame" x="30" y="347" width="364" height="21"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vo9-Ts-0U7">
+                    <rect key="frame" x="30" y="342" width="364" height="20"/>
+                    <attributedString key="attributedText">
+                        <fragment content="그대로 두면 흉터로 남을 수 있어요.">
+                            <attributes>
+                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="17" name="NanumSquareOTFR"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD DAY와 함께 깊은 상처는 아물고" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAh-xu-eWg">
-                    <rect key="frame" x="30" y="391" width="334" height="21"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAh-xu-eWg">
+                    <rect key="frame" x="30" y="385" width="334" height="20"/>
+                    <attributedString key="attributedText">
+                        <fragment content="GOOD DAY와 함께 깊은 상처는 아물고">
+                            <attributes>
+                                <font key="NSFont" size="17" name="NanumSquareOTFR"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회복과 성장을 경험해보아요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="te5-wM-zGZ">
-                    <rect key="frame" x="30" y="416" width="334" height="21"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="te5-wM-zGZ">
+                    <rect key="frame" x="30" y="409" width="334" height="20"/>
+                    <attributedString key="attributedText">
+                        <fragment content="회복과 성장을 경험해보아요.">
+                            <attributes>
+                                <font key="NSFont" size="17" name="NanumSquareOTFR"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD DAY MAKES YOUR LIFE TO BE GOOD DAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAk-mt-GYq">
-                    <rect key="frame" x="30" y="460" width="334" height="16"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAk-mt-GYq">
+                    <rect key="frame" x="30" y="452" width="334" height="16"/>
+                    <attributedString key="attributedText">
+                        <fragment content="WITH YOUR LIFE TO BE GOOD DAY">
+                            <attributes>
+                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="13" name="NanumSquareOTFR"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5W-Eg-jQe">
@@ -75,10 +122,15 @@
                         <action selector="tapStartButton:" destination="-1" eventType="touchUpInside" id="Q1L-51-bWd"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택해주셔서 감사합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fw2-MJ-60U">
-                    <rect key="frame" x="30" y="201" width="374" height="36"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fw2-MJ-60U">
+                    <rect key="frame" x="30" y="200" width="374" height="35"/>
+                    <attributedString key="attributedText">
+                        <fragment content="선택해주셔서 감사합니다.">
+                            <attributes>
+                                <font key="NSFont" size="30" name="NanumSquareOTFR"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>

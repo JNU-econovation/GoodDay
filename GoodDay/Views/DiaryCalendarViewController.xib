@@ -19,10 +19,17 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIC-i7-swm">
-                    <rect key="frame" x="170" y="84" width="48.5" height="20"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                    <color key="textColor" red="0.0" green="0.08235294118" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIC-i7-swm">
+                    <rect key="frame" x="172" y="84" width="46" height="20"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Diary">
+                            <attributes>
+                                <color key="NSColor" red="0.0" green="0.08235294118" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="20" name="NanumSquareOTFB"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZX-vg-pZJ">
@@ -40,10 +47,17 @@
                         <action selector="tapBackButton:" destination="-1" eventType="touchUpInside" id="vxm-M4-JwN"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD DAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LR1-0m-rwc">
-                    <rect key="frame" x="62" y="84" width="102" height="20"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LR1-0m-rwc">
+                    <rect key="frame" x="62" y="84" width="104" height="20"/>
+                    <attributedString key="attributedText">
+                        <fragment content="GOOD DAY">
+                            <attributes>
+                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="20" name="NanumSquareOTFB"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>

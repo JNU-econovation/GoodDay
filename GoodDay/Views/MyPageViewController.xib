@@ -39,60 +39,96 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nys-o5-8im">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="610"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ESFJ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGd-dW-7zH">
-                            <rect key="frame" x="38" y="190" width="59.5" height="32.5"/>
-                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGd-dW-7zH">
+                            <rect key="frame" x="38" y="190" width="64" height="31.5"/>
+                            <attributedString key="attributedText">
+                                <fragment content="ESFJ">
+                                    <attributes>
+                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <font key="NSFont" size="27" name="NanumSquareOTFB"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="명선님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5p1-jK-qcl">
-                            <rect key="frame" x="38" y="232.5" width="122" height="56.5"/>
-                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="47"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5p1-jK-qcl">
+                            <rect key="frame" x="38" y="231.5" width="122" height="55"/>
+                            <attributedString key="attributedText">
+                                <fragment content="명선님">
+                                    <attributes>
+                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <font key="NSFont" size="47" name="NanumSquareOTFB"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="fGe-R0-rbO">
-                            <rect key="frame" x="38" y="326" width="189.5" height="21.5"/>
+                            <rect key="frame" x="38" y="323.5" width="185.5" height="21.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:30 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJI-zE-asz">
-                                    <rect key="frame" x="0.0" y="0.0" width="79.5" height="21.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJI-zE-asz">
+                                    <rect key="frame" x="0.0" y="0.0" width="77.5" height="21.5"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="05:30 AM">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="18" name="NanumSquareOTFR"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yad-eh-vrZ">
-                                    <rect key="frame" x="90.5" y="0.0" width="8.5" height="21.5"/>
+                                    <rect key="frame" x="88.5" y="0.0" width="8.5" height="21.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09:45 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9V-Ab-pHM">
-                                    <rect key="frame" x="110" y="0.0" width="79.5" height="21.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9V-Ab-pHM">
+                                    <rect key="frame" x="108" y="0.0" width="77.5" height="21.5"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="09:45 PM">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="18" name="NanumSquareOTFR"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fIH-vj-hTv">
-                            <rect key="frame" x="38" y="372.5" width="155.5" height="17"/>
+                            <rect key="frame" x="38" y="370" width="154.5" height="16.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마지막 업데이트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scR-Be-c5C">
-                                    <rect key="frame" x="0.0" y="0.0" width="89" height="17"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scR-Be-c5C">
+                                    <rect key="frame" x="0.0" y="0.0" width="89" height="16.5"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="마지막 업데이트">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="14" name="NanumSquareOTFR"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJ8-BK-qfJ">
-                                    <rect key="frame" x="94" y="0.0" width="61.5" height="17"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJ8-BK-qfJ">
+                                    <rect key="frame" x="94" y="0.0" width="60.5" height="16.5"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="12:00 AM">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="14" name="NanumSquareOTFR"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNJ-Dt-Iq9">
-                            <rect key="frame" x="38" y="419.5" width="40" height="40"/>
+                            <rect key="frame" x="38" y="416.5" width="40" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="2Gx-cc-70G"/>
                                 <constraint firstAttribute="width" constant="40" id="B6b-dg-x2j"/>
@@ -148,65 +184,108 @@
                         <action selector="tapBackButton:" destination="-1" eventType="touchUpInside" id="Zm6-dP-Ess"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD DAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4z-Hf-Ydr">
-                    <rect key="frame" x="62" y="74" width="102" height="20"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4z-Hf-Ydr">
+                    <rect key="frame" x="62" y="74" width="183" height="20"/>
+                    <attributedString key="attributedText">
+                        <fragment content="GOOD DAY MyPage">
+                            <attributes>
+                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="20" name="NanumSquareOTFB"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="A9s-b5-rY5">
-                    <rect key="frame" x="41" y="571" width="51.5" height="57"/>
+                    <rect key="frame" x="41" y="574.5" width="51.5" height="56.5"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MBTI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDe-so-u8Y">
-                            <rect key="frame" x="0.0" y="0.0" width="35" height="18"/>
-                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                            <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDe-so-u8Y">
+                            <rect key="frame" x="0.0" y="0.0" width="36" height="17.5"/>
+                            <attributedString key="attributedText">
+                                <fragment content="MBTI">
+                                    <attributes>
+                                        <color key="NSColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" size="15" name="NanumSquareOTFR"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ESFJ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trM-zk-wXD">
-                            <rect key="frame" x="0.0" y="28" width="51.5" height="29"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                            <nil key="textColor"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trM-zk-wXD">
+                            <rect key="frame" x="0.0" y="27.5" width="51.5" height="29"/>
+                            <attributedString key="attributedText">
+                                <fragment content="ESFJ">
+                                    <attributes>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" metaFont="system" size="24"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xYe-ei-oQR">
-                    <rect key="frame" x="41" y="746" width="105" height="56"/>
+                    <rect key="frame" x="41" y="747.5" width="103.5" height="54.5"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SLEEP AT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iT-aJ-eVh">
-                            <rect key="frame" x="0.0" y="0.0" width="61.5" height="17"/>
-                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                            <color key="textColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iT-aJ-eVh">
+                            <rect key="frame" x="0.0" y="0.0" width="63" height="16.5"/>
+                            <attributedString key="attributedText">
+                                <fragment content="SLEEP AT">
+                                    <attributes>
+                                        <color key="NSColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" size="14" name="NanumSquareOTFR"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09:45 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAA-ZA-upS">
-                            <rect key="frame" x="0.0" y="27" width="105" height="29"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                            <nil key="textColor"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAA-ZA-upS">
+                            <rect key="frame" x="0.0" y="26.5" width="103.5" height="28"/>
+                            <attributedString key="attributedText">
+                                <fragment content="09:45 PM">
+                                    <attributes>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" size="24" name="NanumSquareOTFR"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wjc-Hu-aEb">
-                    <rect key="frame" x="41" y="665" width="105" height="56"/>
+                    <rect key="frame" x="41" y="668" width="103.5" height="54.5"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WAKE UP AT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvQ-hh-4nw">
-                            <rect key="frame" x="0.0" y="0.0" width="105" height="17"/>
-                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                            <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvQ-hh-4nw">
+                            <rect key="frame" x="0.0" y="0.0" width="103.5" height="16.5"/>
+                            <attributedString key="attributedText">
+                                <fragment content="WAKE UP AT">
+                                    <attributes>
+                                        <color key="NSColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" size="14" name="NanumSquareOTFR"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:30 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAr-x0-Dp8">
-                            <rect key="frame" x="0.0" y="27" width="105" height="29"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                            <nil key="textColor"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAr-x0-Dp8">
+                            <rect key="frame" x="0.0" y="26.5" width="103.5" height="28"/>
+                            <attributedString key="attributedText">
+                                <fragment content="05:30 AM">
+                                    <attributes>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" size="24" name="NanumSquareOTFR"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xR1-wI-6CW">
-                    <rect key="frame" x="41" y="646" width="314" height="1"/>
+                    <rect key="frame" x="41" y="649" width="314" height="1"/>
                     <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="Bcw-Fu-2Gw"/>
@@ -214,7 +293,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQC-6g-akb">
-                    <rect key="frame" x="361" y="587" width="25" height="25"/>
+                    <rect key="frame" x="361" y="590" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="WrW-SM-EOs"/>
                         <constraint firstAttribute="width" constant="25" id="iEo-BX-gbt"/>

@@ -97,7 +97,7 @@ class ViewController: UIViewController {
         self.view.addSubview(animationView)
         animationView.translatesAutoresizingMaskIntoConstraints = false
         animationView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -27).isActive = true
-        animationView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 40).isActive = true
+        animationView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 37).isActive = true
         animationView.heightAnchor.constraint(equalToConstant:32).isActive = true
         animationView.widthAnchor.constraint(equalToConstant: 32).isActive = true
         

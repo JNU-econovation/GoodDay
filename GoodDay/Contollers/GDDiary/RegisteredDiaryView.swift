@@ -29,7 +29,7 @@ class RegisteredDiaryView: UIView {
     
     let dateLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        label.font = UIFont(name: "NanumSquareOTFB", size: 18)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "2022. 01. 07"
         
@@ -39,7 +39,8 @@ class RegisteredDiaryView: UIView {
     
     let missionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        label.font = UIFont(name: "NanumSquareOTFR", size: 16)
+        label.textColor = UIColor(rgb: 0x323232)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "맛있는 거 먹기"
         label.numberOfLines = 1
@@ -49,7 +50,8 @@ class RegisteredDiaryView: UIView {
     
     let diaryTitleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
+        label.font = UIFont(name: "NanumSquareOTFB", size: 24)
+
         label.text = "오늘은 치팅데이!!!!!!ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
         label.numberOfLines = 1
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -59,7 +61,8 @@ class RegisteredDiaryView: UIView {
     
     let diaryContentLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 12, weight: .ultraLight)
+        label.font = UIFont(name: "NanumSquareOTFL", size: 12)
+        label.textColor = UIColor(rgb: 0xAAAAAA)
         label.text = "오늘은 치팅데이였다. 의식을 잃고 치킨,피자,보쌈을 흡입하였다. 눈 뜨고 보니 치킨, 피자, 보쌈은 모두 없어져 있었다... 다 먹고보니 정말 후회가 된다."
         label.numberOfLines = 2
         let attrString = NSMutableAttributedString(string: label.text!)

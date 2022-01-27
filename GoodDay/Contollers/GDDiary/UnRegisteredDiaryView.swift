@@ -30,7 +30,9 @@ class UnRegisteredDiaryView: UIView {
     
     let dateLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
+//        label.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
+        label.font = UIFont(name: "NanumSquareOTFB", size: 24)
+        
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "2022. 01. 06"
         
@@ -39,7 +41,8 @@ class UnRegisteredDiaryView: UIView {
     }()
     let missionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 17, weight: .regular)
+
+        label.font = UIFont(name: "NanumSquareOTFR", size: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "맛있는 거 먹기"
 
@@ -83,7 +86,7 @@ class UnRegisteredDiaryView: UIView {
     
     func constraintCustomView() {
         NSLayoutConstraint.activate([
-            pointView.topAnchor.constraint(equalTo: self.topAnchor, constant: 50),
+            pointView.topAnchor.constraint(equalTo: self.topAnchor, constant: 49),
             pointView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 50),
             
             dateLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 45),
