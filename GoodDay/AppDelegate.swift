@@ -20,8 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enableAutoToolbar = false
 
         FirebaseApp.configure()
-
+        
         return true
+        
     }
 
     // MARK: UISceneSession Lifecycle
@@ -82,6 +83,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
 

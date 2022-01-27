@@ -122,18 +122,55 @@ class GDChecklist4ViewController: UIViewController {
     }
     
     @IBAction func tapNextButton(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        guard let mainVC = storyBoard.instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
-
+        if !isDone {
+            return
+        }
+        
         qs[9] = q10!
         qs[10] = q11!
         qs[11] = q12!
-        print(qs)
-
-        mainVC.modalPresentationStyle = .overFullScreen
-        mainVC.modalTransitionStyle = .crossDissolve
         
-        self.present(mainVC, animated: true, completion: nil)
+        var checklistResult = 0
+        for i in 0..<qs.count {
+            checklistResult += (qs[i] - 1)
+        }
+        
+        var missionResult = 0
+        let weeks = GDMissionData.shared.missionPerDayData!.weeks.count
+        let days = GDMissionData.shared.missionPerDayData!.weeks[weeks - 1].days
+        for i in 0..<days.count {
+            if days[i].isSuccess == 1 {
+                missionResult += 5
+            }
+        }
+        
+        var diaryResult = 0
+        let db = GDMissionData.shared.db
+        db.collection("diarys").document(UserDefaults.standard.string(forKey: "userUid")!).getDocument { (document, error) in
+            if let document = document {
+                if let diary = (document["diaryList"] as? [[String: String]]) {
+                    for (idx, _) in diary.enumerated() {
+                        let formatter = DateFormatter()
+                        formatter.dateFormat = "yyyy.MM.dd"
+                        let diaryDate = formatter.date(from: diary[idx]["date"]! as String)
+                        if (Calendar.current.dateComponents([.day], from: diaryDate!, to: Date()).day! + 1) < 7 {
+                            diaryResult += 3
+                        }
+                    }
+                }
+            }
+            if checklistResult + missionResult + diaryResult < 91 {
+                let GDChecklistUnder90 = GDChecklistUnder90ViewController(nibName: "GDChecklistResultUnder90", bundle: nil)
+                GDChecklistUnder90.modalPresentationStyle = .overFullScreen
+                GDChecklistUnder90.modalTransitionStyle = .crossDissolve
+                self.present(GDChecklistUnder90, animated: true, completion: nil)
+            } else {
+                let GDChecklistOver90 = GDChecklistOver90ViewController(nibName: "GDChecklistResultOver90", bundle: nil)
+                GDChecklistOver90.modalPresentationStyle = .overFullScreen
+                GDChecklistOver90.modalTransitionStyle = .crossDissolve
+                self.present(GDChecklistOver90, animated: true, completion: nil)
+            }
+        }
     }
     
     @IBAction func tapPrevButton(_ sender: UIButton) {

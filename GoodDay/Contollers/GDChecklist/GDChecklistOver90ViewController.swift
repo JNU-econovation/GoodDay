@@ -1,13 +1,13 @@
 //
-//  WeeklyCheckPopUpViewController.swift
+//  GDChecklistUnder90.swift
 //  GoodDay
 //
-//  Created by myungsun on 2022/01/24.
+//  Created by 임채승 on 2022/01/26.
 //
 
 import UIKit
 
-class WeeklyCheckPopUpViewController: UIViewController {
+class GDChecklistOver90ViewController: UIViewController {
 
     @IBOutlet var weeklyCheckContainerView: UIView!
     @IBOutlet weak var popUpView: UIView!
@@ -29,10 +29,12 @@ class WeeklyCheckPopUpViewController: UIViewController {
     }
     
     func initializeWeeklyCheckPopUpViews() {
-        let weeks = GDMissionData.shared.missionPerDayData?.weeks.count ?? 1
+        let beginDate = UserDefaults.standard.object(forKey: "beginDay") as! Date
+        let curDay = Calendar.current.dateComponents([.day], from: beginDate, to: Date()).day! + 1
+
         mbtiLabel.text = "\(UserDefaults.standard.string(forKey: "mbti") ?? "")"
         nameLabel.text = "\(UserDefaults.standard.string(forKey: "userName") ?? "")님"
-        weeklyCheckLabel.text = "\(weeks)주차 주간 점검"
+        weeklyCheckLabel.text = "\(Int(curDay % 7))주차 주간 점검"
         configureWeeklyCheckContainerView()
         configureCheckButton()
         configureCloseButton()

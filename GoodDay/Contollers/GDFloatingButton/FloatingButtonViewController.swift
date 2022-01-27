@@ -156,7 +156,6 @@ class FloatingButtonViewController: UIViewController {
         myPageButton.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    
     @IBAction func tapMissionButton(_ sender: UIButton) {
         let presentView = presentingViewController
         

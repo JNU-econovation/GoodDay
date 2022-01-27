@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GDChecklistUnder90ViewController" customModule="GoodDay" customModuleProvider="target">
+            <connections>
+                <outlet property="startButton" destination="AlY-Kd-ko8" id="lG5-oE-2Xk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weeklyCheckContainerView" destination="ZYl-rN-frw" id="Ixj-pR-tw0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TeN-Pg-Sbf">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYl-rN-frw">
+                    <rect key="frame" x="64.5" y="330.5" width="285" height="235"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5w-pO-5V0">
+                            <rect key="frame" x="78.5" y="-58" width="128" height="116"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="128" id="Xsq-cj-pZp"/>
+                                <constraint firstAttribute="height" constant="116" id="ywv-Ue-zXb"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <backgroundConfiguration key="background" image="checklistUnder"/>
+                            </buttonConfiguration>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDg-NT-fNr">
+                            <rect key="frame" x="74.5" y="78" width="136" height="20"/>
+                            <attributedString key="attributedText">
+                                <fragment content="주간점검 최종결과">
+                                    <attributes>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="18" name="NanumSquareOTFB"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcZ-L9-gKh">
+                            <rect key="frame" x="12" y="118" width="261" height="39"/>
+                            <attributedString key="attributedText">
+                                <fragment>
+                                    <string key="content">아직 이별의 상처가 아물지 못했군요.
+굿데이와 함께 이어서 극복해 나아가요!</string>
+                                    <attributes>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="14" name="NanumSquareOTFR"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlY-Kd-ko8">
+                            <rect key="frame" x="0.0" y="180" width="285" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="NcV-oc-nyp"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="확인" titleAlignment="center">
+                                <backgroundConfiguration key="background" cornerRadius="20">
+                                    <color key="backgroundColor" red="0.0" green="0.08235294118" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </backgroundConfiguration>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="tapStartButton:" destination="-1" eventType="touchUpInside" id="Vrm-u5-hLm"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="285" id="2rR-Wc-jB8"/>
+                        <constraint firstItem="dcZ-L9-gKh" firstAttribute="top" secondItem="VDg-NT-fNr" secondAttribute="bottom" constant="20" id="CnA-2f-srh"/>
+                        <constraint firstItem="a5w-pO-5V0" firstAttribute="centerY" secondItem="ZYl-rN-frw" secondAttribute="top" id="E06-as-BXJ"/>
+                        <constraint firstAttribute="trailing" secondItem="AlY-Kd-ko8" secondAttribute="trailing" id="Gpb-L9-dVo"/>
+                        <constraint firstItem="a5w-pO-5V0" firstAttribute="centerX" secondItem="ZYl-rN-frw" secondAttribute="centerX" id="Mam-NV-hgv"/>
+                        <constraint firstAttribute="trailing" secondItem="dcZ-L9-gKh" secondAttribute="trailing" constant="12" id="NwN-J2-hoT"/>
+                        <constraint firstItem="VDg-NT-fNr" firstAttribute="centerX" secondItem="ZYl-rN-frw" secondAttribute="centerX" id="SBC-DE-0js"/>
+                        <constraint firstItem="VDg-NT-fNr" firstAttribute="top" secondItem="a5w-pO-5V0" secondAttribute="bottom" constant="20" id="bBc-8e-noy"/>
+                        <constraint firstAttribute="bottom" secondItem="AlY-Kd-ko8" secondAttribute="bottom" id="bhw-es-Koq"/>
+                        <constraint firstItem="dcZ-L9-gKh" firstAttribute="centerX" secondItem="ZYl-rN-frw" secondAttribute="centerX" id="cAR-ZJ-bJW"/>
+                        <constraint firstAttribute="height" constant="235" id="f2e-Qx-mXi"/>
+                        <constraint firstItem="AlY-Kd-ko8" firstAttribute="leading" secondItem="ZYl-rN-frw" secondAttribute="leading" id="geU-18-w2O"/>
+                        <constraint firstItem="dcZ-L9-gKh" firstAttribute="leading" secondItem="ZYl-rN-frw" secondAttribute="leading" constant="12" id="lxF-0v-qyf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="TeN-Pg-Sbf" secondAttribute="bottom" id="8MS-Lc-zhO"/>
+                <constraint firstItem="TeN-Pg-Sbf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Fax-m9-rG2"/>
+                <constraint firstItem="ZYl-rN-frw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="RkR-40-z0b"/>
+                <constraint firstItem="TeN-Pg-Sbf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZeW-mX-EG0"/>
+                <constraint firstAttribute="trailing" secondItem="TeN-Pg-Sbf" secondAttribute="trailing" id="q9j-an-rpJ"/>
+                <constraint firstItem="ZYl-rN-frw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="saq-Fz-d9P"/>
+            </constraints>
+            <point key="canvasLocation" x="351" y="99"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checklistUnder" width="512" height="464"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

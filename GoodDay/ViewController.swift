@@ -45,11 +45,29 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.userUid = UserDefaults.standard.string(forKey: "userUid")
         
+        missionNextButton.addTarget(self, action: #selector(tapMissionPerDay(_:)), for: .touchUpInside)
+        
         configureUserNameLabel()
         configureAnimationView()
         configureMissionView()
         configureFamousSayingView()
         configureNotificationCenter()
+        
+        GDMissionData.shared.db.collection("missionPerDay").document((UserDefaults.standard.string(forKey: "userUid"))!).getDocument {(document, error) in
+            if let document = document, document.exists {
+                print("asdf")
+                let data = document.data()
+                do {
+                    let json = try JSONSerialization.data(withJSONObject: data!, options: [])
+                    GDMissionData.shared.missionPerDayData = try JSONDecoder().decode(MissionPerDay.self, from: json)
+                    self.configureMissionPerDayView()
+                } catch {
+                    print("AppDelegate(): error")
+                }
+            } else {
+                print("Document does not exist")
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -57,20 +75,37 @@ class ViewController: UIViewController {
         goChecklist()
     }
     
+    func configureMissionPerDayView() {
+        let missionDatas = GDMissionData.shared.getMissionData()
+        let missionPerDayData = GDMissionData.shared.missionPerDayData!
+                                        
+        let beginDate = UserDefaults.standard.object(forKey: "beginDay") as! Date
+        let curDay = (Calendar.current.dateComponents([.day], from: beginDate, to: Date()).day! + 1) % 7
+        //let curDay = 2
+        let curWeek = missionPerDayData.weeks.count
+        let missionData = missionDatas[missionPerDayData.weeks[curWeek - 1].days[curDay - 1].missionId]
+        self.missionDayLabel.text = "DAY \(curDay)"
+        self.missionTitleLabel.text = missionData.content
+        let tags = missionData.tags.split(separator: ",")
+        self.missionFirstTagLabel.text = "#"+tags[0].trimmingCharacters(in: .whitespaces)
+        self.missionSecondTagLabel.text = "#"+tags[1].trimmingCharacters(in: .whitespaces)
+    }
+    
     func goChecklist() {
         let beginDate = UserDefaults.standard.object(forKey: "beginDay") as! Date
-//        let isDoChecklist = UserDefaults.standard.bool(forKey: "isDoChecklist")
-        let isDoChecklist = false
+        //let isDoneChecklist = UserDefaults.standard.bool(forKey: "isDoChecklist")
+        let isDoneChecklist = false
+
         //let curDay = Calendar.current.dateComponents([.day], from: beginDate, to: Date()).day! + 1
         let curDay = 7
         
-        if (curDay % 7 == 0) && !isDoChecklist {
+        if (curDay % 7 == 0) && !isDoneChecklist {
             let WeeklyCheckPopUpVC = WeeklyCheckPopUpViewController(nibName: "WeeklyCheckPopUpViewController", bundle: nil)
 
             WeeklyCheckPopUpVC.modalPresentationStyle = .overCurrentContext
 //            WeeklyCheckPopUpVC.modalTransitionStyle = .crossDissolve
             
-            self.present(WeeklyCheckPopUpVC, animated: true, completion: nil)
+            self.present(WeeklyCheckPopUpVC, animated: false, completion: nil)
             
             UserDefaults.standard.set(true, forKey: "isDoChecklist")
         }
@@ -80,7 +115,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func configureUserNameLabel(){
+    func configureUserNameLabel( ){
         
         self.nickname = UserDefaults.standard.string(forKey: "userName")
         
@@ -89,7 +124,7 @@ class ViewController: UIViewController {
     }
     
     
-    func configureAnimationView(){
+    func configureAnimationView() {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
         animationView.addGestureRecognizer(tapGesture)
@@ -104,7 +139,7 @@ class ViewController: UIViewController {
         animationView.contentMode = .scaleAspectFit
     
     }
-    @objc private func handleTap(sender: UITapGestureRecognizer){
+    @objc private func handleTap(sender: UITapGestureRecognizer) {
         
         if isShowFloating {
             animationView.play()
@@ -118,35 +153,44 @@ class ViewController: UIViewController {
         }
         
     }
-    func configureFamousSayingView(){
+    func configureFamousSayingView() {
         self.famousSayingView.layer.cornerRadius = 13
         self.famousSayingView.layer.shadowOffset = CGSize(width: 0, height: 0)
         self.famousSayingView.layer.shadowOpacity = 0.25
     }
     
-    func configureMissionView(){
+    func configureMissionView() {
         self.missionView.layer.cornerRadius = 13
         self.missionView.layer.shadowOffset = CGSize(width: 0, height: 0)
         self.missionView.layer.shadowOpacity = 0.25
         configureMissionButton()
     }
     
-    private func configureMissionButton(){
+    private func configureMissionButton() {
         self.missionNextButton.setImage(rightArrowImg, for: .normal)
         self.missionNextButton.tintColor = .white
     }
     
-    func configureNotificationCenter(){
+    func configureNotificationCenter() {
         let notificationName = Notification.Name("sendBoolData")
         NotificationCenter.default.addObserver(self, selector: #selector(sendBoolData), name: notificationName, object: nil)
     }
     
-    @objc private func sendBoolData(notification: Notification){
+    @objc private func sendBoolData(notification: Notification) {
         self.isShowFloating = notification.userInfo?["isShowFloating"] as? Bool ?? false
         if !self.isShowFloating {
             animationView.play(fromFrame: animationView.animation?.endFrame, toFrame: animationView.animation!.startFrame)
             self.isShowFloating = true
         }
+    }
+    
+    @objc func tapMissionPerDay(_ sender: UIButton) {
+        let GDMissionPerDayDetailVC = GDMissionPerDayDetailViewController(nibName: "GDMissionPerDayDetail", bundle: nil)
+
+        GDMissionPerDayDetailVC.modalPresentationStyle = .overFullScreen
+        GDMissionPerDayDetailVC.modalTransitionStyle = .crossDissolve
+        
+        self.present(GDMissionPerDayDetailVC, animated: true, completion: nil)
     }
 
 }
@@ -160,10 +204,7 @@ extension ViewController: DelegateFloatingButtonViewController {
             animationView.play(fromFrame: animationView.animation?.endFrame, toFrame: animationView.animation!.startFrame)
             self.isShowFloating = true
         }
-        
     }
-    
-    
 }
 
 extension UIView {
