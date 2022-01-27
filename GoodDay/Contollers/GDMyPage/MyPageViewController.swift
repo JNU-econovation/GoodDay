@@ -45,6 +45,7 @@ class MyPageViewController: UIViewController {
         super.viewDidLoad()
         initializeMyPageViews()
         initailizeMyPageData()
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     func initializeMyPageViews(){
