@@ -5,24 +5,33 @@
 //  Created by 임채승 on 2022/01/26.
 //
 
+
 import UIKit
 
-class GDChecklistUnder90:UIViewController {
+class GDChecklistUnder90ViewController: UIViewController {
     
-    @IBOutlet weak var resultContent: UILabel!
-    @IBOutlet weak var resultButton: UIButton!
+    @IBOutlet var weeklyCheckContainerView: UIView!
+    @IBOutlet weak var startButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        resultContent.textAlignment = .center
-        resultButton.layer.cornerRadius = 16.5
-        resultButton.addTarget(self, action: #selector(tapTitleButton(_:)), for: .touchUpInside)
+        weeklyCheckContainerView.layer.cornerRadius = 20
+        configureStartButton()
+        startButton.addTarget(self, action: #selector(tapStartButton(_:)), for: .touchUpInside)
+    }
+
+    func configureStartButton() {
+        self.startButton.titleLabel?.textColor = .white
+        self.startButton.backgroundColor = .blue
+        self.startButton.layer.cornerRadius = 20
+        self.startButton.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
     }
     
-    @objc func tapTitleButton(_ sender: UIButton) {
+    @IBAction func tapStartButton(_ sender: UIButton) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
         guard let mainVC = storyBoard.instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
-
+        
         mainVC.modalPresentationStyle = .overFullScreen
         mainVC.modalTransitionStyle = .crossDissolve
         

@@ -160,12 +160,12 @@ class GDChecklist4ViewController: UIViewController {
                 }
             }
             if checklistResult + missionResult + diaryResult < 91 {
-                let GDChecklistUnder90 = GDChecklistUnder90(nibName: "GDChecklistResultUnder90", bundle: nil)
+                let GDChecklistUnder90 = GDChecklistUnder90ViewController(nibName: "GDChecklistResultUnder90", bundle: nil)
                 GDChecklistUnder90.modalPresentationStyle = .overFullScreen
                 GDChecklistUnder90.modalTransitionStyle = .crossDissolve
                 self.present(GDChecklistUnder90, animated: true, completion: nil)
             } else {
-                let GDChecklistOver90 = GDChecklistOver90(nibName: "GDChecklistResultOver90", bundle: nil)
+                let GDChecklistOver90 = GDChecklistOver90ViewController(nibName: "GDChecklistResultOver90", bundle: nil)
                 GDChecklistOver90.modalPresentationStyle = .overFullScreen
                 GDChecklistOver90.modalTransitionStyle = .crossDissolve
                 self.present(GDChecklistOver90, animated: true, completion: nil)

@@ -55,6 +55,7 @@ class ViewController: UIViewController {
         
         GDMissionData.shared.db.collection("missionPerDay").document((UserDefaults.standard.string(forKey: "userUid"))!).getDocument {(document, error) in
             if let document = document, document.exists {
+                print("asdf")
                 let data = document.data()
                 do {
                     let json = try JSONSerialization.data(withJSONObject: data!, options: [])
@@ -92,13 +93,9 @@ class ViewController: UIViewController {
     
     func goChecklist() {
         let beginDate = UserDefaults.standard.object(forKey: "beginDay") as! Date
-<<<<<<< HEAD
         //let isDoneChecklist = UserDefaults.standard.bool(forKey: "isDoChecklist")
         let isDoneChecklist = false
-=======
-//        let isDoChecklist = UserDefaults.standard.bool(forKey: "isDoChecklist")
-        let isDoChecklist = false
->>>>>>> 59cfeb9c341b5e2b776067caa0b9e661d1a9ec16
+
         //let curDay = Calendar.current.dateComponents([.day], from: beginDate, to: Date()).day! + 1
         let curDay = 7
         
@@ -106,10 +103,7 @@ class ViewController: UIViewController {
             let WeeklyCheckPopUpVC = WeeklyCheckPopUpViewController(nibName: "WeeklyCheckPopUpViewController", bundle: nil)
 
             WeeklyCheckPopUpVC.modalPresentationStyle = .overCurrentContext
-<<<<<<< HEAD
-=======
 //            WeeklyCheckPopUpVC.modalTransitionStyle = .crossDissolve
->>>>>>> 59cfeb9c341b5e2b776067caa0b9e661d1a9ec16
             
             self.present(WeeklyCheckPopUpVC, animated: false, completion: nil)
             

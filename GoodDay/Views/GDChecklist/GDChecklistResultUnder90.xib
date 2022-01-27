@@ -4,86 +4,119 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GDChecklistUnder90" customModule="GoodDay" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GDChecklistUnder90ViewController" customModule="GoodDay" customModuleProvider="target">
             <connections>
-                <outlet property="resultButton" destination="juY-Ql-EeB" id="iXV-Li-SSe"/>
-                <outlet property="resultContent" destination="JfL-gv-Etp" id="Rff-RO-F7j"/>
-                <outlet property="view" destination="iN0-l3-epB" id="eSi-8m-dHC"/>
+                <outlet property="startButton" destination="AlY-Kd-ko8" id="lG5-oE-2Xk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weeklyCheckContainerView" destination="ZYl-rN-frw" id="Ixj-pR-tw0"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" restorationIdentifier="GDChecklistResultOver90" id="iN0-l3-epB">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view alpha="0.80000000000000004" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cZq-aX-1c0">
-                    <rect key="frame" x="0.0" y="-8" width="414" height="896"/>
+                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TeN-Pg-Sbf">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message" translatesAutoresizingMaskIntoConstraints="NO" id="I8e-aY-zDi">
-                    <rect key="frame" x="56.5" y="347" width="301" height="315"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="301" id="3ua-8S-WnJ"/>
-                        <constraint firstAttribute="height" constant="315" id="xHn-0v-e3W"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiP-TM-4GE">
-                    <rect key="frame" x="136.5" y="383" width="141" height="20"/>
-                    <attributedString key="attributedText">
-                        <fragment content="주간 점검 최종결과">
-                            <attributes>
-                                <font key="NSFont" size="18" name="NanumSquareOTFB"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juY-Ql-EeB">
-                    <rect key="frame" x="136.5" y="472" width="141" height="31"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="이별극복 이어서 하기">
-                        <backgroundConfiguration key="background">
-                            <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </backgroundConfiguration>
-                        <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </buttonConfiguration>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfL-gv-Etp">
-                    <rect key="frame" x="96" y="423" width="222.5" height="31"/>
-                    <attributedString key="attributedText">
-                        <fragment>
-                            <string key="content">아직 이별의 상처가 아물지 못했군요.
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYl-rN-frw">
+                    <rect key="frame" x="64.5" y="330.5" width="285" height="235"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5w-pO-5V0">
+                            <rect key="frame" x="78.5" y="-58" width="128" height="116"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="128" id="Xsq-cj-pZp"/>
+                                <constraint firstAttribute="height" constant="116" id="ywv-Ue-zXb"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <backgroundConfiguration key="background" image="checklistUnder"/>
+                            </buttonConfiguration>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDg-NT-fNr">
+                            <rect key="frame" x="74.5" y="78" width="136" height="20"/>
+                            <attributedString key="attributedText">
+                                <fragment content="주간점검 최종결과">
+                                    <attributes>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="18" name="NanumSquareOTFB"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcZ-L9-gKh">
+                            <rect key="frame" x="12" y="118" width="261" height="39"/>
+                            <attributedString key="attributedText">
+                                <fragment>
+                                    <string key="content">아직 이별의 상처가 아물지 못했군요.
 굿데이와 함께 이어서 극복해 나아가요!</string>
-                            <attributes>
-                                <font key="NSFont" size="14" name="NanumSquareOTFB"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
-                    <nil key="highlightedColor"/>
-                </label>
+                                    <attributes>
+                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="14" name="NanumSquareOTFR"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlY-Kd-ko8">
+                            <rect key="frame" x="0.0" y="180" width="285" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="NcV-oc-nyp"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="확인" titleAlignment="center">
+                                <backgroundConfiguration key="background" cornerRadius="20">
+                                    <color key="backgroundColor" red="0.0" green="0.08235294118" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </backgroundConfiguration>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="tapStartButton:" destination="-1" eventType="touchUpInside" id="Vrm-u5-hLm"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="285" id="2rR-Wc-jB8"/>
+                        <constraint firstItem="dcZ-L9-gKh" firstAttribute="top" secondItem="VDg-NT-fNr" secondAttribute="bottom" constant="20" id="CnA-2f-srh"/>
+                        <constraint firstItem="a5w-pO-5V0" firstAttribute="centerY" secondItem="ZYl-rN-frw" secondAttribute="top" id="E06-as-BXJ"/>
+                        <constraint firstAttribute="trailing" secondItem="AlY-Kd-ko8" secondAttribute="trailing" id="Gpb-L9-dVo"/>
+                        <constraint firstItem="a5w-pO-5V0" firstAttribute="centerX" secondItem="ZYl-rN-frw" secondAttribute="centerX" id="Mam-NV-hgv"/>
+                        <constraint firstAttribute="trailing" secondItem="dcZ-L9-gKh" secondAttribute="trailing" constant="12" id="NwN-J2-hoT"/>
+                        <constraint firstItem="VDg-NT-fNr" firstAttribute="centerX" secondItem="ZYl-rN-frw" secondAttribute="centerX" id="SBC-DE-0js"/>
+                        <constraint firstItem="VDg-NT-fNr" firstAttribute="top" secondItem="a5w-pO-5V0" secondAttribute="bottom" constant="20" id="bBc-8e-noy"/>
+                        <constraint firstAttribute="bottom" secondItem="AlY-Kd-ko8" secondAttribute="bottom" id="bhw-es-Koq"/>
+                        <constraint firstItem="dcZ-L9-gKh" firstAttribute="centerX" secondItem="ZYl-rN-frw" secondAttribute="centerX" id="cAR-ZJ-bJW"/>
+                        <constraint firstAttribute="height" constant="235" id="f2e-Qx-mXi"/>
+                        <constraint firstItem="AlY-Kd-ko8" firstAttribute="leading" secondItem="ZYl-rN-frw" secondAttribute="leading" id="geU-18-w2O"/>
+                        <constraint firstItem="dcZ-L9-gKh" firstAttribute="leading" secondItem="ZYl-rN-frw" secondAttribute="leading" constant="12" id="lxF-0v-qyf"/>
+                    </constraints>
+                </view>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <constraints>
-                <constraint firstItem="I8e-aY-zDi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DXt-ZG-C9Q"/>
-                <constraint firstAttribute="trailing" secondItem="cZq-aX-1c0" secondAttribute="trailing" id="EE6-Zj-EaP"/>
-                <constraint firstAttribute="bottom" secondItem="cZq-aX-1c0" secondAttribute="bottom" id="Er8-ag-4DW"/>
-                <constraint firstItem="cZq-aX-1c0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FMD-V3-Ei4"/>
-                <constraint firstItem="juY-Ql-EeB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Gdu-ow-m8M"/>
-                <constraint firstItem="juY-Ql-EeB" firstAttribute="top" secondItem="JfL-gv-Etp" secondAttribute="bottom" constant="18" id="H0I-vB-vUf"/>
-                <constraint firstItem="I8e-aY-zDi" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="303" id="PsR-v1-Vlv"/>
-                <constraint firstItem="cZq-aX-1c0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Q4V-k9-jE0"/>
-                <constraint firstItem="uiP-TM-4GE" firstAttribute="top" secondItem="I8e-aY-zDi" secondAttribute="top" constant="36" id="dUD-Ak-96X"/>
-                <constraint firstItem="JfL-gv-Etp" firstAttribute="top" secondItem="uiP-TM-4GE" secondAttribute="bottom" constant="20" id="eM8-2s-CzX"/>
-                <constraint firstItem="JfL-gv-Etp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tip-Hu-5hy"/>
-                <constraint firstItem="uiP-TM-4GE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ztq-bv-Cke"/>
+                <constraint firstAttribute="bottom" secondItem="TeN-Pg-Sbf" secondAttribute="bottom" id="8MS-Lc-zhO"/>
+                <constraint firstItem="TeN-Pg-Sbf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Fax-m9-rG2"/>
+                <constraint firstItem="ZYl-rN-frw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="RkR-40-z0b"/>
+                <constraint firstItem="TeN-Pg-Sbf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZeW-mX-EG0"/>
+                <constraint firstAttribute="trailing" secondItem="TeN-Pg-Sbf" secondAttribute="trailing" id="q9j-an-rpJ"/>
+                <constraint firstItem="ZYl-rN-frw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="saq-Fz-d9P"/>
             </constraints>
-            <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
+            <point key="canvasLocation" x="351" y="99"/>
         </view>
     </objects>
     <resources>
-        <image name="message" width="512" height="538"/>
+        <image name="checklistUnder" width="512" height="464"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
