@@ -14,6 +14,7 @@ class GDMissionData {
     let db = Firestore.firestore()
     
     static let shared = GDMissionData()
+    var missionPerDayData: MissionPerDay?
 
     private init() {}
     

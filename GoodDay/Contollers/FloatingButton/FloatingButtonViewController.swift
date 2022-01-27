@@ -211,7 +211,6 @@ class FloatingButtonViewController: UIViewController {
         
     }
     
-    
     @IBAction func tapMissionButton(_ sender: UIButton) {
         let presentView = presentingViewController
         
@@ -223,8 +222,6 @@ class FloatingButtonViewController: UIViewController {
 
             presentView?.present(GDMissionPerDayDetailVC, animated: true, completion: nil)
         }
-        
-        
     }
     
     @IBAction func tapDiaryButton(_ sender: UIButton) {

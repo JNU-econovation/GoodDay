@@ -197,7 +197,7 @@ class TimeSettingViewController: UIViewController {
         
         do {
             try db.collection("users").document(self.userUid).setData(from: user)
-            db.collection("missionPerDay").document(self.userUid).setData(["weeks": [["days":[["id": 1, "isSuccess": 0,"missionId": 0]], "id": 1]]])
+            db.collection("missionPerDay").document(self.userUid).setData(["weeks": [["days":[["id": 1, "isSuccess": 0,"missionId": Int.random(in: 0..<44)]], "id": 1]]])
         } catch let error {
             print("Error writing user to Firestore: \(error)")
         }

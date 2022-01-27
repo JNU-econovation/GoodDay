@@ -29,7 +29,6 @@ class WeeklyCheckPopUpViewController: UIViewController {
     }
     
     func initializeWeeklyCheckPopUpViews() {
-        
         let beginDate = UserDefaults.standard.object(forKey: "beginDay") as! Date
         let curDay = Calendar.current.dateComponents([.day], from: beginDate, to: Date()).day! + 1
 
@@ -75,6 +74,7 @@ class WeeklyCheckPopUpViewController: UIViewController {
     }
     
     @IBAction func tapCloseButton(_ sender: UIButton) {
+        UserDefaults.standard.set(false, forKey: "isDoneChecklist")
         self.dismiss(animated: true, completion: nil)
     }
 

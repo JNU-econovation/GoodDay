@@ -28,11 +28,14 @@ class GDMissionPerDayDetailViewController: UIViewController, ProtocolData {
     @IBAction func onTapButton(_ sender: AnyObject) {
         let button = sender as! UIButton
         if button.tag == 20 {
-            if missionIndex != (mission?.count ?? 0) - 1 {
-                missionIndex += 1
-            } else {
-                missionIndex = 0
+            let curIndex = missionIndex
+        
+            missionIndex = Int.random(in: 0..<(mission?.count ?? 1))
+
+            while(missionIndex == curIndex) {
+                missionIndex = Int.random(in: 0..<(mission?.count ?? 1))
             }
+            
             print("update index \(missionIndex)")
             detailView.subviews.forEach{$0.removeFromSuperview()}
             detailView = makeDetails(detailView: detailView)
@@ -52,6 +55,8 @@ class GDMissionPerDayDetailViewController: UIViewController, ProtocolData {
     }
     
     @IBAction func onTapBackButton(_ sender: UIButton) {
+        model?.missionPerDayData = missionPerDayData
+        
         sender.showAnimation {
             let notificationName = Notification.Name("sendBoolData")
             
@@ -107,63 +112,50 @@ class GDMissionPerDayDetailViewController: UIViewController, ProtocolData {
         super.viewDidLoad()
         model = GDMissionData.shared
         mission = model?.getMissionData()
+        docRef = GDMissionData.shared.db.collection("missionPerDay").document((UserDefaults.standard.string(forKey: "userUid"))!)
                 
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
-
+        
         behavior = MSCollectionViewPeekingBehavior(cellPeekWidth: screenSizeWidth * 0.119)
         
         // content height
         contentViewHeight = contentView.frame.height
         
-        docRef = model?.db.collection("missionPerDay").document((UserDefaults.standard.string(forKey: "userUid"))!)
-        docRef?.getDocument { [self] (document, error) in
-            //print(UserDefaults.standard.string(forKey: "mbti"))
-            if let document = document, document.exists {
-                let data = document.data()
-                do {
-                    let json = try JSONSerialization.data(withJSONObject: data!, options: [])
-                    self.missionPerDayData = try JSONDecoder().decode(MissionPerDay.self, from: json)
-                                        
-                    let beginDate = UserDefaults.standard.object(forKey: "beginDay") as! Date
-                    let curDay = Calendar.current.dateComponents([.day], from: beginDate, to: Date()).day! + 1
-
-                    if curDay != (missionPerDayData?.weeks[(curWeek ?? 1) - 1].days.count) ?? -1 {
-                        for i in 1...(curDay + 1) {
-                            if i % 7 != 0 {
-                                let tmpDayId = i % 7
-                                let tmpWeekId = Int(i / 7) + 1
-                                
-                                if missionPerDayData!.weeks.count < tmpWeekId {
-                                    missionPerDayData!.weeks.append(MissionWeek.init(id: tmpWeekId, days: []))
-                                }
-
-                                if missionPerDayData!.weeks[tmpWeekId - 1].days.count < tmpDayId {
-                                    missionPerDayData!.weeks[tmpWeekId - 1].days.append(MissionDay.init(id: tmpDayId, missionId: Int.random(in: 0..<(mission?.count ?? 1)), isSuccess: 0))
-                                }
-                                
-                                docRef?.setData(try missionPerDayData!.toDictionary()!)
-                            }
-                        }
+        let beginDate = UserDefaults.standard.object(forKey: "beginDay") as! Date
+        curDay = Calendar.current.dateComponents([.day], from: beginDate, to: Date()).day! + 1
+        
+        missionPerDayData = model?.missionPerDayData!
+        
+        if curDay != (missionPerDayData?.weeks[(curWeek ?? 1) - 1].days.count) ?? -1 {
+            for i in 1...(curDay + 1) {
+                if i % 7 != 0 {
+                    let tmpDayId = i % 7
+                    let tmpWeekId = Int(i / 7) + 1
+                    
+                    if missionPerDayData!.weeks.count < tmpWeekId {
+                        missionPerDayData!.weeks.append(MissionWeek.init(id: tmpWeekId, days: []))
                     }
-                    
-                    curWeek = missionPerDayData?.weeks.count
 
-                    // add components
-                    collectionView = self.getPeekingCollectionView(screenSizeWidth: screenSizeWidth, contentViewHeight: contentViewHeight, collectionView: collectionView)
-                    contentView.addSubview(self.getCollectionViewBackgroundImage(collectionView: collectionView))
-                    contentView.addSubview(collectionView)
-                    contentView.addSubview(self.getDetailView(screenSizeWidth: screenSizeWidth, contentViewHeight: contentViewHeight))
-                    
-                    contentView.addSubview(self.getweekButton(text: "WEEK \(String(describing: curWeek!))",originButton: weekButton))
-                } catch {
-                    print("getMissionPerDay(): error")
-                    // 안되면 초기화
-                    // docRef?.updateData(["weeks": [["id": 1, "days": [["id": 1,"isSuccess": 0, "missionId": 0]]]]])
+                    if missionPerDayData!.weeks[tmpWeekId - 1].days.count < tmpDayId {
+                        missionPerDayData!.weeks[tmpWeekId - 1].days.append(MissionDay.init(id: tmpDayId, missionId: Int.random(in: 0..<(mission?.count ?? 1)), isSuccess: 0))
+                    }
+                    do {
+                        model?.missionPerDayData = missionPerDayData
+                        docRef?.setData(try missionPerDayData!.toDictionary()!)
+                    } catch {}
                 }
-            } else {
-                print("Document does not exist")
             }
         }
+        
+        curWeek = missionPerDayData?.weeks.count
+
+        // add components
+        collectionView = self.getPeekingCollectionView(screenSizeWidth: screenSizeWidth, contentViewHeight: contentViewHeight, collectionView: collectionView)
+        contentView.addSubview(self.getCollectionViewBackgroundImage(collectionView: collectionView))
+        contentView.addSubview(collectionView)
+        contentView.addSubview(self.getDetailView(screenSizeWidth: screenSizeWidth, contentViewHeight: contentViewHeight))
+        
+        contentView.addSubview(self.getweekButton(text: "WEEK \(String(describing: curWeek!))",originButton: weekButton))
                 
         backButton.addTarget(self, action: #selector(onTapBackButton(_:)), for: .touchUpInside)
     }

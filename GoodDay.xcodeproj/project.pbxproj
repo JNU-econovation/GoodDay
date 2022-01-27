@@ -15,6 +15,12 @@
 		033D218D279FE199005CA90F /* GDChecklistView2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D2189279FE198005CA90F /* GDChecklistView2Controller.swift */; };
 		033D218E279FE199005CA90F /* GDChecklistView3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D218A279FE198005CA90F /* GDChecklistView3Controller.swift */; };
 		033D218F279FE199005CA90F /* GDChecklistView1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D218B279FE198005CA90F /* GDChecklistView1Controller.swift */; };
+		033D219127A00BD9005CA90F /* GDChecklistResultUnder90.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033D219027A00BD9005CA90F /* GDChecklistResultUnder90.xib */; };
+		033D219427A0EF1D005CA90F /* GDChecklistUnder90ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D219327A0EF1D005CA90F /* GDChecklistUnder90ViewController.swift */; };
+		033D219627A0EF39005CA90F /* GDChecklistOver90ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D219527A0EF39005CA90F /* GDChecklistOver90ViewController.swift */; };
+		033D219827A0F1BD005CA90F /* GDCeremony.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D219727A0F1BD005CA90F /* GDCeremony.swift */; };
+		033D219A27A0F202005CA90F /* GDCeremony.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033D219927A0F202005CA90F /* GDCeremony.xib */; };
+		033D219D27A12480005CA90F /* GDChecklistResultOver90.xib in Resources */ = {isa = PBXBuildFile; fileRef = 033D219227A0EDBE005CA90F /* GDChecklistResultOver90.xib */; };
 		035591EF278C188900BD0417 /* missionContent.json in Resources */ = {isa = PBXBuildFile; fileRef = 035591EE278C188800BD0417 /* missionContent.json */; };
 		035591F1278C614100BD0417 /* GDMissionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035591F0278C614100BD0417 /* GDMissionData.swift */; };
 		1BDC4393ADCFBC9BD88D83E8 /* Pods_GoodDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */; };
@@ -86,6 +92,12 @@
 		033D2189279FE198005CA90F /* GDChecklistView2Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDChecklistView2Controller.swift; sourceTree = "<group>"; };
 		033D218A279FE198005CA90F /* GDChecklistView3Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDChecklistView3Controller.swift; sourceTree = "<group>"; };
 		033D218B279FE198005CA90F /* GDChecklistView1Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDChecklistView1Controller.swift; sourceTree = "<group>"; };
+		033D219027A00BD9005CA90F /* GDChecklistResultUnder90.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDChecklistResultUnder90.xib; sourceTree = "<group>"; };
+		033D219227A0EDBE005CA90F /* GDChecklistResultOver90.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDChecklistResultOver90.xib; sourceTree = "<group>"; };
+		033D219327A0EF1D005CA90F /* GDChecklistUnder90ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDChecklistUnder90ViewController.swift; sourceTree = "<group>"; };
+		033D219527A0EF39005CA90F /* GDChecklistOver90ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDChecklistOver90ViewController.swift; sourceTree = "<group>"; };
+		033D219727A0F1BD005CA90F /* GDCeremony.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCeremony.swift; sourceTree = "<group>"; };
+		033D219927A0F202005CA90F /* GDCeremony.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GDCeremony.xib; sourceTree = "<group>"; };
 		035591EE278C188800BD0417 /* missionContent.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = missionContent.json; sourceTree = "<group>"; };
 		035591F0278C614100BD0417 /* GDMissionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDMissionData.swift; sourceTree = "<group>"; };
 		3239BC98277D8E5200E96E21 /* GoodDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +179,7 @@
 		032AEF8B2796FB3F00B6C197 /* Contollers */ = {
 			isa = PBXGroup;
 			children = (
+				F0FDB0792796967D00BDF962 /* GDDiary */,
 				033D217D279FE04A005CA90F /* GDChecklist */,
 				32F2436427833BC900F1D160 /* GDMissionPerDayWeek */,
 				F0E1A983277EDE2400DD286E /* GDInitialSetting */,
@@ -184,8 +197,35 @@
 				033D2189279FE198005CA90F /* GDChecklistView2Controller.swift */,
 				033D218A279FE198005CA90F /* GDChecklistView3Controller.swift */,
 				033D2188279FE198005CA90F /* GDChecklistView4Controller.swift */,
+				033D219527A0EF39005CA90F /* GDChecklistOver90ViewController.swift */,
+				033D219327A0EF1D005CA90F /* GDChecklistUnder90ViewController.swift */,
+				033D219727A0F1BD005CA90F /* GDCeremony.swift */,
 			);
 			path = GDChecklist;
+			sourceTree = "<group>";
+		};
+		033D219B27A11A2F005CA90F /* GDChecklist */ = {
+			isa = PBXGroup;
+			children = (
+				F077CD9B279E7C3900254D61 /* WeeklyCheckPopUpViewController.xib */,
+				0336D284279E3B9C0018BF9E /* GDChecklist1.xib */,
+				0336D286279E425B0018BF9E /* GDChecklist2.xib */,
+				0336D287279E425C0018BF9E /* GDChecklist3.xib */,
+				0336D288279E43990018BF9E /* GDChecklist4.xib */,
+				033D219227A0EDBE005CA90F /* GDChecklistResultOver90.xib */,
+				033D219027A00BD9005CA90F /* GDChecklistResultUnder90.xib */,
+				033D219927A0F202005CA90F /* GDCeremony.xib */,
+			);
+			path = GDChecklist;
+			sourceTree = "<group>";
+		};
+		033D219C27A11A4E005CA90F /* GDMissionPerDay */ = {
+			isa = PBXGroup;
+			children = (
+				32F2438E2783E4D200F1D160 /* GDMissionPerDayDetail.xib */,
+				32F24390278464B600F1D160 /* GDMissionPerDayWeeks.xib */,
+			);
+			path = GDMissionPerDay;
 			sourceTree = "<group>";
 		};
 		3239BC8F277D8E5200E96E21 = {
@@ -211,7 +251,6 @@
 			isa = PBXGroup;
 			children = (
 				F05A8C6C279D248B00EAE250 /* GDMyPage */,
-				F0FDB0792796967D00BDF962 /* GDDiary */,
 				F0794E9B2793F47F00EC55B8 /* Model */,
 				32F2438C2783D47A00F1D160 /* Assets.xcassets */,
 				032AEF8B2796FB3F00B6C197 /* Contollers */,
@@ -346,11 +385,8 @@
 		F0FA07A92782D0F7003FD717 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F077CD9B279E7C3900254D61 /* WeeklyCheckPopUpViewController.xib */,
-				0336D284279E3B9C0018BF9E /* GDChecklist1.xib */,
-				0336D286279E425B0018BF9E /* GDChecklist2.xib */,
-				0336D287279E425C0018BF9E /* GDChecklist3.xib */,
-				0336D288279E43990018BF9E /* GDChecklist4.xib */,
+				033D219C27A11A4E005CA90F /* GDMissionPerDay */,
+				033D219B27A11A2F005CA90F /* GDChecklist */,
 				F07E9D0B27819E2E00C7C6B4 /* FloatingButtonViewController.xib */,
 				F0E1A985277EDE4B00DD286E /* NameSettingViewController.xib */,
 				F0E1A989277EE1EF00DD286E /* WelcomeViewController.xib */,
@@ -359,8 +395,6 @@
 				F0FDB07B279696E300BDF962 /* DiaryCalendarViewController.xib */,
 				F0FDB07F2796987900BDF962 /* DiaryDetailViewController.xib */,
 				3239BCA9277D8E5400E96E21 /* LaunchScreen.storyboard */,
-				32F2438E2783E4D200F1D160 /* GDMissionPerDayDetail.xib */,
-				32F24390278464B600F1D160 /* GDMissionPerDayWeeks.xib */,
 				F068BDB52782DCEF001035B6 /* Main.storyboard */,
 			);
 			path = Views;
@@ -463,11 +497,14 @@
 				32F2437C27833BC900F1D160 /* NanumSquareB.otf in Resources */,
 				32F2438027833BC900F1D160 /* NotoSansKR-Regular.otf in Resources */,
 				F0FDB07D279696E300BDF962 /* DiaryCalendarViewController.xib in Resources */,
+				033D219D27A12480005CA90F /* GDChecklistResultOver90.xib in Resources */,
+				033D219A27A0F202005CA90F /* GDCeremony.xib in Resources */,
 				F077CD9D279E7C3900254D61 /* WeeklyCheckPopUpViewController.xib in Resources */,
 				035591EF278C188900BD0417 /* missionContent.json in Resources */,
 				033D2173279FCD65005CA90F /* GDChecklist3.xib in Resources */,
 				32F2437E27833BC900F1D160 /* NotoSansKR-Black.otf in Resources */,
 				32F2437A27833BC900F1D160 /* NotoSansKR-Thin.otf in Resources */,
+				033D219127A00BD9005CA90F /* GDChecklistResultUnder90.xib in Resources */,
 				F0FDB0812796987900BDF962 /* DiaryDetailViewController.xib in Resources */,
 				033D2174279FCD68005CA90F /* GDChecklist4.xib in Resources */,
 				32F2436F27833BC900F1D160 /* NanumGothicBold.otf in Resources */,
@@ -541,6 +578,7 @@
 				F05A8C6F279D24A600EAE250 /* MyPageViewController.swift in Sources */,
 				32F2436C27833BC900F1D160 /* GDMissionPerDayDetailViewController.swift in Sources */,
 				033D218C279FE199005CA90F /* GDChecklistView4Controller.swift in Sources */,
+				033D219827A0F1BD005CA90F /* GDCeremony.swift in Sources */,
 				F0794E9D2793F49400EC55B8 /* User.swift in Sources */,
 				F0FDB0802796987900BDF962 /* DiaryDetailViewController.swift in Sources */,
 				32F2438427833BC900F1D160 /* FontUtils.swift in Sources */,
@@ -552,7 +590,9 @@
 				3239BC9E277D8E5200E96E21 /* SceneDelegate.swift in Sources */,
 				F0E1A992277EE70400DD286E /* TimeSettingViewController.swift in Sources */,
 				F07E9D0C27819E2E00C7C6B4 /* FloatingButtonViewController.swift in Sources */,
+				033D219427A0EF1D005CA90F /* GDChecklistUnder90ViewController.swift in Sources */,
 				3239BCA6277D8E5200E96E21 /* GoodDay.xcdatamodeld in Sources */,
+				033D219627A0EF39005CA90F /* GDChecklistOver90ViewController.swift in Sources */,
 				32F2438227833BC900F1D160 /* GDMissionButton.swift in Sources */,
 				033D218E279FE199005CA90F /* GDChecklistView3Controller.swift in Sources */,
 				035591F1278C614100BD0417 /* GDMissionData.swift in Sources */,

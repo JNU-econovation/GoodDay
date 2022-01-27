@@ -17,7 +17,7 @@
                 <outlet property="popUpView" destination="ZYl-rN-frw" id="E3z-cT-OEI"/>
                 <outlet property="startButton" destination="AlY-Kd-ko8" id="deM-SQ-BeP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="weeklyCheckContainerView" destination="i5M-Pr-FkT" id="tyM-Pj-dmG"/>
+                <outlet property="weeklyCheckContainerView" destination="TeN-Pg-Sbf" id="d4X-gN-QIh"/>
                 <outlet property="weeklyCheckLabel" destination="xXM-Y0-YYN" id="HMi-Ui-bOX"/>
             </connections>
         </placeholder>
@@ -26,6 +26,10 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TeN-Pg-Sbf">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYl-rN-frw">
                     <rect key="frame" x="64.5" y="320.5" width="285" height="255"/>
                     <subviews>
@@ -129,7 +133,11 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="TeN-Pg-Sbf" secondAttribute="bottom" id="8MS-Lc-zhO"/>
+                <constraint firstItem="TeN-Pg-Sbf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Fax-m9-rG2"/>
                 <constraint firstItem="ZYl-rN-frw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="RkR-40-z0b"/>
+                <constraint firstItem="TeN-Pg-Sbf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ZeW-mX-EG0"/>
+                <constraint firstAttribute="trailing" secondItem="TeN-Pg-Sbf" secondAttribute="trailing" id="q9j-an-rpJ"/>
                 <constraint firstItem="ZYl-rN-frw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="saq-Fz-d9P"/>
             </constraints>
             <point key="canvasLocation" x="351" y="99"/>
