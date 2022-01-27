@@ -24,7 +24,9 @@ extension GDMissionPerDayDetailViewController {
         detailView.addSubview(toDayMissionBackgroundImage(text: mission?[missionIndex].content ?? "", gap: labelsGap))
         detailView.addSubview(toDayMissionLabel(text: mission?[missionIndex].content ?? "", gap: labelsGap))
         detailView.addSubview(toDayMissionSubLabel(text: mission?[missionIndex].detail ?? "", gap: labelsGap))
-        detailView.addSubview(changingMissionButton(gap: labelsGap))
+        if missionPerDayData!.weeks[curWeek! - 1].days[curDay - 1].isSuccess != 1 {
+            detailView.addSubview(changingMissionButton(gap: labelsGap))
+        }
 
         return detailView
     }

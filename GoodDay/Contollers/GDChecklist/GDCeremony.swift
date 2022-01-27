@@ -6,10 +6,15 @@
 //
 
 import UIKit
+import Lottie
 
 class GDCeremony: UIViewController {
     
+    let animationView = AnimationView(name: "Ceremony")
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
     }
 }

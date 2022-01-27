@@ -65,6 +65,10 @@ extension GDMissionPerDayDetailViewController: UICollectionViewDataSource{
     // 버튼 뗄때
     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) {
+            detailView.subviews.forEach{$0.removeFromSuperview()}
+            detailView = makeDetails(detailView: detailView)
+            detailView.setNeedsDisplay()
+            detailView.layoutIfNeeded()
             let innerLabel = getInnerCircleLabel(cell: cell)
             let visualEffectView = getBlurEffectView(style: .regular)
             let blurEffectView = getBlurEffetCircleView(innerLabel: innerLabel)
