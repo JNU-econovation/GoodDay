@@ -41,13 +41,13 @@
                     </buttonConfiguration>
                 </button>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="wD2-EE-rdX">
-                    <rect key="frame" x="37" y="291" width="340" height="31"/>
+                    <rect key="frame" x="37" y="295" width="340" height="31"/>
                     <color key="minimumTrackTintColor" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                     <color key="maximumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <color key="thumbTintColor" red="0.81176470588235294" green="0.81176470588235294" blue="1" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                 </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cmi-Uh-aiK">
-                    <rect key="frame" x="39" y="387" width="215" height="53.5"/>
+                    <rect key="frame" x="39" y="391" width="207" height="56"/>
                     <string key="text">나는 매일 매일에 대해
 더감사하게 되었다.</string>
                     <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="24"/>
@@ -55,7 +55,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANe-Lg-5tS">
-                    <rect key="frame" x="39" y="588.5" width="258.5" height="53.5"/>
+                    <rect key="frame" x="39" y="595" width="248.5" height="56"/>
                     <string key="text">나는 어려움을 극복할 수
 있다는확신을 갖게 되었다.</string>
                     <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="24"/>
@@ -63,7 +63,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="unN-rL-gOr">
-                    <rect key="frame" x="37" y="692" width="340" height="31"/>
+                    <rect key="frame" x="37" y="701" width="340" height="31"/>
                     <color key="minimumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <color key="maximumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <color key="thumbTintColor" red="0.81176470590000005" green="0.81176470590000005" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
@@ -80,20 +80,20 @@
                         <attributedString key="attributedTitle">
                             <fragment content="다음">
                                 <attributes>
-                                    <font key="NSFont" size="18" name="NanumSquareOTFB"/>
+                                    <font key="NSFont" metaFont="system" size="18"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
                     </buttonConfiguration>
                 </button>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="mXy-2v-gDn">
-                    <rect key="frame" x="37" y="492.5" width="340" height="31"/>
+                    <rect key="frame" x="37" y="499" width="340" height="31"/>
                     <color key="minimumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <color key="maximumTrackTintColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                     <color key="thumbTintColor" red="0.81176470590000005" green="0.81176470590000005" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                 </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOt-9w-cAv">
-                    <rect key="frame" x="39" y="161" width="209" height="80"/>
+                    <rect key="frame" x="39" y="161" width="200.5" height="84"/>
                     <string key="text">나는 생각했던 것보다
 내 자신이 강하다는
 것을 알게 되었다.</string>

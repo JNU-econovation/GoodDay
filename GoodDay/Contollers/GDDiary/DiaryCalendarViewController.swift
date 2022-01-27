@@ -11,37 +11,26 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 class DiaryCalendarViewController: UIViewController {
-
-    
     let unRegisteredDiaryView: UnRegisteredDiaryView = {
-        
         let view = UnRegisteredDiaryView()
         view.backgroundColor = .white
         view.layer.cornerRadius = 38
         view.layer.shadowOffset = CGSize(width: 0, height: 0)
         view.layer.shadowOpacity = 0.25
-        
-        
         view.translatesAutoresizingMaskIntoConstraints = false
-        
         return view
     }()
     
     let registeredDiaryView: RegisteredDiaryView = {
-        
         let view = RegisteredDiaryView()
         view.backgroundColor = .white
         view.layer.cornerRadius = 38
         view.layer.shadowOffset = CGSize(width: 0, height: 0)
         view.layer.shadowOpacity = 0.25
-        
         view.translatesAutoresizingMaskIntoConstraints = false
-        
         return view
-        
     }()
     let calendarView: FSCalendar = {
-        
         let calendar = FSCalendar()
         calendar.appearance.headerTitleColor = .black
         calendar.appearance.weekdayTextColor = UIColor(rgb: 0x8A8A8A)
@@ -50,11 +39,8 @@ class DiaryCalendarViewController: UIViewController {
         calendar.appearance.headerDateFormat = "MMMM  yyyy"
         calendar.locale = Locale(identifier: "en_US")
         calendar.appearance.headerMinimumDissolvedAlpha = 0
-        
-        
         calendar.appearance.titleFont = UIFont.systemFont(ofSize: 15, weight: .regular)
         calendar.appearance.headerTitleFont = UIFont.systemFont(ofSize: 20, weight: .medium)
-        
         calendar.appearance.titleTodayColor = UIColor(rgb: 0x0015FF)
         calendar.appearance.todayColor = .white
         calendar.appearance.selectionColor = UIColor(rgb: 0x0015FF)
@@ -63,12 +49,8 @@ class DiaryCalendarViewController: UIViewController {
         calendar.appearance.borderRadius = 1
         calendar.appearance.eventOffset = .init(x: -0.3, y: -11)
         calendar.appearance.headerTitleOffset = .init(x: -75, y: -10)
-        
         calendar.appearance.headerTitleAlignment = .left
         calendar.translatesAutoresizingMaskIntoConstraints = false
-        
-        
-        
         return calendar
     }()
     let dateFormatter: DateFormatter = {
@@ -76,7 +58,6 @@ class DiaryCalendarViewController: UIViewController {
         formatter.dateFormat = "yyyy.MM.dd"
         formatter.locale = Locale(identifier: "ko_KR")
         return formatter
-        
     }()
     let todayDate = Date()
     let db = Firestore.firestore()
@@ -93,20 +74,8 @@ class DiaryCalendarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureCalendarViewLayout()
         fetchDiaryData()
-//        configureTodayDate()
-//        configureDiaryView()
-        
-        
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -140,7 +109,6 @@ class DiaryCalendarViewController: UIViewController {
     func validateIsRegisteredDiary(date: String){
         // 매개변수로 받은 date에 일기가 등록되어 있으면 isRegistered = true
         // 등록되어 있지 않으면 isRegistered = false
-        
         if registeredDiaryDateList.contains(date) {
             self.isRegisteredDiary = true
         }else {
@@ -162,27 +130,19 @@ class DiaryCalendarViewController: UIViewController {
             registeredDiaryView.isHidden = false
             unRegisteredDiaryView.isHidden = true
         }
-        
     }
     
     private func setUpUnregisteredDiaryView(){
-        
         unRegisteredDiaryView.registerButton.addTarget(self, action: #selector(tapRegisterButton), for: .touchUpInside)
         
         self.view.addSubview(unRegisteredDiaryView)
         NSLayoutConstraint.activate([
-            
             unRegisteredDiaryView.widthAnchor.constraint(equalToConstant: 390),
             unRegisteredDiaryView.heightAnchor.constraint(equalToConstant: 250),
             unRegisteredDiaryView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0),
             unRegisteredDiaryView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0),
             unRegisteredDiaryView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0)
-            
-            
         ])
-        
-        
-        
     }
     
     @objc private func tapRegisterButton(){
@@ -194,79 +154,48 @@ class DiaryCalendarViewController: UIViewController {
         diaryDetailVC.modalTransitionStyle = .crossDissolve
         diaryDetailVC.modalPresentationStyle = .overFullScreen
         self.present(diaryDetailVC, animated: true, completion: nil)
-        
-        
     }
-    
-    
-    
+
     private func setUpRegisteredDiaryView() {
-        
         self.registeredDiaryView.seeMoreButton.addTarget(self, action: #selector(tapSeeMoreButton), for: .touchUpInside)
-        
         self.view.addSubview(registeredDiaryView)
         
         NSLayoutConstraint.activate([
-            
             registeredDiaryView.widthAnchor.constraint(equalToConstant: 390),
             registeredDiaryView.heightAnchor.constraint(equalToConstant: 300),
             registeredDiaryView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0),
             registeredDiaryView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0),
             registeredDiaryView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0)
-            
-            
         ])
-        
     }
+    
     @objc private func tapSeeMoreButton(){
         let diaryDetailVC = DiaryDetailViewController(nibName: "DiaryDetailViewController", bundle: nil)
-        
-        
         guard let date = self.registeredDiaryView.dateLabel.text else { return }
-        
         guard let title = self.registeredDiaryView.diaryTitleLabel.text else { return }
-        
         guard let contents = self.registeredDiaryView.diaryContentLabel.text else { return }
         
         diaryDetailVC.diaryDate = date
         diaryDetailVC.diaryTitleStr = title
         diaryDetailVC.diaryContentsStr = contents
-        
-        
         diaryDetailVC.delegate = self
         diaryDetailVC.diaryEditorMode = .edit
         diaryDetailVC.diaryDate = self.registeredDiaryView.dateLabel.text
         diaryDetailVC.modalTransitionStyle = .crossDissolve
         diaryDetailVC.modalPresentationStyle = .overFullScreen
         self.present(diaryDetailVC, animated: true, completion: nil)
-        
-        
-        
     }
-    
     
     @IBAction func tapBackButton(_ sender: UIButton) {
-        
-        
         sender.showAnimation {
             let notificationName = Notification.Name("sendBoolData")
-            
             let boolDic = ["isShowFloating" : false]
-            
             NotificationCenter.default.post(name: notificationName, object: nil, userInfo: boolDic)
-            
-            
-            
-            
             self.dismiss(animated: true, completion: nil)
         }
-       
-        
-        
     }
+    
     func fetchDiaryData() {
-//        self.diaryList = [Diary]()
-//        self.registeredDiaryDateList = [String]()
         self.db.collection("diarys").document(self.userUid!).getDocument { (document, error) in
             if let document = document {
                 
@@ -286,10 +215,7 @@ class DiaryCalendarViewController: UIViewController {
                         self.diaryList.append(diary)
                         self.registeredDiaryDateList.append(date)
                         self.calendarView.reloadData()
-                        
                     }
-                    
-                    
                 }
                 self.configureTodayDate()
                 self.configureDiaryView()
@@ -300,28 +226,15 @@ class DiaryCalendarViewController: UIViewController {
                         self.registeredDiaryView.diaryContentLabel.text = diary.contents
                     }
                 }
-                
-                
             }
         }
-        
-        
     }
-    
-
-
-
 }
 
 
 extension DiaryCalendarViewController: FSCalendarDelegate,FSCalendarDataSource{
-    
-
-    
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        
         selectedDateStr = self.dateFormatter.string(from: date)
-        
         validateIsRegisteredDiary(date: selectedDateStr ?? "")
         
         // 선택된 날짜에 일기장이 등록되지 않은 경우
@@ -344,71 +257,34 @@ extension DiaryCalendarViewController: FSCalendarDelegate,FSCalendarDataSource{
             }
             unRegisteredDiaryView.isHidden = true
             registeredDiaryView.isHidden = false
-            
         }
-        
-        
     }
-    
+
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        
-        
-       
         let dateString = dateFormatter.string(from: date)
-        
+
         if registeredDiaryDateList.contains(dateString) {
             return 1
         }
-       
-        
-//        let datesWithEvent = ["2022.01.07"]
-//
-//        let formmater = DateFormatter()
-//        formmater.dateFormat = "yyyy.MM.dd"
-//
-//        let dateString = formmater.string(from: date)
-//
-//        if datesWithEvent.contains(dateString){
-//            return 1
-//        }
-        
-        
         return 0
     }
-    
-    
-    
-    
-    
-    
 }
-
-
-
-
-
-
-
 
 extension DiaryCalendarViewController: DiaryDetailViewControllerDelegate {
     
     // 일기장 추가 후 호출되는 메소드
     func passDiaryData(date: String, title: String, contents: String){
-        
         let diary = Diary(title: title, contents: contents, date: date)
+        var diaryListItem = [Any]()
         
         self.diaryList.append(diary)
         self.registeredDiaryDateList.append(date)
-        
-        var diaryListItem = [Any]()
         
         do {
             let jsonData = try JSONEncoder().encode(diary)
             let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
             diaryListItem.append(jsonObject)
-            
         }catch {
-            
         }
         
         if self.diaryList.count == 1 {
@@ -422,39 +298,32 @@ extension DiaryCalendarViewController: DiaryDetailViewControllerDelegate {
                     print("Docuemnt successfully written!")
                 }
             }
-            
         }else {
             self.db.collection("diarys").document(self.userUid!).updateData([
                 "diaryList": FieldValue.arrayUnion(diaryListItem)
             ])
-            
         }
-        
         registeredDiaryView.dateLabel.text = date
         registeredDiaryView.diaryTitleLabel.text = title
         registeredDiaryView.diaryContentLabel.text = contents
-        
         calendarView.reloadData()
         validateIsRegisteredDiary(date: date)
         configureDiaryView()
-        
-        
-        
     }
     
     // 일기장 수정 후 호출되는 메소드
     func passModifiedDiaryData(date: String, title: String, contents: String) {
-    
+        var diaryListItem = [Any]()
+        let docData: [String: Any] = [
+            "diaryList": diaryListItem
+        ]
+        
         for (indexVal,diary) in diaryList.enumerated() {
             if diary.date == date {
                 diaryList[indexVal].title = title
                 diaryList[indexVal].contents = contents
-                
             }
-            
         }
-        
-        var diaryListItem = [Any]()
         
         for diary in self.diaryList {
             do {
@@ -466,9 +335,6 @@ extension DiaryCalendarViewController: DiaryDetailViewControllerDelegate {
                 
             }
         }
-        let docData: [String: Any] = [
-            "diaryList": diaryListItem
-        ]
         
         self.db.collection("diarys").document(self.userUid!).setData(docData) { err in
             if let err = err {
@@ -484,7 +350,6 @@ extension DiaryCalendarViewController: DiaryDetailViewControllerDelegate {
         
     }
     func deleteDiaryData(date: String) {
-        
         let deletedDiary: Diary
         for (indexVal, dateStr) in registeredDiaryDateList.enumerated() {
             if dateStr == date {
@@ -494,7 +359,6 @@ extension DiaryCalendarViewController: DiaryDetailViewControllerDelegate {
             }
             
         }
-        
         for (indexVal, diary) in diaryList.enumerated() {
             if diary.date == date {
                 
@@ -516,13 +380,10 @@ extension DiaryCalendarViewController: DiaryDetailViewControllerDelegate {
                 break
             }
         }
-        
-        
         validateIsRegisteredDiary(date: date)
         configureDiaryView()
         unRegisteredDiaryView.dateLabel.text = date
         calendarView.reloadData()
-        
     }
 }
 

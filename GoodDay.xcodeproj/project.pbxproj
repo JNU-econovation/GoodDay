@@ -55,6 +55,7 @@
 		32F2438D2783D47A00F1D160 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32F2438C2783D47A00F1D160 /* Assets.xcassets */; };
 		32F2438F2783E4D200F1D160 /* GDMissionPerDayDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32F2438E2783E4D200F1D160 /* GDMissionPerDayDetail.xib */; };
 		32F24391278464B600F1D160 /* GDMissionPerDayWeeks.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32F24390278464B600F1D160 /* GDMissionPerDayWeeks.xib */; };
+		F013DA58279FF019000178D8 /* MyPageEditorMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F013DA57279FF019000178D8 /* MyPageEditorMode.swift */; };
 		F05A8C6F279D24A600EAE250 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05A8C6D279D24A600EAE250 /* MyPageViewController.swift */; };
 		F05A8C70279D24A600EAE250 /* MyPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05A8C6E279D24A600EAE250 /* MyPageViewController.xib */; };
 		F068BDB62782DCEF001035B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F068BDB52782DCEF001035B6 /* Main.storyboard */; };
@@ -136,6 +137,7 @@
 		70FFDD49101AFD677636CEF0 /* Pods_GoodDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6CFE1151A1AB88C5915BAD /* Pods-GoodDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.debug.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.debug.xcconfig"; sourceTree = "<group>"; };
 		C9657BA07B3C0A1266C0F7B6 /* Pods-GoodDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodDay.release.xcconfig"; path = "Target Support Files/Pods-GoodDay/Pods-GoodDay.release.xcconfig"; sourceTree = "<group>"; };
+		F013DA57279FF019000178D8 /* MyPageEditorMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageEditorMode.swift; sourceTree = "<group>"; };
 		F05A8C6D279D24A600EAE250 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		F05A8C6E279D24A600EAE250 /* MyPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageViewController.xib; sourceTree = "<group>"; };
 		F068BDB52782DCEF001035B6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -179,11 +181,12 @@
 		032AEF8B2796FB3F00B6C197 /* Contollers */ = {
 			isa = PBXGroup;
 			children = (
+				F05A8C6C279D248B00EAE250 /* GDMyPage */,
 				F0FDB0792796967D00BDF962 /* GDDiary */,
 				033D217D279FE04A005CA90F /* GDChecklist */,
 				32F2436427833BC900F1D160 /* GDMissionPerDayWeek */,
 				F0E1A983277EDE2400DD286E /* GDInitialSetting */,
-				F07E9D0727819DF000C7C6B4 /* FloatingButton */,
+				F07E9D0727819DF000C7C6B4 /* GDFloatingButton */,
 				32F2434C27833BC900F1D160 /* GDMissionPerDay */,
 			);
 			path = Contollers;
@@ -252,14 +255,14 @@
 			children = (
 				F05A8C6C279D248B00EAE250 /* GDMyPage */,
 				F0794E9B2793F47F00EC55B8 /* Model */,
-				32F2438C2783D47A00F1D160 /* Assets.xcassets */,
+				F0FA07A92782D0F7003FD717 /* Views */,
 				032AEF8B2796FB3F00B6C197 /* Contollers */,
 				32F2435127833BC900F1D160 /* Fonts */,
 				32F2436727833BC900F1D160 /* GDUtils */,
-				F0FA07A92782D0F7003FD717 /* Views */,
 				3239BC9B277D8E5200E96E21 /* AppDelegate.swift */,
 				3239BC9D277D8E5200E96E21 /* SceneDelegate.swift */,
 				3239BC9F277D8E5200E96E21 /* ViewController.swift */,
+				32F2438C2783D47A00F1D160 /* Assets.xcassets */,
 				3239BCAC277D8E5400E96E21 /* Info.plist */,
 				3239BCA4277D8E5200E96E21 /* GoodDay.xcdatamodeld */,
 				F07E9D0E2781A25300C7C6B4 /* 30344-hamburger-close-animation.json */,
@@ -340,7 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				F05A8C6D279D24A600EAE250 /* MyPageViewController.swift */,
-				F05A8C6E279D24A600EAE250 /* MyPageViewController.xib */,
+				F013DA57279FF019000178D8 /* MyPageEditorMode.swift */,
 			);
 			path = GDMyPage;
 			sourceTree = "<group>";
@@ -355,12 +358,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F07E9D0727819DF000C7C6B4 /* FloatingButton */ = {
+		F07E9D0727819DF000C7C6B4 /* GDFloatingButton */ = {
 			isa = PBXGroup;
 			children = (
 				F07E9D0A27819E2E00C7C6B4 /* FloatingButtonViewController.swift */,
 			);
-			path = FloatingButton;
+			path = GDFloatingButton;
 			sourceTree = "<group>";
 		};
 		F09A579C2796F8F500706B96 /* Recovered References */ = {
@@ -376,8 +379,8 @@
 			children = (
 				F0E1A984277EDE4B00DD286E /* NameSettingViewController.swift */,
 				F0E1A988277EE1EF00DD286E /* WelcomeViewController.swift */,
-				F0E1A98C277EE41700DD286E /* MbtiSettingViewController.swift */,
 				F0E1A990277EE70400DD286E /* TimeSettingViewController.swift */,
+				F0E1A98C277EE41700DD286E /* MbtiSettingViewController.swift */,
 			);
 			path = GDInitialSetting;
 			sourceTree = "<group>";
@@ -395,6 +398,9 @@
 				F0FDB07B279696E300BDF962 /* DiaryCalendarViewController.xib */,
 				F0FDB07F2796987900BDF962 /* DiaryDetailViewController.xib */,
 				3239BCA9277D8E5400E96E21 /* LaunchScreen.storyboard */,
+				32F2438E2783E4D200F1D160 /* GDMissionPerDayDetail.xib */,
+				32F24390278464B600F1D160 /* GDMissionPerDayWeeks.xib */,
+				F05A8C6E279D24A600EAE250 /* MyPageViewController.xib */,
 				F068BDB52782DCEF001035B6 /* Main.storyboard */,
 			);
 			path = Views;
@@ -569,6 +575,7 @@
 				F0FDB08927969F3100BDF962 /* Diary.swift in Sources */,
 				F0FDB08527969EBA00BDF962 /* UnRegisteredDiaryView.swift in Sources */,
 				3239BCA0277D8E5200E96E21 /* ViewController.swift in Sources */,
+				F013DA58279FF019000178D8 /* MyPageEditorMode.swift in Sources */,
 				3239BC9C277D8E5200E96E21 /* AppDelegate.swift in Sources */,
 				F0E1A986277EDE4B00DD286E /* NameSettingViewController.swift in Sources */,
 				033D218D279FE199005CA90F /* GDChecklistView2Controller.swift in Sources */,

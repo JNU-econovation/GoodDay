@@ -15,6 +15,10 @@ enum MbtiPosition {
     case fourth
 }
 
+protocol DelegateMbtiSettingViewController: AnyObject {
+    func passMbtiData(mbti: String)
+}
+
 class MbtiSettingViewController: UIViewController {
 
     @IBOutlet weak var backButton: UIButton!
@@ -25,6 +29,7 @@ class MbtiSettingViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     
     var nickName: String?
+    var mbti: String?
     var mbtiPosition: MbtiPosition?
     var firstMbtiPicker: UIPickerView?
     var secondMbtiPicker: UIPickerView?
@@ -37,16 +42,27 @@ class MbtiSettingViewController: UIViewController {
     let mbtiListSize: Int = 2
     var finishButton: UIBarButtonItem!
     var toolbar: UIToolbar!
+    var myPageEditorMode: MyPageEditorMode = .new
+    weak var delegate: DelegateMbtiSettingViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configureMbtiPicker()
         configureFinishButton()
         configureToolbar()
-        configureBackButton()
         configureMbtiTextFields()
         configureNextButton()
+        editMbtiTextFields()
+    }
+    
+    func editMbtiTextFields(){
+        if myPageEditorMode == .edit {
+            firstMbtiTextField.text = String(mbti![mbti!.startIndex])
+            secondMbtiTextField.text = String(mbti![mbti!.index(mbti!.startIndex, offsetBy: 1)])
+            thirdMbtiTextField.text = String(mbti![mbti!.index(mbti!.startIndex, offsetBy: 2)])
+            fourthMbtiTextField.text = String(mbti![mbti!.index(mbti!.startIndex, offsetBy: 3)])
+            self.validateNextButton()
+        }
     }
 
 
@@ -54,67 +70,54 @@ class MbtiSettingViewController: UIViewController {
     func configureMbtiTextFields(){
         
         self.firstMbtiTextField.addTarget(self, action: #selector(beginFirstTextField(_:)), for: .editingDidBegin)
-        
         self.secondMbtiTextField.addTarget(self, action: #selector(beginSecondTextField(_:)), for: .editingDidBegin)
-        
-        
         self.thirdMbtiTextField.addTarget(self, action: #selector(beginThirdTextField(_:)), for: .editingDidBegin)
-        
-        
         self.fourthMbtiTextField.addTarget(self, action: #selector(beginFourthTextField(_:)), for: .editingDidBegin)
 
-        
-        
         self.firstMbtiTextField.borderStyle = .none
         self.secondMbtiTextField.borderStyle = .none
         self.thirdMbtiTextField.borderStyle = .none
         self.fourthMbtiTextField.borderStyle = .none
         
         self.firstMbtiTextField.font = UIFont(name: self.firstMbtiTextField.font!.fontName, size: 28)
-        
         self.secondMbtiTextField.font = UIFont(name: self.secondMbtiTextField.font!.fontName, size: 28)
-        
         self.thirdMbtiTextField.font = UIFont(name: self.thirdMbtiTextField.font!.fontName, size: 28)
-        
         self.fourthMbtiTextField.font = UIFont(name: self.fourthMbtiTextField.font!.fontName, size: 28)
-        
-        
-        
-        
-        let firstBorder = CALayer()
-        let secondBorder = CALayer()
-        let thirdBorder = CALayer()
-        let fourthBorder = CALayer()
-        
-        firstBorder.frame = CGRect(x: 0, y: self.firstMbtiTextField.frame.size.height - 5, width: self.firstMbtiTextField.frame.width, height: 1)
-        
-        secondBorder.frame = CGRect(x: 0, y: self.secondMbtiTextField.frame.size.height - 5, width: self.secondMbtiTextField.frame.width, height: 1)
-        
-        thirdBorder.frame = CGRect(x: 0, y: self.thirdMbtiTextField.frame.size.height - 5, width: self.thirdMbtiTextField.frame.width, height: 1)
-        
-        fourthBorder.frame = CGRect(x: 0, y: self.fourthMbtiTextField.frame.size.height - 5, width: self.fourthMbtiTextField.frame.width, height: 1)
-        
-        firstBorder.backgroundColor = UIColor.black.cgColor
-        
-        secondBorder.backgroundColor = UIColor.black.cgColor
-        
-        thirdBorder.backgroundColor = UIColor.black.cgColor
-        
-        fourthBorder.backgroundColor = UIColor.black.cgColor
-        
-        self.firstMbtiTextField.layer.addSublayer(firstBorder)
-        self.secondMbtiTextField.layer.addSublayer(secondBorder)
-        self.thirdMbtiTextField.layer.addSublayer(thirdBorder)
-        self.fourthMbtiTextField.layer.addSublayer(fourthBorder)
         
         self.firstMbtiTextField.textAlignment = .center
         self.secondMbtiTextField.textAlignment = .center
         self.thirdMbtiTextField.textAlignment = .center
         self.fourthMbtiTextField.textAlignment = .center
         
+        makeBottomBorders()
         
         
         
+        
+        
+        
+    }
+    
+    private func makeBottomBorders(){
+        let firstBorder = CALayer()
+        let secondBorder = CALayer()
+        let thirdBorder = CALayer()
+        let fourthBorder = CALayer()
+        
+        firstBorder.frame = CGRect(x: 0, y: self.firstMbtiTextField.frame.size.height - 5, width: self.firstMbtiTextField.frame.width, height: 1)
+        secondBorder.frame = CGRect(x: 0, y: self.secondMbtiTextField.frame.size.height - 5, width: self.secondMbtiTextField.frame.width, height: 1)
+        thirdBorder.frame = CGRect(x: 0, y: self.thirdMbtiTextField.frame.size.height - 5, width: self.thirdMbtiTextField.frame.width, height: 1)
+        fourthBorder.frame = CGRect(x: 0, y: self.fourthMbtiTextField.frame.size.height - 5, width: self.fourthMbtiTextField.frame.width, height: 1)
+        
+        firstBorder.backgroundColor = UIColor.black.cgColor
+        secondBorder.backgroundColor = UIColor.black.cgColor
+        thirdBorder.backgroundColor = UIColor.black.cgColor
+        fourthBorder.backgroundColor = UIColor.black.cgColor
+        
+        self.firstMbtiTextField.layer.addSublayer(firstBorder)
+        self.secondMbtiTextField.layer.addSublayer(secondBorder)
+        self.thirdMbtiTextField.layer.addSublayer(thirdBorder)
+        self.fourthMbtiTextField.layer.addSublayer(fourthBorder)
     }
     
     @objc private func beginFirstTextField(_ textField: UITextField){
@@ -145,34 +148,24 @@ class MbtiSettingViewController: UIViewController {
         self.validateNextButton()
     }
     
-    
-
-    
     func configureNextButton(){
+        // 버튼 속성 및 오토레이아웃 설정
         self.validateNextButton()
-        
         self.nextButton.layer.cornerRadius = 13
-
         self.nextButton.translatesAutoresizingMaskIntoConstraints = false
-        
         self.nextButton.widthAnchor.constraint(equalToConstant: 330).isActive = true
         self.nextButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
     
     func configureMbtiPicker(){
-        
         self.firstMbtiPicker = UIPickerView()
         self.secondMbtiPicker = UIPickerView()
         self.thirdMbtiPicker = UIPickerView()
         self.fourthMbtiPicker = UIPickerView()
 
-
         self.firstMbtiPicker?.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.9)
-        
         self.secondMbtiPicker?.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.9)
-        
         self.thirdMbtiPicker?.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.9)
-        
         self.fourthMbtiPicker?.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.9)
         
         self.firstMbtiPicker?.delegate = self
@@ -186,7 +179,6 @@ class MbtiSettingViewController: UIViewController {
         
         self.fourthMbtiPicker?.delegate = self
         self.fourthMbtiPicker?.dataSource = self
-
     }
     
     func configureFinishButton() {
@@ -195,93 +187,95 @@ class MbtiSettingViewController: UIViewController {
         self.finishButton.target = self
         self.finishButton.action = #selector(closeMbtiPicker)
     }
+    
     @objc func closeMbtiPicker(){
         self.validateNextButton()
         self.view.endEditing(true)
     }
+    
     func configureToolbar(){
         self.toolbar = UIToolbar()
         self.toolbar.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         self.toolbar.tintColor = UIColor(rgb: 0x0015FF)
         self.toolbar.frame = CGRect(x: 0, y: 0, width: 0, height: 35)
-        
+
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         self.toolbar.setItems([flexSpace, self.finishButton], animated: true)
-        
     }
     
-    func configureBackButton() {
-        self.backButton.tintColor = .black
-    }
-    
+
     // 다음 버튼 활성화 여부를 체크해주는 메서드
     private func validateNextButton() {
-        
         self.nextButton.isEnabled = !(self.firstMbtiTextField.text?.isEmpty ?? true) && !(self.secondMbtiTextField.text?.isEmpty ?? true) && !(self.thirdMbtiTextField.text?.isEmpty ?? true) && !(self.fourthMbtiTextField.text?.isEmpty ?? true)
         
         // 버튼이 활성화 되어 있는 경우
         if self.nextButton.isEnabled {
-            // 버튼 글자 색 변경
+            if myPageEditorMode == .new {
+                self.nextButton.setTitle("다음", for: .normal)
+            }else {
+                self.nextButton.setTitle("완료", for: .normal)
+            }
             self.nextButton.titleLabel?.textColor = .white
             self.nextButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
             self.nextButton.backgroundColor = UIColor(rgb: 0x0015FF)
-            
-           
-            
         }else { // 버튼이 비활성화 되어 있는 경우
+            if myPageEditorMode == .new {
+                self.nextButton.setTitle("다음", for: .normal)
+            }else {
+                self.nextButton.setTitle("완료", for: .normal)
+            }
+            self.nextButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
             self.nextButton.backgroundColor = UIColor(rgb: 0xCACACA)
-            
         }
-       
     }
     
     @IBAction func tapBackButton(_ sender: UIButton) {
-        
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func tapNextButton(_ sender: UIButton) {
-        let timeSettingVC = TimeSettingViewController(nibName: "TimeSettingViewController", bundle: nil)
+        // 초기 설정인 경우
+        if myPageEditorMode == .new {
+            // "다음" 버튼을 누르면 시간 설정 화면으로 이동.
+            let timeSettingVC = TimeSettingViewController(nibName: "TimeSettingViewController", bundle: nil)
+            timeSettingVC.nickname = self.nickName
+            timeSettingVC.firstMbti = self.firstMbtiTextField.text
+            timeSettingVC.secondMbti = self.secondMbtiTextField.text
+            timeSettingVC.thirdMbti = self.thirdMbtiTextField.text
+            timeSettingVC.fourthMbti = self.fourthMbtiTextField.text
+    
+            timeSettingVC.modalPresentationStyle = .overFullScreen
+            timeSettingVC.modalTransitionStyle = .crossDissolve
+            
+            self.present(timeSettingVC, animated: true, completion: nil)
+        }else { // 마이 페이지에서 수정하는 것 때문에 넘어온 경우
+            self.mbti = (firstMbtiTextField.text ?? "") + (secondMbtiTextField.text ?? "") + (thirdMbtiTextField.text ?? "") + (fourthMbtiTextField.text ?? "")
+            delegate?.passMbtiData(mbti: self.mbti!)
+            self.dismiss(animated: true, completion: nil)
+        }
         
-        timeSettingVC.nickname = self.nickName
-        timeSettingVC.firstMbti = self.firstMbtiTextField.text
-        timeSettingVC.secondMbti = self.secondMbtiTextField.text
-        timeSettingVC.thirdMbti = self.thirdMbtiTextField.text
-        timeSettingVC.fourthMbti = self.fourthMbtiTextField.text
-        
-        
-        timeSettingVC.modalPresentationStyle = .overFullScreen
-        timeSettingVC.modalTransitionStyle = .crossDissolve
-        
-        self.present(timeSettingVC, animated: true, completion: nil)
         
     }
     
     // 유저가 화면을 터치했을 때 호출되는 메서드
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
         self.validateNextButton()
         // 키보드를 내린다.
         self.view.endEditing(true)
-        
     }
 }
 
 extension MbtiSettingViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-
-
     // 한 뷰에 picker view가 몇 개 담겨져 있는지 반환(여러 picker뷰가 존재하면 가로로 정렬)
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-
         return mbtiListSize
-
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
         var pickerTitle: String? = nil
         switch mbtiPosition {
         case .first:
@@ -313,8 +307,6 @@ extension MbtiSettingViewController: UIPickerViewDelegate, UIPickerViewDataSourc
             
         }
         return pickerTitle
-
-
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
